@@ -1,0 +1,15 @@
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.exe.config
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.exe
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.pdb
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.xml
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\MySql.Data.dll
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\MySql.Data.xml
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbprojAssemblyReference.cache
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form1.resources
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Resources.resources
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.GenerateResource.cache
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.CoreCompileInputs.cache
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.CopyComplete
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.exe
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.xml
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.pdb
