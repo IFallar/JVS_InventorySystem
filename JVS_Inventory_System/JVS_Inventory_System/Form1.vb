@@ -10,6 +10,33 @@ Public Class Form1
         'tableload("SELECT `item_ID`, `item_Name`, `item_Brand`, `item_Variant`, `item_Price` FROM `items` WHERE 1", DataGridView1)
         'strconn.Close()
 
+        Dim home_item_valuation As String
+        Dim home_item_qty As Integer
+        Dim home_item_lowstock As Integer
+        Dim home_item_laststock As Date
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT (SELECT SUM(TOTAL_PRICE) FROM products) as home_item_valuation, (Select Count(*) as home_item_qty from products) as home_item_qty, (Select Count(*) as home_item_lowstock from products WHERE STOCK_STATUS = 'LOW STOCK') as home_item_lowstock"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            home_item_valuation = cmdreader.GetValue(0)
+            VALUE_ITEMS.Text = "P" + home_item_valuation
+            home_item_qty = cmdreader.GetValue(1)
+            VALUE_COUNT.Text = home_item_qty
+            home_item_lowstock = cmdreader.GetValue(2)
+            VALUE_LOWSTOCK.Text = home_item_lowstock
+
+        End While
+
+        cmdreader.Close()
+
+        con.Close()
+
 
 
 
@@ -19,7 +46,9 @@ Public Class Form1
 
     End Sub
 
-    'BUTTON EVENTS 
+    'BUTTON EVENTS ===================================================================================================================
+
+    '++++++++++++++++ BUTTON STYLE CHANGES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub HOME_BTN_MouseEnter(sender As Object, e As EventArgs) Handles SIDE_HOME_BTN.MouseEnter
         If (SIDE_HOME_BTN.BackColor = System.Drawing.Color.Transparent) Then
@@ -63,7 +92,9 @@ Public Class Form1
 
     End Sub
 
-    'PANEL NAVIGATION
+    'PANEL NAVIGATION ================================================================================================================
+
+    '++++++++++++++++ PANEL STYLE CHANGES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub HOME_BTN_Click(sender As Object, e As EventArgs) Handles SIDE_HOME_BTN.Click
         HOME_PANEL.Visible = True
@@ -109,6 +140,5 @@ Public Class Form1
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
 
     End Sub
-
 
 End Class
