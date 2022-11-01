@@ -27,6 +27,22 @@ Partial Class Form1
         Me.SIDE_LOG_BTN = New System.Windows.Forms.Button()
         Me.SIDE_ITEM_BTN = New System.Windows.Forms.Button()
         Me.Base_Panel = New System.Windows.Forms.Panel()
+        Me.ITEM_PANEL = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LOG_PANEL = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.HOME_PANEL = New System.Windows.Forms.Panel()
         Me.APP_LABEL = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -46,16 +62,15 @@ Partial Class Form1
         Me.DO_LIST = New System.Windows.Forms.ListBox()
         Me.DO_LABEL = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.HOME_STOCK_IO_BTN = New System.Windows.Forms.Button()
+        Me.HOME_STOCK_IN_BTN = New System.Windows.Forms.Button()
         Me.HOME_ADD_ITEM_BTN = New System.Windows.Forms.Button()
         Me.HOME_INVENTORY_LOG_BTN = New System.Windows.Forms.Button()
-        Me.HOME_ITEM_LIST_BTN = New System.Windows.Forms.Button()
-        Me.ITEM_PANEL = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LOG_PANEL = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.HOME_STOCK_OUT_BTN = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
+        Me.ITEM_PANEL.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.LOG_PANEL.SuspendLayout()
         Me.HOME_PANEL.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.INFO_LBL_ITEMS.SuspendLayout()
@@ -64,23 +79,20 @@ Partial Class Form1
         Me.Panel4.SuspendLayout()
         Me.DAY_LOG_PANEL.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.ITEM_PANEL.SuspendLayout()
-        Me.LOG_PANEL.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel1.Controls.Add(Me.SIDE_HOME_BTN)
         Me.Panel1.Controls.Add(Me.SIDE_LOG_BTN)
         Me.Panel1.Controls.Add(Me.SIDE_ITEM_BTN)
         Me.Panel1.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(221, 661)
+        Me.Panel1.Size = New System.Drawing.Size(223, 661)
         Me.Panel1.TabIndex = 1
         '
         'SIDE_HOME_BTN
@@ -94,7 +106,7 @@ Partial Class Form1
         Me.SIDE_HOME_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SIDE_HOME_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SIDE_HOME_BTN.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SIDE_HOME_BTN.Location = New System.Drawing.Point(43, 346)
+        Me.SIDE_HOME_BTN.Location = New System.Drawing.Point(43, 292)
         Me.SIDE_HOME_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
         Me.SIDE_HOME_BTN.Name = "SIDE_HOME_BTN"
         Me.SIDE_HOME_BTN.Size = New System.Drawing.Size(181, 64)
@@ -113,7 +125,7 @@ Partial Class Form1
         Me.SIDE_LOG_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SIDE_LOG_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SIDE_LOG_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.SIDE_LOG_BTN.Location = New System.Drawing.Point(43, 494)
+        Me.SIDE_LOG_BTN.Location = New System.Drawing.Point(43, 440)
         Me.SIDE_LOG_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
         Me.SIDE_LOG_BTN.Name = "SIDE_LOG_BTN"
         Me.SIDE_LOG_BTN.Size = New System.Drawing.Size(181, 64)
@@ -132,7 +144,7 @@ Partial Class Form1
         Me.SIDE_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SIDE_ITEM_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SIDE_ITEM_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.SIDE_ITEM_BTN.Location = New System.Drawing.Point(43, 420)
+        Me.SIDE_ITEM_BTN.Location = New System.Drawing.Point(43, 366)
         Me.SIDE_ITEM_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
         Me.SIDE_ITEM_BTN.Name = "SIDE_ITEM_BTN"
         Me.SIDE_ITEM_BTN.Size = New System.Drawing.Size(181, 64)
@@ -152,6 +164,245 @@ Partial Class Form1
         Me.Base_Panel.Name = "Base_Panel"
         Me.Base_Panel.Size = New System.Drawing.Size(881, 661)
         Me.Base_Panel.TabIndex = 2
+        '
+        'ITEM_PANEL
+        '
+        Me.ITEM_PANEL.Controls.Add(Me.Panel8)
+        Me.ITEM_PANEL.Controls.Add(Me.Button4)
+        Me.ITEM_PANEL.Controls.Add(Me.Button3)
+        Me.ITEM_PANEL.Controls.Add(Me.Button2)
+        Me.ITEM_PANEL.Controls.Add(Me.Button1)
+        Me.ITEM_PANEL.Controls.Add(Me.Panel7)
+        Me.ITEM_PANEL.Controls.Add(Me.Label1)
+        Me.ITEM_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ITEM_PANEL.Location = New System.Drawing.Point(0, 0)
+        Me.ITEM_PANEL.Margin = New System.Windows.Forms.Padding(3, 3, 3, 5)
+        Me.ITEM_PANEL.Name = "ITEM_PANEL"
+        Me.ITEM_PANEL.Size = New System.Drawing.Size(881, 661)
+        Me.ITEM_PANEL.TabIndex = 0
+        Me.ITEM_PANEL.Visible = False
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.TextBox1)
+        Me.Panel8.Controls.Add(Me.ComboBox1)
+        Me.Panel8.Controls.Add(Me.Button5)
+        Me.Panel8.Controls.Add(Me.ComboBox2)
+        Me.Panel8.Controls.Add(Me.Button6)
+        Me.Panel8.Controls.Add(Me.Button7)
+        Me.Panel8.Location = New System.Drawing.Point(15, 70)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(850, 32)
+        Me.Panel8.TabIndex = 16
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(229, 0)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(5, 3, 0, 5)
+        Me.TextBox1.MaximumSize = New System.Drawing.Size(310, 30)
+        Me.TextBox1.MinimumSize = New System.Drawing.Size(310, 30)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(310, 29)
+        Me.TextBox1.TabIndex = 14
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox1.Font = New System.Drawing.Font("Bahnschrift", 13.5!)
+        Me.ComboBox1.ForeColor = System.Drawing.SystemColors.Info
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(582, 0)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(5, 3, 5, 10)
+        Me.ComboBox1.MinimumSize = New System.Drawing.Size(130, 0)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(130, 30)
+        Me.ComboBox1.TabIndex = 13
+        Me.ComboBox1.Text = "CATEGORY"
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.Location = New System.Drawing.Point(-1, 0)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(10, 10, 0, 10)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(110, 30)
+        Me.Button5.TabIndex = 10
+        Me.Button5.Text = "STOCK OUT"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox2.Font = New System.Drawing.Font("Bahnschrift", 13.5!)
+        Me.ComboBox2.ForeColor = System.Drawing.SystemColors.Info
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(719, 0)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(5, 3, 0, 10)
+        Me.ComboBox2.MinimumSize = New System.Drawing.Size(130, 0)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(130, 30)
+        Me.ComboBox2.TabIndex = 15
+        Me.ComboBox2.Text = "FILTERS"
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.White
+        Me.Button6.Location = New System.Drawing.Point(114, 0)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(5, 10, 0, 10)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(110, 30)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "STOCK IN"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.Black
+        Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.Color.White
+        Me.Button7.Location = New System.Drawing.Point(538, 0)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(37, 30)
+        Me.Button7.TabIndex = 12
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Black
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(15, 541)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(127, 45)
+        Me.Button4.TabIndex = 9
+        Me.Button4.Text = "FLAG ITEM"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(464, 541)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(127, 45)
+        Me.Button3.TabIndex = 8
+        Me.Button3.Text = "EDIT DETAILS"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(601, 541)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(127, 45)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "DELETE"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(738, 541)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(127, 45)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "ADD NEW ITEM"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Panel7
+        '
+        Me.Panel7.Location = New System.Drawing.Point(15, 108)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(850, 420)
+        Me.Panel7.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(798, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(71, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "ITEM PANEL"
+        '
+        'LOG_PANEL
+        '
+        Me.LOG_PANEL.BackColor = System.Drawing.SystemColors.Control
+        Me.LOG_PANEL.Controls.Add(Me.Label3)
+        Me.LOG_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LOG_PANEL.Location = New System.Drawing.Point(0, 0)
+        Me.LOG_PANEL.Name = "LOG_PANEL"
+        Me.LOG_PANEL.Size = New System.Drawing.Size(881, 661)
+        Me.LOG_PANEL.TabIndex = 1
+        Me.LOG_PANEL.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(17, 12)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(67, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "LOG PANEL"
         '
         'HOME_PANEL
         '
@@ -411,34 +662,34 @@ Partial Class Form1
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightGray
-        Me.Panel2.Controls.Add(Me.HOME_STOCK_IO_BTN)
+        Me.Panel2.Controls.Add(Me.HOME_STOCK_IN_BTN)
         Me.Panel2.Controls.Add(Me.HOME_ADD_ITEM_BTN)
         Me.Panel2.Controls.Add(Me.HOME_INVENTORY_LOG_BTN)
-        Me.Panel2.Controls.Add(Me.HOME_ITEM_LIST_BTN)
+        Me.Panel2.Controls.Add(Me.HOME_STOCK_OUT_BTN)
         Me.Panel2.Location = New System.Drawing.Point(11, 284)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(521, 377)
         Me.Panel2.TabIndex = 3
         '
-        'HOME_STOCK_IO_BTN
+        'HOME_STOCK_IN_BTN
         '
-        Me.HOME_STOCK_IO_BTN.BackColor = System.Drawing.Color.White
-        Me.HOME_STOCK_IO_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.HOME_STOCK_IO_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_STOCK_IO_BTN.FlatAppearance.BorderSize = 0
-        Me.HOME_STOCK_IO_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.HOME_STOCK_IO_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
-        Me.HOME_STOCK_IO_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_STOCK_IO_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_STOCK_IO_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_STOCK_IO_BTN.Location = New System.Drawing.Point(20, 198)
-        Me.HOME_STOCK_IO_BTN.Margin = New System.Windows.Forms.Padding(20, 10, 10, 10)
-        Me.HOME_STOCK_IO_BTN.Name = "HOME_STOCK_IO_BTN"
-        Me.HOME_STOCK_IO_BTN.Size = New System.Drawing.Size(230, 160)
-        Me.HOME_STOCK_IO_BTN.TabIndex = 9
-        Me.HOME_STOCK_IO_BTN.Text = "STOCK IN AND OUT"
-        Me.HOME_STOCK_IO_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_STOCK_IO_BTN.UseVisualStyleBackColor = False
+        Me.HOME_STOCK_IN_BTN.BackColor = System.Drawing.Color.White
+        Me.HOME_STOCK_IN_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HOME_STOCK_IN_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HOME_STOCK_IN_BTN.FlatAppearance.BorderSize = 0
+        Me.HOME_STOCK_IN_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.HOME_STOCK_IN_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
+        Me.HOME_STOCK_IN_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_STOCK_IN_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_STOCK_IN_BTN.ForeColor = System.Drawing.Color.Black
+        Me.HOME_STOCK_IN_BTN.Location = New System.Drawing.Point(20, 198)
+        Me.HOME_STOCK_IN_BTN.Margin = New System.Windows.Forms.Padding(20, 10, 10, 10)
+        Me.HOME_STOCK_IN_BTN.Name = "HOME_STOCK_IN_BTN"
+        Me.HOME_STOCK_IN_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_STOCK_IN_BTN.TabIndex = 9
+        Me.HOME_STOCK_IN_BTN.Text = "ITEM IN"
+        Me.HOME_STOCK_IN_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_STOCK_IN_BTN.UseVisualStyleBackColor = False
         '
         'HOME_ADD_ITEM_BTN
         '
@@ -451,8 +702,8 @@ Partial Class Form1
         Me.HOME_ADD_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_ADD_ITEM_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_ADD_ITEM_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_ADD_ITEM_BTN.Location = New System.Drawing.Point(270, 198)
-        Me.HOME_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 20, 10)
+        Me.HOME_ADD_ITEM_BTN.Location = New System.Drawing.Point(20, 20)
+        Me.HOME_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(20, 20, 10, 10)
         Me.HOME_ADD_ITEM_BTN.Name = "HOME_ADD_ITEM_BTN"
         Me.HOME_ADD_ITEM_BTN.Size = New System.Drawing.Size(230, 160)
         Me.HOME_ADD_ITEM_BTN.TabIndex = 7
@@ -481,65 +732,26 @@ Partial Class Form1
         Me.HOME_INVENTORY_LOG_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HOME_INVENTORY_LOG_BTN.UseVisualStyleBackColor = False
         '
-        'HOME_ITEM_LIST_BTN
+        'HOME_STOCK_OUT_BTN
         '
-        Me.HOME_ITEM_LIST_BTN.BackColor = System.Drawing.Color.White
-        Me.HOME_ITEM_LIST_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.HOME_ITEM_LIST_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.HOME_ITEM_LIST_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_ITEM_LIST_BTN.FlatAppearance.BorderSize = 0
-        Me.HOME_ITEM_LIST_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.HOME_ITEM_LIST_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
-        Me.HOME_ITEM_LIST_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_ITEM_LIST_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_ITEM_LIST_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_ITEM_LIST_BTN.Location = New System.Drawing.Point(20, 20)
-        Me.HOME_ITEM_LIST_BTN.Margin = New System.Windows.Forms.Padding(20, 20, 10, 10)
-        Me.HOME_ITEM_LIST_BTN.Name = "HOME_ITEM_LIST_BTN"
-        Me.HOME_ITEM_LIST_BTN.Size = New System.Drawing.Size(230, 160)
-        Me.HOME_ITEM_LIST_BTN.TabIndex = 6
-        Me.HOME_ITEM_LIST_BTN.Text = "ITEMS AND PRODUCTS"
-        Me.HOME_ITEM_LIST_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_ITEM_LIST_BTN.UseVisualStyleBackColor = False
-        '
-        'ITEM_PANEL
-        '
-        Me.ITEM_PANEL.Controls.Add(Me.Label1)
-        Me.ITEM_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ITEM_PANEL.Location = New System.Drawing.Point(0, 0)
-        Me.ITEM_PANEL.Name = "ITEM_PANEL"
-        Me.ITEM_PANEL.Size = New System.Drawing.Size(881, 661)
-        Me.ITEM_PANEL.TabIndex = 0
-        Me.ITEM_PANEL.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ITEM PANEL"
-        '
-        'LOG_PANEL
-        '
-        Me.LOG_PANEL.BackColor = System.Drawing.SystemColors.Control
-        Me.LOG_PANEL.Controls.Add(Me.Label3)
-        Me.LOG_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LOG_PANEL.Location = New System.Drawing.Point(0, 0)
-        Me.LOG_PANEL.Name = "LOG_PANEL"
-        Me.LOG_PANEL.Size = New System.Drawing.Size(881, 661)
-        Me.LOG_PANEL.TabIndex = 1
-        Me.LOG_PANEL.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 12)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 13)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "LOG PANEL"
+        Me.HOME_STOCK_OUT_BTN.BackColor = System.Drawing.Color.White
+        Me.HOME_STOCK_OUT_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.HOME_STOCK_OUT_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HOME_STOCK_OUT_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HOME_STOCK_OUT_BTN.FlatAppearance.BorderSize = 0
+        Me.HOME_STOCK_OUT_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.HOME_STOCK_OUT_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
+        Me.HOME_STOCK_OUT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_STOCK_OUT_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_STOCK_OUT_BTN.ForeColor = System.Drawing.Color.Black
+        Me.HOME_STOCK_OUT_BTN.Location = New System.Drawing.Point(270, 198)
+        Me.HOME_STOCK_OUT_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 20, 10)
+        Me.HOME_STOCK_OUT_BTN.Name = "HOME_STOCK_OUT_BTN"
+        Me.HOME_STOCK_OUT_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_STOCK_OUT_BTN.TabIndex = 6
+        Me.HOME_STOCK_OUT_BTN.Text = "ITEM OUT"
+        Me.HOME_STOCK_OUT_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_STOCK_OUT_BTN.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -557,6 +769,12 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Base_Panel.ResumeLayout(False)
+        Me.ITEM_PANEL.ResumeLayout(False)
+        Me.ITEM_PANEL.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.LOG_PANEL.ResumeLayout(False)
+        Me.LOG_PANEL.PerformLayout()
         Me.HOME_PANEL.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.INFO_LBL_ITEMS.ResumeLayout(False)
@@ -565,10 +783,6 @@ Partial Class Form1
         Me.Panel4.ResumeLayout(False)
         Me.DAY_LOG_PANEL.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
-        Me.ITEM_PANEL.ResumeLayout(False)
-        Me.ITEM_PANEL.PerformLayout()
-        Me.LOG_PANEL.ResumeLayout(False)
-        Me.LOG_PANEL.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -582,10 +796,10 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents DO_LABEL As Label
-    Friend WithEvents HOME_STOCK_IO_BTN As Button
+    Friend WithEvents HOME_STOCK_IN_BTN As Button
     Friend WithEvents HOME_ADD_ITEM_BTN As Button
     Friend WithEvents HOME_INVENTORY_LOG_BTN As Button
-    Friend WithEvents HOME_ITEM_LIST_BTN As Button
+    Friend WithEvents HOME_STOCK_OUT_BTN As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DAY_LOG_PANEL As Panel
     Friend WithEvents DO_LIST As ListBox
@@ -604,4 +818,16 @@ Partial Class Form1
     Friend WithEvents VALUE_LOWSTOCK As Button
     Friend WithEvents HEADER_LOWSTOCK As Label
     Friend WithEvents APP_LABEL As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ComboBox2 As ComboBox
 End Class
