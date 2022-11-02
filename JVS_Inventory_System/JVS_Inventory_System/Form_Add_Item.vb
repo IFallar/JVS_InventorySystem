@@ -11,6 +11,8 @@ Public Class Form_Add_Item
         '++++++++++++++++ ADD COMBO BOX VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         FAI_CBX_ITEM_BRAND.Items.Clear()
+        FAI_CBX_ITEM_CAT.Items.Clear()
+        FAI_CBX_ITEM_MODEL.Items.Clear()
 
         opencon()
 
@@ -23,6 +25,38 @@ Public Class Form_Add_Item
         While cmdreader.Read
             Dim list_brands = cmdreader.GetString("BRAND_NAME")
             FAI_CBX_ITEM_BRAND.Items.Add(list_brands)
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT variant_name FROM variants"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            Dim list_variants = cmdreader.GetString("variant_name")
+            FAI_CBX_ITEM_MODEL.Items.Add(list_variants)
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT categories_name FROM categories"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            Dim list_categories = cmdreader.GetString("categories_name")
+            FAI_CBX_ITEM_CAT.Items.Add(list_categories)
         End While
 
         cmdreader.Close()
@@ -110,11 +144,13 @@ Public Class Form_Add_Item
             MsgBox("ITEM SUCCESSFULY ADDED", MsgBoxStyle.OkOnly, "Action Confirmation")
             strconn.Close()
 
+            Me.Close()
+
             Form1.Set_Home_Value()
 
         Catch ex As System.InvalidCastException
 
-            MsgBox("Please Enter all proper Information.", MsgBoxStyle.OkOnly, "Incomplete Information")
+            MsgBox("Please Enter all necessary Information.", MsgBoxStyle.OkOnly, "Incomplete Information")
 
         End Try
 
@@ -149,6 +185,12 @@ Public Class Form_Add_Item
             FAI_TBX_TOPAY.BackColor = Color.DimGray
             FAI_TBX_TOPAY.Text() = 0
             FAI_TBX_TOPAY.ReadOnly = True
+
+        Else
+
+            FAI_TBX_TOPAY.BackColor = Color.White
+            FAI_TBX_TOPAY.Text() = ""
+            FAI_TBX_TOPAY.ReadOnly = False
 
         End If
 

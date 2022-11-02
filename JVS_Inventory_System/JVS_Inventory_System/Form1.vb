@@ -5,18 +5,36 @@ Public Class Form1
 
     Dim tablemode As Integer = 1
 
+    'FORMAT TABLE AND CELLS ================================================================================================================
+
+    Private Sub DataGridView1_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView1.CellFormatting
+
+        If e.ColumnIndex = 8 And e.Value IsNot Nothing Then
+            Dim content As String = e.Value
+            If content = "LOW STOCK" Then
+                e.CellStyle.BackColor = Color.Orange
+            ElseIf content = "OUT OF STOCK" Then
+                e.CellStyle.BackColor = Color.Red
+            End If
+        End If
+
+    End Sub
+
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        'tableload("SELECT `item_ID`, `item_Name`, `item_Brand`, `item_Variant`, `item_Price` FROM `items` WHERE 1", DataGridView1)
-        'strconn.Close()
 
-        '++++++++++++++++ SET QUICK INFO VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `UNIT_PRICE` as Price, `QUANTITY` as QTY, `MAX_SELL` as Max, `CATEGORY` as Category, `STOCK_STATUS` as LEvel, `HOLDING_STATUS` Holding, `TOTAL_PRICE` as Total, `LAST_STOCK` as Last FROM `products` WHERE 1", DataGridView1)
+        strconn.Close()
 
         Set_Home_Value()
 
     End Sub
 
     Public Sub Set_Home_Value()
+
+        '++++++++++++++++ SET QUICK INFO VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         Dim home_item_valuation As String
         Dim home_item_qty As Integer
@@ -33,17 +51,28 @@ Public Class Form1
 
         While cmdreader.Read
 
-            home_item_valuation = cmdreader.GetValue(0)
-            VALUE_ITEMS.Text = "P" + home_item_valuation
+            Try
 
-            home_item_qty = cmdreader.GetValue(1)
-            VALUE_COUNT.Text = home_item_qty
+                home_item_valuation = cmdreader.GetValue(0)
+                VALUE_ITEMS.Text = "P" + home_item_valuation
 
-            home_item_lowstock = cmdreader.GetValue(2)
-            VALUE_LOWSTOCK.Text = home_item_lowstock
+                home_item_qty = cmdreader.GetValue(1)
+                VALUE_COUNT.Text = home_item_qty
 
-            home_item_laststock = cmdreader.GetValue(3)
-            VALUE_LASTSTOCK.Text = home_item_laststock
+                home_item_lowstock = cmdreader.GetValue(2)
+                VALUE_LOWSTOCK.Text = home_item_lowstock
+
+                home_item_laststock = cmdreader.GetValue(3)
+                VALUE_LASTSTOCK.Text = home_item_laststock
+
+            Catch ex As System.InvalidCastException
+
+                VALUE_ITEMS.Text = "P0"
+                VALUE_COUNT.Text = 0
+                VALUE_LOWSTOCK.Text = 0
+                VALUE_LASTSTOCK.Text = "DD/MM/YYYY"
+
+            End Try
 
         End While
 
@@ -181,5 +210,6 @@ Public Class Form1
         End Try
 
     End Sub
+
 
 End Class

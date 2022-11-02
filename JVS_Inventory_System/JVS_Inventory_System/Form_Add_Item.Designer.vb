@@ -335,6 +335,8 @@ Partial Class Form_Add_Item
         '
         'FAI_CBX_ITEM_CAT
         '
+        Me.FAI_CBX_ITEM_CAT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.FAI_CBX_ITEM_CAT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.FAI_CBX_ITEM_CAT.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FAI_CBX_ITEM_CAT.FormattingEnabled = True
         Me.FAI_CBX_ITEM_CAT.Location = New System.Drawing.Point(425, 98)
@@ -360,6 +362,8 @@ Partial Class Form_Add_Item
         '
         'FAI_CBX_ITEM_MODEL
         '
+        Me.FAI_CBX_ITEM_MODEL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.FAI_CBX_ITEM_MODEL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.FAI_CBX_ITEM_MODEL.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FAI_CBX_ITEM_MODEL.FormattingEnabled = True
         Me.FAI_CBX_ITEM_MODEL.Location = New System.Drawing.Point(224, 98)
