@@ -5,27 +5,12 @@ Public Class Form1
 
     Dim tablemode As Integer = 1
 
-    'FORMAT TABLE AND CELLS ================================================================================================================
-
-    Private Sub DataGridView1_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView1.CellFormatting
-
-        If e.ColumnIndex = 8 And e.Value IsNot Nothing Then
-            Dim content As String = e.Value
-            If content = "LOW STOCK" Then
-                e.CellStyle.BackColor = Color.Orange
-            ElseIf content = "OUT OF STOCK" Then
-                e.CellStyle.BackColor = Color.Red
-            End If
-        End If
-
-    End Sub
-
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
 
         '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `UNIT_PRICE` as Price, `QUANTITY` as QTY, `MAX_SELL` as Max, `CATEGORY` as Category, `STOCK_STATUS` as LEvel, `HOLDING_STATUS` Holding, `TOTAL_PRICE` as Total, `LAST_STOCK` as Last FROM `products` WHERE 1", DataGridView1)
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `UNIT_PRICE` as Price, `QUANTITY` as QTY, `MAX_SELL` as Max, `CATEGORY` as Category, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` Holding, `TOTAL_PRICE` as Total, `LAST_STOCK` as Last FROM `products` WHERE 1", DataGridView1)
         strconn.Close()
 
         Set_Home_Value()
@@ -80,6 +65,43 @@ Public Class Form1
         con.Close()
 
     End Sub
+
+    'FORMAT TABLE AND CELLS ================================================================================================================
+
+    '++++++++++++++++ SET SPECIFIC CELL COLORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Private Sub DataGridView1_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView1.CellFormatting
+
+        If e.ColumnIndex = 8 And e.Value IsNot Nothing Then
+            Dim content As String = e.Value
+            If content = "LOW STOCK" Then
+                e.CellStyle.BackColor = Color.Orange
+            ElseIf content = "OUT OF STOCK" Then
+                e.CellStyle.BackColor = Color.Red
+            End If
+        End If
+
+    End Sub
+
+    '++++++++++++++++ SET SPECIFIC CELL COLORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Private Sub DataGridView1_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles DataGridView1.DataBindingComplete
+
+        DataGridView1.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+
+    End Sub
+
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
@@ -210,6 +232,5 @@ Public Class Form1
         End Try
 
     End Sub
-
 
 End Class
