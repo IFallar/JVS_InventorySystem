@@ -10,7 +10,7 @@ Public Class Form1
 
         '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `UNIT_PRICE` as Price, `QUANTITY` as QTY, `MAX_SELL` as Max, `CATEGORY` as Category, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` Holding, `TOTAL_PRICE` as Total, `LAST_STOCK` as Last FROM `products` WHERE 1", DataGridView1)
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `MAX_SELL` as 'Max Price', `CATEGORY` as Category, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `TOTAL_PRICE` as Total, `LAST_STOCK` as Last FROM `products` WHERE 1", DataGridView1)
         strconn.Close()
 
         Set_Home_Value()
@@ -219,7 +219,7 @@ Public Class Form1
 
     End Sub 'UNUSED SNIPPETS
 
-    Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
+    Public Sub Open_Add_Modal()
 
         Dim ADD_ITEM_MODAL As New Form
 
@@ -231,6 +231,14 @@ Public Class Form1
 
         End Try
 
+    End Sub
+
+    Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
+        Open_Add_Modal()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
+        Open_Add_Modal()
     End Sub
 
 End Class
