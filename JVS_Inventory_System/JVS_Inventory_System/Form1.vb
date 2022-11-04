@@ -10,10 +10,15 @@ Public Class Form1
 
         '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `MAX_SELL` as 'Max Price', `CATEGORY` as Category, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `TOTAL_PRICE` as Total, `LAST_STOCK` as Last FROM `products` WHERE 1", DataGridView1)
-        strconn.Close()
-
+        Load_Table_Main()
         Set_Home_Value()
+
+    End Sub
+
+    Public Sub Load_Table_Main()
+
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as Last FROM `products` WHERE 1", DataGridView1)
+        strconn.Close()
 
     End Sub
 
@@ -78,30 +83,32 @@ Public Class Form1
                 e.CellStyle.BackColor = Color.Orange
             ElseIf content = "OUT OF STOCK" Then
                 e.CellStyle.BackColor = Color.Red
+            Else
+                e.CellStyle.BackColor = Color.Green
             End If
         End If
 
     End Sub
 
-    '++++++++++++++++ SET SPECIFIC CELL COLORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    '++++++++++++++++ SET CELL SIZING ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub DataGridView1_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles DataGridView1.DataBindingComplete
 
         DataGridView1.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridView1.Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
     End Sub
-
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
@@ -185,6 +192,8 @@ Public Class Form1
         SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.White
 
+        Load_Table_Main()
+
     End Sub
 
     Private Sub LOG_BTN_Click(sender As Object, e As EventArgs) Handles SIDE_LOG_BTN.Click
@@ -219,8 +228,7 @@ Public Class Form1
 
     End Sub 'UNUSED SNIPPETS
 
-    Public Sub Open_Add_Modal()
-
+    Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
         Dim ADD_ITEM_MODAL As New Form
 
         Try
@@ -230,15 +238,18 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
-
-    End Sub
-
-    Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
-        Open_Add_Modal()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
-        Open_Add_Modal()
+        Dim ADD_ITEM_MODAL As New Form
+
+        Try
+            Dim Modal As New Form_Add_Item
+            Form_Add_Item.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 End Class

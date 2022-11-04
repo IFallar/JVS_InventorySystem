@@ -73,6 +73,7 @@ Public Class Form_Add_Item
 
         End Try
 
+        Form1.Load_Table_Main()
         Form1.Set_Home_Value()
 
     End Sub
@@ -122,14 +123,17 @@ Public Class Form_Add_Item
             ITEM_RPS = "NORMAL"
             ITEM_TOTAL = ITEM_INIT * ITEM_PC
 
-            Select Case True
-                Case ITEM_INIT >= ITEM_TRHD
-                    ITEM_STATUS = "NORMAL"
-                Case ITEM_INIT < ITEM_TRHD
-                    ITEM_STATUS = "LOW STOCK"
-                Case ITEM_INIT = 0
-                    ITEM_STATUS = "OUT OF STOCK"
-            End Select
+            Dim x As String = ""
+
+            If ITEM_INIT >= ITEM_TRHD Then
+                x = "NORMAL"
+            ElseIf ITEM_INIT < ITEM_TRHD And ITEM_INIT > 0 Then
+                x = "LOW STOCK"
+            ElseIf ITEM_INIT = 0 Then
+                x = "OUT OF STOCK"
+            End If
+
+            ITEM_STATUS = x
 
             Dim regDate As Date = Date.Now()
             ITEM_ADD_DATE = regDate.ToString("yyyy\-MM\-dd")
@@ -144,9 +148,9 @@ Public Class Form_Add_Item
             MsgBox("ITEM SUCCESSFULY ADDED", MsgBoxStyle.OkOnly, "Action Confirmation")
             strconn.Close()
 
-            Me.Close()
-
+            Form1.Load_Table_Main()
             Form1.Set_Home_Value()
+
 
         Catch ex As System.InvalidCastException
 
@@ -174,6 +178,7 @@ Public Class Form_Add_Item
         FAI_TBX_TOPAY.BackColor = Color.White
         FAI_TBX_TOPAY.ReadOnly = False
 
+        Form1.Load_Table_Main()
         Form1.Set_Home_Value()
 
     End Sub
