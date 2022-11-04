@@ -10,11 +10,16 @@ Public Class Form_Add_Item
 
         'INITIATE MODAL ================================================================================================================
 
-        '++++++++++++++++ ADD COMBO BOX VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        '++++++++++++++++ SET MODAL MODE ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         If Label13.Text = "ADD NEW ITEM" Then
 
             Confirm = "ITEM SUCCESSFULY ADDED"
+            AllClear()
+            Query = 0
+
+            FAI_TBX_ITEM_ID.Visible = False
+            FAI_L_ITEM_ID.Visible = False
 
             FAI_TBX_ITEM_INIT.BackColor = Color.White
             FAI_TBX_ITEM_INIT.Text() = ""
@@ -23,12 +28,20 @@ Public Class Form_Add_Item
         ElseIf Label13.Text = "EDIT ITEM DETAILS" Then
 
             Confirm = "ITEM SUCCESSFULY UPDATED"
+            Form1.Edit_Details()
+            Query = 1
+
+            FAI_TBX_ITEM_ID.Visible = True
+            FAI_L_ITEM_ID.Visible = True
 
             FAI_TBX_ITEM_INIT.BackColor = Color.DimGray
-            FAI_TBX_ITEM_INIT.Text() = 0
             FAI_TBX_ITEM_INIT.ReadOnly = True
 
+
+
         End If
+
+        '++++++++++++++++ ADD COMBO BOX VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         FAI_CBX_ITEM_BRAND.Items.Clear()
         FAI_CBX_ITEM_CAT.Items.Clear()
@@ -127,6 +140,8 @@ Public Class Form_Add_Item
 
         '++++++++++++++++ GET AND SET VALUES SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+
         Try
 
             ITEM_NAME = FAI_TBX_ITEM_NAME.Text
@@ -134,7 +149,6 @@ Public Class Form_Add_Item
             ITEM_CAT = FAI_CBX_ITEM_CAT.Text
             ITEM_HLDSTAT = FAI_CBX_ITEM_HLDSTAT.Text
             ITEM_MODEL = FAI_CBX_ITEM_MODEL.Text
-
 
             ITEM_INIT = FAI_TBX_ITEM_INIT.Text
             ITEM_TRHD = FAI_TBX_ITEM_TRHD.Text
@@ -166,7 +180,11 @@ Public Class Form_Add_Item
             cmd.Connection = strconn
             strconn.Open()
 
-            cmd.CommandText = "INSERT INTO `products`(`ITEM_ID`, `ITEM_NAME`, `ITEM_BRAND`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `CATEGORY`, `THRESHOLD`, `STOCK_STATUS`, `REPAIR_STATUS`, `HOLDING_STATUS`, `TOTAL_PRICE`, `LAST_STOCK`) VALUES (DEFAULT,'" & ITEM_NAME & "','" & ITEM_BRAND & "','" & ITEM_MODEL & "','" & ITEM_PC & "','" & ITEM_INIT & "','" & ITEM_MIN & "','" & ITEM_MAX & "','" & ITEM_CAT & "','" & ITEM_TRHD & "','" & ITEM_STATUS & "','" & ITEM_RPS & "','" & ITEM_HLDSTAT & "','" & ITEM_TOTAL & "','" & ITEM_ADD_DATE & "'); UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
+            If Query = 0 Then
+                cmd.CommandText = "INSERT INTO `products`(`ITEM_ID`, `ITEM_NAME`, `ITEM_BRAND`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `CATEGORY`, `THRESHOLD`, `TO_PAY`, `STOCK_STATUS`, `REPAIR_STATUS`, `HOLDING_STATUS`, `TOTAL_PRICE`, `LAST_STOCK`) VALUES (DEFAULT,'" & ITEM_NAME & "','" & ITEM_BRAND & "','" & ITEM_MODEL & "','" & ITEM_PC & "','" & ITEM_INIT & "','" & ITEM_MIN & "','" & ITEM_MAX & "','" & ITEM_CAT & "','" & ITEM_TRHD & "','" & ITEM_STATUS & "','" & ITEM_RPS & "','" & ITEM_HLDSTAT & "','" & TOPAY & "','" & ITEM_TOTAL & "','" & ITEM_ADD_DATE & "'); UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
+            ElseIf Query = 1 Then
+                cmd.CommandText = "UPDATE `products` SET `ITEM_NAME`='" & ITEM_NAME & "',`ITEM_BRAND`='" & ITEM_BRAND & "',`VARIANT`='" & ITEM_MODEL & "',`UNIT_PRICE`='" & ITEM_PC & "',`QUANTITY`='" & ITEM_INIT & "',`MIN_SELL`='" & ITEM_MIN & "',`MAX_SELL`='" & ITEM_MAX & "',`CATEGORY`='" & ITEM_CAT & "',`STOCK_STATUS`='" & ITEM_STATUS & "',`THRESHOLD`='" & ITEM_TRHD & "',`REPAIR_STATUS`='" & ITEM_RPS & "',`HOLDING_STATUS`='" & ITEM_HLDSTAT & "',`TO_PAY`='" & TOPAY & "',`TOTAL_PRICE`='" & ITEM_TOTAL & "' WHERE `ITEM_ID` = '" & FAI_TBX_ITEM_ID.Text & "'"
+            End If
             cmd.ExecuteNonQuery()
             MsgBox(Message, MsgBoxStyle.OkOnly, "Action Confirmation")
             strconn.Close()
@@ -183,8 +201,7 @@ Public Class Form_Add_Item
 
     End Sub
 
-    Private Sub FAI_BTN_RESET_Click(sender As Object, e As EventArgs) Handles FAI_BTN_RESET.Click
-
+    Public Sub AllClear()
         FAI_TBX_ITEM_NAME.ResetText()
         FAI_TBX_ITEM_INIT.ResetText()
         FAI_TBX_ITEM_TRHD.ResetText()
@@ -195,11 +212,20 @@ Public Class Form_Add_Item
 
         FAI_CBX_ITEM_BRAND.ResetText()
         FAI_CBX_ITEM_CAT.ResetText()
-        FAI_CBX_ITEM_HLDSTAT.ResetText()
+        FAI_CBX_ITEM_HLDSTAT.Text = ""
         FAI_CBX_ITEM_MODEL.ResetText()
 
         FAI_TBX_TOPAY.BackColor = Color.White
         FAI_TBX_TOPAY.ReadOnly = False
+    End Sub
+
+    Private Sub FAI_BTN_RESET_Click(sender As Object, e As EventArgs) Handles FAI_BTN_RESET.Click
+
+        If Query = 0 Then
+            AllClear()
+        ElseIf Query = 1 Then
+            Form1.Edit_Details()
+        End If
 
         Form1.Load_Table_Main()
         Form1.Set_Home_Value()

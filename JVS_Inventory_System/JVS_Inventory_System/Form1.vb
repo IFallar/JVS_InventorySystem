@@ -3,15 +3,45 @@ Imports MySql.Data.MySqlClient
 
 Public Class Form1
 
-    Dim tablemode As Integer = 1
+    'PUBLICS ================================================================================================================
 
-    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Public Sub Edit_Details()
 
+        opencon()
 
-        '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `ITEM_NAME`, `ITEM_BRAND`, `CATEGORY`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `THRESHOLD`, `HOLDING_STATUS` FROM `products` WHERE `ITEM_ID` = '" & Selected & "'"
+        cmd.Prepare()
 
-        Load_Table_Main()
-        Set_Home_Value()
+        cmdreader = cmd.ExecuteReader
+
+        Form_Add_Item.FAI_TBX_ITEM_ID.Text = Selected
+
+        While cmdreader.Read
+
+            Try
+
+                Form_Add_Item.FAI_TBX_ITEM_NAME.Text = cmdreader.GetValue(0)
+                Form_Add_Item.FAI_CBX_ITEM_BRAND.Text = cmdreader.GetValue(1)
+                Form_Add_Item.FAI_CBX_ITEM_CAT.Text = cmdreader.GetValue(2)
+                Form_Add_Item.FAI_CBX_ITEM_HLDSTAT.Text = cmdreader.GetValue(9)
+                Form_Add_Item.FAI_CBX_ITEM_MODEL.Text = cmdreader.GetValue(3)
+
+                Form_Add_Item.FAI_TBX_ITEM_INIT.Text = cmdreader.GetValue(5)
+                Form_Add_Item.FAI_TBX_ITEM_TRHD.Text = cmdreader.GetValue(8)
+                Form_Add_Item.FAI_TBX_TOPAY.Text = 0
+                Form_Add_Item.FAI_TBX_ITEM_PC.Text = cmdreader.GetValue(4)
+                Form_Add_Item.FAI_TBX_ITEM_MAX.Text = cmdreader.GetValue(7)
+                Form_Add_Item.FAI_TBX_ITEM_MIN.Text = cmdreader.GetValue(6)
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
 
     End Sub
 
@@ -71,6 +101,21 @@ Public Class Form1
 
     End Sub
 
+    'PRIVATES ================================================================================================================
+
+    Dim tablemode As Integer = 1
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+
+        '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        Load_Table_Main()
+        Set_Home_Value()
+
+    End Sub
+
+
     'FORMAT TABLE AND CELLS ================================================================================================================
 
     '++++++++++++++++ SET SPECIFIC CELL COLORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -118,10 +163,16 @@ Public Class Form1
         End If
     End Sub
 
+    Dim Selected As Integer = Nothing
+
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
 
         If (DataGridView1.Columns(0).Name = "cbx_column") Then
-            MsgBox("CHECKED", MsgBoxStyle.OkOnly, "Action Confirmation")
+
+            If DataGridView1.CurrentRow.Cells(0).Value = "Yes" Then
+                Selected = DataGridView1.CurrentRow.Cells(1).Value
+            End If
+
         End If
 
     End Sub
@@ -180,6 +231,7 @@ Public Class Form1
         End If
 
     End Sub
+
 
     'PANEL NAVIGATION ================================================================================================================
 
@@ -264,7 +316,9 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
+    '++++++++++++++++ ITEM SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Private Sub ITM_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
         Dim ADD_ITEM_MODAL As New Form
 
         Try
@@ -279,14 +333,18 @@ Public Class Form1
 
     Private Sub ITM_EDIT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_EDIT_ITEM_BTN.Click
 
-        Try
-            Dim Modal As New Form_Add_Item
-            Form_Add_Item.Label13.Text = "EDIT ITEM DETAILS"
-            Form_Add_Item.ShowDialog()
+        If Selected = Nothing Then
+            MsgBox("Select an Item to Edit.", MsgBoxStyle.OkOnly, "No Item Selected")
+        Else
+            Try
+                Dim Modal As New Form_Add_Item
+                Form_Add_Item.Label13.Text = "EDIT ITEM DETAILS"
+                Form_Add_Item.ShowDialog()
 
-        Catch ex As Exception
+            Catch ex As Exception
 
-        End Try
+            End Try
+        End If
 
     End Sub
 

@@ -44,6 +44,7 @@ Partial Class Form1
         Me.ITM_ADD_ITEM_BTN = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.cbx_column = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LOG_PANEL = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -70,7 +71,6 @@ Partial Class Form1
         Me.HOME_ADD_ITEM_BTN = New System.Windows.Forms.Button()
         Me.HOME_INVENTORY_LOG_BTN = New System.Windows.Forms.Button()
         Me.HOME_STOCK_OUT_BTN = New System.Windows.Forms.Button()
-        Me.cbx_column = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
         Me.ITEM_PANEL.SuspendLayout()
@@ -429,6 +429,14 @@ Partial Class Form1
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(850, 431)
         Me.DataGridView1.TabIndex = 0
+        '
+        'cbx_column
+        '
+        Me.cbx_column.FalseValue = "Not"
+        Me.cbx_column.HeaderText = "*"
+        Me.cbx_column.Name = "cbx_column"
+        Me.cbx_column.TrueValue = "Yes"
+        Me.cbx_column.Width = 850
         '
         'Label1
         '
@@ -807,14 +815,6 @@ Partial Class Form1
         Me.HOME_STOCK_OUT_BTN.Text = "ITEM OUT"
         Me.HOME_STOCK_OUT_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HOME_STOCK_OUT_BTN.UseVisualStyleBackColor = False
-        '
-        'cbx_column
-        '
-        Me.cbx_column.FalseValue = "Not"
-        Me.cbx_column.HeaderText = "*"
-        Me.cbx_column.Name = "cbx_column"
-        Me.cbx_column.TrueValue = "Yes"
-        Me.cbx_column.Width = 850
         '
         'Form1
         '

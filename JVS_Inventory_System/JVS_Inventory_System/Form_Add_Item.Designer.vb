@@ -25,6 +25,8 @@ Partial Class Form_Add_Item
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.FAI_L_ITEM_ID = New System.Windows.Forms.Label()
+        Me.FAI_TBX_ITEM_ID = New System.Windows.Forms.TextBox()
         Me.FAI_BTN_CANCEL = New System.Windows.Forms.Button()
         Me.FAI_BTN_RESET = New System.Windows.Forms.Button()
         Me.FAI_BTN_SAVE = New System.Windows.Forms.Button()
@@ -82,6 +84,8 @@ Partial Class Form_Add_Item
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.FAI_L_ITEM_ID)
+        Me.Panel2.Controls.Add(Me.FAI_TBX_ITEM_ID)
         Me.Panel2.Controls.Add(Me.FAI_BTN_CANCEL)
         Me.Panel2.Controls.Add(Me.FAI_BTN_RESET)
         Me.Panel2.Controls.Add(Me.FAI_BTN_SAVE)
@@ -113,6 +117,35 @@ Partial Class Form_Add_Item
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(584, 356)
         Me.Panel2.TabIndex = 1
+        '
+        'FAI_L_ITEM_ID
+        '
+        Me.FAI_L_ITEM_ID.AutoSize = True
+        Me.FAI_L_ITEM_ID.BackColor = System.Drawing.SystemColors.Control
+        Me.FAI_L_ITEM_ID.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FAI_L_ITEM_ID.Location = New System.Drawing.Point(422, 17)
+        Me.FAI_L_ITEM_ID.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.FAI_L_ITEM_ID.Name = "FAI_L_ITEM_ID"
+        Me.FAI_L_ITEM_ID.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.FAI_L_ITEM_ID.Size = New System.Drawing.Size(51, 16)
+        Me.FAI_L_ITEM_ID.TabIndex = 34
+        Me.FAI_L_ITEM_ID.Text = "ITEM ID"
+        Me.FAI_L_ITEM_ID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FAI_L_ITEM_ID.Visible = False
+        '
+        'FAI_TBX_ITEM_ID
+        '
+        Me.FAI_TBX_ITEM_ID.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.FAI_TBX_ITEM_ID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FAI_TBX_ITEM_ID.Location = New System.Drawing.Point(425, 35)
+        Me.FAI_TBX_ITEM_ID.Margin = New System.Windows.Forms.Padding(20, 3, 5, 5)
+        Me.FAI_TBX_ITEM_ID.MaximumSize = New System.Drawing.Size(135, 25)
+        Me.FAI_TBX_ITEM_ID.MinimumSize = New System.Drawing.Size(135, 25)
+        Me.FAI_TBX_ITEM_ID.Name = "FAI_TBX_ITEM_ID"
+        Me.FAI_TBX_ITEM_ID.ReadOnly = True
+        Me.FAI_TBX_ITEM_ID.Size = New System.Drawing.Size(135, 26)
+        Me.FAI_TBX_ITEM_ID.TabIndex = 33
+        Me.FAI_TBX_ITEM_ID.Visible = False
         '
         'FAI_BTN_CANCEL
         '
@@ -430,7 +463,7 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_ITEM_NAME.MaximumSize = New System.Drawing.Size(535, 25)
         Me.FAI_TBX_ITEM_NAME.MinimumSize = New System.Drawing.Size(385, 25)
         Me.FAI_TBX_ITEM_NAME.Name = "FAI_TBX_ITEM_NAME"
-        Me.FAI_TBX_ITEM_NAME.Size = New System.Drawing.Size(531, 23)
+        Me.FAI_TBX_ITEM_NAME.Size = New System.Drawing.Size(385, 23)
         Me.FAI_TBX_ITEM_NAME.TabIndex = 0
         '
         'Form_Add_Item
@@ -482,4 +515,6 @@ Partial Class Form_Add_Item
     Friend WithEvents FAI_TBX_TOPAY As TextBox
     Friend WithEvents FAI_BTN_CANCEL As Button
     Friend WithEvents FAI_BTN_RESET As Button
+    Friend WithEvents FAI_L_ITEM_ID As Label
+    Friend WithEvents FAI_TBX_ITEM_ID As TextBox
 End Class
