@@ -94,7 +94,6 @@ Public Class Form1
 
     Private Sub DataGridView1_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles DataGridView1.DataBindingComplete
 
-        DataGridView1.Columns(0).ReadOnly = False
         DataGridView1.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DataGridView1.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -113,10 +112,16 @@ Public Class Form1
 
     '++++++++++++++++ SET CELL SELECTION (RUDIMENTRARY) ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    Private Sub DataGridView1_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles DataGridView1.CellBeginEdit
+        If e.ColumnIndex > 0 Then
+            e.Cancel = True
+        End If
+    End Sub
+
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
 
         If (DataGridView1.Columns(0).Name = "cbx_column") Then
-            MsgBox("ITEM SUCCESSFULY ADDED", MsgBoxStyle.OkOnly, "Action Confirmation")
+            MsgBox("CHECKED", MsgBoxStyle.OkOnly, "Action Confirmation")
         End If
 
     End Sub
@@ -284,4 +289,5 @@ Public Class Form1
         End Try
 
     End Sub
+
 End Class

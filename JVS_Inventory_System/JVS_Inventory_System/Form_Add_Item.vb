@@ -4,6 +4,7 @@ Imports MySql.Data.MySqlClient
 Public Class Form_Add_Item
 
     Dim Confirm As String
+    Dim Query As String
 
     Private Sub Form_Add_Item_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
