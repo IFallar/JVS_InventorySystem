@@ -417,6 +417,7 @@ Partial Class Form1
         Me.DataGridView1.MaximumSize = New System.Drawing.Size(850, 431)
         Me.DataGridView1.MinimumSize = New System.Drawing.Size(850, 431)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
@@ -813,6 +814,7 @@ Partial Class Form1
         Me.cbx_column.FalseValue = "Not"
         Me.cbx_column.HeaderText = "*"
         Me.cbx_column.Name = "cbx_column"
+        Me.cbx_column.ReadOnly = True
         Me.cbx_column.TrueValue = "Yes"
         Me.cbx_column.Width = 850
         '

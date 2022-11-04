@@ -3,12 +3,31 @@ Imports MySql.Data.MySqlClient
 
 Public Class Form_Add_Item
 
-    
+    Dim Confirm As String
+
     Private Sub Form_Add_Item_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         'INITIATE MODAL ================================================================================================================
 
         '++++++++++++++++ ADD COMBO BOX VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        If Label13.Text = "ADD NEW ITEM" Then
+
+            Confirm = "ITEM SUCCESSFULY ADDED"
+
+            FAI_TBX_ITEM_INIT.BackColor = Color.White
+            FAI_TBX_ITEM_INIT.Text() = ""
+            FAI_TBX_ITEM_INIT.ReadOnly = False
+
+        ElseIf Label13.Text = "EDIT ITEM DETAILS" Then
+
+            Confirm = "ITEM SUCCESSFULY UPDATED"
+
+            FAI_TBX_ITEM_INIT.BackColor = Color.DimGray
+            FAI_TBX_ITEM_INIT.Text() = 0
+            FAI_TBX_ITEM_INIT.ReadOnly = True
+
+        End If
 
         FAI_CBX_ITEM_BRAND.Items.Clear()
         FAI_CBX_ITEM_CAT.Items.Clear()
@@ -80,6 +99,9 @@ Public Class Form_Add_Item
 
     Private Sub FAI_BTN_SAVE_Click(sender As Object, e As EventArgs) Handles FAI_BTN_SAVE.Click
 
+        Dim Message As String
+        Message = Confirm
+
         '++++++++++++++++ INPUT VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         Dim ITEM_NAME As String
@@ -145,7 +167,7 @@ Public Class Form_Add_Item
 
             cmd.CommandText = "INSERT INTO `products`(`ITEM_ID`, `ITEM_NAME`, `ITEM_BRAND`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `CATEGORY`, `THRESHOLD`, `STOCK_STATUS`, `REPAIR_STATUS`, `HOLDING_STATUS`, `TOTAL_PRICE`, `LAST_STOCK`) VALUES (DEFAULT,'" & ITEM_NAME & "','" & ITEM_BRAND & "','" & ITEM_MODEL & "','" & ITEM_PC & "','" & ITEM_INIT & "','" & ITEM_MIN & "','" & ITEM_MAX & "','" & ITEM_CAT & "','" & ITEM_TRHD & "','" & ITEM_STATUS & "','" & ITEM_RPS & "','" & ITEM_HLDSTAT & "','" & ITEM_TOTAL & "','" & ITEM_ADD_DATE & "'); UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
             cmd.ExecuteNonQuery()
-            MsgBox("ITEM SUCCESSFULY ADDED", MsgBoxStyle.OkOnly, "Action Confirmation")
+            MsgBox(Message, MsgBoxStyle.OkOnly, "Action Confirmation")
             strconn.Close()
 
             Form1.Load_Table_Main()

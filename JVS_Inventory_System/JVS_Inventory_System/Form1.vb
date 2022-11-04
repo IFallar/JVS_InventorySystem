@@ -94,6 +94,7 @@ Public Class Form1
 
     Private Sub DataGridView1_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles DataGridView1.DataBindingComplete
 
+        DataGridView1.Columns(0).ReadOnly = False
         DataGridView1.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DataGridView1.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -110,23 +111,21 @@ Public Class Form1
 
     End Sub
 
+    '++++++++++++++++ SET CELL SELECTION (RUDIMENTRARY) ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
 
         If (DataGridView1.Columns(0).Name = "cbx_column") Then
             MsgBox("ITEM SUCCESSFULY ADDED", MsgBoxStyle.OkOnly, "Action Confirmation")
         End If
 
-        If (DataGridView1.IsCurrentCellDirty) Then
-            DataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit)
-        End If
-
-
-
-
     End Sub
 
     Private Sub DataGridView1_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles DataGridView1.CurrentCellDirtyStateChanged
 
+        If (DataGridView1.IsCurrentCellDirty) Then
+            DataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit)
+        End If
 
     End Sub
 
@@ -245,16 +244,19 @@ Public Class Form1
 
     End Sub 'UNUSED SNIPPETS
 
+
     Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
         Dim ADD_ITEM_MODAL As New Form
 
         Try
             Dim Modal As New Form_Add_Item
+            Form_Add_Item.Label13.Text = "ADD NEW ITEM"
             Form_Add_Item.ShowDialog()
 
         Catch ex As Exception
 
         End Try
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
@@ -262,6 +264,7 @@ Public Class Form1
 
         Try
             Dim Modal As New Form_Add_Item
+            Form_Add_Item.Label13.Text = "ADD NEW ITEM"
             Form_Add_Item.ShowDialog()
 
         Catch ex As Exception
@@ -269,4 +272,16 @@ Public Class Form1
         End Try
     End Sub
 
+    Private Sub ITM_EDIT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_EDIT_ITEM_BTN.Click
+
+        Try
+            Dim Modal As New Form_Add_Item
+            Form_Add_Item.Label13.Text = "EDIT ITEM DETAILS"
+            Form_Add_Item.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 End Class
