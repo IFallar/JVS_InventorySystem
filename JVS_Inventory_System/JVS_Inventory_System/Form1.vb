@@ -110,9 +110,26 @@ Public Class Form1
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+    Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
+
+        If (DataGridView1.Columns(0).Name = "cbx_column") Then
+            MsgBox("ITEM SUCCESSFULY ADDED", MsgBoxStyle.OkOnly, "Action Confirmation")
+        End If
+
+        If (DataGridView1.IsCurrentCellDirty) Then
+            DataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit)
+        End If
+
+
+
 
     End Sub
+
+    Private Sub DataGridView1_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles DataGridView1.CurrentCellDirtyStateChanged
+
+
+    End Sub
+
 
     'BUTTON EVENTS ===================================================================================================================
 
