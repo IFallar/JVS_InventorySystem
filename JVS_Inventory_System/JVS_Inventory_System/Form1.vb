@@ -250,6 +250,8 @@ Public Class Form1
         SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.White
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.White
 
+        Set_Home_Value()
+
     End Sub
 
     Private Sub ITEM_BTN_Click(sender As Object, e As EventArgs) Handles SIDE_ITEM_BTN.Click
@@ -266,6 +268,7 @@ Public Class Form1
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.White
 
         Load_Table_Main()
+        Set_Home_Value()
 
     End Sub
 
@@ -281,6 +284,8 @@ Public Class Form1
         SIDE_HOME_BTN.ForeColor = System.Drawing.Color.White
         SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.White
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
+
+        Set_Home_Value()
 
     End Sub
 
@@ -344,6 +349,65 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
+        End If
+
+    End Sub
+
+    Private Sub ITM_DELETE_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_DELETE_ITEM_BTN.Click
+
+        Dim TO_DELETE As String
+
+        If Selected = Nothing Then
+            MsgBox("Select an Item to Edit.", MsgBoxStyle.OkOnly, "No Item Selected")
+        Else
+            Try
+
+                opencon()
+
+                cmd.Connection = con
+                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & Selected & "'"
+                cmd.Prepare()
+
+                cmdreader = cmd.ExecuteReader
+
+                While cmdreader.Read
+
+                    Try
+
+                        TO_DELETE = cmdreader(0)
+                        Dim result As DialogResult = MessageBox.Show("Remove " + TO_DELETE + " from Inventory?", "DELETE ENTRY", MessageBoxButtons.YesNo)
+                        If result = DialogResult.Yes Then
+
+                            strconnection()
+
+                            cmd.Connection = strconn
+                            strconn.Open()
+
+                            cmd.CommandText = "DELETE FROM `products` WHERE `ITEM_ID` = '" & Selected & "'"
+                            cmd.ExecuteNonQuery()
+
+                            strconn.Close()
+
+                            Load_Table_Main()
+                            Set_Home_Value()
+
+                        ElseIf result = DialogResult.No Then
+
+                        End If
+
+                    Catch ex As System.InvalidCastException
+
+                    End Try
+
+                End While
+
+                cmdreader.Close()
+                con.Close()
+
+            Catch ex As Exception
+
+            End Try
+
         End If
 
     End Sub

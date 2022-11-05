@@ -164,10 +164,10 @@ Public Class Form_Add_Item
 
             If ITEM_INIT >= ITEM_TRHD Then
                 x = "NORMAL"
-            ElseIf ITEM_INIT < ITEM_TRHD And ITEM_INIT > 0 Then
-                x = "LOW STOCK"
             ElseIf ITEM_INIT = 0 Then
                 x = "OUT OF STOCK"
+            Else
+                x = "LOW STOCK"
             End If
 
             ITEM_STATUS = x
