@@ -110,6 +110,7 @@ Public Class Form1
 
         '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
         Load_Table_Main()
         Set_Home_Value()
 
@@ -399,6 +400,8 @@ Public Class Form1
 
                     End Try
 
+                    con.Close()
+
                 End While
 
                 cmdreader.Close()
@@ -407,6 +410,8 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
+
+            con.Close()
 
         End If
 
