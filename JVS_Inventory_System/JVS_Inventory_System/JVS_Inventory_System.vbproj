@@ -123,6 +123,9 @@
     <EmbeddedResource Include="Form_Add_Item.resx">
       <DependentUpon>Form_Add_Item.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Stock_HS.resx">
+      <DependentUpon>Form_Stock_HS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Stock_IS.resx">
       <DependentUpon>Form_Stock_IS.vb</DependentUpon>
     </EmbeddedResource>

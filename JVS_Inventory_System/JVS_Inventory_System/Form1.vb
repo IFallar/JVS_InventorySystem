@@ -5,6 +5,39 @@ Public Class Form1
 
     'PUBLICS ================================================================================================================
 
+    Public Sub Get_Name()
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `ITEM_NAME` WHERE `ITEM_ID`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE`  = '" & Selected & "'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        Form_Stock_IS.FSIS_ID_HOLD.Text = Selected
+
+
+        While cmdreader.Read
+
+            Try
+
+                Form_Stock_IS.FSIS_ITEM_TBX.Text = cmdreader.GetValue(0)
+                Form_Stock_IS.FSIS_QTY_HOLD.Text = cmdreader.GetValue(1)
+                Form_Stock_IS.FSIS_TRH_HOLD.Text = cmdreader.GetValue(2)
+                Form_Stock_IS.FSIS_PRC_HOLD.Text = cmdreader.GetValue(3)
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+    End Sub
+
     Public Sub Edit_Details()
 
         opencon()
@@ -413,6 +446,40 @@ Public Class Form1
 
             con.Close()
 
+        End If
+
+    End Sub
+
+    Private Sub ITM_STOCKIN_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_STOCKIN_ITEM_BTN.Click
+
+        If Selected = Nothing Then
+            MsgBox("Select an Item!.", MsgBoxStyle.OkOnly, "No Item Selected")
+        Else
+            Try
+                Dim Modal As New Form_Stock_IS
+                Form_Stock_IS.FSIS_HEAD_LBL.Text = "RESTOCK"
+                Form_Stock_IS.ShowDialog()
+
+            Catch ex As Exception
+
+            End Try
+        End If
+
+    End Sub
+
+    Private Sub ITM_STOCKOUT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_STOCKOUT_ITEM_BTN.Click
+
+        If Selected = Nothing Then
+            MsgBox("Select an Item!.", MsgBoxStyle.OkOnly, "No Item Selected")
+        Else
+            Try
+                Dim Modal As New Form_Stock_IS
+                Form_Stock_IS.FSIS_HEAD_LBL.Text = "TAKE OUT ITEM"
+                Form_Stock_IS.ShowDialog()
+
+            Catch ex As Exception
+
+            End Try
         End If
 
     End Sub
