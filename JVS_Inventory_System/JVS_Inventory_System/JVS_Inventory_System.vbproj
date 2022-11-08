@@ -87,6 +87,18 @@
     <Compile Include="Form_Add_Item.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Stock_HS.Designer.vb">
+      <DependentUpon>Form_Stock_HS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Stock_HS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Stock_IS.Designer.vb">
+      <DependentUpon>Form_Stock_IS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Stock_IS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -110,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Add_Item.resx">
       <DependentUpon>Form_Add_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Stock_IS.resx">
+      <DependentUpon>Form_Stock_IS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
