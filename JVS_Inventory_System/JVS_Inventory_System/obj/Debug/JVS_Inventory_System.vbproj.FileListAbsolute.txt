@@ -14,3 +14,5 @@ C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_Sy
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.xml
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.pdb
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Add_Item.resources
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Stock_HS.resources
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Stock_IS.resources
