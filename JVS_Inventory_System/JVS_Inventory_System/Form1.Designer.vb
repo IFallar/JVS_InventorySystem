@@ -232,7 +232,7 @@ Partial Class Form1
         Me.ITM_CAT_ITEM_CBX.Name = "ITM_CAT_ITEM_CBX"
         Me.ITM_CAT_ITEM_CBX.Size = New System.Drawing.Size(140, 29)
         Me.ITM_CAT_ITEM_CBX.TabIndex = 13
-        Me.ITM_CAT_ITEM_CBX.Text = "FILTER BY:"
+        Me.ITM_CAT_ITEM_CBX.Text = "Filter By:"
         '
         'ITM_STOCKOUT_ITEM_BTN
         '
@@ -266,7 +266,7 @@ Partial Class Form1
         Me.ITM_FLT_ITEM_CBX.Name = "ITM_FLT_ITEM_CBX"
         Me.ITM_FLT_ITEM_CBX.Size = New System.Drawing.Size(130, 29)
         Me.ITM_FLT_ITEM_CBX.TabIndex = 15
-        Me.ITM_FLT_ITEM_CBX.Text = "VALUE"
+        Me.ITM_FLT_ITEM_CBX.Text = "Value:"
         '
         'ITM_STOCKIN_ITEM_BTN
         '
@@ -289,12 +289,12 @@ Partial Class Form1
         '
         'ITM_SEARCH_BTN
         '
-        Me.ITM_SEARCH_BTN.BackColor = System.Drawing.Color.Black
+        Me.ITM_SEARCH_BTN.BackColor = System.Drawing.Color.Green
         Me.ITM_SEARCH_BTN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ITM_SEARCH_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ITM_SEARCH_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_SEARCH_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.ITM_SEARCH_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.ITM_SEARCH_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.ITM_SEARCH_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
         Me.ITM_SEARCH_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_SEARCH_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_SEARCH_BTN.ForeColor = System.Drawing.Color.White
@@ -830,12 +830,12 @@ Partial Class Form1
         '
         'ITM_FLTR_BTN
         '
-        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.Black
+        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.Green
         Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
         Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White

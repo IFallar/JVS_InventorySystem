@@ -486,4 +486,81 @@ Public Class Form1
 
     End Sub
 
+    '++++++++++++++++ SETTING FILTER FUNCTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+    Private Sub ITM_CAT_ITEM_CBX_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ITM_CAT_ITEM_CBX.SelectedIndexChanged
+
+        ITM_FLT_ITEM_CBX.Items.Clear()
+
+        If ITM_CAT_ITEM_CBX.SelectedIndex = 0 Then
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT BRAND_NAME FROM (brands)"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim list_brands = cmdreader.GetString("BRAND_NAME")
+                ITM_FLT_ITEM_CBX.Items.Add(list_brands)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 1 Then
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT categories_name FROM categories"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim list_categories = cmdreader.GetString("categories_name")
+                ITM_FLT_ITEM_CBX.Items.Add(list_categories)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 2 Then
+
+            ITM_FLT_ITEM_CBX.Items.Add("OWNED")
+            ITM_FLT_ITEM_CBX.Items.Add("CONSIGNED")
+            ITM_FLT_ITEM_CBX.Items.Add("LOANED")
+
+        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 3 Then
+
+            ITM_FLT_ITEM_CBX.Items.Add("NORMAL")
+            ITM_FLT_ITEM_CBX.Items.Add("DAMAGED")
+            ITM_FLT_ITEM_CBX.Items.Add("DEFECTIVE")
+
+        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 4 Then
+
+            ITM_FLT_ITEM_CBX.Items.Add("NORMAL")
+            ITM_FLT_ITEM_CBX.Items.Add("LOW STOCK")
+            ITM_FLT_ITEM_CBX.Items.Add("OUT OF STOCK")
+
+        End If
+
+    End Sub
+
+    Private Sub ITM_FLTR_BTN_Click(sender As Object, e As EventArgs) Handles ITM_FLTR_BTN.Click
+
+        Dim Filter_Value As String = ITM_FLT_ITEM_CBX.Text
+
+        If ITM_CAT_ITEM_CBX.SelectedIndex = 0 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_BRAND = '" & Filter_Value & "'", DataGridView1)
+            strconn.Close()
+        End If
+
+    End Sub
+
 End Class
