@@ -488,8 +488,6 @@ Public Class Form1
 
     '++++++++++++++++ SETTING FILTER FUNCTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
-
     Private Sub ITM_CAT_ITEM_CBX_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ITM_FLTSET_ITEM_CBX.SelectedIndexChanged
 
         ITM_FLTVAL_ITEM_CBX.Items.Clear()
