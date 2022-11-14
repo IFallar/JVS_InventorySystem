@@ -506,8 +506,8 @@ Public Class Form1
             cmdreader = cmd.ExecuteReader
 
             While cmdreader.Read
-                Dim list_brands = cmdreader.GetString("BRAND_NAME")
-                ITM_FLT_ITEM_CBX.Items.Add(list_brands)
+                Dim filter_list = cmdreader.GetString("BRAND_NAME")
+                ITM_FLT_ITEM_CBX.Items.Add(filter_list)
             End While
 
             cmdreader.Close()
@@ -524,8 +524,8 @@ Public Class Form1
             cmdreader = cmd.ExecuteReader
 
             While cmdreader.Read
-                Dim list_categories = cmdreader.GetString("categories_name")
-                ITM_FLT_ITEM_CBX.Items.Add(list_categories)
+                Dim filter_list = cmdreader.GetString("categories_name")
+                ITM_FLT_ITEM_CBX.Items.Add(filter_list)
             End While
 
             cmdreader.Close()
@@ -548,6 +548,24 @@ Public Class Form1
             ITM_FLT_ITEM_CBX.Items.Add("NORMAL")
             ITM_FLT_ITEM_CBX.Items.Add("LOW STOCK")
             ITM_FLT_ITEM_CBX.Items.Add("OUT OF STOCK")
+
+        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 5 Then
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT supplier_name FROM suppliers"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim filter_list = cmdreader.GetString("supplier_name")
+                ITM_FLT_ITEM_CBX.Items.Add(filter_list)
+            End While
+
+            cmdreader.Close()
+            con.Close()
 
         End If
 
@@ -575,6 +593,10 @@ Public Class Form1
 
         ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 4 Then
             tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE STOCK_STATUS = '" & Filter_Value & "'", DataGridView1)
+            strconn.Close()
+
+        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 5 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE SUPPLIER = '" & Filter_Value & "'", DataGridView1)
             strconn.Close()
 
         End If
