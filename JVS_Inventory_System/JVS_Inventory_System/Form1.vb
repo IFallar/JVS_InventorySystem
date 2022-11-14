@@ -490,12 +490,12 @@ Public Class Form1
 
 
 
-    Private Sub ITM_CAT_ITEM_CBX_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ITM_CAT_ITEM_CBX.SelectedIndexChanged
+    Private Sub ITM_CAT_ITEM_CBX_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ITM_FLTSET_ITEM_CBX.SelectedIndexChanged
 
-        ITM_FLT_ITEM_CBX.Items.Clear()
-        ITM_FLT_ITEM_CBX.Text = "Value"
+        ITM_FLTVAL_ITEM_CBX.Items.Clear()
+        ITM_FLTVAL_ITEM_CBX.Text = "Value"
 
-        If ITM_CAT_ITEM_CBX.SelectedIndex = 0 Then
+        If ITM_FLTSET_ITEM_CBX.SelectedIndex = 0 Then
 
             opencon()
 
@@ -507,13 +507,13 @@ Public Class Form1
 
             While cmdreader.Read
                 Dim filter_list = cmdreader.GetString("BRAND_NAME")
-                ITM_FLT_ITEM_CBX.Items.Add(filter_list)
+                ITM_FLTVAL_ITEM_CBX.Items.Add(filter_list)
             End While
 
             cmdreader.Close()
             con.Close()
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 1 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 1 Then
 
             opencon()
 
@@ -525,31 +525,31 @@ Public Class Form1
 
             While cmdreader.Read
                 Dim filter_list = cmdreader.GetString("categories_name")
-                ITM_FLT_ITEM_CBX.Items.Add(filter_list)
+                ITM_FLTVAL_ITEM_CBX.Items.Add(filter_list)
             End While
 
             cmdreader.Close()
             con.Close()
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 2 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 2 Then
 
-            ITM_FLT_ITEM_CBX.Items.Add("OWNED")
-            ITM_FLT_ITEM_CBX.Items.Add("CONSIGNED")
-            ITM_FLT_ITEM_CBX.Items.Add("LOANED")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("OWNED")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("CONSIGNED")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("LOANED")
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 3 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 3 Then
 
-            ITM_FLT_ITEM_CBX.Items.Add("NORMAL")
-            ITM_FLT_ITEM_CBX.Items.Add("DAMAGED")
-            ITM_FLT_ITEM_CBX.Items.Add("DEFECTIVE")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("NORMAL")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("DAMAGED")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("DEFECTIVE")
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 4 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 4 Then
 
-            ITM_FLT_ITEM_CBX.Items.Add("NORMAL")
-            ITM_FLT_ITEM_CBX.Items.Add("LOW STOCK")
-            ITM_FLT_ITEM_CBX.Items.Add("OUT OF STOCK")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("NORMAL")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("LOW STOCK")
+            ITM_FLTVAL_ITEM_CBX.Items.Add("OUT OF STOCK")
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 5 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 5 Then
 
             opencon()
 
@@ -561,7 +561,7 @@ Public Class Form1
 
             While cmdreader.Read
                 Dim filter_list = cmdreader.GetString("supplier_name")
-                ITM_FLT_ITEM_CBX.Items.Add(filter_list)
+                ITM_FLTVAL_ITEM_CBX.Items.Add(filter_list)
             End While
 
             cmdreader.Close()
@@ -573,29 +573,36 @@ Public Class Form1
 
     Private Sub ITM_FLTR_BTN_Click(sender As Object, e As EventArgs) Handles ITM_FLTR_BTN.Click
 
-        Dim Filter_Value As String = ITM_FLT_ITEM_CBX.Text
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = 'NORMAL'", DataGridView1)
+        strconn.Close()
 
-        If ITM_CAT_ITEM_CBX.SelectedIndex = 0 Then
+    End Sub
+
+    Private Sub ITM_FLT_ITEM_CBX_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ITM_FLTVAL_ITEM_CBX.SelectedIndexChanged
+
+        Dim Filter_Value As String = ITM_FLTVAL_ITEM_CBX.Text
+
+        If ITM_FLTSET_ITEM_CBX.SelectedIndex = 0 Then
             tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_BRAND = '" & Filter_Value & "'", DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 1 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 1 Then
             tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE CATEGORY = '" & Filter_Value & "'", DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 2 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 2 Then
             tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE HOLDING_STATUS = '" & Filter_Value & "'", DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 3 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 3 Then
             tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = '" & Filter_Value & "'", DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 4 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 4 Then
             tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE STOCK_STATUS = '" & Filter_Value & "'", DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_CAT_ITEM_CBX.SelectedIndex = 5 Then
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 5 Then
             tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE SUPPLIER = '" & Filter_Value & "'", DataGridView1)
             strconn.Close()
 
