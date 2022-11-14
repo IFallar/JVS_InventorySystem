@@ -95,6 +95,22 @@ Public Class Form_Add_Item
         cmdreader.Close()
         con.Close()
 
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `supplier_name` FROM `suppliers` WHERE 1"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            Dim list_supp = cmdreader.GetString("supplier_name")
+            FAI_CBX_ITEM_SP.Items.Add(list_supp)
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
     End Sub
 
     Private Sub FAI_BTN_CANCEL_Click(sender As Object, e As EventArgs) Handles FAI_BTN_CANCEL.Click
@@ -124,6 +140,7 @@ Public Class Form_Add_Item
         Dim ITEM_HLDSTAT As String
         Dim ITEM_MODEL As String
         Dim ITEM_RPS As String
+        Dim ITEM_SP As String
 
         Dim ITEM_INIT As Integer
         Dim ITEM_TRHD As Integer
@@ -149,6 +166,7 @@ Public Class Form_Add_Item
             ITEM_CAT = FAI_CBX_ITEM_CAT.Text
             ITEM_HLDSTAT = FAI_CBX_ITEM_HLDSTAT.Text
             ITEM_MODEL = FAI_CBX_ITEM_MODEL.Text
+            ITEM_SP = FAI_CBX_ITEM_SP.Text
 
             ITEM_INIT = FAI_TBX_ITEM_INIT.Text
             ITEM_TRHD = FAI_TBX_ITEM_TRHD.Text
@@ -181,9 +199,9 @@ Public Class Form_Add_Item
             strconn.Open()
 
             If Query = 0 Then
-                cmd.CommandText = "INSERT INTO `products`(`ITEM_ID`, `ITEM_NAME`, `ITEM_BRAND`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `CATEGORY`, `THRESHOLD`, `TO_PAY`, `STOCK_STATUS`, `REPAIR_STATUS`, `HOLDING_STATUS`, `TOTAL_PRICE`, `LAST_STOCK`) VALUES (DEFAULT,'" & ITEM_NAME & "','" & ITEM_BRAND & "','" & ITEM_MODEL & "','" & ITEM_PC & "','" & ITEM_INIT & "','" & ITEM_MIN & "','" & ITEM_MAX & "','" & ITEM_CAT & "','" & ITEM_TRHD & "', '" & TOPAY & "', '" & ITEM_STATUS & "', '" & ITEM_RPS & "', '" & ITEM_HLDSTAT & "','" & ITEM_TOTAL & "','" & ITEM_ADD_DATE & "'); UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
+                cmd.CommandText = "INSERT INTO `products` (`ITEM_ID`, `ITEM_NAME`, `ITEM_BRAND`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `CATEGORY`, `THRESHOLD`, `STOCK_STATUS`, `REPAIR_STATUS`, `HOLDING_STATUS`, `TO_PAY`, `SUPPLIER`, `TOTAL_PRICE`, `LAST_STOCK`) VALUES (DEFAULT,'" & ITEM_NAME & "','" & ITEM_BRAND & "','" & ITEM_MODEL & "','" & ITEM_PC & "','" & ITEM_INIT & "','" & ITEM_MIN & "','" & ITEM_MAX & "','" & ITEM_CAT & "','" & ITEM_TRHD & "','" & ITEM_STATUS & "','" & ITEM_RPS & "','" & ITEM_HLDSTAT & "','" & TOPAY & "','" & ITEM_SP & "','" & ITEM_TOTAL & "','" & ITEM_ADD_DATE & "')"
             ElseIf Query = 1 Then
-                cmd.CommandText = "UPDATE `products` SET `ITEM_NAME`='" & ITEM_NAME & "',`ITEM_BRAND`='" & ITEM_BRAND & "',`VARIANT`='" & ITEM_MODEL & "',`UNIT_PRICE`='" & ITEM_PC & "',`QUANTITY`='" & ITEM_INIT & "',`MIN_SELL`='" & ITEM_MIN & "',`MAX_SELL`='" & ITEM_MAX & "',`CATEGORY`='" & ITEM_CAT & "',`STOCK_STATUS`='" & ITEM_STATUS & "',`THRESHOLD`='" & ITEM_TRHD & "',`REPAIR_STATUS`='" & ITEM_RPS & "',`HOLDING_STATUS`='" & ITEM_HLDSTAT & "',`TO_PAY`='" & TOPAY & "',`TOTAL_PRICE`='" & ITEM_TOTAL & "' WHERE `ITEM_ID` = '" & FAI_TBX_ITEM_ID.Text & "'"
+                cmd.CommandText = "UPDATE `products` SET `ITEM_NAME`='" & ITEM_NAME & "',`ITEM_BRAND`='" & ITEM_BRAND & "',`VARIANT`='" & ITEM_MODEL & "',`UNIT_PRICE`='" & ITEM_PC & "',`QUANTITY`='" & ITEM_INIT & "',`MIN_SELL`='" & ITEM_MIN & "',`MAX_SELL`='" & ITEM_MAX & "',`CATEGORY`='" & ITEM_CAT & "',`STOCK_STATUS`='" & ITEM_STATUS & "',`THRESHOLD`='" & ITEM_TRHD & "',`REPAIR_STATUS`='" & ITEM_RPS & "',`HOLDING_STATUS`='" & ITEM_HLDSTAT & "',`SUPPLIER`='" & ITEM_SP & "', `TO_PAY`='" & TOPAY & "',`TOTAL_PRICE`='" & ITEM_TOTAL & "' WHERE `ITEM_ID` = '" & FAI_TBX_ITEM_ID.Text & "'"
             End If
             cmd.ExecuteNonQuery()
             MsgBox(Message, MsgBoxStyle.OkOnly, "Action Confirmation")

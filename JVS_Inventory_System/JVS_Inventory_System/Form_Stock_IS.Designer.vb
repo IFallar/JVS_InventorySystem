@@ -67,6 +67,7 @@ Partial Class Form_Stock_IS
         Me.FSIS_PRC_HOLD.TabIndex = 34
         Me.FSIS_PRC_HOLD.Text = "ITEM NAME"
         Me.FSIS_PRC_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FSIS_PRC_HOLD.Visible = False
         '
         'FSIS_TRH_HOLD
         '
@@ -80,6 +81,7 @@ Partial Class Form_Stock_IS
         Me.FSIS_TRH_HOLD.TabIndex = 33
         Me.FSIS_TRH_HOLD.Text = "ITEM NAME"
         Me.FSIS_TRH_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FSIS_TRH_HOLD.Visible = False
         '
         'FSIS_QTY_HOLD
         '
@@ -93,6 +95,7 @@ Partial Class Form_Stock_IS
         Me.FSIS_QTY_HOLD.TabIndex = 32
         Me.FSIS_QTY_HOLD.Text = "ITEM NAME"
         Me.FSIS_QTY_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FSIS_QTY_HOLD.Visible = False
         '
         'FSIS_ID_HOLD
         '
@@ -106,6 +109,7 @@ Partial Class Form_Stock_IS
         Me.FSIS_ID_HOLD.TabIndex = 17
         Me.FSIS_ID_HOLD.Text = "ITEM NAME"
         Me.FSIS_ID_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FSIS_ID_HOLD.Visible = False
         '
         'FSIS_HEAD_LBL
         '
@@ -124,12 +128,13 @@ Partial Class Form_Stock_IS
         'FSIS_ITEM_TBX
         '
         Me.FSIS_ITEM_TBX.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.FSIS_ITEM_TBX.Location = New System.Drawing.Point(12, 70)
+        Me.FSIS_ITEM_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FSIS_ITEM_TBX.Location = New System.Drawing.Point(12, 74)
         Me.FSIS_ITEM_TBX.MaximumSize = New System.Drawing.Size(360, 25)
         Me.FSIS_ITEM_TBX.MinimumSize = New System.Drawing.Size(360, 25)
         Me.FSIS_ITEM_TBX.Name = "FSIS_ITEM_TBX"
         Me.FSIS_ITEM_TBX.ReadOnly = True
-        Me.FSIS_ITEM_TBX.Size = New System.Drawing.Size(360, 20)
+        Me.FSIS_ITEM_TBX.Size = New System.Drawing.Size(360, 25)
         Me.FSIS_ITEM_TBX.TabIndex = 0
         '
         'FSIS_NUM_TBX
@@ -198,7 +203,7 @@ Partial Class Form_Stock_IS
         '
         Me.FAI_L_ITEM_NAME.AutoSize = True
         Me.FAI_L_ITEM_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_L_ITEM_NAME.Location = New System.Drawing.Point(9, 51)
+        Me.FAI_L_ITEM_NAME.Location = New System.Drawing.Point(9, 55)
         Me.FAI_L_ITEM_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FAI_L_ITEM_NAME.Name = "FAI_L_ITEM_NAME"
         Me.FAI_L_ITEM_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
@@ -221,6 +226,7 @@ Partial Class Form_Stock_IS
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.FSIS_ITEM_TBX)
         Me.Name = "Form_Stock_IS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_Stock_IS"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

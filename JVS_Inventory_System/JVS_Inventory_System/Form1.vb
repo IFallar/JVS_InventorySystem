@@ -10,7 +10,7 @@ Public Class Form1
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `ITEM_NAME` WHERE `ITEM_ID`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE`  = '" & Selected & "'"
+        cmd.CommandText = "SELECT `ITEM_NAME`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE` FROM `products` WHERE `ITEM_ID` = '" & Selected & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
@@ -43,7 +43,7 @@ Public Class Form1
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `ITEM_NAME`, `ITEM_BRAND`, `CATEGORY`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `THRESHOLD`, `HOLDING_STATUS` FROM `products` WHERE `ITEM_ID` = '" & Selected & "'"
+        cmd.CommandText = "SELECT `ITEM_NAME`, `ITEM_BRAND`, `CATEGORY`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `THRESHOLD`, `HOLDING_STATUS`, `SUPPLIER` FROM `products` WHERE `ITEM_ID` = '" & Selected & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
@@ -59,6 +59,7 @@ Public Class Form1
                 Form_Add_Item.FAI_CBX_ITEM_CAT.Text = cmdreader.GetValue(2)
                 Form_Add_Item.FAI_CBX_ITEM_HLDSTAT.Text = cmdreader.GetValue(9)
                 Form_Add_Item.FAI_CBX_ITEM_MODEL.Text = cmdreader.GetValue(3)
+                Form_Add_Item.FAI_CBX_ITEM_SP.Text = cmdreader.GetValue(10)
 
                 Form_Add_Item.FAI_TBX_ITEM_INIT.Text = cmdreader.GetValue(5)
                 Form_Add_Item.FAI_TBX_ITEM_TRHD.Text = cmdreader.GetValue(8)
@@ -66,6 +67,7 @@ Public Class Form1
                 Form_Add_Item.FAI_TBX_ITEM_PC.Text = cmdreader.GetValue(4)
                 Form_Add_Item.FAI_TBX_ITEM_MAX.Text = cmdreader.GetValue(7)
                 Form_Add_Item.FAI_TBX_ITEM_MIN.Text = cmdreader.GetValue(6)
+
 
             Catch ex As System.InvalidCastException
 
@@ -80,7 +82,7 @@ Public Class Form1
 
     Public Sub Load_Table_Main()
 
-        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as Last FROM `products` WHERE 1", DataGridView1)
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = 'NORMAL'", DataGridView1)
         strconn.Close()
 
     End Sub
@@ -453,7 +455,7 @@ Public Class Form1
     Private Sub ITM_STOCKIN_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_STOCKIN_ITEM_BTN.Click
 
         If Selected = Nothing Then
-            MsgBox("Select an Item!.", MsgBoxStyle.OkOnly, "No Item Selected")
+            MsgBox("Please Select an Item.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
                 Dim Modal As New Form_Stock_IS
@@ -470,7 +472,7 @@ Public Class Form1
     Private Sub ITM_STOCKOUT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_STOCKOUT_ITEM_BTN.Click
 
         If Selected = Nothing Then
-            MsgBox("Select an Item!.", MsgBoxStyle.OkOnly, "No Item Selected")
+            MsgBox("Please Select an Item.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
                 Dim Modal As New Form_Stock_IS

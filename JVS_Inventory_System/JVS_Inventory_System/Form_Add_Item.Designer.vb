@@ -25,6 +25,7 @@ Partial Class Form_Add_Item
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.FAI_L_ITEM_ID = New System.Windows.Forms.Label()
         Me.FAI_TBX_ITEM_ID = New System.Windows.Forms.TextBox()
         Me.FAI_BTN_CANCEL = New System.Windows.Forms.Button()
@@ -53,6 +54,7 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_ITEM_TRHD = New System.Windows.Forms.TextBox()
         Me.FAI_TBX_ITEM_INIT = New System.Windows.Forms.TextBox()
         Me.FAI_TBX_ITEM_NAME = New System.Windows.Forms.TextBox()
+        Me.FAI_CBX_ITEM_SP = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -84,6 +86,8 @@ Partial Class Form_Add_Item
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.FAI_CBX_ITEM_SP)
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.FAI_L_ITEM_ID)
         Me.Panel2.Controls.Add(Me.FAI_TBX_ITEM_ID)
         Me.Panel2.Controls.Add(Me.FAI_BTN_CANCEL)
@@ -118,6 +122,19 @@ Partial Class Form_Add_Item
         Me.Panel2.Size = New System.Drawing.Size(584, 356)
         Me.Panel2.TabIndex = 1
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(26, 232)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(60, 16)
+        Me.Label1.TabIndex = 36
+        Me.Label1.Text = "SUPPLIER"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'FAI_L_ITEM_ID
         '
         Me.FAI_L_ITEM_ID.AutoSize = True
@@ -150,22 +167,22 @@ Partial Class Form_Add_Item
         'FAI_BTN_CANCEL
         '
         Me.FAI_BTN_CANCEL.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_BTN_CANCEL.Location = New System.Drawing.Point(246, 299)
+        Me.FAI_BTN_CANCEL.Location = New System.Drawing.Point(249, 299)
         Me.FAI_BTN_CANCEL.Margin = New System.Windows.Forms.Padding(5, 10, 5, 5)
         Me.FAI_BTN_CANCEL.Name = "FAI_BTN_CANCEL"
-        Me.FAI_BTN_CANCEL.Size = New System.Drawing.Size(98, 32)
-        Me.FAI_BTN_CANCEL.TabIndex = 32
+        Me.FAI_BTN_CANCEL.Size = New System.Drawing.Size(100, 32)
+        Me.FAI_BTN_CANCEL.TabIndex = 14
         Me.FAI_BTN_CANCEL.Text = "CANCEL"
         Me.FAI_BTN_CANCEL.UseVisualStyleBackColor = True
         '
         'FAI_BTN_RESET
         '
         Me.FAI_BTN_RESET.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_BTN_RESET.Location = New System.Drawing.Point(354, 299)
+        Me.FAI_BTN_RESET.Location = New System.Drawing.Point(355, 299)
         Me.FAI_BTN_RESET.Margin = New System.Windows.Forms.Padding(5, 10, 5, 5)
         Me.FAI_BTN_RESET.Name = "FAI_BTN_RESET"
-        Me.FAI_BTN_RESET.Size = New System.Drawing.Size(98, 32)
-        Me.FAI_BTN_RESET.TabIndex = 31
+        Me.FAI_BTN_RESET.Size = New System.Drawing.Size(100, 32)
+        Me.FAI_BTN_RESET.TabIndex = 13
         Me.FAI_BTN_RESET.Text = "RESET"
         Me.FAI_BTN_RESET.UseVisualStyleBackColor = True
         '
@@ -174,11 +191,11 @@ Partial Class Form_Add_Item
         Me.FAI_BTN_SAVE.BackColor = System.Drawing.Color.DarkGreen
         Me.FAI_BTN_SAVE.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FAI_BTN_SAVE.ForeColor = System.Drawing.SystemColors.Control
-        Me.FAI_BTN_SAVE.Location = New System.Drawing.Point(462, 299)
+        Me.FAI_BTN_SAVE.Location = New System.Drawing.Point(460, 299)
         Me.FAI_BTN_SAVE.Margin = New System.Windows.Forms.Padding(5, 10, 5, 5)
         Me.FAI_BTN_SAVE.Name = "FAI_BTN_SAVE"
-        Me.FAI_BTN_SAVE.Size = New System.Drawing.Size(98, 32)
-        Me.FAI_BTN_SAVE.TabIndex = 30
+        Me.FAI_BTN_SAVE.Size = New System.Drawing.Size(100, 32)
+        Me.FAI_BTN_SAVE.TabIndex = 12
         Me.FAI_BTN_SAVE.Text = "SAVE"
         Me.FAI_BTN_SAVE.UseVisualStyleBackColor = False
         '
@@ -194,20 +211,20 @@ Partial Class Form_Add_Item
         '
         Me.FAI_L_ITEM_MIN.AutoSize = True
         Me.FAI_L_ITEM_MIN.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_L_ITEM_MIN.Location = New System.Drawing.Point(286, 223)
+        Me.FAI_L_ITEM_MIN.Location = New System.Drawing.Point(354, 232)
         Me.FAI_L_ITEM_MIN.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FAI_L_ITEM_MIN.Name = "FAI_L_ITEM_MIN"
         Me.FAI_L_ITEM_MIN.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FAI_L_ITEM_MIN.Size = New System.Drawing.Size(98, 16)
+        Me.FAI_L_ITEM_MIN.Size = New System.Drawing.Size(111, 16)
         Me.FAI_L_ITEM_MIN.TabIndex = 28
-        Me.FAI_L_ITEM_MIN.Text = "MIN. SELL PRICE"
+        Me.FAI_L_ITEM_MIN.Text = "MIN. SELL PRICE  -"
         Me.FAI_L_ITEM_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'FAI_L_ITEM_MAX
         '
         Me.FAI_L_ITEM_MAX.AutoSize = True
         Me.FAI_L_ITEM_MAX.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_L_ITEM_MAX.Location = New System.Drawing.Point(156, 223)
+        Me.FAI_L_ITEM_MAX.Location = New System.Drawing.Point(460, 232)
         Me.FAI_L_ITEM_MAX.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FAI_L_ITEM_MAX.Name = "FAI_L_ITEM_MAX"
         Me.FAI_L_ITEM_MAX.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
@@ -220,7 +237,7 @@ Partial Class Form_Add_Item
         '
         Me.FAI_L_ITEM_PC.AutoSize = True
         Me.FAI_L_ITEM_PC.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_L_ITEM_PC.Location = New System.Drawing.Point(26, 223)
+        Me.FAI_L_ITEM_PC.Location = New System.Drawing.Point(197, 232)
         Me.FAI_L_ITEM_PC.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FAI_L_ITEM_PC.Name = "FAI_L_ITEM_PC"
         Me.FAI_L_ITEM_PC.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
@@ -232,24 +249,24 @@ Partial Class Form_Add_Item
         'FAI_TBX_ITEM_MIN
         '
         Me.FAI_TBX_ITEM_MIN.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_TBX_ITEM_MIN.Location = New System.Drawing.Point(289, 242)
+        Me.FAI_TBX_ITEM_MIN.Location = New System.Drawing.Point(355, 251)
         Me.FAI_TBX_ITEM_MIN.Margin = New System.Windows.Forms.Padding(0, 3, 5, 5)
-        Me.FAI_TBX_ITEM_MIN.MaximumSize = New System.Drawing.Size(125, 25)
-        Me.FAI_TBX_ITEM_MIN.MinimumSize = New System.Drawing.Size(125, 25)
+        Me.FAI_TBX_ITEM_MIN.MaximumSize = New System.Drawing.Size(100, 25)
+        Me.FAI_TBX_ITEM_MIN.MinimumSize = New System.Drawing.Size(100, 25)
         Me.FAI_TBX_ITEM_MIN.Name = "FAI_TBX_ITEM_MIN"
-        Me.FAI_TBX_ITEM_MIN.Size = New System.Drawing.Size(125, 23)
-        Me.FAI_TBX_ITEM_MIN.TabIndex = 25
+        Me.FAI_TBX_ITEM_MIN.Size = New System.Drawing.Size(100, 23)
+        Me.FAI_TBX_ITEM_MIN.TabIndex = 10
         '
         'FAI_TBX_ITEM_MAX
         '
         Me.FAI_TBX_ITEM_MAX.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_TBX_ITEM_MAX.Location = New System.Drawing.Point(159, 242)
+        Me.FAI_TBX_ITEM_MAX.Location = New System.Drawing.Point(460, 251)
         Me.FAI_TBX_ITEM_MAX.Margin = New System.Windows.Forms.Padding(0, 3, 5, 5)
-        Me.FAI_TBX_ITEM_MAX.MaximumSize = New System.Drawing.Size(125, 25)
-        Me.FAI_TBX_ITEM_MAX.MinimumSize = New System.Drawing.Size(125, 25)
+        Me.FAI_TBX_ITEM_MAX.MaximumSize = New System.Drawing.Size(100, 25)
+        Me.FAI_TBX_ITEM_MAX.MinimumSize = New System.Drawing.Size(100, 25)
         Me.FAI_TBX_ITEM_MAX.Name = "FAI_TBX_ITEM_MAX"
-        Me.FAI_TBX_ITEM_MAX.Size = New System.Drawing.Size(125, 23)
-        Me.FAI_TBX_ITEM_MAX.TabIndex = 24
+        Me.FAI_TBX_ITEM_MAX.Size = New System.Drawing.Size(100, 23)
+        Me.FAI_TBX_ITEM_MAX.TabIndex = 10
         '
         'FAI_L_ITEM_INITSTOCK
         '
@@ -364,7 +381,7 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_TOPAY.MinimumSize = New System.Drawing.Size(135, 25)
         Me.FAI_TBX_TOPAY.Name = "FAI_TBX_TOPAY"
         Me.FAI_TBX_TOPAY.Size = New System.Drawing.Size(135, 26)
-        Me.FAI_TBX_TOPAY.TabIndex = 14
+        Me.FAI_TBX_TOPAY.TabIndex = 7
         '
         'FAI_CBX_ITEM_CAT
         '
@@ -378,7 +395,7 @@ Partial Class Form_Add_Item
         Me.FAI_CBX_ITEM_CAT.MinimumSize = New System.Drawing.Size(135, 0)
         Me.FAI_CBX_ITEM_CAT.Name = "FAI_CBX_ITEM_CAT"
         Me.FAI_CBX_ITEM_CAT.Size = New System.Drawing.Size(135, 25)
-        Me.FAI_CBX_ITEM_CAT.TabIndex = 12
+        Me.FAI_CBX_ITEM_CAT.TabIndex = 3
         '
         'FAI_CBX_ITEM_HLDSTAT
         '
@@ -391,7 +408,7 @@ Partial Class Form_Add_Item
         Me.FAI_CBX_ITEM_HLDSTAT.MinimumSize = New System.Drawing.Size(190, 0)
         Me.FAI_CBX_ITEM_HLDSTAT.Name = "FAI_CBX_ITEM_HLDSTAT"
         Me.FAI_CBX_ITEM_HLDSTAT.Size = New System.Drawing.Size(190, 25)
-        Me.FAI_CBX_ITEM_HLDSTAT.TabIndex = 10
+        Me.FAI_CBX_ITEM_HLDSTAT.TabIndex = 6
         '
         'FAI_CBX_ITEM_MODEL
         '
@@ -405,7 +422,7 @@ Partial Class Form_Add_Item
         Me.FAI_CBX_ITEM_MODEL.MinimumSize = New System.Drawing.Size(190, 0)
         Me.FAI_CBX_ITEM_MODEL.Name = "FAI_CBX_ITEM_MODEL"
         Me.FAI_CBX_ITEM_MODEL.Size = New System.Drawing.Size(190, 25)
-        Me.FAI_CBX_ITEM_MODEL.TabIndex = 9
+        Me.FAI_CBX_ITEM_MODEL.TabIndex = 2
         '
         'FAI_CBX_ITEM_BRAND
         '
@@ -419,40 +436,40 @@ Partial Class Form_Add_Item
         Me.FAI_CBX_ITEM_BRAND.MinimumSize = New System.Drawing.Size(190, 0)
         Me.FAI_CBX_ITEM_BRAND.Name = "FAI_CBX_ITEM_BRAND"
         Me.FAI_CBX_ITEM_BRAND.Size = New System.Drawing.Size(190, 25)
-        Me.FAI_CBX_ITEM_BRAND.TabIndex = 8
+        Me.FAI_CBX_ITEM_BRAND.TabIndex = 1
         '
         'FAI_TBX_ITEM_PC
         '
         Me.FAI_TBX_ITEM_PC.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_TBX_ITEM_PC.Location = New System.Drawing.Point(29, 242)
+        Me.FAI_TBX_ITEM_PC.Location = New System.Drawing.Point(200, 251)
         Me.FAI_TBX_ITEM_PC.Margin = New System.Windows.Forms.Padding(20, 3, 5, 5)
-        Me.FAI_TBX_ITEM_PC.MaximumSize = New System.Drawing.Size(125, 25)
-        Me.FAI_TBX_ITEM_PC.MinimumSize = New System.Drawing.Size(125, 25)
+        Me.FAI_TBX_ITEM_PC.MaximumSize = New System.Drawing.Size(115, 25)
+        Me.FAI_TBX_ITEM_PC.MinimumSize = New System.Drawing.Size(115, 25)
         Me.FAI_TBX_ITEM_PC.Name = "FAI_TBX_ITEM_PC"
-        Me.FAI_TBX_ITEM_PC.Size = New System.Drawing.Size(125, 23)
-        Me.FAI_TBX_ITEM_PC.TabIndex = 5
+        Me.FAI_TBX_ITEM_PC.Size = New System.Drawing.Size(115, 25)
+        Me.FAI_TBX_ITEM_PC.TabIndex = 9
         '
         'FAI_TBX_ITEM_TRHD
         '
-        Me.FAI_TBX_ITEM_TRHD.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FAI_TBX_ITEM_TRHD.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.FAI_TBX_ITEM_TRHD.Location = New System.Drawing.Point(127, 157)
         Me.FAI_TBX_ITEM_TRHD.Margin = New System.Windows.Forms.Padding(20, 3, 5, 5)
         Me.FAI_TBX_ITEM_TRHD.MaximumSize = New System.Drawing.Size(92, 25)
         Me.FAI_TBX_ITEM_TRHD.MinimumSize = New System.Drawing.Size(92, 25)
         Me.FAI_TBX_ITEM_TRHD.Name = "FAI_TBX_ITEM_TRHD"
-        Me.FAI_TBX_ITEM_TRHD.Size = New System.Drawing.Size(92, 23)
-        Me.FAI_TBX_ITEM_TRHD.TabIndex = 4
+        Me.FAI_TBX_ITEM_TRHD.Size = New System.Drawing.Size(92, 25)
+        Me.FAI_TBX_ITEM_TRHD.TabIndex = 5
         '
         'FAI_TBX_ITEM_INIT
         '
-        Me.FAI_TBX_ITEM_INIT.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FAI_TBX_ITEM_INIT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.FAI_TBX_ITEM_INIT.Location = New System.Drawing.Point(29, 157)
         Me.FAI_TBX_ITEM_INIT.Margin = New System.Windows.Forms.Padding(20, 3, 5, 5)
         Me.FAI_TBX_ITEM_INIT.MaximumSize = New System.Drawing.Size(92, 25)
         Me.FAI_TBX_ITEM_INIT.MinimumSize = New System.Drawing.Size(92, 25)
         Me.FAI_TBX_ITEM_INIT.Name = "FAI_TBX_ITEM_INIT"
-        Me.FAI_TBX_ITEM_INIT.Size = New System.Drawing.Size(92, 23)
-        Me.FAI_TBX_ITEM_INIT.TabIndex = 3
+        Me.FAI_TBX_ITEM_INIT.Size = New System.Drawing.Size(92, 25)
+        Me.FAI_TBX_ITEM_INIT.TabIndex = 4
         '
         'FAI_TBX_ITEM_NAME
         '
@@ -465,6 +482,20 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_ITEM_NAME.Name = "FAI_TBX_ITEM_NAME"
         Me.FAI_TBX_ITEM_NAME.Size = New System.Drawing.Size(385, 23)
         Me.FAI_TBX_ITEM_NAME.TabIndex = 0
+        '
+        'FAI_CBX_ITEM_SP
+        '
+        Me.FAI_CBX_ITEM_SP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.FAI_CBX_ITEM_SP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.FAI_CBX_ITEM_SP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FAI_CBX_ITEM_SP.FormattingEnabled = True
+        Me.FAI_CBX_ITEM_SP.Location = New System.Drawing.Point(29, 251)
+        Me.FAI_CBX_ITEM_SP.Margin = New System.Windows.Forms.Padding(20, 3, 5, 5)
+        Me.FAI_CBX_ITEM_SP.MaximumSize = New System.Drawing.Size(190, 0)
+        Me.FAI_CBX_ITEM_SP.MinimumSize = New System.Drawing.Size(165, 0)
+        Me.FAI_CBX_ITEM_SP.Name = "FAI_CBX_ITEM_SP"
+        Me.FAI_CBX_ITEM_SP.Size = New System.Drawing.Size(165, 25)
+        Me.FAI_CBX_ITEM_SP.TabIndex = 8
         '
         'Form_Add_Item
         '
@@ -517,4 +548,6 @@ Partial Class Form_Add_Item
     Friend WithEvents FAI_BTN_RESET As Button
     Friend WithEvents FAI_L_ITEM_ID As Label
     Friend WithEvents FAI_TBX_ITEM_ID As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents FAI_CBX_ITEM_SP As ComboBox
 End Class
