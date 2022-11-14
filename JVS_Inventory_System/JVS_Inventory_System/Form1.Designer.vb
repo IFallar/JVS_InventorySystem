@@ -22,9 +22,9 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SIDE_HOME_BTN = New System.Windows.Forms.Button()
@@ -72,6 +72,7 @@ Partial Class Form1
         Me.HOME_ADD_ITEM_BTN = New System.Windows.Forms.Button()
         Me.HOME_INVENTORY_LOG_BTN = New System.Windows.Forms.Button()
         Me.HOME_STOCK_OUT_BTN = New System.Windows.Forms.Button()
+        Me.ITM_FLTR_BTN = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
         Me.ITEM_PANEL.SuspendLayout()
@@ -193,6 +194,7 @@ Partial Class Form1
         '
         'Panel8
         '
+        Me.Panel8.Controls.Add(Me.ITM_FLTR_BTN)
         Me.Panel8.Controls.Add(Me.ITM_SEARCH_TBX)
         Me.Panel8.Controls.Add(Me.ITM_CAT_ITEM_CBX)
         Me.Panel8.Controls.Add(Me.ITM_STOCKOUT_ITEM_BTN)
@@ -208,12 +210,12 @@ Partial Class Form1
         '
         Me.ITM_SEARCH_TBX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ITM_SEARCH_TBX.Font = New System.Drawing.Font("Bahnschrift", 13.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_SEARCH_TBX.Location = New System.Drawing.Point(229, 13)
+        Me.ITM_SEARCH_TBX.Location = New System.Drawing.Point(188, 13)
         Me.ITM_SEARCH_TBX.Margin = New System.Windows.Forms.Padding(5, 3, 0, 5)
         Me.ITM_SEARCH_TBX.MaximumSize = New System.Drawing.Size(310, 30)
         Me.ITM_SEARCH_TBX.MinimumSize = New System.Drawing.Size(310, 30)
         Me.ITM_SEARCH_TBX.Name = "ITM_SEARCH_TBX"
-        Me.ITM_SEARCH_TBX.Size = New System.Drawing.Size(310, 29)
+        Me.ITM_SEARCH_TBX.Size = New System.Drawing.Size(310, 30)
         Me.ITM_SEARCH_TBX.TabIndex = 14
         '
         'ITM_CAT_ITEM_CBX
@@ -222,13 +224,15 @@ Partial Class Form1
         Me.ITM_CAT_ITEM_CBX.Font = New System.Drawing.Font("Bahnschrift", 13.0!)
         Me.ITM_CAT_ITEM_CBX.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ITM_CAT_ITEM_CBX.FormattingEnabled = True
-        Me.ITM_CAT_ITEM_CBX.Location = New System.Drawing.Point(582, 13)
+        Me.ITM_CAT_ITEM_CBX.Items.AddRange(New Object() {"Brand", "Category", "Holding Status", "Repair Status", "Stock Status"})
+        Me.ITM_CAT_ITEM_CBX.Location = New System.Drawing.Point(542, 13)
         Me.ITM_CAT_ITEM_CBX.Margin = New System.Windows.Forms.Padding(5, 3, 5, 10)
-        Me.ITM_CAT_ITEM_CBX.MinimumSize = New System.Drawing.Size(130, 0)
+        Me.ITM_CAT_ITEM_CBX.MaximumSize = New System.Drawing.Size(140, 0)
+        Me.ITM_CAT_ITEM_CBX.MinimumSize = New System.Drawing.Size(140, 0)
         Me.ITM_CAT_ITEM_CBX.Name = "ITM_CAT_ITEM_CBX"
-        Me.ITM_CAT_ITEM_CBX.Size = New System.Drawing.Size(130, 29)
+        Me.ITM_CAT_ITEM_CBX.Size = New System.Drawing.Size(140, 29)
         Me.ITM_CAT_ITEM_CBX.TabIndex = 13
-        Me.ITM_CAT_ITEM_CBX.Text = "CATEGORIES"
+        Me.ITM_CAT_ITEM_CBX.Text = "FILTER BY:"
         '
         'ITM_STOCKOUT_ITEM_BTN
         '
@@ -244,7 +248,7 @@ Partial Class Form1
         Me.ITM_STOCKOUT_ITEM_BTN.Location = New System.Drawing.Point(-1, 13)
         Me.ITM_STOCKOUT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 10)
         Me.ITM_STOCKOUT_ITEM_BTN.Name = "ITM_STOCKOUT_ITEM_BTN"
-        Me.ITM_STOCKOUT_ITEM_BTN.Size = New System.Drawing.Size(110, 29)
+        Me.ITM_STOCKOUT_ITEM_BTN.Size = New System.Drawing.Size(90, 29)
         Me.ITM_STOCKOUT_ITEM_BTN.TabIndex = 10
         Me.ITM_STOCKOUT_ITEM_BTN.Text = "STOCK OUT"
         Me.ITM_STOCKOUT_ITEM_BTN.UseVisualStyleBackColor = False
@@ -255,13 +259,14 @@ Partial Class Form1
         Me.ITM_FLT_ITEM_CBX.Font = New System.Drawing.Font("Bahnschrift", 13.0!)
         Me.ITM_FLT_ITEM_CBX.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ITM_FLT_ITEM_CBX.FormattingEnabled = True
-        Me.ITM_FLT_ITEM_CBX.Location = New System.Drawing.Point(719, 13)
+        Me.ITM_FLT_ITEM_CBX.Location = New System.Drawing.Point(686, 13)
         Me.ITM_FLT_ITEM_CBX.Margin = New System.Windows.Forms.Padding(5, 3, 0, 10)
+        Me.ITM_FLT_ITEM_CBX.MaximumSize = New System.Drawing.Size(130, 0)
         Me.ITM_FLT_ITEM_CBX.MinimumSize = New System.Drawing.Size(130, 0)
         Me.ITM_FLT_ITEM_CBX.Name = "ITM_FLT_ITEM_CBX"
         Me.ITM_FLT_ITEM_CBX.Size = New System.Drawing.Size(130, 29)
         Me.ITM_FLT_ITEM_CBX.TabIndex = 15
-        Me.ITM_FLT_ITEM_CBX.Text = "FILTERS"
+        Me.ITM_FLT_ITEM_CBX.Text = "VALUE"
         '
         'ITM_STOCKIN_ITEM_BTN
         '
@@ -274,10 +279,10 @@ Partial Class Form1
         Me.ITM_STOCKIN_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_STOCKIN_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_STOCKIN_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_STOCKIN_ITEM_BTN.Location = New System.Drawing.Point(114, 13)
+        Me.ITM_STOCKIN_ITEM_BTN.Location = New System.Drawing.Point(94, 13)
         Me.ITM_STOCKIN_ITEM_BTN.Margin = New System.Windows.Forms.Padding(5, 10, 0, 10)
         Me.ITM_STOCKIN_ITEM_BTN.Name = "ITM_STOCKIN_ITEM_BTN"
-        Me.ITM_STOCKIN_ITEM_BTN.Size = New System.Drawing.Size(110, 29)
+        Me.ITM_STOCKIN_ITEM_BTN.Size = New System.Drawing.Size(90, 29)
         Me.ITM_STOCKIN_ITEM_BTN.TabIndex = 11
         Me.ITM_STOCKIN_ITEM_BTN.Text = "STOCK IN"
         Me.ITM_STOCKIN_ITEM_BTN.UseVisualStyleBackColor = False
@@ -293,7 +298,7 @@ Partial Class Form1
         Me.ITM_SEARCH_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_SEARCH_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_SEARCH_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_SEARCH_BTN.Location = New System.Drawing.Point(543, 13)
+        Me.ITM_SEARCH_BTN.Location = New System.Drawing.Point(502, 13)
         Me.ITM_SEARCH_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
         Me.ITM_SEARCH_BTN.Name = "ITM_SEARCH_BTN"
         Me.ITM_SEARCH_BTN.Size = New System.Drawing.Size(30, 29)
@@ -392,26 +397,26 @@ Partial Class Form1
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 40
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cbx_column})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
@@ -419,14 +424,14 @@ Partial Class Form1
         Me.DataGridView1.MinimumSize = New System.Drawing.Size(850, 431)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(850, 431)
         Me.DataGridView1.TabIndex = 0
@@ -823,6 +828,24 @@ Partial Class Form1
         Me.HOME_STOCK_OUT_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HOME_STOCK_OUT_BTN.UseVisualStyleBackColor = False
         '
+        'ITM_FLTR_BTN
+        '
+        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.Black
+        Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(820, 13)
+        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
+        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(30, 29)
+        Me.ITM_FLTR_BTN.TabIndex = 16
+        Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -904,4 +927,5 @@ Partial Class Form1
     Friend WithEvents ITM_SEARCH_BTN As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents cbx_column As DataGridViewCheckBoxColumn
+    Friend WithEvents ITM_FLTR_BTN As Button
 End Class
