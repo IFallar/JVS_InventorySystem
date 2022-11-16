@@ -22,9 +22,9 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SIDE_HOME_BTN = New System.Windows.Forms.Button()
@@ -32,6 +32,10 @@ Partial Class Form1
         Me.SIDE_ITEM_BTN = New System.Windows.Forms.Button()
         Me.Base_Panel = New System.Windows.Forms.Panel()
         Me.ITEM_PANEL = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.PANEL_ITEM_FLAGGING = New System.Windows.Forms.Panel()
+        Me.ITM_DEF_ITEM_BTN = New System.Windows.Forms.Button()
+        Me.ITM_DMG_ITEM_BTN = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.ITM_FLTR_BTN = New System.Windows.Forms.Button()
         Me.ITM_SEARCH_TBX = New System.Windows.Forms.TextBox()
@@ -75,6 +79,7 @@ Partial Class Form1
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
         Me.ITEM_PANEL.SuspendLayout()
+        Me.PANEL_ITEM_FLAGGING.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,8 +180,9 @@ Partial Class Form1
         '
         'ITEM_PANEL
         '
-        Me.ITEM_PANEL.Controls.Add(Me.Panel8)
         Me.ITEM_PANEL.Controls.Add(Me.ITM_FLAG_ITEM_BTN)
+        Me.ITEM_PANEL.Controls.Add(Me.PANEL_ITEM_FLAGGING)
+        Me.ITEM_PANEL.Controls.Add(Me.Panel8)
         Me.ITEM_PANEL.Controls.Add(Me.ITM_EDIT_ITEM_BTN)
         Me.ITEM_PANEL.Controls.Add(Me.ITM_DELETE_ITEM_BTN)
         Me.ITEM_PANEL.Controls.Add(Me.ITM_ADD_ITEM_BTN)
@@ -189,6 +195,73 @@ Partial Class Form1
         Me.ITEM_PANEL.Size = New System.Drawing.Size(881, 661)
         Me.ITEM_PANEL.TabIndex = 0
         Me.ITEM_PANEL.Visible = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.DarkRed
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(188, 0)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(34, 45)
+        Me.Button3.TabIndex = 18
+        Me.Button3.Text = "X"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'PANEL_ITEM_FLAGGING
+        '
+        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.Button3)
+        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_DEF_ITEM_BTN)
+        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_DMG_ITEM_BTN)
+        Me.PANEL_ITEM_FLAGGING.Location = New System.Drawing.Point(74, 541)
+        Me.PANEL_ITEM_FLAGGING.Name = "PANEL_ITEM_FLAGGING"
+        Me.PANEL_ITEM_FLAGGING.Size = New System.Drawing.Size(10, 45)
+        Me.PANEL_ITEM_FLAGGING.TabIndex = 17
+        '
+        'ITM_DEF_ITEM_BTN
+        '
+        Me.ITM_DEF_ITEM_BTN.BackColor = System.Drawing.Color.Black
+        Me.ITM_DEF_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_DEF_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DEF_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_DEF_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DEF_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DEF_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_DEF_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
+        Me.ITM_DEF_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_DEF_ITEM_BTN.Location = New System.Drawing.Point(94, 0)
+        Me.ITM_DEF_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_DEF_ITEM_BTN.Name = "ITM_DEF_ITEM_BTN"
+        Me.ITM_DEF_ITEM_BTN.Size = New System.Drawing.Size(90, 45)
+        Me.ITM_DEF_ITEM_BTN.TabIndex = 19
+        Me.ITM_DEF_ITEM_BTN.Text = "DEFECTIVE"
+        Me.ITM_DEF_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'ITM_DMG_ITEM_BTN
+        '
+        Me.ITM_DMG_ITEM_BTN.BackColor = System.Drawing.SystemColors.Desktop
+        Me.ITM_DMG_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_DMG_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DMG_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_DMG_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DMG_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DMG_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_DMG_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
+        Me.ITM_DMG_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_DMG_ITEM_BTN.Location = New System.Drawing.Point(0, 0)
+        Me.ITM_DMG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_DMG_ITEM_BTN.Name = "ITM_DMG_ITEM_BTN"
+        Me.ITM_DMG_ITEM_BTN.Size = New System.Drawing.Size(90, 45)
+        Me.ITM_DMG_ITEM_BTN.TabIndex = 18
+        Me.ITM_DMG_ITEM_BTN.Text = "DAMAGED"
+        Me.ITM_DMG_ITEM_BTN.UseVisualStyleBackColor = False
         '
         'Panel8
         '
@@ -332,7 +405,7 @@ Partial Class Form1
         Me.ITM_FLAG_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_FLAG_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
         Me.ITM_FLAG_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_FLAG_ITEM_BTN.Location = New System.Drawing.Point(15, 541)
+        Me.ITM_FLAG_ITEM_BTN.Location = New System.Drawing.Point(14, 596)
         Me.ITM_FLAG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
         Me.ITM_FLAG_ITEM_BTN.Name = "ITM_FLAG_ITEM_BTN"
         Me.ITM_FLAG_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
@@ -413,26 +486,26 @@ Partial Class Form1
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.ColumnHeadersHeight = 40
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cbx_column})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
@@ -440,14 +513,14 @@ Partial Class Form1
         Me.DataGridView1.MinimumSize = New System.Drawing.Size(850, 431)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(850, 431)
         Me.DataGridView1.TabIndex = 0
@@ -852,6 +925,7 @@ Partial Class Form1
         Me.Panel1.ResumeLayout(False)
         Me.Base_Panel.ResumeLayout(False)
         Me.ITEM_PANEL.ResumeLayout(False)
+        Me.PANEL_ITEM_FLAGGING.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.Panel7.ResumeLayout(False)
@@ -915,4 +989,8 @@ Partial Class Form1
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents cbx_column As DataGridViewCheckBoxColumn
     Friend WithEvents ITM_FLTR_BTN As Button
+    Friend WithEvents PANEL_ITEM_FLAGGING As Panel
+    Friend WithEvents ITM_DMG_ITEM_BTN As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents ITM_DEF_ITEM_BTN As Button
 End Class

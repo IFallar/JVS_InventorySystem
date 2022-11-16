@@ -5,7 +5,7 @@ Public Class Form1
 
     'PUBLICS ================================================================================================================
 
-    Public Sub Get_Name()
+    Public Sub Get_ITMNAME()
 
         opencon()
 
@@ -483,6 +483,18 @@ Public Class Form1
 
     End Sub
 
+    Private Sub ITM_FLAG_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_FLAG_ITEM_BTN.Click
+
+        If ITM_FLAG_ITEM_BTN.Width = 55 Then
+            ITM_FLAG_ITEM_BTN.Width = 127
+            PANEL_ITEM_FLAGGING.Width = 10
+        Else
+            ITM_FLAG_ITEM_BTN.Width = 55
+            PANEL_ITEM_FLAGGING.Width = 220
+        End If
+
+    End Sub
+
     'TABLE MANIPULATION ================================================================================================================
 
     '++++++++++++++++ SETTING FILTER FUNCTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -606,5 +618,7 @@ Public Class Form1
         End If
 
     End Sub
+
+
 
 End Class

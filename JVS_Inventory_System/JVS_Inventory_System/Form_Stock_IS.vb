@@ -2,7 +2,7 @@
 
     Private Sub Form_Stock_IS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Form1.Get_Name()
+        Form1.Get_ITMNAME()
         FSIS_NUM_TBX.Text = 0
 
     End Sub
@@ -48,6 +48,8 @@
             NEW_TOTAL = UNIT_PRICE * FINAL_AMOUNT
 
         Catch ex As Exception
+
+            MsgBox("Please Enter a number!", MsgBoxStyle.OkOnly, "Incomplete Information")
 
         End Try
 

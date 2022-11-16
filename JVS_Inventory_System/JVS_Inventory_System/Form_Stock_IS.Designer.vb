@@ -59,13 +59,12 @@ Partial Class Form_Stock_IS
         '
         Me.FSIS_PRC_HOLD.AutoSize = True
         Me.FSIS_PRC_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSIS_PRC_HOLD.Location = New System.Drawing.Point(217, 22)
+        Me.FSIS_PRC_HOLD.Location = New System.Drawing.Point(365, 20)
         Me.FSIS_PRC_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FSIS_PRC_HOLD.Name = "FSIS_PRC_HOLD"
         Me.FSIS_PRC_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FSIS_PRC_HOLD.Size = New System.Drawing.Size(74, 16)
+        Me.FSIS_PRC_HOLD.Size = New System.Drawing.Size(2, 16)
         Me.FSIS_PRC_HOLD.TabIndex = 34
-        Me.FSIS_PRC_HOLD.Text = "ITEM NAME"
         Me.FSIS_PRC_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.FSIS_PRC_HOLD.Visible = False
         '
@@ -73,13 +72,12 @@ Partial Class Form_Stock_IS
         '
         Me.FSIS_TRH_HOLD.AutoSize = True
         Me.FSIS_TRH_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSIS_TRH_HOLD.Location = New System.Drawing.Point(217, 6)
+        Me.FSIS_TRH_HOLD.Location = New System.Drawing.Point(365, 4)
         Me.FSIS_TRH_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FSIS_TRH_HOLD.Name = "FSIS_TRH_HOLD"
         Me.FSIS_TRH_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FSIS_TRH_HOLD.Size = New System.Drawing.Size(74, 16)
+        Me.FSIS_TRH_HOLD.Size = New System.Drawing.Size(2, 16)
         Me.FSIS_TRH_HOLD.TabIndex = 33
-        Me.FSIS_TRH_HOLD.Text = "ITEM NAME"
         Me.FSIS_TRH_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.FSIS_TRH_HOLD.Visible = False
         '
@@ -87,13 +85,12 @@ Partial Class Form_Stock_IS
         '
         Me.FSIS_QTY_HOLD.AutoSize = True
         Me.FSIS_QTY_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSIS_QTY_HOLD.Location = New System.Drawing.Point(298, 22)
+        Me.FSIS_QTY_HOLD.Location = New System.Drawing.Point(375, 20)
         Me.FSIS_QTY_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FSIS_QTY_HOLD.Name = "FSIS_QTY_HOLD"
         Me.FSIS_QTY_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FSIS_QTY_HOLD.Size = New System.Drawing.Size(74, 16)
+        Me.FSIS_QTY_HOLD.Size = New System.Drawing.Size(2, 16)
         Me.FSIS_QTY_HOLD.TabIndex = 32
-        Me.FSIS_QTY_HOLD.Text = "ITEM NAME"
         Me.FSIS_QTY_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.FSIS_QTY_HOLD.Visible = False
         '
@@ -101,13 +98,12 @@ Partial Class Form_Stock_IS
         '
         Me.FSIS_ID_HOLD.AutoSize = True
         Me.FSIS_ID_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSIS_ID_HOLD.Location = New System.Drawing.Point(298, 6)
+        Me.FSIS_ID_HOLD.Location = New System.Drawing.Point(375, 4)
         Me.FSIS_ID_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FSIS_ID_HOLD.Name = "FSIS_ID_HOLD"
         Me.FSIS_ID_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FSIS_ID_HOLD.Size = New System.Drawing.Size(74, 16)
+        Me.FSIS_ID_HOLD.Size = New System.Drawing.Size(2, 16)
         Me.FSIS_ID_HOLD.TabIndex = 17
-        Me.FSIS_ID_HOLD.Text = "ITEM NAME"
         Me.FSIS_ID_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.FSIS_ID_HOLD.Visible = False
         '
@@ -134,7 +130,7 @@ Partial Class Form_Stock_IS
         Me.FSIS_ITEM_TBX.MinimumSize = New System.Drawing.Size(360, 25)
         Me.FSIS_ITEM_TBX.Name = "FSIS_ITEM_TBX"
         Me.FSIS_ITEM_TBX.ReadOnly = True
-        Me.FSIS_ITEM_TBX.Size = New System.Drawing.Size(360, 25)
+        Me.FSIS_ITEM_TBX.Size = New System.Drawing.Size(360, 29)
         Me.FSIS_ITEM_TBX.TabIndex = 0
         '
         'FSIS_NUM_TBX
@@ -151,7 +147,9 @@ Partial Class Form_Stock_IS
         '
         'FSIS_SAVE_BTN
         '
-        Me.FSIS_SAVE_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.FSIS_SAVE_BTN.BackColor = System.Drawing.Color.Green
+        Me.FSIS_SAVE_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.FSIS_SAVE_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
         Me.FSIS_SAVE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FSIS_SAVE_BTN.ForeColor = System.Drawing.SystemColors.Control
         Me.FSIS_SAVE_BTN.Location = New System.Drawing.Point(297, 125)
@@ -163,7 +161,9 @@ Partial Class Form_Stock_IS
         '
         'FSIS_CNC_BTN
         '
-        Me.FSIS_CNC_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.FSIS_CNC_BTN.BackColor = System.Drawing.Color.DarkRed
+        Me.FSIS_CNC_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.FSIS_CNC_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.FSIS_CNC_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FSIS_CNC_BTN.ForeColor = System.Drawing.SystemColors.Control
         Me.FSIS_CNC_BTN.Location = New System.Drawing.Point(216, 125)
