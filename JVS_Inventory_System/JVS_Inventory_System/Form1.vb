@@ -225,7 +225,6 @@ Public Class Form1
 
     Public Sub Search_Bar()
 
-
     End Sub
 
     'PRIVATES ================================================================================================================
@@ -751,5 +750,13 @@ Public Class Form1
 
     End Sub
 
+    '++++++++++++++++ SEARCH ITEMS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Private Sub ITM_SEARCH_TBX_TextChanged(sender As Object, e As EventArgs) Handles ITM_SEARCH_TBX.TextChanged
+
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_NAME LIKE '%" & ITM_SEARCH_TBX.Text & "%' OR ITEM_BRAND LIKE '%" & ITM_SEARCH_TBX.Text & "%' OR VARIANT LIKE '%" & ITM_SEARCH_TBX.Text & "%'", DataGridView1)
+        strconn.Close()
+
+    End Sub
 
 End Class
