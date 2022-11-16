@@ -485,13 +485,24 @@ Public Class Form1
 
     Private Sub ITM_FLAG_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_FLAG_ITEM_BTN.Click
 
-        If ITM_FLAG_ITEM_BTN.Width = 55 Then
+        If ITM_FLAG_ITEM_BTN.Width = 40 Then
             ITM_FLAG_ITEM_BTN.Width = 127
+            ITM_FLAG_ITEM_BTN.Text = "FLAG ITEM"
+            ITM_FLAG_ITEM_BTN.BackColor = Color.Black
+            ITM_FLAG_ITEM_BTN.FlatAppearance.MouseOverBackColor = Color.DimGray
             PANEL_ITEM_FLAGGING.Width = 10
+
         Else
-            ITM_FLAG_ITEM_BTN.Width = 55
+            ITM_FLAG_ITEM_BTN.Width = 40
+            ITM_FLAG_ITEM_BTN.Text = "X"
+            ITM_FLAG_ITEM_BTN.BackColor = Color.DarkRed
+            ITM_FLAG_ITEM_BTN.FlatAppearance.MouseOverBackColor = Color.Red
             PANEL_ITEM_FLAGGING.Width = 220
         End If
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -618,7 +629,6 @@ Public Class Form1
         End If
 
     End Sub
-
 
 
 End Class
