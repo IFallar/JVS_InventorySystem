@@ -223,6 +223,11 @@ Public Class Form1
         End If
     End Sub
 
+    Public Sub Search_Bar()
+
+
+    End Sub
+
     'PRIVATES ================================================================================================================
 
     Dim tablemode As Integer = 1
