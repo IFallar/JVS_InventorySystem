@@ -82,8 +82,36 @@ Public Class Form1
 
     Public Sub Load_Table_Main()
 
-        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = 'NORMAL'", DataGridView1)
-        strconn.Close()
+        Dim Filter_Value As String = ITM_FLTVAL_ITEM_CBX.Text
+
+        If ITM_FLTSET_ITEM_CBX.SelectedIndex = 0 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_BRAND = '" & Filter_Value & "'", DataGridView1)
+            strconn.Close()
+
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 1 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE CATEGORY = '" & Filter_Value & "'", DataGridView1)
+            strconn.Close()
+
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 2 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE HOLDING_STATUS = '" & Filter_Value & "'", DataGridView1)
+            strconn.Close()
+
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 3 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = '" & Filter_Value & "'", DataGridView1)
+            strconn.Close()
+
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 4 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE STOCK_STATUS = '" & Filter_Value & "'", DataGridView1)
+            strconn.Close()
+
+        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 5 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE SUPPLIER = '" & Filter_Value & "'", DataGridView1)
+            strconn.Close()
+        Else
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = 'NORMAL'", DataGridView1)
+            strconn.Close()
+
+        End If
 
     End Sub
 
@@ -134,6 +162,65 @@ Public Class Form1
         cmdreader.Close()
         con.Close()
 
+    End Sub
+
+    Public Sub UPDATE_RPR_STATUS()
+        If Selected = Nothing Then
+            MsgBox("Select an Item to Flag.", MsgBoxStyle.OkOnly, "No Item Selected")
+        Else
+            Try
+
+                opencon()
+
+                cmd.Connection = con
+                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & Selected & "'"
+                cmd.Prepare()
+
+                cmdreader = cmd.ExecuteReader
+
+                While cmdreader.Read
+
+                    Try
+
+                        FLAGGED_ITM = cmdreader(0)
+                        Dim result As DialogResult = MessageBox.Show("Mark " + FLAGGED_ITM + FLAGGED_MSG, "FLAG ITEM", MessageBoxButtons.YesNo)
+                        If result = DialogResult.Yes Then
+
+                            strconnection()
+
+                            cmd.Connection = strconn
+                            strconn.Open()
+
+                            cmd.CommandText = "UPDATE `products` SET `REPAIR_STATUS`='" & FLAGGED_VAL & "' WHERE `ITEM_ID` = '" & Selected & "'"
+                            cmd.ExecuteNonQuery()
+
+                            strconn.Close()
+
+                            Load_Table_Main()
+                            Set_Home_Value()
+
+                        ElseIf result = DialogResult.No Then
+
+                        End If
+
+                    Catch ex As System.InvalidCastException
+
+                    End Try
+
+                    con.Close()
+
+                End While
+
+                cmdreader.Close()
+                con.Close()
+
+            Catch ex As Exception
+
+            End Try
+
+            con.Close()
+
+        End If
     End Sub
 
     'PRIVATES ================================================================================================================
@@ -483,6 +570,12 @@ Public Class Form1
 
     End Sub
 
+    '++++++++++++++++ ITEM SCREEN BUTTONS - FLAGGING ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Dim FLAGGED_ITM As String
+    Dim FLAGGED_MSG As String
+    Dim FLAGGED_VAL As String
+
     Private Sub ITM_FLAG_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_FLAG_ITEM_BTN.Click
 
         If ITM_FLAG_ITEM_BTN.Width = 40 Then
@@ -497,12 +590,32 @@ Public Class Form1
             ITM_FLAG_ITEM_BTN.Text = "X"
             ITM_FLAG_ITEM_BTN.BackColor = Color.DarkRed
             ITM_FLAG_ITEM_BTN.FlatAppearance.MouseOverBackColor = Color.Red
-            PANEL_ITEM_FLAGGING.Width = 220
+            PANEL_ITEM_FLAGGING.Width = 248
         End If
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
+    Private Sub ITM_DMG_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_DMG_ITEM_BTN.Click
+
+        FLAGGED_MSG = " as Damaged?"
+        FLAGGED_VAL = "DAMAGED"
+        UPDATE_RPR_STATUS()
+
+    End Sub
+
+    Private Sub ITM_DEF_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_DEF_ITEM_BTN.Click
+
+        FLAGGED_MSG = " as Defective?"
+        FLAGGED_VAL = "DEFECTIVE"
+        UPDATE_RPR_STATUS()
+
+    End Sub
+
+    Private Sub ITM_RESET_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_RESET_ITEM_BTN.Click
+
+        FLAGGED_MSG = " as Normal?"
+        FLAGGED_VAL = "NORMAL"
+        UPDATE_RPR_STATUS()
 
     End Sub
 
@@ -595,6 +708,9 @@ Public Class Form1
 
         tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = 'NORMAL'", DataGridView1)
         strconn.Close()
+
+        ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+        ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
 
     End Sub
 
