@@ -369,10 +369,13 @@ Public Class Form1
         SIDE_HOME_BTN.BackColor = System.Drawing.Color.White
         SIDE_ITEM_BTN.BackColor = System.Drawing.Color.Transparent
         SIDE_LOG_BTN.BackColor = System.Drawing.Color.Transparent
+        SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent
 
         SIDE_HOME_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
         SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.White
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.White
+        SIDE_SET_BTN.ForeColor = System.Drawing.Color.White
+
 
         Set_Home_Value()
 
@@ -386,10 +389,12 @@ Public Class Form1
         SIDE_HOME_BTN.BackColor = System.Drawing.Color.Transparent
         SIDE_ITEM_BTN.BackColor = System.Drawing.Color.White
         SIDE_LOG_BTN.BackColor = System.Drawing.Color.Transparent
+        SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent
 
         SIDE_HOME_BTN.ForeColor = System.Drawing.Color.White
         SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.White
+        SIDE_SET_BTN.ForeColor = System.Drawing.Color.White
 
         Load_Table_Main()
         Set_Home_Value()
@@ -404,10 +409,32 @@ Public Class Form1
         SIDE_HOME_BTN.BackColor = System.Drawing.Color.Transparent
         SIDE_ITEM_BTN.BackColor = System.Drawing.Color.Transparent
         SIDE_LOG_BTN.BackColor = System.Drawing.Color.White
+        SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent
 
         SIDE_HOME_BTN.ForeColor = System.Drawing.Color.White
         SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.White
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
+        SIDE_SET_BTN.ForeColor = System.Drawing.Color.White
+
+        Set_Home_Value()
+
+    End Sub
+
+    Private Sub SIDE_SET_BTN_Click(sender As Object, e As EventArgs) Handles SIDE_SET_BTN.Click
+
+        HOME_PANEL.Visible = False
+        ITEM_PANEL.Visible = False
+        LOG_PANEL.Visible = True
+
+        SIDE_HOME_BTN.BackColor = System.Drawing.Color.Transparent
+        SIDE_ITEM_BTN.BackColor = System.Drawing.Color.Transparent
+        SIDE_LOG_BTN.BackColor = System.Drawing.Color.Transparent
+        SIDE_SET_BTN.BackColor = System.Drawing.Color.White
+
+        SIDE_HOME_BTN.ForeColor = System.Drawing.Color.White
+        SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        SIDE_LOG_BTN.ForeColor = System.Drawing.Color.White
+        SIDE_SET_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
 
         Set_Home_Value()
 
@@ -758,5 +785,6 @@ Public Class Form1
         strconn.Close()
 
     End Sub
+
 
 End Class
