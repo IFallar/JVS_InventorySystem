@@ -475,8 +475,8 @@ Public Class Form1
     Private Sub HOME_STOCK_IN_BTN_Click(sender As Object, e As EventArgs) Handles HOME_STOCK_IN_BTN.Click
 
         Try
-            Dim Modal As New Form_Stock_IS
-            Form_Stock_HS.FSHS_HEAD_LBL.Text = "STOCK IN"
+            Dim Modal As New Form_Stock_HS
+            Form_Stock_HS.FSHS_HEAD_LBL.Text = "RESTOCK"
             Form_Stock_HS.ShowDialog()
 
         Catch ex As Exception
@@ -488,7 +488,7 @@ Public Class Form1
     Private Sub HOME_STOCK_OUT_BTN_Click(sender As Object, e As EventArgs) Handles HOME_STOCK_OUT_BTN.Click
 
         Try
-            Dim Modal As New Form_Stock_IS
+            Dim Modal As New Form_Stock_HS
             Form_Stock_HS.FSHS_HEAD_LBL.Text = "STOCK OUT"
             Form_Stock_HS.ShowDialog()
 

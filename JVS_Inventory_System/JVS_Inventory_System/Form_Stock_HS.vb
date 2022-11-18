@@ -1,28 +1,82 @@
 ﻿Public Class Form_Stock_HS
 
-    Public Sub GetNum()
+    Dim QTY As Integer
+    Dim TRH As Integer
 
-        Dim QTY As Integer
-        Dim TRH As Integer
+    Public Sub Stock_Function()
+
+        Dim ID As String = FSHS_ID_HOLD.Text
+        Dim ITEM_INIT As Integer = FSHS_QTY_HOLD.Text
+        Dim THRESHOLD As Integer = FSHS_TRH_HOLD.Text
+        Dim UNIT_PRICE As Integer = FSHS_PRC_HOLD.Text
+
+
+        Dim FINAL_AMOUNT As Integer
+        Dim NEW_TOTAL As Integer
+        Dim NEW_STATUS As String = ""
+
+        Dim regDate As Date = Date.Now()
+        Dim ITEM_ADD_DATE = regDate.ToString("yyyy\-MM\-dd")
+
+        Try
+
+            If FSHS_HEAD_LBL.Text = "RESTOCK" Then
+                FINAL_AMOUNT = ITEM_INIT + STOCK_AMOUNT
+            Else
+                If STOCK_AMOUNT > ITEM_INIT Then
+                    MsgBox("Exceeds Inventory Quantity.", MsgBoxStyle.OkOnly, "Insufficient Stock")
+                Else
+                    FINAL_AMOUNT = ITEM_INIT - STOCK_AMOUNT
+                End If
+            End If
+
+            If FINAL_AMOUNT >= THRESHOLD Then
+                NEW_STATUS = "NORMAL"
+            ElseIf ITEM_INIT = 0 Then
+                NEW_STATUS = "OUT OF STOCK"
+            Else
+                NEW_STATUS = "LOW STOCK"
+            End If
+
+            NEW_TOTAL = UNIT_PRICE * FINAL_AMOUNT
+
+        Catch ex As Exception
+
+            MsgBox("Please Enter a number!", MsgBoxStyle.OkOnly, "Incomplete Information")
+
+        End Try
+
+        strconnection()
+
+        cmd.Connection = strconn
+        strconn.Open()
+
+        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "' WHERE `ITEM_ID` = '" & ID & "'"
+        cmd.ExecuteNonQuery()
+        MsgBox("Success", MsgBoxStyle.OkOnly, "Action Confirmation")
+        strconn.Close()
+
+        Form1.Load_Table_Main()
+        Form1.Set_Home_Value()
+
+    End Sub
+
+    Public Sub GetNum()
 
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `QUANTITY`, `THRESHOLD` FROM `products` WHERE `ITEM_ID` = '" & Selected_HS & "'"
+        cmd.CommandText = "SELECT `ITEM_NAME`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE` FROM `products` WHERE `ITEM_ID` = '" & Selected_HS & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
 
         While cmdreader.Read
 
-            Try
+            QTY = cmdreader.GetValue(1)
+            TRH = cmdreader.GetValue(2)
 
-                QTY = cmdreader.GetValue(0)
-                TRH = cmdreader.GetValue(1)
-
-            Catch ex As System.InvalidCastException
-
-            End Try
+            FSHS_PRC_HOLD.Text = cmdreader.GetValue(3)
 
         End While
 
@@ -30,13 +84,47 @@
         con.Close()
 
         FSHS_FLT4_TBX.Text = "" & QTY & " / " & TRH & ""
+        FSHS_FLT5_TBX.Text = "" & QTY & " / " & TRH & ""
+
+        FSHS_QTY_HOLD.Text = QTY
+        FSHS_TRH_HOLD.Text = TRH
 
         If QTY >= TRH And QTY > 0 Then
             FSHS_FLT4_TBX.BackColor = Color.Green
+            FSHS_FLT5_TBX.BackColor = Color.Green
         ElseIf QTY = 0 Then
             FSHS_FLT4_TBX.BackColor = Color.Red
+            FSHS_FLT5_TBX.BackColor = Color.Red
         Else
             FSHS_FLT4_TBX.BackColor = Color.Orange
+            FSHS_FLT5_TBX.BackColor = Color.Orange
+        End If
+
+    End Sub
+
+    Public Sub UpdateNewStock()
+
+        Dim NewStockVal As Integer
+
+        If FSHS_NUM_TBX.Text = Nothing Then
+            NewStockVal = 0 + QTY
+        Else
+            If FSHS_HEAD_LBL.Text = "RESTOCK" Then
+                NewStockVal = FSHS_NUM_TBX.Text + QTY
+            Else
+                NewStockVal = FSHS_NUM_TBX.Text - QTY
+            End If
+
+        End If
+
+        FSHS_FLT5_TBX.Text = "" & NewStockVal & " / " & TRH & ""
+
+        If NewStockVal >= TRH And QTY > 0 Then
+            FSHS_FLT5_TBX.BackColor = Color.Green
+        ElseIf NewStockVal = 0 Then
+            FSHS_FLT5_TBX.BackColor = Color.Red
+        Else
+            FSHS_FLT5_TBX.BackColor = Color.Orange
         End If
 
     End Sub
@@ -109,9 +197,10 @@
 
     Private Sub SEARCH_GRID_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles SEARCH_GRID.CellValueChanged
 
-        If (SEARCH_GRID.Columns(0).Name = "cbx_column") Then
+        If (SEARCH_GRID.Columns(0).Name = "CK_COLUMN") Then
 
-            If SEARCH_GRID.CurrentRow.Cells(0).Value = "Yes" Then
+            If SEARCH_GRID.CurrentRow.Cells(0).Value = "YES" Then
+                FSHS_ID_HOLD.Text = SEARCH_GRID.CurrentRow.Cells(1).Value
                 Selected_HS = SEARCH_GRID.CurrentRow.Cells(1).Value
             End If
 
@@ -130,11 +219,11 @@
         FSHS_FLT2_TBX.Text = SEARCH_GRID.CurrentRow.Cells(4).Value
         SEARCH_GRID.Visible = False
 
+
         GetNum()
 
+
     End Sub
-
-
 
     '++++++++++++++++ PLACEHOLDER HANDLING (RUDIMENTRARY) ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -200,6 +289,43 @@
             R_Value = R_Value - 1
             FSHS_NUM_TBX.Text = R_Value
         End If
+
+    End Sub
+
+    Private Sub FSHS_NUM_TBX_TextChanged(sender As Object, e As EventArgs) Handles FSHS_NUM_TBX.TextChanged
+
+        UpdateNewStock()
+
+    End Sub
+
+    Dim STOCK_AMOUNT As Integer
+
+    Private Sub FSHS_SAVE_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_SAVE_BTN.Click
+
+        STOCK_AMOUNT = FSHS_NUM_TBX.Text
+        Stock_Function()
+
+    End Sub
+
+    Private Sub FSHS_CNC_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_CNC_BTN.Click
+
+        FSHS_ITEM_TBX.Text = ""
+        FSHS_FLT1_TBX.Text = "BRAND"
+        FSHS_FLT2_TBX.Text = "VARIANT"
+        FSHS_FLT4_TBX.Text = ""
+        FSHS_FLT5_TBX.Text = ""
+        FSHS_NUM_TBX.Text = 0
+        FSHS_NUM_TBX.BackColor = Color.Gray
+
+        Try
+            Me.Close()
+
+        Catch ex As Exception
+
+        End Try
+
+        Form1.Load_Table_Main()
+        Form1.Set_Home_Value()
 
     End Sub
 

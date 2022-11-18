@@ -1,22 +1,12 @@
 ﻿Public Class Form_Stock_IS
 
-    Private Sub Form_Stock_IS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-        Form1.Get_ITMNAME()
-        FSIS_NUM_TBX.Text = 0
-
-    End Sub
-
-    Private Sub FSIS_SAVE_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_SAVE_BTN.Click
-
-        Dim STOCK_AMOUNT As Integer
+    Public Sub Stock_Function()
 
         Dim ID As String = FSIS_ID_HOLD.Text
         Dim ITEM_INIT As Integer = FSIS_QTY_HOLD.Text
         Dim THRESHOLD As Integer = FSIS_TRH_HOLD.Text
         Dim UNIT_PRICE As Integer = FSIS_PRC_HOLD.Text
 
-        STOCK_AMOUNT = FSIS_NUM_TBX.Text
 
         Dim FINAL_AMOUNT As Integer
         Dim NEW_TOTAL As Integer
@@ -68,6 +58,25 @@
 
     End Sub
 
+    Private Sub Form_Stock_IS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        Form1.Get_ITMNAME()
+        FSIS_NUM_TBX.Text = 0
+
+    End Sub
+
+    Dim STOCK_AMOUNT As Integer
+
+
+    Private Sub FSIS_SAVE_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_SAVE_BTN.Click
+
+        STOCK_AMOUNT = FSIS_NUM_TBX.Text
+
+        Stock_Function()
+
+
+    End Sub
+
     Private Sub FSIS_ADD_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_ADD_BTN.Click
 
         If FSIS_NUM_TBX.Text = Nothing Then
@@ -94,4 +103,17 @@
 
     End Sub
 
+    Private Sub FSIS_CNC_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_CNC_BTN.Click
+
+        Try
+            Me.Close()
+
+        Catch ex As Exception
+
+        End Try
+
+        Form1.Load_Table_Main()
+        Form1.Set_Home_Value()
+
+    End Sub
 End Class

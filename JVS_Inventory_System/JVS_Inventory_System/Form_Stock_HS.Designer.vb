@@ -23,10 +23,6 @@ Partial Class Form_Stock_HS
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.FSHS_PRC_HOLD = New System.Windows.Forms.Label()
-        Me.FSHS_TRH_HOLD = New System.Windows.Forms.Label()
-        Me.FSHS_QTY_HOLD = New System.Windows.Forms.Label()
-        Me.FSHS_ID_HOLD = New System.Windows.Forms.Label()
         Me.FSHS_HEAD_LBL = New System.Windows.Forms.Label()
         Me.FSHS_ADD_BTN = New System.Windows.Forms.Button()
         Me.FSHS_MIN_BTN = New System.Windows.Forms.Button()
@@ -44,7 +40,11 @@ Partial Class Form_Stock_HS
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.FSHS_FLT5_TBX = New System.Windows.Forms.TextBox()
+        Me.FSHS_PRC_HOLD = New System.Windows.Forms.Label()
+        Me.FSHS_TRH_HOLD = New System.Windows.Forms.Label()
+        Me.FSHS_QTY_HOLD = New System.Windows.Forms.Label()
+        Me.FSHS_ID_HOLD = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.SEARCH_GRID, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -53,10 +53,6 @@ Partial Class Form_Stock_HS
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.FSHS_PRC_HOLD)
-        Me.Panel1.Controls.Add(Me.FSHS_TRH_HOLD)
-        Me.Panel1.Controls.Add(Me.FSHS_QTY_HOLD)
-        Me.Panel1.Controls.Add(Me.FSHS_ID_HOLD)
         Me.Panel1.Controls.Add(Me.FSHS_HEAD_LBL)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
@@ -64,58 +60,6 @@ Partial Class Form_Stock_HS
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(564, 40)
         Me.Panel1.TabIndex = 2
-        '
-        'FSHS_PRC_HOLD
-        '
-        Me.FSHS_PRC_HOLD.AutoSize = True
-        Me.FSHS_PRC_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSHS_PRC_HOLD.Location = New System.Drawing.Point(365, 20)
-        Me.FSHS_PRC_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.FSHS_PRC_HOLD.Name = "FSHS_PRC_HOLD"
-        Me.FSHS_PRC_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FSHS_PRC_HOLD.Size = New System.Drawing.Size(2, 16)
-        Me.FSHS_PRC_HOLD.TabIndex = 34
-        Me.FSHS_PRC_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.FSHS_PRC_HOLD.Visible = False
-        '
-        'FSHS_TRH_HOLD
-        '
-        Me.FSHS_TRH_HOLD.AutoSize = True
-        Me.FSHS_TRH_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSHS_TRH_HOLD.Location = New System.Drawing.Point(365, 4)
-        Me.FSHS_TRH_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.FSHS_TRH_HOLD.Name = "FSHS_TRH_HOLD"
-        Me.FSHS_TRH_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FSHS_TRH_HOLD.Size = New System.Drawing.Size(2, 16)
-        Me.FSHS_TRH_HOLD.TabIndex = 33
-        Me.FSHS_TRH_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.FSHS_TRH_HOLD.Visible = False
-        '
-        'FSHS_QTY_HOLD
-        '
-        Me.FSHS_QTY_HOLD.AutoSize = True
-        Me.FSHS_QTY_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSHS_QTY_HOLD.Location = New System.Drawing.Point(375, 20)
-        Me.FSHS_QTY_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.FSHS_QTY_HOLD.Name = "FSHS_QTY_HOLD"
-        Me.FSHS_QTY_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FSHS_QTY_HOLD.Size = New System.Drawing.Size(2, 16)
-        Me.FSHS_QTY_HOLD.TabIndex = 32
-        Me.FSHS_QTY_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.FSHS_QTY_HOLD.Visible = False
-        '
-        'FSHS_ID_HOLD
-        '
-        Me.FSHS_ID_HOLD.AutoSize = True
-        Me.FSHS_ID_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSHS_ID_HOLD.Location = New System.Drawing.Point(375, 4)
-        Me.FSHS_ID_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.FSHS_ID_HOLD.Name = "FSHS_ID_HOLD"
-        Me.FSHS_ID_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.FSHS_ID_HOLD.Size = New System.Drawing.Size(2, 16)
-        Me.FSHS_ID_HOLD.TabIndex = 17
-        Me.FSHS_ID_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.FSHS_ID_HOLD.Visible = False
         '
         'FSHS_HEAD_LBL
         '
@@ -241,8 +185,10 @@ Partial Class Form_Stock_HS
         'CK_COLUMN
         '
         Me.CK_COLUMN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.CK_COLUMN.FalseValue = "NOT"
         Me.CK_COLUMN.HeaderText = "*"
         Me.CK_COLUMN.Name = "CK_COLUMN"
+        Me.CK_COLUMN.TrueValue = "YES"
         Me.CK_COLUMN.Width = 5
         '
         'FSHS_ITEM_TBX
@@ -295,6 +241,7 @@ Partial Class Form_Stock_HS
         Me.FSHS_FLT4_TBX.ForeColor = System.Drawing.SystemColors.Desktop
         Me.FSHS_FLT4_TBX.Location = New System.Drawing.Point(421, 69)
         Me.FSHS_FLT4_TBX.Name = "FSHS_FLT4_TBX"
+        Me.FSHS_FLT4_TBX.ReadOnly = True
         Me.FSHS_FLT4_TBX.Size = New System.Drawing.Size(131, 25)
         Me.FSHS_FLT4_TBX.TabIndex = 48
         Me.FSHS_FLT4_TBX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -334,15 +281,73 @@ Partial Class Form_Stock_HS
         Me.Label3.Text = "NEW STOCK LEVEL:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'FSHS_FLT5_TBX
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.TextBox1.Font = New System.Drawing.Font("Tw Cen MT", 18.0!)
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.TextBox1.Location = New System.Drawing.Point(421, 280)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(131, 34)
-        Me.TextBox1.TabIndex = 51
+        Me.FSHS_FLT5_TBX.BackColor = System.Drawing.Color.Gray
+        Me.FSHS_FLT5_TBX.Font = New System.Drawing.Font("Tw Cen MT", 18.0!)
+        Me.FSHS_FLT5_TBX.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.FSHS_FLT5_TBX.Location = New System.Drawing.Point(421, 280)
+        Me.FSHS_FLT5_TBX.Name = "FSHS_FLT5_TBX"
+        Me.FSHS_FLT5_TBX.ReadOnly = True
+        Me.FSHS_FLT5_TBX.Size = New System.Drawing.Size(131, 34)
+        Me.FSHS_FLT5_TBX.TabIndex = 51
+        Me.FSHS_FLT5_TBX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'FSHS_PRC_HOLD
+        '
+        Me.FSHS_PRC_HOLD.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.FSHS_PRC_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FSHS_PRC_HOLD.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.FSHS_PRC_HOLD.Location = New System.Drawing.Point(491, 124)
+        Me.FSHS_PRC_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.FSHS_PRC_HOLD.Name = "FSHS_PRC_HOLD"
+        Me.FSHS_PRC_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.FSHS_PRC_HOLD.Size = New System.Drawing.Size(50, 50)
+        Me.FSHS_PRC_HOLD.TabIndex = 38
+        Me.FSHS_PRC_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FSHS_PRC_HOLD.Visible = False
+        '
+        'FSHS_TRH_HOLD
+        '
+        Me.FSHS_TRH_HOLD.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.FSHS_TRH_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FSHS_TRH_HOLD.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.FSHS_TRH_HOLD.Location = New System.Drawing.Point(433, 124)
+        Me.FSHS_TRH_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.FSHS_TRH_HOLD.Name = "FSHS_TRH_HOLD"
+        Me.FSHS_TRH_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.FSHS_TRH_HOLD.Size = New System.Drawing.Size(50, 50)
+        Me.FSHS_TRH_HOLD.TabIndex = 37
+        Me.FSHS_TRH_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FSHS_TRH_HOLD.Visible = False
+        '
+        'FSHS_QTY_HOLD
+        '
+        Me.FSHS_QTY_HOLD.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.FSHS_QTY_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FSHS_QTY_HOLD.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.FSHS_QTY_HOLD.Location = New System.Drawing.Point(433, 178)
+        Me.FSHS_QTY_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.FSHS_QTY_HOLD.Name = "FSHS_QTY_HOLD"
+        Me.FSHS_QTY_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.FSHS_QTY_HOLD.Size = New System.Drawing.Size(50, 50)
+        Me.FSHS_QTY_HOLD.TabIndex = 36
+        Me.FSHS_QTY_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FSHS_QTY_HOLD.Visible = False
+        '
+        'FSHS_ID_HOLD
+        '
+        Me.FSHS_ID_HOLD.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.FSHS_ID_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FSHS_ID_HOLD.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.FSHS_ID_HOLD.Location = New System.Drawing.Point(491, 178)
+        Me.FSHS_ID_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.FSHS_ID_HOLD.Name = "FSHS_ID_HOLD"
+        Me.FSHS_ID_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.FSHS_ID_HOLD.Size = New System.Drawing.Size(50, 50)
+        Me.FSHS_ID_HOLD.TabIndex = 35
+        Me.FSHS_ID_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FSHS_ID_HOLD.Visible = False
         '
         'Form_Stock_HS
         '
@@ -350,8 +355,12 @@ Partial Class Form_Stock_HS
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(562, 326)
+        Me.Controls.Add(Me.FSHS_PRC_HOLD)
+        Me.Controls.Add(Me.FSHS_TRH_HOLD)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.FSHS_QTY_HOLD)
+        Me.Controls.Add(Me.FSHS_FLT5_TBX)
+        Me.Controls.Add(Me.FSHS_ID_HOLD)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.FSHS_FLT4_TBX)
@@ -380,10 +389,6 @@ Partial Class Form_Stock_HS
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents FSHS_PRC_HOLD As Label
-    Friend WithEvents FSHS_TRH_HOLD As Label
-    Friend WithEvents FSHS_QTY_HOLD As Label
-    Friend WithEvents FSHS_ID_HOLD As Label
     Friend WithEvents FSHS_HEAD_LBL As Label
     Friend WithEvents FSHS_ADD_BTN As Button
     Friend WithEvents FSHS_MIN_BTN As Button
@@ -393,7 +398,6 @@ Partial Class Form_Stock_HS
     Friend WithEvents FAI_L_ITEM_NAME As Label
     Friend WithEvents SEARCH_GRID As DataGridView
     Friend WithEvents FSHS_ITEM_TBX As TextBox
-    Friend WithEvents CK_COLUMN As DataGridViewCheckBoxColumn
     Friend WithEvents FSHS_FLT1_TBX As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents FSHS_FLT2_TBX As TextBox
@@ -401,5 +405,10 @@ Partial Class Form_Stock_HS
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents FSHS_FLT5_TBX As TextBox
+    Friend WithEvents CK_COLUMN As DataGridViewCheckBoxColumn
+    Friend WithEvents FSHS_PRC_HOLD As Label
+    Friend WithEvents FSHS_TRH_HOLD As Label
+    Friend WithEvents FSHS_QTY_HOLD As Label
+    Friend WithEvents FSHS_ID_HOLD As Label
 End Class
