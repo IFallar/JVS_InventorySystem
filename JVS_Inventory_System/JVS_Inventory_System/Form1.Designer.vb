@@ -23,10 +23,11 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.SIDE_SET_BTN = New System.Windows.Forms.Button()
         Me.SIDE_HOME_BTN = New System.Windows.Forms.Button()
         Me.SIDE_LOG_BTN = New System.Windows.Forms.Button()
         Me.SIDE_ITEM_BTN = New System.Windows.Forms.Button()
@@ -75,7 +76,6 @@ Partial Class Form1
         Me.cbx_column = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.LOG_PANEL = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.SIDE_SET_BTN = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
         Me.HOME_PANEL.SuspendLayout()
@@ -108,6 +108,26 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(223, 661)
         Me.Panel1.TabIndex = 1
+        '
+        'SIDE_SET_BTN
+        '
+        Me.SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent
+        Me.SIDE_SET_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SIDE_SET_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SIDE_SET_BTN.FlatAppearance.BorderSize = 0
+        Me.SIDE_SET_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.SIDE_SET_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.SIDE_SET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SIDE_SET_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SIDE_SET_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.SIDE_SET_BTN.Location = New System.Drawing.Point(41, 514)
+        Me.SIDE_SET_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.SIDE_SET_BTN.Name = "SIDE_SET_BTN"
+        Me.SIDE_SET_BTN.Size = New System.Drawing.Size(181, 64)
+        Me.SIDE_SET_BTN.TabIndex = 6
+        Me.SIDE_SET_BTN.TabStop = False
+        Me.SIDE_SET_BTN.Text = "SETTINGS"
+        Me.SIDE_SET_BTN.UseVisualStyleBackColor = False
         '
         'SIDE_HOME_BTN
         '
@@ -172,9 +192,9 @@ Partial Class Form1
         'Base_Panel
         '
         Me.Base_Panel.BackColor = System.Drawing.Color.White
-        Me.Base_Panel.Controls.Add(Me.HOME_PANEL)
         Me.Base_Panel.Controls.Add(Me.ITEM_PANEL)
         Me.Base_Panel.Controls.Add(Me.LOG_PANEL)
+        Me.Base_Panel.Controls.Add(Me.HOME_PANEL)
         Me.Base_Panel.Dock = System.Windows.Forms.DockStyle.Right
         Me.Base_Panel.Location = New System.Drawing.Point(223, 0)
         Me.Base_Panel.Margin = New System.Windows.Forms.Padding(0)
@@ -847,26 +867,26 @@ Partial Class Form1
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 40
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cbx_column})
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
@@ -874,14 +894,14 @@ Partial Class Form1
         Me.DataGridView1.MinimumSize = New System.Drawing.Size(850, 431)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(850, 431)
         Me.DataGridView1.TabIndex = 0
@@ -914,26 +934,6 @@ Partial Class Form1
         Me.Label3.Size = New System.Drawing.Size(67, 13)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "LOG PANEL"
-        '
-        'SIDE_SET_BTN
-        '
-        Me.SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent
-        Me.SIDE_SET_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SIDE_SET_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SIDE_SET_BTN.FlatAppearance.BorderSize = 0
-        Me.SIDE_SET_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.SIDE_SET_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.SIDE_SET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SIDE_SET_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SIDE_SET_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.SIDE_SET_BTN.Location = New System.Drawing.Point(41, 514)
-        Me.SIDE_SET_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.SIDE_SET_BTN.Name = "SIDE_SET_BTN"
-        Me.SIDE_SET_BTN.Size = New System.Drawing.Size(181, 64)
-        Me.SIDE_SET_BTN.TabIndex = 6
-        Me.SIDE_SET_BTN.TabStop = False
-        Me.SIDE_SET_BTN.Text = "SETTINGS"
-        Me.SIDE_SET_BTN.UseVisualStyleBackColor = False
         '
         'Form1
         '

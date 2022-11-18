@@ -472,6 +472,32 @@ Public Class Form1
 
     End Sub
 
+    Private Sub HOME_STOCK_IN_BTN_Click(sender As Object, e As EventArgs) Handles HOME_STOCK_IN_BTN.Click
+
+        Try
+            Dim Modal As New Form_Stock_IS
+            Form_Stock_HS.FSHS_HEAD_LBL.Text = "STOCK IN"
+            Form_Stock_HS.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub HOME_STOCK_OUT_BTN_Click(sender As Object, e As EventArgs) Handles HOME_STOCK_OUT_BTN.Click
+
+        Try
+            Dim Modal As New Form_Stock_IS
+            Form_Stock_HS.FSHS_HEAD_LBL.Text = "STOCK OUT"
+            Form_Stock_HS.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
     '++++++++++++++++ ITEM SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub ITM_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
@@ -785,6 +811,5 @@ Public Class Form1
         strconn.Close()
 
     End Sub
-
 
 End Class
