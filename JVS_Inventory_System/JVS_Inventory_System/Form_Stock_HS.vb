@@ -6,8 +6,33 @@
 
     Private Sub FSHS_ITEM_TBX_TextChanged(sender As Object, e As EventArgs) Handles FSHS_ITEM_TBX.TextChanged
 
-        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant FROM `products` WHERE ITEM_NAME LIKE '%" & FSHS_ITEM_TBX.Text & "%' OR ITEM_BRAND LIKE '%" & FSHS_ITEM_TBX.Text & "%' OR VARIANT LIKE '%" & FSHS_ITEM_TBX.Text & "%'", SEARCH_GRID)
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `QUANTITY` as QUANTITY  FROM `products` WHERE ITEM_NAME LIKE '%" & FSHS_ITEM_TBX.Text & "%'", SEARCH_GRID)
         strconn.Close()
+
+    End Sub
+
+    Private Sub FSHS_FLT1_TBX_TextChanged(sender As Object, e As EventArgs) Handles FSHS_FLT1_TBX.TextChanged
+
+        If FSHS_FLT2_TBX.Text = "" Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `QUANTITY` as QUANTITY  FROM `products` WHERE ITEM_NAME LIKE '%" & FSHS_ITEM_TBX.Text & "%' AND ITEM_BRAND LIKE '%" & FSHS_FLT1_TBX.Text & "%'", SEARCH_GRID)
+            strconn.Close()
+        Else
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `QUANTITY` as QUANTITY  FROM `products` WHERE ITEM_NAME LIKE '%" & FSHS_ITEM_TBX.Text & "%' AND ITEM_BRAND LIKE '%" & FSHS_FLT1_TBX.Text & "%' AND VARIANT LIKE '%" & FSHS_FLT2_TBX.Text & "%'", SEARCH_GRID)
+            strconn.Close()
+        End If
+
+
+    End Sub
+
+    Private Sub FSHS_FLT2_TBX_TextChanged(sender As Object, e As EventArgs) Handles FSHS_FLT2_TBX.TextChanged
+
+        If FSHS_FLT2_TBX.Text = "" Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `QUANTITY` as QUANTITY  FROM `products` WHERE ITEM_NAME LIKE '%" & FSHS_ITEM_TBX.Text & "%' AND VARIANT LIKE '%" & FSHS_FLT2_TBX.Text & "%'", SEARCH_GRID)
+            strconn.Close()
+        Else
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `QUANTITY` as QUANTITY  FROM `products` WHERE ITEM_NAME LIKE '%" & FSHS_ITEM_TBX.Text & "%' AND ITEM_BRAND LIKE '%" & FSHS_FLT1_TBX.Text & "%' AND VARIANT LIKE '%" & FSHS_FLT2_TBX.Text & "%'", SEARCH_GRID)
+            strconn.Close()
+        End If
 
     End Sub
 
@@ -24,6 +49,12 @@
         SEARCH_GRID.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         SEARCH_GRID.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         SEARCH_GRID.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+    End Sub
+
+    Private Sub FSHS_FLT1_TBX_GotFocus(sender As Object, e As EventArgs) Handles FSHS_FLT1_TBX.GotFocus
+
+
 
     End Sub
 
