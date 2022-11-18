@@ -291,13 +291,13 @@ Partial Class Form_Stock_HS
         'FSHS_FLT4_TBX
         '
         Me.FSHS_FLT4_TBX.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.FSHS_FLT4_TBX.Font = New System.Drawing.Font("Roobert Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSHS_FLT4_TBX.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.FSHS_FLT4_TBX.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FSHS_FLT4_TBX.ForeColor = System.Drawing.SystemColors.Desktop
         Me.FSHS_FLT4_TBX.Location = New System.Drawing.Point(421, 69)
         Me.FSHS_FLT4_TBX.Name = "FSHS_FLT4_TBX"
-        Me.FSHS_FLT4_TBX.ReadOnly = True
-        Me.FSHS_FLT4_TBX.Size = New System.Drawing.Size(131, 27)
+        Me.FSHS_FLT4_TBX.Size = New System.Drawing.Size(131, 25)
         Me.FSHS_FLT4_TBX.TabIndex = 48
+        Me.FSHS_FLT4_TBX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '

@@ -1,5 +1,46 @@
 ﻿Public Class Form_Stock_HS
 
+    Public Sub GetNum()
+
+        Dim QTY As Integer
+        Dim TRH As Integer
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `QUANTITY`, `THRESHOLD` FROM `products` WHERE `ITEM_ID` = '" & Selected_HS & "'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Try
+
+                QTY = cmdreader.GetValue(0)
+                TRH = cmdreader.GetValue(1)
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+        FSHS_FLT4_TBX.Text = "" & QTY & " / " & TRH & ""
+
+        If QTY >= TRH And QTY > 0 Then
+            FSHS_FLT4_TBX.BackColor = Color.Green
+        ElseIf QTY = 0 Then
+            FSHS_FLT4_TBX.BackColor = Color.Red
+        Else
+            FSHS_FLT4_TBX.BackColor = Color.Orange
+        End If
+
+    End Sub
+
     Private Sub Form_Stock_HS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
@@ -89,9 +130,10 @@
         FSHS_FLT2_TBX.Text = SEARCH_GRID.CurrentRow.Cells(4).Value
         SEARCH_GRID.Visible = False
 
-
+        GetNum()
 
     End Sub
+
 
 
     '++++++++++++++++ PLACEHOLDER HANDLING (RUDIMENTRARY) ++++++++++++++++++++++++++++++++++++++++++++++++++++++
