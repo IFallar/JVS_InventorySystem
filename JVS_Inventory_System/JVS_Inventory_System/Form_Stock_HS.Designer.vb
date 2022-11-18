@@ -35,7 +35,13 @@ Partial Class Form_Stock_HS
         Me.FSIS_NUM_TBX = New System.Windows.Forms.TextBox()
         Me.FAI_L_ITEM_NAME = New System.Windows.Forms.Label()
         Me.SEARCH_GRID = New System.Windows.Forms.DataGridView()
+        Me.CK_COLUMN = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.FSHS_ITEM_TBX = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.SEARCH_GRID, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,13 +54,11 @@ Partial Class Form_Stock_HS
         Me.Panel1.Controls.Add(Me.FSHS_QTY_HOLD)
         Me.Panel1.Controls.Add(Me.FSHS_ID_HOLD)
         Me.Panel1.Controls.Add(Me.FSHS_HEAD_LBL)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel1.MaximumSize = New System.Drawing.Size(400, 40)
         Me.Panel1.MinimumSize = New System.Drawing.Size(500, 40)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(500, 40)
+        Me.Panel1.Size = New System.Drawing.Size(564, 40)
         Me.Panel1.TabIndex = 2
         '
         'FSHS_PRC_HOLD
@@ -129,7 +133,7 @@ Partial Class Form_Stock_HS
         Me.FSIS_ADD_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FSIS_ADD_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FSIS_ADD_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.FSIS_ADD_BTN.Location = New System.Drawing.Point(149, 237)
+        Me.FSIS_ADD_BTN.Location = New System.Drawing.Point(149, 262)
         Me.FSIS_ADD_BTN.Name = "FSIS_ADD_BTN"
         Me.FSIS_ADD_BTN.Size = New System.Drawing.Size(25, 35)
         Me.FSIS_ADD_BTN.TabIndex = 39
@@ -142,7 +146,7 @@ Partial Class Form_Stock_HS
         Me.FSIS_MIN_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FSIS_MIN_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FSIS_MIN_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.FSIS_MIN_BTN.Location = New System.Drawing.Point(12, 237)
+        Me.FSIS_MIN_BTN.Location = New System.Drawing.Point(12, 262)
         Me.FSIS_MIN_BTN.Name = "FSIS_MIN_BTN"
         Me.FSIS_MIN_BTN.Size = New System.Drawing.Size(25, 35)
         Me.FSIS_MIN_BTN.TabIndex = 38
@@ -156,7 +160,7 @@ Partial Class Form_Stock_HS
         Me.FSIS_CNC_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.FSIS_CNC_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FSIS_CNC_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.FSIS_CNC_BTN.Location = New System.Drawing.Point(279, 237)
+        Me.FSIS_CNC_BTN.Location = New System.Drawing.Point(395, 262)
         Me.FSIS_CNC_BTN.Name = "FSIS_CNC_BTN"
         Me.FSIS_CNC_BTN.Size = New System.Drawing.Size(75, 35)
         Me.FSIS_CNC_BTN.TabIndex = 37
@@ -170,7 +174,7 @@ Partial Class Form_Stock_HS
         Me.FSIS_SAVE_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
         Me.FSIS_SAVE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FSIS_SAVE_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.FSIS_SAVE_BTN.Location = New System.Drawing.Point(360, 237)
+        Me.FSIS_SAVE_BTN.Location = New System.Drawing.Point(476, 262)
         Me.FSIS_SAVE_BTN.Name = "FSIS_SAVE_BTN"
         Me.FSIS_SAVE_BTN.Size = New System.Drawing.Size(75, 35)
         Me.FSIS_SAVE_BTN.TabIndex = 36
@@ -180,7 +184,7 @@ Partial Class Form_Stock_HS
         'FSIS_NUM_TBX
         '
         Me.FSIS_NUM_TBX.Font = New System.Drawing.Font("Tw Cen MT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FSIS_NUM_TBX.Location = New System.Drawing.Point(43, 237)
+        Me.FSIS_NUM_TBX.Location = New System.Drawing.Point(43, 262)
         Me.FSIS_NUM_TBX.MaximumSize = New System.Drawing.Size(100, 35)
         Me.FSIS_NUM_TBX.MinimumSize = New System.Drawing.Size(100, 35)
         Me.FSIS_NUM_TBX.Name = "FSIS_NUM_TBX"
@@ -204,6 +208,8 @@ Partial Class Form_Stock_HS
         '
         'SEARCH_GRID
         '
+        Me.SEARCH_GRID.AllowUserToAddRows = False
+        Me.SEARCH_GRID.AllowUserToDeleteRows = False
         Me.SEARCH_GRID.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.SEARCH_GRID.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
         Me.SEARCH_GRID.BackgroundColor = System.Drawing.SystemColors.Control
@@ -212,25 +218,94 @@ Partial Class Form_Stock_HS
         Me.SEARCH_GRID.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.SEARCH_GRID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SEARCH_GRID.ColumnHeadersVisible = False
-        Me.SEARCH_GRID.Location = New System.Drawing.Point(12, 96)
+        Me.SEARCH_GRID.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CK_COLUMN})
+        Me.SEARCH_GRID.Location = New System.Drawing.Point(9, 157)
         Me.SEARCH_GRID.Margin = New System.Windows.Forms.Padding(0)
+        Me.SEARCH_GRID.MultiSelect = False
         Me.SEARCH_GRID.Name = "SEARCH_GRID"
-        Me.SEARCH_GRID.Size = New System.Drawing.Size(423, 138)
+        Me.SEARCH_GRID.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.SEARCH_GRID.RowHeadersVisible = False
+        Me.SEARCH_GRID.Size = New System.Drawing.Size(542, 91)
         Me.SEARCH_GRID.TabIndex = 42
+        '
+        'CK_COLUMN
+        '
+        Me.CK_COLUMN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.CK_COLUMN.HeaderText = "*"
+        Me.CK_COLUMN.Name = "CK_COLUMN"
+        Me.CK_COLUMN.Width = 5
         '
         'FSHS_ITEM_TBX
         '
         Me.FSHS_ITEM_TBX.Font = New System.Drawing.Font("Roobert Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FSHS_ITEM_TBX.Location = New System.Drawing.Point(12, 69)
         Me.FSHS_ITEM_TBX.Name = "FSHS_ITEM_TBX"
-        Me.FSHS_ITEM_TBX.Size = New System.Drawing.Size(423, 27)
+        Me.FSHS_ITEM_TBX.Size = New System.Drawing.Size(539, 27)
         Me.FSHS_ITEM_TBX.TabIndex = 43
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Roobert Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.TextBox1.Location = New System.Drawing.Point(12, 119)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(131, 27)
+        Me.TextBox1.TabIndex = 45
+        Me.TextBox1.Text = "BRAND"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(9, 99)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(88, 16)
+        Me.Label1.TabIndex = 44
+        Me.Label1.Text = "NARROW BY:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Roobert Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.TextBox2.Location = New System.Drawing.Point(148, 119)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(131, 27)
+        Me.TextBox2.TabIndex = 46
+        Me.TextBox2.Text = "VARIANT"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Roobert Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.TextBox3.Location = New System.Drawing.Point(284, 119)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(131, 27)
+        Me.TextBox3.TabIndex = 47
+        Me.TextBox3.Text = "CATEGORY"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Roobert Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.TextBox4.Location = New System.Drawing.Point(420, 119)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(131, 27)
+        Me.TextBox4.TabIndex = 48
+        Me.TextBox4.Text = "SUPPLIER"
         '
         'Form_Stock_HS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(452, 284)
+        Me.ClientSize = New System.Drawing.Size(563, 309)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.FSHS_ITEM_TBX)
         Me.Controls.Add(Me.SEARCH_GRID)
         Me.Controls.Add(Me.FAI_L_ITEM_NAME)
@@ -265,4 +340,10 @@ Partial Class Form_Stock_HS
     Friend WithEvents FAI_L_ITEM_NAME As Label
     Friend WithEvents SEARCH_GRID As DataGridView
     Friend WithEvents FSHS_ITEM_TBX As TextBox
+    Friend WithEvents CK_COLUMN As DataGridViewCheckBoxColumn
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox4 As TextBox
 End Class
