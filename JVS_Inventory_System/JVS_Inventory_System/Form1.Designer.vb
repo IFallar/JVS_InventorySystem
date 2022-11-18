@@ -76,6 +76,7 @@ Partial Class Form1
         Me.HOME_ADD_ITEM_BTN = New System.Windows.Forms.Button()
         Me.HOME_INVENTORY_LOG_BTN = New System.Windows.Forms.Button()
         Me.HOME_STOCK_OUT_BTN = New System.Windows.Forms.Button()
+        Me.PANEL_SETTINGS = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
         Me.ITEM_PANEL.SuspendLayout()
@@ -120,7 +121,7 @@ Partial Class Form1
         Me.SIDE_SET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SIDE_SET_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SIDE_SET_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.SIDE_SET_BTN.Location = New System.Drawing.Point(41, 514)
+        Me.SIDE_SET_BTN.Location = New System.Drawing.Point(42, 514)
         Me.SIDE_SET_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
         Me.SIDE_SET_BTN.Name = "SIDE_SET_BTN"
         Me.SIDE_SET_BTN.Size = New System.Drawing.Size(181, 64)
@@ -195,6 +196,7 @@ Partial Class Form1
         Me.Base_Panel.Controls.Add(Me.HOME_PANEL)
         Me.Base_Panel.Controls.Add(Me.ITEM_PANEL)
         Me.Base_Panel.Controls.Add(Me.LOG_PANEL)
+        Me.Base_Panel.Controls.Add(Me.PANEL_SETTINGS)
         Me.Base_Panel.Dock = System.Windows.Forms.DockStyle.Right
         Me.Base_Panel.Location = New System.Drawing.Point(223, 0)
         Me.Base_Panel.Margin = New System.Windows.Forms.Padding(0)
@@ -935,6 +937,14 @@ Partial Class Form1
         Me.HOME_STOCK_OUT_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HOME_STOCK_OUT_BTN.UseVisualStyleBackColor = False
         '
+        'PANEL_SETTINGS
+        '
+        Me.PANEL_SETTINGS.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PANEL_SETTINGS.Location = New System.Drawing.Point(0, 0)
+        Me.PANEL_SETTINGS.Name = "PANEL_SETTINGS"
+        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 661)
+        Me.PANEL_SETTINGS.TabIndex = 2
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1020,4 +1030,5 @@ Partial Class Form1
     Friend WithEvents ITM_RESET_ITEM_BTN As Button
     Friend WithEvents ITM_SEARCH_TBX As TextBox
     Friend WithEvents SIDE_SET_BTN As Button
+    Friend WithEvents PANEL_SETTINGS As Panel
 End Class
