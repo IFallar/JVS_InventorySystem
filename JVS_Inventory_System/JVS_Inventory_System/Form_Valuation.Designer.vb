@@ -22,9 +22,9 @@ Partial Class Form_Valuation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FSIS_PRC_HOLD = New System.Windows.Forms.Label()
         Me.FSIS_TRH_HOLD = New System.Windows.Forms.Label()
@@ -32,10 +32,10 @@ Partial Class Form_Valuation
         Me.FSIS_ID_HOLD = New System.Windows.Forms.Label()
         Me.FV_HEAD_LBL = New System.Windows.Forms.Label()
         Me.VALUE_GRID = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.COL4_TT_LBL = New System.Windows.Forms.Label()
+        Me.COL3_TT_LBL = New System.Windows.Forms.Label()
+        Me.COL1_TT_LBL = New System.Windows.Forms.Label()
+        Me.COL2_TT_LBL = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
@@ -134,87 +134,87 @@ Partial Class Form_Valuation
         Me.VALUE_GRID.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.VALUE_GRID.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.VALUE_GRID.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tw Cen MT Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.VALUE_GRID.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Tw Cen MT Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VALUE_GRID.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.VALUE_GRID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tw Cen MT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.VALUE_GRID.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Tw Cen MT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VALUE_GRID.DefaultCellStyle = DataGridViewCellStyle5
         Me.VALUE_GRID.Location = New System.Drawing.Point(12, 47)
         Me.VALUE_GRID.Name = "VALUE_GRID"
         Me.VALUE_GRID.ReadOnly = True
         Me.VALUE_GRID.RowHeadersVisible = False
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.VALUE_GRID.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VALUE_GRID.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.VALUE_GRID.Size = New System.Drawing.Size(760, 340)
         Me.VALUE_GRID.TabIndex = 3
         '
-        'Label1
+        'COL4_TT_LBL
         '
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Lime
-        Me.Label1.Location = New System.Drawing.Point(673, 400)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 40)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Label1"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.COL4_TT_LBL.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.COL4_TT_LBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.COL4_TT_LBL.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.COL4_TT_LBL.ForeColor = System.Drawing.Color.Lime
+        Me.COL4_TT_LBL.Location = New System.Drawing.Point(673, 400)
+        Me.COL4_TT_LBL.Margin = New System.Windows.Forms.Padding(0)
+        Me.COL4_TT_LBL.Name = "COL4_TT_LBL"
+        Me.COL4_TT_LBL.Size = New System.Drawing.Size(96, 40)
+        Me.COL4_TT_LBL.TabIndex = 4
+        Me.COL4_TT_LBL.Text = "Label1"
+        Me.COL4_TT_LBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
+        'COL3_TT_LBL
         '
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(583, 400)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 40)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Label2"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.COL3_TT_LBL.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.COL3_TT_LBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.COL3_TT_LBL.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.COL3_TT_LBL.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.COL3_TT_LBL.Location = New System.Drawing.Point(583, 400)
+        Me.COL3_TT_LBL.Margin = New System.Windows.Forms.Padding(0)
+        Me.COL3_TT_LBL.Name = "COL3_TT_LBL"
+        Me.COL3_TT_LBL.Size = New System.Drawing.Size(86, 40)
+        Me.COL3_TT_LBL.TabIndex = 5
+        Me.COL3_TT_LBL.Text = "Label2"
+        Me.COL3_TT_LBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label4
+        'COL1_TT_LBL
         '
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(313, 400)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 40)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Label4"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.COL1_TT_LBL.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.COL1_TT_LBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.COL1_TT_LBL.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.COL1_TT_LBL.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.COL1_TT_LBL.Location = New System.Drawing.Point(313, 400)
+        Me.COL1_TT_LBL.Margin = New System.Windows.Forms.Padding(0)
+        Me.COL1_TT_LBL.Name = "COL1_TT_LBL"
+        Me.COL1_TT_LBL.Size = New System.Drawing.Size(96, 40)
+        Me.COL1_TT_LBL.TabIndex = 7
+        Me.COL1_TT_LBL.Text = "Label4"
+        Me.COL1_TT_LBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label5
+        'COL2_TT_LBL
         '
-        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(413, 400)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(76, 40)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Label5"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.COL2_TT_LBL.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.COL2_TT_LBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.COL2_TT_LBL.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.COL2_TT_LBL.ForeColor = System.Drawing.Color.Red
+        Me.COL2_TT_LBL.Location = New System.Drawing.Point(413, 400)
+        Me.COL2_TT_LBL.Margin = New System.Windows.Forms.Padding(0)
+        Me.COL2_TT_LBL.Name = "COL2_TT_LBL"
+        Me.COL2_TT_LBL.Size = New System.Drawing.Size(76, 40)
+        Me.COL2_TT_LBL.TabIndex = 8
+        Me.COL2_TT_LBL.Text = "Label5"
+        Me.COL2_TT_LBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
@@ -245,10 +245,10 @@ Partial Class Form_Valuation
         Me.ClientSize = New System.Drawing.Size(784, 461)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.COL2_TT_LBL)
+        Me.Controls.Add(Me.COL1_TT_LBL)
+        Me.Controls.Add(Me.COL3_TT_LBL)
+        Me.Controls.Add(Me.COL4_TT_LBL)
         Me.Controls.Add(Me.VALUE_GRID)
         Me.Controls.Add(Me.Panel1)
         Me.MaximumSize = New System.Drawing.Size(800, 500)
@@ -270,10 +270,10 @@ Partial Class Form_Valuation
     Friend WithEvents FSIS_ID_HOLD As Label
     Friend WithEvents FV_HEAD_LBL As Label
     Friend WithEvents VALUE_GRID As DataGridView
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents COL4_TT_LBL As Label
+    Friend WithEvents COL3_TT_LBL As Label
+    Friend WithEvents COL1_TT_LBL As Label
+    Friend WithEvents COL2_TT_LBL As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
 End Class
