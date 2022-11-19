@@ -51,7 +51,7 @@
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "' WHERE `ITEM_ID` = '" & ID & "'"
+        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
         cmd.ExecuteNonQuery()
         MsgBox("Success", MsgBoxStyle.OkOnly, "Action Confirmation")
         strconn.Close()

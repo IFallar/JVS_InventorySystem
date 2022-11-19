@@ -365,6 +365,7 @@ Public Class Form1
         HOME_PANEL.Visible = True
         ITEM_PANEL.Visible = False
         LOG_PANEL.Visible = False
+        PANEL_SETTINGS.Visible = False
 
         SIDE_HOME_BTN.BackColor = System.Drawing.Color.White
         SIDE_ITEM_BTN.BackColor = System.Drawing.Color.Transparent
@@ -385,6 +386,7 @@ Public Class Form1
         HOME_PANEL.Visible = False
         ITEM_PANEL.Visible = True
         LOG_PANEL.Visible = False
+        PANEL_SETTINGS.Visible = False
 
         SIDE_HOME_BTN.BackColor = System.Drawing.Color.Transparent
         SIDE_ITEM_BTN.BackColor = System.Drawing.Color.White
@@ -405,6 +407,7 @@ Public Class Form1
         HOME_PANEL.Visible = False
         ITEM_PANEL.Visible = False
         LOG_PANEL.Visible = True
+        PANEL_SETTINGS.Visible = False
 
         SIDE_HOME_BTN.BackColor = System.Drawing.Color.Transparent
         SIDE_ITEM_BTN.BackColor = System.Drawing.Color.Transparent
@@ -424,7 +427,8 @@ Public Class Form1
 
         HOME_PANEL.Visible = False
         ITEM_PANEL.Visible = False
-        LOG_PANEL.Visible = True
+        LOG_PANEL.Visible = False
+        PANEL_SETTINGS.Visible = True
 
         SIDE_HOME_BTN.BackColor = System.Drawing.Color.Transparent
         SIDE_ITEM_BTN.BackColor = System.Drawing.Color.Transparent
