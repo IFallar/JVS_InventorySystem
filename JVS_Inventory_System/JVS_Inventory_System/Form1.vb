@@ -225,6 +225,9 @@ Public Class Form1
 
     Public Sub Search_Bar()
 
+        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_NAME LIKE '%" & ITM_SEARCH_TBX.Text & "%' OR ITEM_BRAND LIKE '%" & ITM_SEARCH_TBX.Text & "%' OR VARIANT LIKE '%" & ITM_SEARCH_TBX.Text & "%'", DataGridView1)
+        strconn.Close()
+
     End Sub
 
     'PRIVATES ================================================================================================================
@@ -309,7 +312,6 @@ Public Class Form1
 
     End Sub
 
-
     'BUTTON EVENTS ===================================================================================================================
 
     '++++++++++++++++ BUTTON STYLE CHANGES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -355,7 +357,6 @@ Public Class Form1
         End If
 
     End Sub
-
 
     'PANEL NAVIGATION ================================================================================================================
 
@@ -444,6 +445,8 @@ Public Class Form1
 
     End Sub
 
+    'MAIN SCREEN ================================================================================================================
+
     '++++++++++++++++ MAIN SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub Darken_BG()
@@ -460,7 +463,6 @@ Public Class Form1
         ADD_ITEM_MODAL.Show()
 
     End Sub 'UNUSED SNIPPETS
-
 
     Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
         Dim ADD_ITEM_MODAL As New Form
@@ -502,6 +504,29 @@ Public Class Form1
 
     End Sub
 
+    '++++++++++++++++ QUICK INFO BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Private Sub VALUE_ITEMS_Click(sender As Object, e As EventArgs) Handles VALUE_ITEMS.Click
+
+        Dim ADD_ITEM_MODAL As New Form
+
+        Try
+            Dim Modal As New Form_Valuation
+            Form_Valuation.FV_HEAD_LBL.Text = "INVENTORY VALUE BREAKDOWN"
+            Form_Valuation.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub VALUE_LOWSTOCK_Click(sender As Object, e As EventArgs) Handles VALUE_LOWSTOCK.Click
+
+    End Sub
+
+    'ITEM SCREEN ================================================================================================================
+
     '++++++++++++++++ ITEM SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub ITM_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
@@ -515,6 +540,7 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
+
     End Sub
 
     Private Sub ITM_EDIT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_EDIT_ITEM_BTN.Click
@@ -680,8 +706,6 @@ Public Class Form1
 
     End Sub
 
-    'TABLE MANIPULATION ================================================================================================================
-
     '++++++++++++++++ SETTING FILTER FUNCTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub ITM_CAT_ITEM_CBX_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ITM_FLTSET_ITEM_CBX.SelectedIndexChanged
@@ -811,9 +835,10 @@ Public Class Form1
 
     Private Sub ITM_SEARCH_TBX_TextChanged(sender As Object, e As EventArgs) Handles ITM_SEARCH_TBX.TextChanged
 
-        tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_NAME LIKE '%" & ITM_SEARCH_TBX.Text & "%' OR ITEM_BRAND LIKE '%" & ITM_SEARCH_TBX.Text & "%' OR VARIANT LIKE '%" & ITM_SEARCH_TBX.Text & "%'", DataGridView1)
-        strconn.Close()
+        Search_Bar()
 
     End Sub
+
+
 
 End Class
