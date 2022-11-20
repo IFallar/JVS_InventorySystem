@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form_Valuation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,11 @@ Partial Class Form_Valuation
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FSIS_PRC_HOLD = New System.Windows.Forms.Label()
         Me.FSIS_TRH_HOLD = New System.Windows.Forms.Label()
@@ -38,6 +38,8 @@ Partial Class Form_Valuation
         Me.COL2_TT_LBL = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.MARGIN_BTN = New System.Windows.Forms.Button()
+        Me.PRICE_BTN = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.VALUE_GRID, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -134,30 +136,30 @@ Partial Class Form_Valuation
         Me.VALUE_GRID.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.VALUE_GRID.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.VALUE_GRID.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Tw Cen MT Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.VALUE_GRID.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tw Cen MT Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VALUE_GRID.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.VALUE_GRID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Tw Cen MT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.VALUE_GRID.DefaultCellStyle = DataGridViewCellStyle5
-        Me.VALUE_GRID.Location = New System.Drawing.Point(12, 47)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tw Cen MT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VALUE_GRID.DefaultCellStyle = DataGridViewCellStyle2
+        Me.VALUE_GRID.Location = New System.Drawing.Point(12, 76)
         Me.VALUE_GRID.Name = "VALUE_GRID"
         Me.VALUE_GRID.ReadOnly = True
         Me.VALUE_GRID.RowHeadersVisible = False
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.VALUE_GRID.RowsDefaultCellStyle = DataGridViewCellStyle6
-        Me.VALUE_GRID.Size = New System.Drawing.Size(760, 340)
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VALUE_GRID.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.VALUE_GRID.Size = New System.Drawing.Size(760, 311)
         Me.VALUE_GRID.TabIndex = 3
         '
         'COL4_TT_LBL
@@ -237,12 +239,32 @@ Partial Class Form_Valuation
         Me.Panel2.Size = New System.Drawing.Size(760, 3)
         Me.Panel2.TabIndex = 33
         '
+        'MARGIN_BTN
+        '
+        Me.MARGIN_BTN.Location = New System.Drawing.Point(587, 47)
+        Me.MARGIN_BTN.Name = "MARGIN_BTN"
+        Me.MARGIN_BTN.Size = New System.Drawing.Size(75, 23)
+        Me.MARGIN_BTN.TabIndex = 34
+        Me.MARGIN_BTN.Text = "Total"
+        Me.MARGIN_BTN.UseVisualStyleBackColor = True
+        '
+        'PRICE_BTN
+        '
+        Me.PRICE_BTN.Location = New System.Drawing.Point(499, 47)
+        Me.PRICE_BTN.Name = "PRICE_BTN"
+        Me.PRICE_BTN.Size = New System.Drawing.Size(75, 23)
+        Me.PRICE_BTN.TabIndex = 36
+        Me.PRICE_BTN.Text = "Maximum"
+        Me.PRICE_BTN.UseVisualStyleBackColor = True
+        '
         'Form_Valuation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(784, 461)
+        Me.Controls.Add(Me.PRICE_BTN)
+        Me.Controls.Add(Me.MARGIN_BTN)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.COL2_TT_LBL)
@@ -276,4 +298,6 @@ Partial Class Form_Valuation
     Friend WithEvents COL2_TT_LBL As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents MARGIN_BTN As Button
+    Friend WithEvents PRICE_BTN As Button
 End Class
