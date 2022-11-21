@@ -152,6 +152,8 @@
         FSHS_QTY_HOLD.Text = ""
         FSHS_PRC_HOLD.Text = ""
 
+        FSHS_NUM_TBX.Text = ""
+
     End Sub
 
     '++++++++++++++++ SET TABLE (RUDIMENTRARY) ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -240,7 +242,6 @@
         FSHS_FLT2_TBX.Text = SEARCH_GRID.CurrentRow.Cells(4).Value
         SEARCH_GRID.Visible = False
 
-
         GetNum()
 
 
@@ -293,14 +294,11 @@
 
         If FSHS_NUM_TBX.Text = Nothing Then
             FSHS_NUM_TBX.Text = 1
+        ElseIf FSHS_NUM_TBX.Text = QTY Then
+            MsgBox("Exceeds Inventory Quantity.", MsgBoxStyle.OkOnly, "Insufficient Stock")
         Else
             Dim R_Value As Integer = FSHS_NUM_TBX.Text
-            If FSHS_QTY_HOLD.Text >= FSHS_NUM_TBX.Text Then
-                R_Value = R_Value + 1
-            Else
-                R_Value = R_Value
-            End If
-
+            R_Value = R_Value + 1
             FSHS_NUM_TBX.Text = R_Value
         End If
 
