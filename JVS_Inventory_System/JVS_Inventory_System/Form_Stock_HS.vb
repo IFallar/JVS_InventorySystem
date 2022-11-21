@@ -112,7 +112,7 @@
             If FSHS_HEAD_LBL.Text = "RESTOCK" Then
                 NewStockVal = FSHS_NUM_TBX.Text + QTY
             Else
-                NewStockVal = FSHS_NUM_TBX.Text - QTY
+                NewStockVal = QTY - FSHS_NUM_TBX.Text
             End If
 
         End If
@@ -130,6 +130,27 @@
     End Sub
 
     Private Sub Form_Stock_HS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        FSHS_FLT1_TBX.ReadOnly = True
+        FSHS_FLT2_TBX.ReadOnly = True
+        SEARCH_GRID.Visible = False
+
+        FSHS_FLT1_TBX.ForeColor = Color.Gray
+        FSHS_FLT1_TBX.Text = "BRAND"
+
+        FSHS_FLT2_TBX.ForeColor = Color.Gray
+        FSHS_FLT2_TBX.Text = "VARIANT"
+
+        FSHS_FLT5_TBX.Text = ""
+        FSHS_FLT4_TBX.Text = ""
+
+        FSHS_FLT5_TBX.BackColor = Color.Gray
+        FSHS_FLT4_TBX.BackColor = Color.Gray
+
+        FSHS_TRH_HOLD.Text = ""
+        FSHS_ID_HOLD.Text = ""
+        FSHS_QTY_HOLD.Text = ""
+        FSHS_PRC_HOLD.Text = ""
 
     End Sub
 
@@ -268,11 +289,18 @@
 
     Private Sub FSHS_ADD_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_ADD_BTN.Click
 
+
+
         If FSHS_NUM_TBX.Text = Nothing Then
             FSHS_NUM_TBX.Text = 1
         Else
             Dim R_Value As Integer = FSHS_NUM_TBX.Text
-            R_Value = R_Value + 1
+            If FSHS_QTY_HOLD.Text >= FSHS_NUM_TBX.Text Then
+                R_Value = R_Value + 1
+            Else
+                R_Value = R_Value
+            End If
+
             FSHS_NUM_TBX.Text = R_Value
         End If
 

@@ -17,3 +17,21 @@ C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_Sy
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Stock_HS.resources
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Stock_IS.resources
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Valuation.resources
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.exe.config
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.exe
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.pdb
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.xml
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\MySql.Data.xml
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbprojAssemblyReference.cache
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form1.resources
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Add_Item.resources
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Stock_HS.resources
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Stock_IS.resources
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Valuation.resources
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Resources.resources
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.GenerateResource.cache
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.CopyComplete
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.exe
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.xml
+C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.pdb

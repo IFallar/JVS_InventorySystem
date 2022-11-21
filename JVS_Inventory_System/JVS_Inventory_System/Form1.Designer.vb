@@ -23,9 +23,9 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SIDE_SET_BTN = New System.Windows.Forms.Button()
         Me.SIDE_HOME_BTN = New System.Windows.Forms.Button()
@@ -107,7 +107,7 @@ Partial Class Form1
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(223, 661)
+        Me.Panel1.Size = New System.Drawing.Size(294, 804)
         Me.Panel1.TabIndex = 1
         '
         'SIDE_SET_BTN
@@ -121,10 +121,10 @@ Partial Class Form1
         Me.SIDE_SET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SIDE_SET_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SIDE_SET_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.SIDE_SET_BTN.Location = New System.Drawing.Point(42, 514)
-        Me.SIDE_SET_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.SIDE_SET_BTN.Location = New System.Drawing.Point(56, 633)
+        Me.SIDE_SET_BTN.Margin = New System.Windows.Forms.Padding(0, 12, 0, 0)
         Me.SIDE_SET_BTN.Name = "SIDE_SET_BTN"
-        Me.SIDE_SET_BTN.Size = New System.Drawing.Size(181, 64)
+        Me.SIDE_SET_BTN.Size = New System.Drawing.Size(241, 79)
         Me.SIDE_SET_BTN.TabIndex = 6
         Me.SIDE_SET_BTN.TabStop = False
         Me.SIDE_SET_BTN.Text = "SETTINGS"
@@ -141,10 +141,10 @@ Partial Class Form1
         Me.SIDE_HOME_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SIDE_HOME_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SIDE_HOME_BTN.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SIDE_HOME_BTN.Location = New System.Drawing.Point(43, 292)
-        Me.SIDE_HOME_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.SIDE_HOME_BTN.Location = New System.Drawing.Point(57, 359)
+        Me.SIDE_HOME_BTN.Margin = New System.Windows.Forms.Padding(0, 12, 0, 0)
         Me.SIDE_HOME_BTN.Name = "SIDE_HOME_BTN"
-        Me.SIDE_HOME_BTN.Size = New System.Drawing.Size(181, 64)
+        Me.SIDE_HOME_BTN.Size = New System.Drawing.Size(241, 79)
         Me.SIDE_HOME_BTN.TabIndex = 5
         Me.SIDE_HOME_BTN.TabStop = False
         Me.SIDE_HOME_BTN.Text = "HOME"
@@ -161,10 +161,10 @@ Partial Class Form1
         Me.SIDE_LOG_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SIDE_LOG_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SIDE_LOG_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.SIDE_LOG_BTN.Location = New System.Drawing.Point(43, 440)
-        Me.SIDE_LOG_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.SIDE_LOG_BTN.Location = New System.Drawing.Point(57, 542)
+        Me.SIDE_LOG_BTN.Margin = New System.Windows.Forms.Padding(0, 12, 0, 0)
         Me.SIDE_LOG_BTN.Name = "SIDE_LOG_BTN"
-        Me.SIDE_LOG_BTN.Size = New System.Drawing.Size(181, 64)
+        Me.SIDE_LOG_BTN.Size = New System.Drawing.Size(241, 79)
         Me.SIDE_LOG_BTN.TabIndex = 4
         Me.SIDE_LOG_BTN.TabStop = False
         Me.SIDE_LOG_BTN.Text = "HISTORY"
@@ -181,10 +181,10 @@ Partial Class Form1
         Me.SIDE_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SIDE_ITEM_BTN.Font = New System.Drawing.Font("Tw Cen MT", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SIDE_ITEM_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.SIDE_ITEM_BTN.Location = New System.Drawing.Point(43, 366)
-        Me.SIDE_ITEM_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.SIDE_ITEM_BTN.Location = New System.Drawing.Point(57, 450)
+        Me.SIDE_ITEM_BTN.Margin = New System.Windows.Forms.Padding(0, 12, 0, 0)
         Me.SIDE_ITEM_BTN.Name = "SIDE_ITEM_BTN"
-        Me.SIDE_ITEM_BTN.Size = New System.Drawing.Size(181, 64)
+        Me.SIDE_ITEM_BTN.Size = New System.Drawing.Size(241, 79)
         Me.SIDE_ITEM_BTN.TabIndex = 3
         Me.SIDE_ITEM_BTN.TabStop = False
         Me.SIDE_ITEM_BTN.Text = "ITEMS"
@@ -198,10 +198,10 @@ Partial Class Form1
         Me.Base_Panel.Controls.Add(Me.LOG_PANEL)
         Me.Base_Panel.Controls.Add(Me.PANEL_SETTINGS)
         Me.Base_Panel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Base_Panel.Location = New System.Drawing.Point(223, 0)
+        Me.Base_Panel.Location = New System.Drawing.Point(294, 0)
         Me.Base_Panel.Margin = New System.Windows.Forms.Padding(0)
         Me.Base_Panel.Name = "Base_Panel"
-        Me.Base_Panel.Size = New System.Drawing.Size(881, 661)
+        Me.Base_Panel.Size = New System.Drawing.Size(1175, 804)
         Me.Base_Panel.TabIndex = 2
         '
         'HOME_PANEL
@@ -213,8 +213,9 @@ Partial Class Form1
         Me.HOME_PANEL.Controls.Add(Me.Panel2)
         Me.HOME_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HOME_PANEL.Location = New System.Drawing.Point(0, 0)
+        Me.HOME_PANEL.Margin = New System.Windows.Forms.Padding(4)
         Me.HOME_PANEL.Name = "HOME_PANEL"
-        Me.HOME_PANEL.Size = New System.Drawing.Size(881, 661)
+        Me.HOME_PANEL.Size = New System.Drawing.Size(1175, 804)
         Me.HOME_PANEL.TabIndex = 0
         '
         'APP_LABEL
@@ -222,9 +223,10 @@ Partial Class Form1
         Me.APP_LABEL.BackColor = System.Drawing.Color.Transparent
         Me.APP_LABEL.Font = New System.Drawing.Font("Bahnschrift SemiBold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.APP_LABEL.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.APP_LABEL.Location = New System.Drawing.Point(11, 25)
+        Me.APP_LABEL.Location = New System.Drawing.Point(15, 31)
+        Me.APP_LABEL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.APP_LABEL.Name = "APP_LABEL"
-        Me.APP_LABEL.Size = New System.Drawing.Size(839, 80)
+        Me.APP_LABEL.Size = New System.Drawing.Size(1119, 98)
         Me.APP_LABEL.TabIndex = 14
         Me.APP_LABEL.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
         Me.APP_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -235,9 +237,10 @@ Partial Class Form1
         Me.Panel6.Controls.Add(Me.Panel5)
         Me.Panel6.Controls.Add(Me.Panel3)
         Me.Panel6.Controls.Add(Me.Panel4)
-        Me.Panel6.Location = New System.Drawing.Point(11, 136)
+        Me.Panel6.Location = New System.Drawing.Point(15, 167)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(815, 103)
+        Me.Panel6.Size = New System.Drawing.Size(1087, 127)
         Me.Panel6.TabIndex = 13
         '
         'INFO_LBL_ITEMS
@@ -246,8 +249,9 @@ Partial Class Form1
         Me.INFO_LBL_ITEMS.Controls.Add(Me.HEADER_ITEMS)
         Me.INFO_LBL_ITEMS.Controls.Add(Me.VALUE_ITEMS)
         Me.INFO_LBL_ITEMS.Location = New System.Drawing.Point(0, 0)
+        Me.INFO_LBL_ITEMS.Margin = New System.Windows.Forms.Padding(4)
         Me.INFO_LBL_ITEMS.Name = "INFO_LBL_ITEMS"
-        Me.INFO_LBL_ITEMS.Size = New System.Drawing.Size(199, 108)
+        Me.INFO_LBL_ITEMS.Size = New System.Drawing.Size(265, 133)
         Me.INFO_LBL_ITEMS.TabIndex = 10
         '
         'HEADER_ITEMS
@@ -257,9 +261,10 @@ Partial Class Form1
         Me.HEADER_ITEMS.Font = New System.Drawing.Font("Tw Cen MT", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HEADER_ITEMS.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.HEADER_ITEMS.Location = New System.Drawing.Point(0, 0)
+        Me.HEADER_ITEMS.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.HEADER_ITEMS.Name = "HEADER_ITEMS"
-        Me.HEADER_ITEMS.Padding = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.HEADER_ITEMS.Size = New System.Drawing.Size(199, 34)
+        Me.HEADER_ITEMS.Padding = New System.Windows.Forms.Padding(7, 6, 7, 0)
+        Me.HEADER_ITEMS.Size = New System.Drawing.Size(265, 42)
         Me.HEADER_ITEMS.TabIndex = 10
         Me.HEADER_ITEMS.Text = "INVENTORY VALUE"
         Me.HEADER_ITEMS.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -275,11 +280,11 @@ Partial Class Form1
         Me.VALUE_ITEMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.VALUE_ITEMS.Font = New System.Drawing.Font("Bahnschrift SemiBold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VALUE_ITEMS.ForeColor = System.Drawing.Color.Lime
-        Me.VALUE_ITEMS.Location = New System.Drawing.Point(0, 34)
+        Me.VALUE_ITEMS.Location = New System.Drawing.Point(0, 42)
         Me.VALUE_ITEMS.Margin = New System.Windows.Forms.Padding(0)
         Me.VALUE_ITEMS.Name = "VALUE_ITEMS"
-        Me.VALUE_ITEMS.Padding = New System.Windows.Forms.Padding(5, 5, 0, 0)
-        Me.VALUE_ITEMS.Size = New System.Drawing.Size(199, 74)
+        Me.VALUE_ITEMS.Padding = New System.Windows.Forms.Padding(7, 6, 0, 0)
+        Me.VALUE_ITEMS.Size = New System.Drawing.Size(265, 91)
         Me.VALUE_ITEMS.TabIndex = 11
         Me.VALUE_ITEMS.TabStop = False
         Me.VALUE_ITEMS.Text = "VALUE"
@@ -291,9 +296,10 @@ Partial Class Form1
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel5.Controls.Add(Me.HEADER_LASTSTOCK)
         Me.Panel5.Controls.Add(Me.VALUE_LASTSTOCK)
-        Me.Panel5.Location = New System.Drawing.Point(615, 0)
+        Me.Panel5.Location = New System.Drawing.Point(820, 0)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(199, 108)
+        Me.Panel5.Size = New System.Drawing.Size(265, 133)
         Me.Panel5.TabIndex = 11
         '
         'HEADER_LASTSTOCK
@@ -303,9 +309,10 @@ Partial Class Form1
         Me.HEADER_LASTSTOCK.Font = New System.Drawing.Font("Tw Cen MT", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HEADER_LASTSTOCK.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.HEADER_LASTSTOCK.Location = New System.Drawing.Point(0, 0)
+        Me.HEADER_LASTSTOCK.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.HEADER_LASTSTOCK.Name = "HEADER_LASTSTOCK"
-        Me.HEADER_LASTSTOCK.Padding = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.HEADER_LASTSTOCK.Size = New System.Drawing.Size(199, 34)
+        Me.HEADER_LASTSTOCK.Padding = New System.Windows.Forms.Padding(7, 6, 7, 0)
+        Me.HEADER_LASTSTOCK.Size = New System.Drawing.Size(265, 42)
         Me.HEADER_LASTSTOCK.TabIndex = 10
         Me.HEADER_LASTSTOCK.Text = "LAST RESTOCK"
         Me.HEADER_LASTSTOCK.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -321,11 +328,11 @@ Partial Class Form1
         Me.VALUE_LASTSTOCK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.VALUE_LASTSTOCK.Font = New System.Drawing.Font("Bahnschrift SemiBold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VALUE_LASTSTOCK.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.VALUE_LASTSTOCK.Location = New System.Drawing.Point(0, 34)
+        Me.VALUE_LASTSTOCK.Location = New System.Drawing.Point(0, 42)
         Me.VALUE_LASTSTOCK.Margin = New System.Windows.Forms.Padding(0)
         Me.VALUE_LASTSTOCK.Name = "VALUE_LASTSTOCK"
-        Me.VALUE_LASTSTOCK.Padding = New System.Windows.Forms.Padding(5, 5, 0, 0)
-        Me.VALUE_LASTSTOCK.Size = New System.Drawing.Size(199, 74)
+        Me.VALUE_LASTSTOCK.Padding = New System.Windows.Forms.Padding(7, 6, 0, 0)
+        Me.VALUE_LASTSTOCK.Size = New System.Drawing.Size(265, 91)
         Me.VALUE_LASTSTOCK.TabIndex = 14
         Me.VALUE_LASTSTOCK.TabStop = False
         Me.VALUE_LASTSTOCK.Text = "VALUE"
@@ -337,9 +344,10 @@ Partial Class Form1
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel3.Controls.Add(Me.HEADER_COUNT)
         Me.Panel3.Controls.Add(Me.VALUE_COUNT)
-        Me.Panel3.Location = New System.Drawing.Point(205, 0)
+        Me.Panel3.Location = New System.Drawing.Point(273, 0)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(199, 108)
+        Me.Panel3.Size = New System.Drawing.Size(265, 133)
         Me.Panel3.TabIndex = 11
         '
         'HEADER_COUNT
@@ -349,9 +357,10 @@ Partial Class Form1
         Me.HEADER_COUNT.Font = New System.Drawing.Font("Tw Cen MT", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HEADER_COUNT.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.HEADER_COUNT.Location = New System.Drawing.Point(0, 0)
+        Me.HEADER_COUNT.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.HEADER_COUNT.Name = "HEADER_COUNT"
-        Me.HEADER_COUNT.Padding = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.HEADER_COUNT.Size = New System.Drawing.Size(199, 34)
+        Me.HEADER_COUNT.Padding = New System.Windows.Forms.Padding(7, 6, 7, 0)
+        Me.HEADER_COUNT.Size = New System.Drawing.Size(265, 42)
         Me.HEADER_COUNT.TabIndex = 10
         Me.HEADER_COUNT.Text = "ITEM COUNT"
         Me.HEADER_COUNT.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -367,11 +376,11 @@ Partial Class Form1
         Me.VALUE_COUNT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.VALUE_COUNT.Font = New System.Drawing.Font("Bahnschrift SemiBold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VALUE_COUNT.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.VALUE_COUNT.Location = New System.Drawing.Point(0, 34)
+        Me.VALUE_COUNT.Location = New System.Drawing.Point(0, 42)
         Me.VALUE_COUNT.Margin = New System.Windows.Forms.Padding(0)
         Me.VALUE_COUNT.Name = "VALUE_COUNT"
-        Me.VALUE_COUNT.Padding = New System.Windows.Forms.Padding(5, 5, 0, 0)
-        Me.VALUE_COUNT.Size = New System.Drawing.Size(199, 74)
+        Me.VALUE_COUNT.Padding = New System.Windows.Forms.Padding(7, 6, 0, 0)
+        Me.VALUE_COUNT.Size = New System.Drawing.Size(265, 91)
         Me.VALUE_COUNT.TabIndex = 12
         Me.VALUE_COUNT.TabStop = False
         Me.VALUE_COUNT.Text = "VALUE"
@@ -383,9 +392,10 @@ Partial Class Form1
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel4.Controls.Add(Me.HEADER_LOWSTOCK)
         Me.Panel4.Controls.Add(Me.VALUE_LOWSTOCK)
-        Me.Panel4.Location = New System.Drawing.Point(410, 0)
+        Me.Panel4.Location = New System.Drawing.Point(547, 0)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(199, 108)
+        Me.Panel4.Size = New System.Drawing.Size(265, 133)
         Me.Panel4.TabIndex = 12
         '
         'HEADER_LOWSTOCK
@@ -395,9 +405,10 @@ Partial Class Form1
         Me.HEADER_LOWSTOCK.Font = New System.Drawing.Font("Tw Cen MT", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HEADER_LOWSTOCK.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.HEADER_LOWSTOCK.Location = New System.Drawing.Point(0, 0)
+        Me.HEADER_LOWSTOCK.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.HEADER_LOWSTOCK.Name = "HEADER_LOWSTOCK"
-        Me.HEADER_LOWSTOCK.Padding = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.HEADER_LOWSTOCK.Size = New System.Drawing.Size(199, 34)
+        Me.HEADER_LOWSTOCK.Padding = New System.Windows.Forms.Padding(7, 6, 7, 0)
+        Me.HEADER_LOWSTOCK.Size = New System.Drawing.Size(265, 42)
         Me.HEADER_LOWSTOCK.TabIndex = 10
         Me.HEADER_LOWSTOCK.Text = "LOW STOCK"
         Me.HEADER_LOWSTOCK.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -413,11 +424,11 @@ Partial Class Form1
         Me.VALUE_LOWSTOCK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.VALUE_LOWSTOCK.Font = New System.Drawing.Font("Bahnschrift SemiBold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VALUE_LOWSTOCK.ForeColor = System.Drawing.Color.Red
-        Me.VALUE_LOWSTOCK.Location = New System.Drawing.Point(0, 34)
+        Me.VALUE_LOWSTOCK.Location = New System.Drawing.Point(0, 42)
         Me.VALUE_LOWSTOCK.Margin = New System.Windows.Forms.Padding(0)
         Me.VALUE_LOWSTOCK.Name = "VALUE_LOWSTOCK"
-        Me.VALUE_LOWSTOCK.Padding = New System.Windows.Forms.Padding(5, 5, 0, 0)
-        Me.VALUE_LOWSTOCK.Size = New System.Drawing.Size(199, 74)
+        Me.VALUE_LOWSTOCK.Padding = New System.Windows.Forms.Padding(7, 6, 0, 0)
+        Me.VALUE_LOWSTOCK.Size = New System.Drawing.Size(265, 91)
         Me.VALUE_LOWSTOCK.TabIndex = 13
         Me.VALUE_LOWSTOCK.TabStop = False
         Me.VALUE_LOWSTOCK.Text = "VALUE"
@@ -429,9 +440,10 @@ Partial Class Form1
         Me.DAY_LOG_PANEL.BackColor = System.Drawing.Color.LightGray
         Me.DAY_LOG_PANEL.Controls.Add(Me.DO_LIST)
         Me.DAY_LOG_PANEL.Controls.Add(Me.DO_LABEL)
-        Me.DAY_LOG_PANEL.Location = New System.Drawing.Point(552, 284)
+        Me.DAY_LOG_PANEL.Location = New System.Drawing.Point(736, 350)
+        Me.DAY_LOG_PANEL.Margin = New System.Windows.Forms.Padding(4)
         Me.DAY_LOG_PANEL.Name = "DAY_LOG_PANEL"
-        Me.DAY_LOG_PANEL.Size = New System.Drawing.Size(319, 377)
+        Me.DAY_LOG_PANEL.Size = New System.Drawing.Size(425, 464)
         Me.DAY_LOG_PANEL.TabIndex = 5
         '
         'DO_LIST
@@ -442,12 +454,13 @@ Partial Class Form1
         Me.DO_LIST.ForeColor = System.Drawing.SystemColors.Info
         Me.DO_LIST.FormattingEnabled = True
         Me.DO_LIST.HorizontalScrollbar = True
-        Me.DO_LIST.ItemHeight = 15
+        Me.DO_LIST.ItemHeight = 20
         Me.DO_LIST.Items.AddRange(New Object() {"EVENT 1", "EVENT 2", "EVENT 3"})
-        Me.DO_LIST.Location = New System.Drawing.Point(0, 47)
+        Me.DO_LIST.Location = New System.Drawing.Point(0, 58)
+        Me.DO_LIST.Margin = New System.Windows.Forms.Padding(4)
         Me.DO_LIST.Name = "DO_LIST"
         Me.DO_LIST.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.DO_LIST.Size = New System.Drawing.Size(319, 330)
+        Me.DO_LIST.Size = New System.Drawing.Size(425, 400)
         Me.DO_LIST.TabIndex = 4
         Me.DO_LIST.TabStop = False
         '
@@ -457,9 +470,10 @@ Partial Class Form1
         Me.DO_LABEL.Font = New System.Drawing.Font("Tw Cen MT", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DO_LABEL.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.DO_LABEL.Location = New System.Drawing.Point(0, 0)
+        Me.DO_LABEL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DO_LABEL.Name = "DO_LABEL"
-        Me.DO_LABEL.Padding = New System.Windows.Forms.Padding(5)
-        Me.DO_LABEL.Size = New System.Drawing.Size(319, 44)
+        Me.DO_LABEL.Padding = New System.Windows.Forms.Padding(7, 6, 7, 6)
+        Me.DO_LABEL.Size = New System.Drawing.Size(425, 54)
         Me.DO_LABEL.TabIndex = 1
         Me.DO_LABEL.Text = "DAY OVERVIEW"
         Me.DO_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -471,9 +485,10 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.HOME_ADD_ITEM_BTN)
         Me.Panel2.Controls.Add(Me.HOME_INVENTORY_LOG_BTN)
         Me.Panel2.Controls.Add(Me.HOME_STOCK_OUT_BTN)
-        Me.Panel2.Location = New System.Drawing.Point(11, 284)
+        Me.Panel2.Location = New System.Drawing.Point(15, 350)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(521, 377)
+        Me.Panel2.Size = New System.Drawing.Size(695, 464)
         Me.Panel2.TabIndex = 3
         '
         'HOME_STOCK_IN_BTN
@@ -489,10 +504,10 @@ Partial Class Form1
         Me.HOME_STOCK_IN_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_STOCK_IN_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_STOCK_IN_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_STOCK_IN_BTN.Location = New System.Drawing.Point(20, 198)
-        Me.HOME_STOCK_IN_BTN.Margin = New System.Windows.Forms.Padding(20, 10, 10, 10)
+        Me.HOME_STOCK_IN_BTN.Location = New System.Drawing.Point(27, 244)
+        Me.HOME_STOCK_IN_BTN.Margin = New System.Windows.Forms.Padding(27, 12, 13, 12)
         Me.HOME_STOCK_IN_BTN.Name = "HOME_STOCK_IN_BTN"
-        Me.HOME_STOCK_IN_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_STOCK_IN_BTN.Size = New System.Drawing.Size(307, 197)
         Me.HOME_STOCK_IN_BTN.TabIndex = 9
         Me.HOME_STOCK_IN_BTN.TabStop = False
         Me.HOME_STOCK_IN_BTN.Text = "ITEM IN"
@@ -512,10 +527,10 @@ Partial Class Form1
         Me.HOME_ADD_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_ADD_ITEM_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_ADD_ITEM_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_ADD_ITEM_BTN.Location = New System.Drawing.Point(20, 20)
-        Me.HOME_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(20, 20, 10, 10)
+        Me.HOME_ADD_ITEM_BTN.Location = New System.Drawing.Point(27, 25)
+        Me.HOME_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(27, 25, 13, 12)
         Me.HOME_ADD_ITEM_BTN.Name = "HOME_ADD_ITEM_BTN"
-        Me.HOME_ADD_ITEM_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_ADD_ITEM_BTN.Size = New System.Drawing.Size(307, 197)
         Me.HOME_ADD_ITEM_BTN.TabIndex = 7
         Me.HOME_ADD_ITEM_BTN.TabStop = False
         Me.HOME_ADD_ITEM_BTN.Text = "ADD NEW ITEM"
@@ -535,10 +550,10 @@ Partial Class Form1
         Me.HOME_INVENTORY_LOG_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_INVENTORY_LOG_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_INVENTORY_LOG_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_INVENTORY_LOG_BTN.Location = New System.Drawing.Point(270, 20)
-        Me.HOME_INVENTORY_LOG_BTN.Margin = New System.Windows.Forms.Padding(10, 20, 20, 10)
+        Me.HOME_INVENTORY_LOG_BTN.Location = New System.Drawing.Point(360, 25)
+        Me.HOME_INVENTORY_LOG_BTN.Margin = New System.Windows.Forms.Padding(13, 25, 27, 12)
         Me.HOME_INVENTORY_LOG_BTN.Name = "HOME_INVENTORY_LOG_BTN"
-        Me.HOME_INVENTORY_LOG_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_INVENTORY_LOG_BTN.Size = New System.Drawing.Size(307, 197)
         Me.HOME_INVENTORY_LOG_BTN.TabIndex = 8
         Me.HOME_INVENTORY_LOG_BTN.TabStop = False
         Me.HOME_INVENTORY_LOG_BTN.Text = "INVENTORY LOG"
@@ -558,10 +573,10 @@ Partial Class Form1
         Me.HOME_STOCK_OUT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_STOCK_OUT_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_STOCK_OUT_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_STOCK_OUT_BTN.Location = New System.Drawing.Point(270, 198)
-        Me.HOME_STOCK_OUT_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 20, 10)
+        Me.HOME_STOCK_OUT_BTN.Location = New System.Drawing.Point(360, 244)
+        Me.HOME_STOCK_OUT_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 27, 12)
         Me.HOME_STOCK_OUT_BTN.Name = "HOME_STOCK_OUT_BTN"
-        Me.HOME_STOCK_OUT_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_STOCK_OUT_BTN.Size = New System.Drawing.Size(307, 197)
         Me.HOME_STOCK_OUT_BTN.TabIndex = 6
         Me.HOME_STOCK_OUT_BTN.TabStop = False
         Me.HOME_STOCK_OUT_BTN.Text = "ITEM OUT"
@@ -579,10 +594,10 @@ Partial Class Form1
         Me.ITEM_PANEL.Controls.Add(Me.Panel7)
         Me.ITEM_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ITEM_PANEL.Location = New System.Drawing.Point(0, 0)
-        Me.ITEM_PANEL.Margin = New System.Windows.Forms.Padding(3, 3, 3, 5)
+        Me.ITEM_PANEL.Margin = New System.Windows.Forms.Padding(4, 4, 4, 6)
         Me.ITEM_PANEL.Name = "ITEM_PANEL"
         Me.ITEM_PANEL.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.ITEM_PANEL.Size = New System.Drawing.Size(881, 661)
+        Me.ITEM_PANEL.Size = New System.Drawing.Size(1175, 804)
         Me.ITEM_PANEL.TabIndex = 0
         Me.ITEM_PANEL.Visible = False
         '
@@ -597,10 +612,10 @@ Partial Class Form1
         Me.ITM_FLAG_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_FLAG_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
         Me.ITM_FLAG_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_FLAG_ITEM_BTN.Location = New System.Drawing.Point(15, 541)
-        Me.ITM_FLAG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_FLAG_ITEM_BTN.Location = New System.Drawing.Point(20, 666)
+        Me.ITM_FLAG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 0, 0)
         Me.ITM_FLAG_ITEM_BTN.Name = "ITM_FLAG_ITEM_BTN"
-        Me.ITM_FLAG_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
+        Me.ITM_FLAG_ITEM_BTN.Size = New System.Drawing.Size(169, 55)
         Me.ITM_FLAG_ITEM_BTN.TabIndex = 9
         Me.ITM_FLAG_ITEM_BTN.TabStop = False
         Me.ITM_FLAG_ITEM_BTN.Text = "FLAG ITEM"
@@ -611,9 +626,10 @@ Partial Class Form1
         Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_RESET_ITEM_BTN)
         Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_DEF_ITEM_BTN)
         Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_DMG_ITEM_BTN)
-        Me.PANEL_ITEM_FLAGGING.Location = New System.Drawing.Point(57, 541)
+        Me.PANEL_ITEM_FLAGGING.Location = New System.Drawing.Point(76, 666)
+        Me.PANEL_ITEM_FLAGGING.Margin = New System.Windows.Forms.Padding(4)
         Me.PANEL_ITEM_FLAGGING.Name = "PANEL_ITEM_FLAGGING"
-        Me.PANEL_ITEM_FLAGGING.Size = New System.Drawing.Size(10, 45)
+        Me.PANEL_ITEM_FLAGGING.Size = New System.Drawing.Size(13, 55)
         Me.PANEL_ITEM_FLAGGING.TabIndex = 17
         '
         'ITM_RESET_ITEM_BTN
@@ -627,10 +643,10 @@ Partial Class Form1
         Me.ITM_RESET_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_RESET_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
         Me.ITM_RESET_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_RESET_ITEM_BTN.Location = New System.Drawing.Point(183, 0)
-        Me.ITM_RESET_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_RESET_ITEM_BTN.Location = New System.Drawing.Point(244, 0)
+        Me.ITM_RESET_ITEM_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 0, 0)
         Me.ITM_RESET_ITEM_BTN.Name = "ITM_RESET_ITEM_BTN"
-        Me.ITM_RESET_ITEM_BTN.Size = New System.Drawing.Size(62, 45)
+        Me.ITM_RESET_ITEM_BTN.Size = New System.Drawing.Size(83, 55)
         Me.ITM_RESET_ITEM_BTN.TabIndex = 20
         Me.ITM_RESET_ITEM_BTN.Text = "RESET"
         Me.ITM_RESET_ITEM_BTN.UseVisualStyleBackColor = False
@@ -646,10 +662,10 @@ Partial Class Form1
         Me.ITM_DEF_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_DEF_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
         Me.ITM_DEF_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_DEF_ITEM_BTN.Location = New System.Drawing.Point(91, 0)
-        Me.ITM_DEF_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_DEF_ITEM_BTN.Location = New System.Drawing.Point(121, 0)
+        Me.ITM_DEF_ITEM_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 0, 0)
         Me.ITM_DEF_ITEM_BTN.Name = "ITM_DEF_ITEM_BTN"
-        Me.ITM_DEF_ITEM_BTN.Size = New System.Drawing.Size(90, 45)
+        Me.ITM_DEF_ITEM_BTN.Size = New System.Drawing.Size(120, 55)
         Me.ITM_DEF_ITEM_BTN.TabIndex = 19
         Me.ITM_DEF_ITEM_BTN.Text = "DEFECTIVE"
         Me.ITM_DEF_ITEM_BTN.UseVisualStyleBackColor = False
@@ -666,9 +682,9 @@ Partial Class Form1
         Me.ITM_DMG_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
         Me.ITM_DMG_ITEM_BTN.ForeColor = System.Drawing.Color.White
         Me.ITM_DMG_ITEM_BTN.Location = New System.Drawing.Point(-1, 0)
-        Me.ITM_DMG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_DMG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 0, 0)
         Me.ITM_DMG_ITEM_BTN.Name = "ITM_DMG_ITEM_BTN"
-        Me.ITM_DMG_ITEM_BTN.Size = New System.Drawing.Size(90, 45)
+        Me.ITM_DMG_ITEM_BTN.Size = New System.Drawing.Size(120, 55)
         Me.ITM_DMG_ITEM_BTN.TabIndex = 18
         Me.ITM_DMG_ITEM_BTN.Text = "DAMAGED"
         Me.ITM_DMG_ITEM_BTN.UseVisualStyleBackColor = False
@@ -681,9 +697,10 @@ Partial Class Form1
         Me.Panel8.Controls.Add(Me.ITM_STOCKOUT_ITEM_BTN)
         Me.Panel8.Controls.Add(Me.ITM_FLTVAL_ITEM_CBX)
         Me.Panel8.Controls.Add(Me.ITM_STOCKIN_ITEM_BTN)
-        Me.Panel8.Location = New System.Drawing.Point(15, 45)
+        Me.Panel8.Location = New System.Drawing.Point(20, 55)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(850, 48)
+        Me.Panel8.Size = New System.Drawing.Size(1133, 59)
         Me.Panel8.TabIndex = 16
         '
         'ITM_FLTR_BTN
@@ -697,10 +714,10 @@ Partial Class Form1
         Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(820, 13)
-        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(1093, 16)
+        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 12, 0, 12)
         Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
-        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(30, 29)
+        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(40, 36)
         Me.ITM_FLTR_BTN.TabIndex = 16
         Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
         '
@@ -713,12 +730,12 @@ Partial Class Form1
         Me.ITM_FLTSET_ITEM_CBX.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ITM_FLTSET_ITEM_CBX.FormattingEnabled = True
         Me.ITM_FLTSET_ITEM_CBX.Items.AddRange(New Object() {"Brand", "Category", "Holding Status", "Repair Status", "Stock Status", "Supplier"})
-        Me.ITM_FLTSET_ITEM_CBX.Location = New System.Drawing.Point(534, 13)
-        Me.ITM_FLTSET_ITEM_CBX.Margin = New System.Windows.Forms.Padding(5, 3, 5, 10)
-        Me.ITM_FLTSET_ITEM_CBX.MaximumSize = New System.Drawing.Size(140, 0)
-        Me.ITM_FLTSET_ITEM_CBX.MinimumSize = New System.Drawing.Size(140, 0)
+        Me.ITM_FLTSET_ITEM_CBX.Location = New System.Drawing.Point(712, 16)
+        Me.ITM_FLTSET_ITEM_CBX.Margin = New System.Windows.Forms.Padding(7, 4, 7, 12)
+        Me.ITM_FLTSET_ITEM_CBX.MaximumSize = New System.Drawing.Size(185, 0)
+        Me.ITM_FLTSET_ITEM_CBX.MinimumSize = New System.Drawing.Size(185, 0)
         Me.ITM_FLTSET_ITEM_CBX.Name = "ITM_FLTSET_ITEM_CBX"
-        Me.ITM_FLTSET_ITEM_CBX.Size = New System.Drawing.Size(140, 29)
+        Me.ITM_FLTSET_ITEM_CBX.Size = New System.Drawing.Size(185, 35)
         Me.ITM_FLTSET_ITEM_CBX.TabIndex = 2
         Me.ITM_FLTSET_ITEM_CBX.Text = "Filter By:"
         '
@@ -727,13 +744,13 @@ Partial Class Form1
         Me.ITM_SEARCH_TBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ITM_SEARCH_TBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.ITM_SEARCH_TBX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ITM_SEARCH_TBX.Font = New System.Drawing.Font("Roobert Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_SEARCH_TBX.Location = New System.Drawing.Point(185, 13)
-        Me.ITM_SEARCH_TBX.Margin = New System.Windows.Forms.Padding(5, 3, 0, 5)
-        Me.ITM_SEARCH_TBX.MaximumSize = New System.Drawing.Size(340, 30)
-        Me.ITM_SEARCH_TBX.MinimumSize = New System.Drawing.Size(310, 30)
+        Me.ITM_SEARCH_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_SEARCH_TBX.Location = New System.Drawing.Point(247, 16)
+        Me.ITM_SEARCH_TBX.Margin = New System.Windows.Forms.Padding(7, 4, 0, 6)
+        Me.ITM_SEARCH_TBX.MaximumSize = New System.Drawing.Size(453, 30)
+        Me.ITM_SEARCH_TBX.MinimumSize = New System.Drawing.Size(413, 30)
         Me.ITM_SEARCH_TBX.Name = "ITM_SEARCH_TBX"
-        Me.ITM_SEARCH_TBX.Size = New System.Drawing.Size(340, 30)
+        Me.ITM_SEARCH_TBX.Size = New System.Drawing.Size(453, 34)
         Me.ITM_SEARCH_TBX.TabIndex = 1
         '
         'ITM_STOCKOUT_ITEM_BTN
@@ -747,10 +764,10 @@ Partial Class Form1
         Me.ITM_STOCKOUT_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_STOCKOUT_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_STOCKOUT_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_STOCKOUT_ITEM_BTN.Location = New System.Drawing.Point(-1, 13)
-        Me.ITM_STOCKOUT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 10)
+        Me.ITM_STOCKOUT_ITEM_BTN.Location = New System.Drawing.Point(-1, 16)
+        Me.ITM_STOCKOUT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 0, 12)
         Me.ITM_STOCKOUT_ITEM_BTN.Name = "ITM_STOCKOUT_ITEM_BTN"
-        Me.ITM_STOCKOUT_ITEM_BTN.Size = New System.Drawing.Size(90, 30)
+        Me.ITM_STOCKOUT_ITEM_BTN.Size = New System.Drawing.Size(120, 37)
         Me.ITM_STOCKOUT_ITEM_BTN.TabIndex = 10
         Me.ITM_STOCKOUT_ITEM_BTN.TabStop = False
         Me.ITM_STOCKOUT_ITEM_BTN.Text = "STOCK OUT"
@@ -764,12 +781,12 @@ Partial Class Form1
         Me.ITM_FLTVAL_ITEM_CBX.Font = New System.Drawing.Font("Bahnschrift", 13.0!)
         Me.ITM_FLTVAL_ITEM_CBX.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ITM_FLTVAL_ITEM_CBX.FormattingEnabled = True
-        Me.ITM_FLTVAL_ITEM_CBX.Location = New System.Drawing.Point(676, 13)
-        Me.ITM_FLTVAL_ITEM_CBX.Margin = New System.Windows.Forms.Padding(5, 3, 0, 10)
-        Me.ITM_FLTVAL_ITEM_CBX.MaximumSize = New System.Drawing.Size(140, 0)
-        Me.ITM_FLTVAL_ITEM_CBX.MinimumSize = New System.Drawing.Size(140, 0)
+        Me.ITM_FLTVAL_ITEM_CBX.Location = New System.Drawing.Point(901, 16)
+        Me.ITM_FLTVAL_ITEM_CBX.Margin = New System.Windows.Forms.Padding(7, 4, 0, 12)
+        Me.ITM_FLTVAL_ITEM_CBX.MaximumSize = New System.Drawing.Size(185, 0)
+        Me.ITM_FLTVAL_ITEM_CBX.MinimumSize = New System.Drawing.Size(185, 0)
         Me.ITM_FLTVAL_ITEM_CBX.Name = "ITM_FLTVAL_ITEM_CBX"
-        Me.ITM_FLTVAL_ITEM_CBX.Size = New System.Drawing.Size(140, 29)
+        Me.ITM_FLTVAL_ITEM_CBX.Size = New System.Drawing.Size(185, 35)
         Me.ITM_FLTVAL_ITEM_CBX.TabIndex = 3
         Me.ITM_FLTVAL_ITEM_CBX.Text = "Value:"
         '
@@ -784,10 +801,10 @@ Partial Class Form1
         Me.ITM_STOCKIN_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_STOCKIN_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_STOCKIN_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_STOCKIN_ITEM_BTN.Location = New System.Drawing.Point(92, 13)
-        Me.ITM_STOCKIN_ITEM_BTN.Margin = New System.Windows.Forms.Padding(5, 10, 0, 10)
+        Me.ITM_STOCKIN_ITEM_BTN.Location = New System.Drawing.Point(123, 16)
+        Me.ITM_STOCKIN_ITEM_BTN.Margin = New System.Windows.Forms.Padding(7, 12, 0, 12)
         Me.ITM_STOCKIN_ITEM_BTN.Name = "ITM_STOCKIN_ITEM_BTN"
-        Me.ITM_STOCKIN_ITEM_BTN.Size = New System.Drawing.Size(90, 30)
+        Me.ITM_STOCKIN_ITEM_BTN.Size = New System.Drawing.Size(120, 37)
         Me.ITM_STOCKIN_ITEM_BTN.TabIndex = 11
         Me.ITM_STOCKIN_ITEM_BTN.TabStop = False
         Me.ITM_STOCKIN_ITEM_BTN.Text = "STOCK IN"
@@ -804,10 +821,10 @@ Partial Class Form1
         Me.ITM_EDIT_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_EDIT_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_EDIT_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_EDIT_ITEM_BTN.Location = New System.Drawing.Point(464, 541)
-        Me.ITM_EDIT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_EDIT_ITEM_BTN.Location = New System.Drawing.Point(619, 666)
+        Me.ITM_EDIT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 0, 0)
         Me.ITM_EDIT_ITEM_BTN.Name = "ITM_EDIT_ITEM_BTN"
-        Me.ITM_EDIT_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
+        Me.ITM_EDIT_ITEM_BTN.Size = New System.Drawing.Size(169, 55)
         Me.ITM_EDIT_ITEM_BTN.TabIndex = 8
         Me.ITM_EDIT_ITEM_BTN.TabStop = False
         Me.ITM_EDIT_ITEM_BTN.Text = "EDIT DETAILS"
@@ -824,10 +841,10 @@ Partial Class Form1
         Me.ITM_DELETE_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_DELETE_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_DELETE_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_DELETE_ITEM_BTN.Location = New System.Drawing.Point(601, 541)
-        Me.ITM_DELETE_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_DELETE_ITEM_BTN.Location = New System.Drawing.Point(801, 666)
+        Me.ITM_DELETE_ITEM_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 0, 0)
         Me.ITM_DELETE_ITEM_BTN.Name = "ITM_DELETE_ITEM_BTN"
-        Me.ITM_DELETE_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
+        Me.ITM_DELETE_ITEM_BTN.Size = New System.Drawing.Size(169, 55)
         Me.ITM_DELETE_ITEM_BTN.TabIndex = 7
         Me.ITM_DELETE_ITEM_BTN.TabStop = False
         Me.ITM_DELETE_ITEM_BTN.Text = "DELETE"
@@ -844,10 +861,10 @@ Partial Class Form1
         Me.ITM_ADD_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_ADD_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_ADD_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_ADD_ITEM_BTN.Location = New System.Drawing.Point(738, 541)
-        Me.ITM_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_ADD_ITEM_BTN.Location = New System.Drawing.Point(984, 666)
+        Me.ITM_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(13, 12, 0, 0)
         Me.ITM_ADD_ITEM_BTN.Name = "ITM_ADD_ITEM_BTN"
-        Me.ITM_ADD_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
+        Me.ITM_ADD_ITEM_BTN.Size = New System.Drawing.Size(169, 55)
         Me.ITM_ADD_ITEM_BTN.TabIndex = 6
         Me.ITM_ADD_ITEM_BTN.TabStop = False
         Me.ITM_ADD_ITEM_BTN.Text = "ADD NEW ITEM"
@@ -857,9 +874,10 @@ Partial Class Form1
         '
         Me.Panel7.BackColor = System.Drawing.Color.DarkGray
         Me.Panel7.Controls.Add(Me.DataGridView1)
-        Me.Panel7.Location = New System.Drawing.Point(15, 97)
+        Me.Panel7.Location = New System.Drawing.Point(20, 119)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(850, 431)
+        Me.Panel7.Size = New System.Drawing.Size(1133, 530)
         Me.Panel7.TabIndex = 1
         '
         'DataGridView1
@@ -869,43 +887,44 @@ Partial Class Form1
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 40
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cbx_column})
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.MaximumSize = New System.Drawing.Size(850, 431)
-        Me.DataGridView1.MinimumSize = New System.Drawing.Size(850, 431)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.MaximumSize = New System.Drawing.Size(1133, 530)
+        Me.DataGridView1.MinimumSize = New System.Drawing.Size(1133, 530)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(850, 431)
+        Me.DataGridView1.Size = New System.Drawing.Size(1133, 530)
         Me.DataGridView1.TabIndex = 0
         Me.DataGridView1.TabStop = False
         '
@@ -923,17 +942,19 @@ Partial Class Form1
         Me.LOG_PANEL.Controls.Add(Me.Label3)
         Me.LOG_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LOG_PANEL.Location = New System.Drawing.Point(0, 0)
+        Me.LOG_PANEL.Margin = New System.Windows.Forms.Padding(4)
         Me.LOG_PANEL.Name = "LOG_PANEL"
-        Me.LOG_PANEL.Size = New System.Drawing.Size(881, 661)
+        Me.LOG_PANEL.Size = New System.Drawing.Size(1175, 804)
         Me.LOG_PANEL.TabIndex = 1
         Me.LOG_PANEL.Visible = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 12)
+        Me.Label3.Location = New System.Drawing.Point(23, 15)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 13)
+        Me.Label3.Size = New System.Drawing.Size(87, 17)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "LOG PANEL"
         '
@@ -941,21 +962,24 @@ Partial Class Form1
         '
         Me.PANEL_SETTINGS.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PANEL_SETTINGS.Location = New System.Drawing.Point(0, 0)
+        Me.PANEL_SETTINGS.Margin = New System.Windows.Forms.Padding(4)
         Me.PANEL_SETTINGS.Name = "PANEL_SETTINGS"
-        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 661)
+        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(1175, 804)
         Me.PANEL_SETTINGS.TabIndex = 2
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1104, 661)
+        Me.ClientSize = New System.Drawing.Size(1469, 804)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Base_Panel)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.MaximumSize = New System.Drawing.Size(1120, 700)
-        Me.MinimumSize = New System.Drawing.Size(1120, 700)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximumSize = New System.Drawing.Size(1487, 851)
+        Me.MinimumSize = New System.Drawing.Size(1487, 851)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
