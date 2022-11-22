@@ -25,6 +25,7 @@ Partial Class Form_Add_Item
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.FAI_CBX_ITEM_SP = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FAI_L_ITEM_ID = New System.Windows.Forms.Label()
         Me.FAI_TBX_ITEM_ID = New System.Windows.Forms.TextBox()
@@ -54,7 +55,6 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_ITEM_TRHD = New System.Windows.Forms.TextBox()
         Me.FAI_TBX_ITEM_INIT = New System.Windows.Forms.TextBox()
         Me.FAI_TBX_ITEM_NAME = New System.Windows.Forms.TextBox()
-        Me.FAI_CBX_ITEM_SP = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -121,6 +121,20 @@ Partial Class Form_Add_Item
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(584, 356)
         Me.Panel2.TabIndex = 1
+        '
+        'FAI_CBX_ITEM_SP
+        '
+        Me.FAI_CBX_ITEM_SP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.FAI_CBX_ITEM_SP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.FAI_CBX_ITEM_SP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FAI_CBX_ITEM_SP.FormattingEnabled = True
+        Me.FAI_CBX_ITEM_SP.Location = New System.Drawing.Point(29, 251)
+        Me.FAI_CBX_ITEM_SP.Margin = New System.Windows.Forms.Padding(20, 3, 5, 5)
+        Me.FAI_CBX_ITEM_SP.MaximumSize = New System.Drawing.Size(190, 0)
+        Me.FAI_CBX_ITEM_SP.MinimumSize = New System.Drawing.Size(165, 0)
+        Me.FAI_CBX_ITEM_SP.Name = "FAI_CBX_ITEM_SP"
+        Me.FAI_CBX_ITEM_SP.Size = New System.Drawing.Size(165, 25)
+        Me.FAI_CBX_ITEM_SP.TabIndex = 8
         '
         'Label1
         '
@@ -446,7 +460,7 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_ITEM_PC.MaximumSize = New System.Drawing.Size(115, 25)
         Me.FAI_TBX_ITEM_PC.MinimumSize = New System.Drawing.Size(115, 25)
         Me.FAI_TBX_ITEM_PC.Name = "FAI_TBX_ITEM_PC"
-        Me.FAI_TBX_ITEM_PC.Size = New System.Drawing.Size(115, 25)
+        Me.FAI_TBX_ITEM_PC.Size = New System.Drawing.Size(115, 23)
         Me.FAI_TBX_ITEM_PC.TabIndex = 9
         '
         'FAI_TBX_ITEM_TRHD
@@ -457,7 +471,7 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_ITEM_TRHD.MaximumSize = New System.Drawing.Size(92, 25)
         Me.FAI_TBX_ITEM_TRHD.MinimumSize = New System.Drawing.Size(92, 25)
         Me.FAI_TBX_ITEM_TRHD.Name = "FAI_TBX_ITEM_TRHD"
-        Me.FAI_TBX_ITEM_TRHD.Size = New System.Drawing.Size(92, 25)
+        Me.FAI_TBX_ITEM_TRHD.Size = New System.Drawing.Size(92, 26)
         Me.FAI_TBX_ITEM_TRHD.TabIndex = 5
         '
         'FAI_TBX_ITEM_INIT
@@ -468,7 +482,7 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_ITEM_INIT.MaximumSize = New System.Drawing.Size(92, 25)
         Me.FAI_TBX_ITEM_INIT.MinimumSize = New System.Drawing.Size(92, 25)
         Me.FAI_TBX_ITEM_INIT.Name = "FAI_TBX_ITEM_INIT"
-        Me.FAI_TBX_ITEM_INIT.Size = New System.Drawing.Size(92, 25)
+        Me.FAI_TBX_ITEM_INIT.Size = New System.Drawing.Size(92, 26)
         Me.FAI_TBX_ITEM_INIT.TabIndex = 4
         '
         'FAI_TBX_ITEM_NAME
@@ -482,20 +496,6 @@ Partial Class Form_Add_Item
         Me.FAI_TBX_ITEM_NAME.Name = "FAI_TBX_ITEM_NAME"
         Me.FAI_TBX_ITEM_NAME.Size = New System.Drawing.Size(385, 23)
         Me.FAI_TBX_ITEM_NAME.TabIndex = 0
-        '
-        'FAI_CBX_ITEM_SP
-        '
-        Me.FAI_CBX_ITEM_SP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.FAI_CBX_ITEM_SP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.FAI_CBX_ITEM_SP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FAI_CBX_ITEM_SP.FormattingEnabled = True
-        Me.FAI_CBX_ITEM_SP.Location = New System.Drawing.Point(29, 251)
-        Me.FAI_CBX_ITEM_SP.Margin = New System.Windows.Forms.Padding(20, 3, 5, 5)
-        Me.FAI_CBX_ITEM_SP.MaximumSize = New System.Drawing.Size(190, 0)
-        Me.FAI_CBX_ITEM_SP.MinimumSize = New System.Drawing.Size(165, 0)
-        Me.FAI_CBX_ITEM_SP.Name = "FAI_CBX_ITEM_SP"
-        Me.FAI_CBX_ITEM_SP.Size = New System.Drawing.Size(165, 25)
-        Me.FAI_CBX_ITEM_SP.TabIndex = 8
         '
         'Form_Add_Item
         '

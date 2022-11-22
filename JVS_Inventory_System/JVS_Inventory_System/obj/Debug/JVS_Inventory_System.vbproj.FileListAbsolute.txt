@@ -35,3 +35,22 @@ C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inve
 C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.exe
 C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.xml
 C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.pdb
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.exe.config
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.exe
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.pdb
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.xml
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\MySql.Data.xml
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbprojAssemblyReference.cache
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form1.resources
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Add_Item.resources
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Stock_HS.resources
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Stock_IS.resources
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Valuation.resources
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Resources.resources
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.GenerateResource.cache
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.CoreCompileInputs.cache
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.vbproj.CopyComplete
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.exe
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.xml
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.pdb
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Login.resources
