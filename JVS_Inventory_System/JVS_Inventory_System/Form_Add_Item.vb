@@ -204,8 +204,12 @@ Public Class Form_Add_Item
                 cmd.CommandText = "UPDATE `products` SET `ITEM_NAME`='" & ITEM_NAME & "',`ITEM_BRAND`='" & ITEM_BRAND & "',`VARIANT`='" & ITEM_MODEL & "',`UNIT_PRICE`='" & ITEM_PC & "',`QUANTITY`='" & ITEM_INIT & "',`MIN_SELL`='" & ITEM_MIN & "',`MAX_SELL`='" & ITEM_MAX & "',`CATEGORY`='" & ITEM_CAT & "',`STOCK_STATUS`='" & ITEM_STATUS & "',`THRESHOLD`='" & ITEM_TRHD & "',`REPAIR_STATUS`='" & ITEM_RPS & "',`HOLDING_STATUS`='" & ITEM_HLDSTAT & "',`SUPPLIER`='" & ITEM_SP & "', `TO_PAY`='" & TOPAY & "',`TOTAL_PRICE`='" & ITEM_TOTAL & "' WHERE `ITEM_ID` = '" & FAI_TBX_ITEM_ID.Text & "'"
             End If
             cmd.ExecuteNonQuery()
-            MsgBox(Message, MsgBoxStyle.OkOnly, "Action Confirmation")
+
             strconn.Close()
+
+            Form1.Add_Log(1, ITEM_INIT)
+            MsgBox(Message, MsgBoxStyle.OkOnly, "Action Confirmation")
+
 
             Form1.Load_Table_Main()
             Form1.Set_Home_Value()

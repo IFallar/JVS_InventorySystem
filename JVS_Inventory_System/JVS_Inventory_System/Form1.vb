@@ -230,6 +230,105 @@ Public Class Form1
 
     End Sub
 
+    Public Sub Get_Name()
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `acc_fn`, `acc_ln` FROM `account` WHERE `acc_id` = '" & active_acc_id & "'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Try
+
+                acc_log = cmdreader.GetValue(0) + " " + cmdreader.GetValue(1)
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+    End Sub
+
+    '++++++++++++++++ LOG FUNCTIONALITY ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Dim active_acc_id = 1 'PLACEHOLDER FOR NOW
+    Dim acc_log As String = active_acc_id
+    Dim item_id_log As Integer
+    Dim transaction_type As String = ""
+    Dim transaction_qty As String = ""
+
+    Public Sub Add_Log(Token As Integer, transaction_qty As Integer)
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `auto_increment` FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'products'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Try
+
+                item_id_log = cmdreader.GetValue(0) - 1
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+        transaction_qty = transaction_qty
+
+        If Token = 1 Then
+
+            transaction_type = "NEW ITEM"
+
+        ElseIf Token = 2 Then
+
+            transaction_type = "RESTOCK"
+
+        ElseIf Token = 3 Then
+
+            transaction_type = "STOCK OUT"
+
+        ElseIf Token = 4 Then
+
+            transaction_type = "EDIT DETAILS"
+
+        ElseIf Token = 5 Then
+
+            transaction_type = "DELETED ITEM"
+
+        End If
+
+        Dim log_date As Date = Date.Now()
+        Dim transaction_date = log_date.ToString("yyyy\-MM\-dd")
+
+        Dim transaction_time As String = TimeOfDay.ToString("hh:mm")
+
+        strconnection()
+
+        cmd.Connection = strconn
+        strconn.Open()
+
+        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `r_transtaction_type`, `r_qty`, `r_time`, `r_date`) VALUES ('DEFAULT', '" & active_acc_id & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
+        cmd.ExecuteNonQuery()
+
+        strconn.Close()
+
+    End Sub
+
     'PRIVATES ================================================================================================================
 
     Dim tablemode As Integer = 1
