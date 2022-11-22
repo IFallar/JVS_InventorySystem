@@ -280,6 +280,8 @@ Public Class Form1
         DataGridView1.Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DataGridView1.Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
+        DataGridView1.RowTemplate.MinimumHeight = 50
+
     End Sub
 
     '++++++++++++++++ SET CELL SELECTION (RUDIMENTRARY) ++++++++++++++++++++++++++++++++++++++++++++++++++++++
