@@ -22,6 +22,11 @@ JVS_Inventory_System
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:JVS_Inventory_System.My.Resources.Resources._213965982_978436666253882_1246474777397895940_n">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:JVS_Inventory_System.My.Resources.Resources._287462655_1192573321506881_1858220183491915134_n">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

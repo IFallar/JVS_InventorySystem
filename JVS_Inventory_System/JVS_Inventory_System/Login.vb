@@ -3,17 +3,15 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Login
+
     Private Sub userName_TextChanged(sender As Object, e As EventArgs) Handles userName.TextChanged
-
-
-
 
     End Sub
 
     Private Sub log_in_Click(sender As Object, e As EventArgs) Handles log_in.Click
         opencon()
         cmd.Connection = con
-        cmd.CommandText = "SELECT `usertype`, CONCAT(`acc_fn`, ' ' , `acc_ln`) as `UserName`, `acc_pass` FROM `account` WHERE usertype = '" & userType.SelectedItem & "' and CONCAT(`acc_fn`, ' ' , `acc_ln`) = '" & userName.Text & "' and acc_pass = '" & pass.Text & "'"
+        cmd.CommandText = "SELECT `acc_id`,`usertype`, CONCAT(`acc_fn`, ' ' , `acc_ln`) as `UserName`, `acc_pass` FROM `account` WHERE usertype = '" & userType.SelectedItem & "' and CONCAT(`acc_fn`, ' ' , `acc_ln`) = '" & userName.Text & "' and acc_pass = '" & pass.Text & "'"
         cmd.Prepare()
         adapter = New MySqlDataAdapter(cmd)
         table = New DataTable
@@ -22,11 +20,16 @@ Public Class Login
 
 
         If table.Rows.Count > 0 Then
-            MessageBox.Show("Welcome " + table.Rows(0)(1) + "!")
+            MessageBox.Show("Welcome " + table.Rows(0)(2) + "!")
 
             If userType.SelectedIndex = 0 Then
                 'tentative showing form1'
                 Dim a As New Form1
+
+                a.acc_name_lbl.Text = userName.Text
+                a.acc_type_lbl.Text = userType.SelectedItem
+                a.active_acc_holder.Text = table.Rows(0)(0)
+
                 a.Show()
                 Me.Hide()
 
@@ -38,11 +41,11 @@ Public Class Login
             End If
 
         End If
+
+
+
     End Sub
 
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub USERNAME_ENTER(sender As Object, e As EventArgs) Handles userName.Enter
         If userName.Text = "USERNAME" Then
@@ -62,7 +65,7 @@ Public Class Login
 
     Private Sub PASSWORD_ENTER(sender As Object, e As EventArgs) Handles pass.Enter
 
-        If pass.Text = "PASSWORD"  Then
+        If pass.Text = "PASSWORD" Then
             pass.Text = ""
             pass.ForeColor = Color.Black
         End If

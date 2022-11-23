@@ -46,6 +46,7 @@ Public Class Form_Add_Item
         FAI_CBX_ITEM_BRAND.Items.Clear()
         FAI_CBX_ITEM_CAT.Items.Clear()
         FAI_CBX_ITEM_MODEL.Items.Clear()
+        FAI_CBX_ITEM_SP.Items.Clear()
 
         opencon()
 

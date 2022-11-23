@@ -230,35 +230,9 @@ Public Class Form1
 
     End Sub
 
-    Public Sub Get_Name()
-        opencon()
-
-        cmd.Connection = con
-        cmd.CommandText = "SELECT `acc_fn`, `acc_ln` FROM `account` WHERE `acc_id` = '" & active_acc_id & "'"
-        cmd.Prepare()
-
-        cmdreader = cmd.ExecuteReader
-
-        While cmdreader.Read
-
-            Try
-
-                acc_log = cmdreader.GetValue(0) + " " + cmdreader.GetValue(1)
-
-            Catch ex As System.InvalidCastException
-
-            End Try
-
-        End While
-
-        cmdreader.Close()
-        con.Close()
-    End Sub
-
     '++++++++++++++++ LOG FUNCTIONALITY ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    Dim active_acc_id = 1 'PLACEHOLDER FOR NOW
-    Dim acc_log As String = active_acc_id
+
     Dim item_id_log As Integer
     Dim transaction_type As String = ""
     Dim transaction_qty As String = ""
@@ -318,11 +292,10 @@ Public Class Form1
         Dim transaction_time As String = TimeOfDay.ToString("hh:mm")
 
         strconnection()
-
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `r_transtaction_type`, `r_qty`, `r_time`, `r_date`) VALUES ('DEFAULT', '" & active_acc_id & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
+        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `r_transtaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT, '" & active_acc_holder.Text & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
         cmd.ExecuteNonQuery()
 
         strconn.Close()
@@ -917,14 +890,6 @@ Public Class Form1
     Private Sub ITM_SEARCH_TBX_TextChanged(sender As Object, e As EventArgs) Handles ITM_SEARCH_TBX.TextChanged
 
         Search_Bar()
-
-    End Sub
-
-    Private Sub HOME_PANEL_Paint(sender As Object, e As PaintEventArgs) Handles HOME_PANEL.Paint
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 
