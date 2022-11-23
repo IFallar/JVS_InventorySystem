@@ -920,6 +920,14 @@ Public Class Form1
 
     End Sub
 
+    Private Sub HOME_PANEL_Paint(sender As Object, e As PaintEventArgs) Handles HOME_PANEL.Paint
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
     'SETTINGS ================================================================================================================
 
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++

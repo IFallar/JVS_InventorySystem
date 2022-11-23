@@ -22,5 +22,25 @@ JVS_Inventory_System
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:JVS_Inventory_System.My.Resources.Resources._287462655_1192573321506881_1858220183491915134_n">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JVS_Inventory_System.My.Resources.Resources.icons8_circled_user_male_skin_type_5_64">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JVS_Inventory_System.My.Resources.Resources.student">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JVS_Inventory_System.My.Resources.Resources.user">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
