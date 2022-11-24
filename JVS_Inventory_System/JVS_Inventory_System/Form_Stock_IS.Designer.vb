@@ -227,7 +227,7 @@ Partial Class Form_Stock_IS
         Me.Controls.Add(Me.FSIS_ITEM_TBX)
         Me.Name = "Form_Stock_IS"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form_Stock_IS"
+        Me.Text = "QUICK STOCK"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

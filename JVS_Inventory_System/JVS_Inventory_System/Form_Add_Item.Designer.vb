@@ -508,7 +508,7 @@ Partial Class Form_Add_Item
         Me.MinimumSize = New System.Drawing.Size(600, 450)
         Me.Name = "Form_Add_Item"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form_Add_Item"
+        Me.Text = "ADD NEW ITEM"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

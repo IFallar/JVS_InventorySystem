@@ -158,8 +158,6 @@ Public Class Form_Add_Item
 
         '++++++++++++++++ GET AND SET VALUES SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
-
         Try
 
             ITEM_NAME = FAI_TBX_ITEM_NAME.Text
@@ -208,9 +206,7 @@ Public Class Form_Add_Item
 
             strconn.Close()
 
-            Form1.Add_Log(1, ITEM_INIT)
             MsgBox(Message, MsgBoxStyle.OkOnly, "Action Confirmation")
-
 
             Form1.Load_Table_Main()
             Form1.Set_Home_Value()

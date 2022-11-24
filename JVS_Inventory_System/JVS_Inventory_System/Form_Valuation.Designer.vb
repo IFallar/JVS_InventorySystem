@@ -168,7 +168,7 @@ Partial Class Form_Valuation
         Me.COL4_TT_LBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.COL4_TT_LBL.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.COL4_TT_LBL.ForeColor = System.Drawing.Color.Lime
-        Me.COL4_TT_LBL.Location = New System.Drawing.Point(673, 400)
+        Me.COL4_TT_LBL.Location = New System.Drawing.Point(659, 400)
         Me.COL4_TT_LBL.Margin = New System.Windows.Forms.Padding(0)
         Me.COL4_TT_LBL.Name = "COL4_TT_LBL"
         Me.COL4_TT_LBL.Size = New System.Drawing.Size(96, 40)
@@ -182,7 +182,7 @@ Partial Class Form_Valuation
         Me.COL3_TT_LBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.COL3_TT_LBL.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.COL3_TT_LBL.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.COL3_TT_LBL.Location = New System.Drawing.Point(583, 400)
+        Me.COL3_TT_LBL.Location = New System.Drawing.Point(569, 400)
         Me.COL3_TT_LBL.Margin = New System.Windows.Forms.Padding(0)
         Me.COL3_TT_LBL.Name = "COL3_TT_LBL"
         Me.COL3_TT_LBL.Size = New System.Drawing.Size(86, 40)
@@ -196,7 +196,7 @@ Partial Class Form_Valuation
         Me.COL1_TT_LBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.COL1_TT_LBL.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.COL1_TT_LBL.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.COL1_TT_LBL.Location = New System.Drawing.Point(313, 400)
+        Me.COL1_TT_LBL.Location = New System.Drawing.Point(299, 400)
         Me.COL1_TT_LBL.Margin = New System.Windows.Forms.Padding(0)
         Me.COL1_TT_LBL.Name = "COL1_TT_LBL"
         Me.COL1_TT_LBL.Size = New System.Drawing.Size(96, 40)
@@ -210,7 +210,7 @@ Partial Class Form_Valuation
         Me.COL2_TT_LBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.COL2_TT_LBL.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.COL2_TT_LBL.ForeColor = System.Drawing.Color.Red
-        Me.COL2_TT_LBL.Location = New System.Drawing.Point(413, 400)
+        Me.COL2_TT_LBL.Location = New System.Drawing.Point(399, 400)
         Me.COL2_TT_LBL.Margin = New System.Windows.Forms.Padding(0)
         Me.COL2_TT_LBL.Name = "COL2_TT_LBL"
         Me.COL2_TT_LBL.Size = New System.Drawing.Size(76, 40)
@@ -241,7 +241,7 @@ Partial Class Form_Valuation
         '
         'MARGIN_BTN
         '
-        Me.MARGIN_BTN.Location = New System.Drawing.Point(587, 47)
+        Me.MARGIN_BTN.Location = New System.Drawing.Point(573, 47)
         Me.MARGIN_BTN.Name = "MARGIN_BTN"
         Me.MARGIN_BTN.Size = New System.Drawing.Size(75, 23)
         Me.MARGIN_BTN.TabIndex = 34
@@ -250,7 +250,7 @@ Partial Class Form_Valuation
         '
         'PRICE_BTN
         '
-        Me.PRICE_BTN.Location = New System.Drawing.Point(499, 47)
+        Me.PRICE_BTN.Location = New System.Drawing.Point(485, 47)
         Me.PRICE_BTN.Name = "PRICE_BTN"
         Me.PRICE_BTN.Size = New System.Drawing.Size(75, 23)
         Me.PRICE_BTN.TabIndex = 36
@@ -277,7 +277,7 @@ Partial Class Form_Valuation
         Me.MinimumSize = New System.Drawing.Size(800, 499)
         Me.Name = "Form_Valuation"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form_Valuation"
+        Me.Text = "SUMMARY"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.VALUE_GRID, System.ComponentModel.ISupportInitialize).EndInit()

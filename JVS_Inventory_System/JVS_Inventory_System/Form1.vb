@@ -232,75 +232,68 @@ Public Class Form1
 
     '++++++++++++++++ LOG FUNCTIONALITY ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    Public Sub Add_Log(Token As Integer, transac_qty As String, itid As Integer)
 
-    Dim item_id_log As Integer
-    Dim transaction_type As String = ""
-    Dim transaction_qty As String = ""
+        '++++++++++++++++ VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    Public Sub Add_Log(Token As Integer, transaction_qty As Integer)
+        Dim acc_id_log As Integer
+        Dim item_id_log As Integer = itid
+        Dim transaction_type As String = ""
+        Dim transaction_qty As String = transac_qty
+        Dim log_date As Date = Date.Now()
+        Dim transaction_date = log_date.ToString("yyyy\-MM\-dd")
+        Dim transaction_time As String = TimeOfDay.ToString("hh:mm")
 
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `auto_increment` FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'products'"
+        cmd.CommandText = "SELECT `acc_id` FROM account WHERE CONCAT(`acc_fn`, ' ' , `acc_ln`) = '" & acc_name_lbl.Text & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
 
         While cmdreader.Read
-
-            Try
-
-                item_id_log = cmdreader.GetValue(0) - 1
-
-            Catch ex As System.InvalidCastException
-
-            End Try
-
+            acc_id_log = cmdreader.GetValue(0)
         End While
 
         cmdreader.Close()
         con.Close()
 
-        transaction_qty = transaction_qty
 
         If Token = 1 Then
 
             transaction_type = "NEW ITEM"
 
-        ElseIf Token = 2 Then
+            opencon()
 
-            transaction_type = "RESTOCK"
+            cmd.Connection = con
+            cmd.CommandText = "SELECT `auto_increment` FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'products'"
+            cmd.Prepare()
 
-        ElseIf Token = 3 Then
+            cmdreader = cmd.ExecuteReader
 
-            transaction_type = "STOCK OUT"
+            While cmdreader.Read
+                item_id_log = cmdreader.GetValue(0) - 1
+            End While
 
-        ElseIf Token = 4 Then
-
-            transaction_type = "EDIT DETAILS"
-
-        ElseIf Token = 5 Then
-
-            transaction_type = "DELETED ITEM"
+            cmdreader.Close()
+            con.Close()
 
         End If
 
-        Dim log_date As Date = Date.Now()
-        Dim transaction_date = log_date.ToString("yyyy\-MM\-dd")
-
-        Dim transaction_time As String = TimeOfDay.ToString("hh:mm")
-
         strconnection()
+
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `r_transtaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT, '" & active_acc_holder.Text & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
+        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `r_transtaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT,'" & acc_id_log & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
         cmd.ExecuteNonQuery()
 
         strconn.Close()
 
     End Sub
+
+
 
     'PRIVATES ================================================================================================================
 
@@ -309,6 +302,8 @@ Public Class Form1
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        Add_Log(1, 4, 0)
 
         Load_Table_Main()
         Set_Home_Value()
@@ -338,12 +333,13 @@ Public Class Form1
 
     Private Sub DataGridView1_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles DataGridView1.DataBindingComplete
 
+        DataGridView1.RowTemplate.Resizable = False
         DataGridView1.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DataGridView1.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DataGridView1.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DataGridView1.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView1.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DataGridView1.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DataGridView1.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DataGridView1.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -892,6 +888,7 @@ Public Class Form1
         Search_Bar()
 
     End Sub
+
 
     'SETTINGS ================================================================================================================
 

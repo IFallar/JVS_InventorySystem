@@ -28,7 +28,6 @@ Public Class Login
 
                 a.acc_name_lbl.Text = userName.Text
                 a.acc_type_lbl.Text = userType.SelectedItem
-                a.active_acc_holder.Text = table.Rows(0)(0)
 
                 a.Show()
                 Me.Hide()
@@ -79,5 +78,14 @@ Public Class Login
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        Me.WindowState = FormWindowState.Minimized
+
+    End Sub
 
 End Class

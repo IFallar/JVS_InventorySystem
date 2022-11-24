@@ -28,6 +28,8 @@ Partial Class Login
         Me.userName = New System.Windows.Forms.TextBox()
         Me.pass = New System.Windows.Forms.TextBox()
         Me.log_in = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -63,7 +65,7 @@ Partial Class Login
         Me.userType.Location = New System.Drawing.Point(586, 224)
         Me.userType.Name = "userType"
         Me.userType.Size = New System.Drawing.Size(121, 23)
-        Me.userType.TabIndex = 2
+        Me.userType.TabIndex = 1
         Me.userType.Text = "ACCOUNT TYPE"
         '
         'userName
@@ -75,7 +77,7 @@ Partial Class Login
         Me.userName.Location = New System.Drawing.Point(563, 253)
         Me.userName.Name = "userName"
         Me.userName.Size = New System.Drawing.Size(170, 25)
-        Me.userName.TabIndex = 4
+        Me.userName.TabIndex = 2
         Me.userName.Text = "USERNAME"
         Me.userName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -87,7 +89,7 @@ Partial Class Login
         Me.pass.Location = New System.Drawing.Point(563, 284)
         Me.pass.Name = "pass"
         Me.pass.Size = New System.Drawing.Size(170, 25)
-        Me.pass.TabIndex = 4
+        Me.pass.TabIndex = 3
         Me.pass.Text = "PASSWORD"
         Me.pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.pass.UseSystemPasswordChar = True
@@ -103,9 +105,40 @@ Partial Class Login
         Me.log_in.Location = New System.Drawing.Point(563, 315)
         Me.log_in.Name = "log_in"
         Me.log_in.Size = New System.Drawing.Size(170, 25)
-        Me.log_in.TabIndex = 5
+        Me.log_in.TabIndex = 4
         Me.log_in.Text = "LOG-IN"
         Me.log_in.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(748, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(37, 30)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "X"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(710, -12)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(39, 42)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "_"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Login
         '
@@ -113,13 +146,17 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(785, 461)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.log_in)
         Me.Controls.Add(Me.pass)
         Me.Controls.Add(Me.userName)
         Me.Controls.Add(Me.userType)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -134,4 +171,6 @@ Partial Class Login
     Friend WithEvents userName As TextBox
     Friend WithEvents pass As TextBox
     Friend WithEvents log_in As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

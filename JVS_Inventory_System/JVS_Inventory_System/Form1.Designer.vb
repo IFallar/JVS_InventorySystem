@@ -22,11 +22,11 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.acc_type_lbl = New System.Windows.Forms.Label()
         Me.acc_name_lbl = New System.Windows.Forms.Label()
@@ -35,29 +35,6 @@ Partial Class Form1
         Me.SIDE_LOG_BTN = New System.Windows.Forms.Button()
         Me.SIDE_ITEM_BTN = New System.Windows.Forms.Button()
         Me.Base_Panel = New System.Windows.Forms.Panel()
-        Me.HOME_PANEL = New System.Windows.Forms.Panel()
-        Me.APP_LABEL = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.INFO_LBL_ITEMS = New System.Windows.Forms.Panel()
-        Me.HEADER_ITEMS = New System.Windows.Forms.Label()
-        Me.VALUE_ITEMS = New System.Windows.Forms.Button()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.HEADER_LASTSTOCK = New System.Windows.Forms.Label()
-        Me.VALUE_LASTSTOCK = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.HEADER_COUNT = New System.Windows.Forms.Label()
-        Me.VALUE_COUNT = New System.Windows.Forms.Button()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.HEADER_LOWSTOCK = New System.Windows.Forms.Label()
-        Me.VALUE_LOWSTOCK = New System.Windows.Forms.Button()
-        Me.DAY_LOG_PANEL = New System.Windows.Forms.Panel()
-        Me.DO_LIST = New System.Windows.Forms.ListBox()
-        Me.DO_LABEL = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.HOME_STOCK_IN_BTN = New System.Windows.Forms.Button()
-        Me.HOME_ADD_ITEM_BTN = New System.Windows.Forms.Button()
-        Me.HOME_INVENTORY_LOG_BTN = New System.Windows.Forms.Button()
-        Me.HOME_STOCK_OUT_BTN = New System.Windows.Forms.Button()
         Me.ITEM_PANEL = New System.Windows.Forms.Panel()
         Me.ITM_FLAG_ITEM_BTN = New System.Windows.Forms.Button()
         Me.PANEL_ITEM_FLAGGING = New System.Windows.Forms.Panel()
@@ -80,8 +57,37 @@ Partial Class Form1
         Me.LOG_PANEL = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PANEL_SETTINGS = New System.Windows.Forms.Panel()
+        Me.HOME_PANEL = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.INFO_LBL_ITEMS = New System.Windows.Forms.Panel()
+        Me.HEADER_ITEMS = New System.Windows.Forms.Label()
+        Me.VALUE_ITEMS = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.HEADER_LASTSTOCK = New System.Windows.Forms.Label()
+        Me.VALUE_LASTSTOCK = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.HEADER_COUNT = New System.Windows.Forms.Label()
+        Me.VALUE_COUNT = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.HEADER_LOWSTOCK = New System.Windows.Forms.Label()
+        Me.VALUE_LOWSTOCK = New System.Windows.Forms.Button()
+        Me.DAY_LOG_PANEL = New System.Windows.Forms.Panel()
+        Me.DO_LIST = New System.Windows.Forms.ListBox()
+        Me.DO_LABEL = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.HOME_STOCK_IN_BTN = New System.Windows.Forms.Button()
+        Me.HOME_ADD_ITEM_BTN = New System.Windows.Forms.Button()
+        Me.HOME_INVENTORY_LOG_BTN = New System.Windows.Forms.Button()
+        Me.HOME_STOCK_OUT_BTN = New System.Windows.Forms.Button()
+        Me.APP_LABEL = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
+        Me.ITEM_PANEL.SuspendLayout()
+        Me.PANEL_ITEM_FLAGGING.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LOG_PANEL.SuspendLayout()
         Me.HOME_PANEL.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.INFO_LBL_ITEMS.SuspendLayout()
@@ -90,12 +96,6 @@ Partial Class Form1
         Me.Panel4.SuspendLayout()
         Me.DAY_LOG_PANEL.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.ITEM_PANEL.SuspendLayout()
-        Me.PANEL_ITEM_FLAGGING.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.LOG_PANEL.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -235,30 +235,399 @@ Partial Class Form1
         Me.Base_Panel.Size = New System.Drawing.Size(881, 660)
         Me.Base_Panel.TabIndex = 2
         '
+        'ITEM_PANEL
+        '
+        Me.ITEM_PANEL.Controls.Add(Me.ITM_FLAG_ITEM_BTN)
+        Me.ITEM_PANEL.Controls.Add(Me.PANEL_ITEM_FLAGGING)
+        Me.ITEM_PANEL.Controls.Add(Me.Panel8)
+        Me.ITEM_PANEL.Controls.Add(Me.ITM_EDIT_ITEM_BTN)
+        Me.ITEM_PANEL.Controls.Add(Me.ITM_DELETE_ITEM_BTN)
+        Me.ITEM_PANEL.Controls.Add(Me.ITM_ADD_ITEM_BTN)
+        Me.ITEM_PANEL.Controls.Add(Me.Panel7)
+        Me.ITEM_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ITEM_PANEL.Location = New System.Drawing.Point(0, 0)
+        Me.ITEM_PANEL.Margin = New System.Windows.Forms.Padding(3, 3, 3, 5)
+        Me.ITEM_PANEL.Name = "ITEM_PANEL"
+        Me.ITEM_PANEL.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.ITEM_PANEL.Size = New System.Drawing.Size(881, 660)
+        Me.ITEM_PANEL.TabIndex = 0
+        Me.ITEM_PANEL.Visible = False
+        '
+        'ITM_FLAG_ITEM_BTN
+        '
+        Me.ITM_FLAG_ITEM_BTN.BackColor = System.Drawing.Color.Black
+        Me.ITM_FLAG_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_FLAG_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_FLAG_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_FLAG_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.ITM_FLAG_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_FLAG_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_FLAG_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
+        Me.ITM_FLAG_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_FLAG_ITEM_BTN.Location = New System.Drawing.Point(15, 541)
+        Me.ITM_FLAG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_FLAG_ITEM_BTN.Name = "ITM_FLAG_ITEM_BTN"
+        Me.ITM_FLAG_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
+        Me.ITM_FLAG_ITEM_BTN.TabIndex = 9
+        Me.ITM_FLAG_ITEM_BTN.TabStop = False
+        Me.ITM_FLAG_ITEM_BTN.Text = "FLAG ITEM"
+        Me.ITM_FLAG_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'PANEL_ITEM_FLAGGING
+        '
+        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_RESET_ITEM_BTN)
+        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_DEF_ITEM_BTN)
+        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_DMG_ITEM_BTN)
+        Me.PANEL_ITEM_FLAGGING.Location = New System.Drawing.Point(57, 541)
+        Me.PANEL_ITEM_FLAGGING.Name = "PANEL_ITEM_FLAGGING"
+        Me.PANEL_ITEM_FLAGGING.Size = New System.Drawing.Size(10, 45)
+        Me.PANEL_ITEM_FLAGGING.TabIndex = 17
+        '
+        'ITM_RESET_ITEM_BTN
+        '
+        Me.ITM_RESET_ITEM_BTN.BackColor = System.Drawing.Color.Green
+        Me.ITM_RESET_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_RESET_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_RESET_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_RESET_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ITM_RESET_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_RESET_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_RESET_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
+        Me.ITM_RESET_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_RESET_ITEM_BTN.Location = New System.Drawing.Point(183, 0)
+        Me.ITM_RESET_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_RESET_ITEM_BTN.Name = "ITM_RESET_ITEM_BTN"
+        Me.ITM_RESET_ITEM_BTN.Size = New System.Drawing.Size(62, 45)
+        Me.ITM_RESET_ITEM_BTN.TabIndex = 20
+        Me.ITM_RESET_ITEM_BTN.Text = "RESET"
+        Me.ITM_RESET_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'ITM_DEF_ITEM_BTN
+        '
+        Me.ITM_DEF_ITEM_BTN.BackColor = System.Drawing.Color.Black
+        Me.ITM_DEF_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_DEF_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DEF_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_DEF_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DEF_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DEF_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_DEF_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
+        Me.ITM_DEF_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_DEF_ITEM_BTN.Location = New System.Drawing.Point(91, 0)
+        Me.ITM_DEF_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_DEF_ITEM_BTN.Name = "ITM_DEF_ITEM_BTN"
+        Me.ITM_DEF_ITEM_BTN.Size = New System.Drawing.Size(90, 45)
+        Me.ITM_DEF_ITEM_BTN.TabIndex = 19
+        Me.ITM_DEF_ITEM_BTN.Text = "DEFECTIVE"
+        Me.ITM_DEF_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'ITM_DMG_ITEM_BTN
+        '
+        Me.ITM_DMG_ITEM_BTN.BackColor = System.Drawing.SystemColors.Desktop
+        Me.ITM_DMG_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_DMG_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DMG_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_DMG_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DMG_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DMG_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_DMG_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
+        Me.ITM_DMG_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_DMG_ITEM_BTN.Location = New System.Drawing.Point(-1, 0)
+        Me.ITM_DMG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_DMG_ITEM_BTN.Name = "ITM_DMG_ITEM_BTN"
+        Me.ITM_DMG_ITEM_BTN.Size = New System.Drawing.Size(90, 45)
+        Me.ITM_DMG_ITEM_BTN.TabIndex = 18
+        Me.ITM_DMG_ITEM_BTN.Text = "DAMAGED"
+        Me.ITM_DMG_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.ITM_FLTR_BTN)
+        Me.Panel8.Controls.Add(Me.ITM_FLTSET_ITEM_CBX)
+        Me.Panel8.Controls.Add(Me.ITM_SEARCH_TBX)
+        Me.Panel8.Controls.Add(Me.ITM_STOCKOUT_ITEM_BTN)
+        Me.Panel8.Controls.Add(Me.ITM_FLTVAL_ITEM_CBX)
+        Me.Panel8.Controls.Add(Me.ITM_STOCKIN_ITEM_BTN)
+        Me.Panel8.Location = New System.Drawing.Point(15, 45)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(850, 48)
+        Me.Panel8.TabIndex = 16
+        '
+        'ITM_FLTR_BTN
+        '
+        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.DarkRed
+        Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(820, 13)
+        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
+        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(30, 29)
+        Me.ITM_FLTR_BTN.TabIndex = 16
+        Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
+        '
+        'ITM_FLTSET_ITEM_CBX
+        '
+        Me.ITM_FLTSET_ITEM_CBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ITM_FLTSET_ITEM_CBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ITM_FLTSET_ITEM_CBX.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ITM_FLTSET_ITEM_CBX.Font = New System.Drawing.Font("Bahnschrift", 13.0!)
+        Me.ITM_FLTSET_ITEM_CBX.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.ITM_FLTSET_ITEM_CBX.FormattingEnabled = True
+        Me.ITM_FLTSET_ITEM_CBX.Items.AddRange(New Object() {"Brand", "Category", "Holding Status", "Repair Status", "Stock Status", "Supplier"})
+        Me.ITM_FLTSET_ITEM_CBX.Location = New System.Drawing.Point(534, 13)
+        Me.ITM_FLTSET_ITEM_CBX.Margin = New System.Windows.Forms.Padding(5, 3, 5, 10)
+        Me.ITM_FLTSET_ITEM_CBX.MaximumSize = New System.Drawing.Size(140, 0)
+        Me.ITM_FLTSET_ITEM_CBX.MinimumSize = New System.Drawing.Size(140, 0)
+        Me.ITM_FLTSET_ITEM_CBX.Name = "ITM_FLTSET_ITEM_CBX"
+        Me.ITM_FLTSET_ITEM_CBX.Size = New System.Drawing.Size(140, 29)
+        Me.ITM_FLTSET_ITEM_CBX.TabIndex = 2
+        Me.ITM_FLTSET_ITEM_CBX.Text = "Filter By:"
+        '
+        'ITM_SEARCH_TBX
+        '
+        Me.ITM_SEARCH_TBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ITM_SEARCH_TBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.ITM_SEARCH_TBX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ITM_SEARCH_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_SEARCH_TBX.Location = New System.Drawing.Point(185, 13)
+        Me.ITM_SEARCH_TBX.Margin = New System.Windows.Forms.Padding(5, 3, 0, 5)
+        Me.ITM_SEARCH_TBX.MaximumSize = New System.Drawing.Size(340, 30)
+        Me.ITM_SEARCH_TBX.MinimumSize = New System.Drawing.Size(310, 30)
+        Me.ITM_SEARCH_TBX.Name = "ITM_SEARCH_TBX"
+        Me.ITM_SEARCH_TBX.Size = New System.Drawing.Size(340, 29)
+        Me.ITM_SEARCH_TBX.TabIndex = 1
+        '
+        'ITM_STOCKOUT_ITEM_BTN
+        '
+        Me.ITM_STOCKOUT_ITEM_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_STOCKOUT_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_STOCKOUT_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_STOCKOUT_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_STOCKOUT_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ITM_STOCKOUT_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ITM_STOCKOUT_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_STOCKOUT_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_STOCKOUT_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_STOCKOUT_ITEM_BTN.Location = New System.Drawing.Point(-1, 13)
+        Me.ITM_STOCKOUT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 10)
+        Me.ITM_STOCKOUT_ITEM_BTN.Name = "ITM_STOCKOUT_ITEM_BTN"
+        Me.ITM_STOCKOUT_ITEM_BTN.Size = New System.Drawing.Size(90, 30)
+        Me.ITM_STOCKOUT_ITEM_BTN.TabIndex = 10
+        Me.ITM_STOCKOUT_ITEM_BTN.TabStop = False
+        Me.ITM_STOCKOUT_ITEM_BTN.Text = "STOCK OUT"
+        Me.ITM_STOCKOUT_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'ITM_FLTVAL_ITEM_CBX
+        '
+        Me.ITM_FLTVAL_ITEM_CBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ITM_FLTVAL_ITEM_CBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ITM_FLTVAL_ITEM_CBX.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ITM_FLTVAL_ITEM_CBX.Font = New System.Drawing.Font("Bahnschrift", 13.0!)
+        Me.ITM_FLTVAL_ITEM_CBX.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.ITM_FLTVAL_ITEM_CBX.FormattingEnabled = True
+        Me.ITM_FLTVAL_ITEM_CBX.Location = New System.Drawing.Point(676, 13)
+        Me.ITM_FLTVAL_ITEM_CBX.Margin = New System.Windows.Forms.Padding(5, 3, 0, 10)
+        Me.ITM_FLTVAL_ITEM_CBX.MaximumSize = New System.Drawing.Size(140, 0)
+        Me.ITM_FLTVAL_ITEM_CBX.MinimumSize = New System.Drawing.Size(140, 0)
+        Me.ITM_FLTVAL_ITEM_CBX.Name = "ITM_FLTVAL_ITEM_CBX"
+        Me.ITM_FLTVAL_ITEM_CBX.Size = New System.Drawing.Size(140, 29)
+        Me.ITM_FLTVAL_ITEM_CBX.TabIndex = 3
+        Me.ITM_FLTVAL_ITEM_CBX.Text = "Value:"
+        '
+        'ITM_STOCKIN_ITEM_BTN
+        '
+        Me.ITM_STOCKIN_ITEM_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ITM_STOCKIN_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_STOCKIN_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_STOCKIN_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_STOCKIN_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ITM_STOCKIN_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ITM_STOCKIN_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_STOCKIN_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_STOCKIN_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_STOCKIN_ITEM_BTN.Location = New System.Drawing.Point(92, 13)
+        Me.ITM_STOCKIN_ITEM_BTN.Margin = New System.Windows.Forms.Padding(5, 10, 0, 10)
+        Me.ITM_STOCKIN_ITEM_BTN.Name = "ITM_STOCKIN_ITEM_BTN"
+        Me.ITM_STOCKIN_ITEM_BTN.Size = New System.Drawing.Size(90, 30)
+        Me.ITM_STOCKIN_ITEM_BTN.TabIndex = 11
+        Me.ITM_STOCKIN_ITEM_BTN.TabStop = False
+        Me.ITM_STOCKIN_ITEM_BTN.Text = "STOCK IN"
+        Me.ITM_STOCKIN_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'ITM_EDIT_ITEM_BTN
+        '
+        Me.ITM_EDIT_ITEM_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_EDIT_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_EDIT_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_EDIT_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_EDIT_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ITM_EDIT_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ITM_EDIT_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_EDIT_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_EDIT_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_EDIT_ITEM_BTN.Location = New System.Drawing.Point(464, 541)
+        Me.ITM_EDIT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_EDIT_ITEM_BTN.Name = "ITM_EDIT_ITEM_BTN"
+        Me.ITM_EDIT_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
+        Me.ITM_EDIT_ITEM_BTN.TabIndex = 8
+        Me.ITM_EDIT_ITEM_BTN.TabStop = False
+        Me.ITM_EDIT_ITEM_BTN.Text = "EDIT DETAILS"
+        Me.ITM_EDIT_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'ITM_DELETE_ITEM_BTN
+        '
+        Me.ITM_DELETE_ITEM_BTN.BackColor = System.Drawing.Color.DarkRed
+        Me.ITM_DELETE_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_DELETE_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_DELETE_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_DELETE_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.ITM_DELETE_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.ITM_DELETE_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_DELETE_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_DELETE_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_DELETE_ITEM_BTN.Location = New System.Drawing.Point(601, 541)
+        Me.ITM_DELETE_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_DELETE_ITEM_BTN.Name = "ITM_DELETE_ITEM_BTN"
+        Me.ITM_DELETE_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
+        Me.ITM_DELETE_ITEM_BTN.TabIndex = 7
+        Me.ITM_DELETE_ITEM_BTN.TabStop = False
+        Me.ITM_DELETE_ITEM_BTN.Text = "DELETE"
+        Me.ITM_DELETE_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'ITM_ADD_ITEM_BTN
+        '
+        Me.ITM_ADD_ITEM_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ITM_ADD_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_ADD_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_ADD_ITEM_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_ADD_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ITM_ADD_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ITM_ADD_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_ADD_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_ADD_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_ADD_ITEM_BTN.Location = New System.Drawing.Point(738, 541)
+        Me.ITM_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
+        Me.ITM_ADD_ITEM_BTN.Name = "ITM_ADD_ITEM_BTN"
+        Me.ITM_ADD_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
+        Me.ITM_ADD_ITEM_BTN.TabIndex = 6
+        Me.ITM_ADD_ITEM_BTN.TabStop = False
+        Me.ITM_ADD_ITEM_BTN.Text = "ADD NEW ITEM"
+        Me.ITM_ADD_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.DarkGray
+        Me.Panel7.Controls.Add(Me.DataGridView1)
+        Me.Panel7.Location = New System.Drawing.Point(15, 97)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(850, 431)
+        Me.Panel7.TabIndex = 1
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridView1.ColumnHeadersHeight = 40
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cbx_column})
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.EnableHeadersVisualStyles = False
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.MaximumSize = New System.Drawing.Size(850, 431)
+        Me.DataGridView1.MinimumSize = New System.Drawing.Size(850, 431)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridView1.Size = New System.Drawing.Size(850, 431)
+        Me.DataGridView1.TabIndex = 0
+        Me.DataGridView1.TabStop = False
+        '
+        'cbx_column
+        '
+        Me.cbx_column.FalseValue = "Not"
+        Me.cbx_column.HeaderText = "*"
+        Me.cbx_column.Name = "cbx_column"
+        Me.cbx_column.TrueValue = "Yes"
+        Me.cbx_column.Width = 850
+        '
+        'LOG_PANEL
+        '
+        Me.LOG_PANEL.BackColor = System.Drawing.SystemColors.Control
+        Me.LOG_PANEL.Controls.Add(Me.Label3)
+        Me.LOG_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LOG_PANEL.Location = New System.Drawing.Point(0, 0)
+        Me.LOG_PANEL.Name = "LOG_PANEL"
+        Me.LOG_PANEL.Size = New System.Drawing.Size(881, 660)
+        Me.LOG_PANEL.TabIndex = 1
+        Me.LOG_PANEL.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(17, 12)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(67, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "LOG PANEL"
+        '
+        'PANEL_SETTINGS
+        '
+        Me.PANEL_SETTINGS.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PANEL_SETTINGS.Location = New System.Drawing.Point(0, 0)
+        Me.PANEL_SETTINGS.Name = "PANEL_SETTINGS"
+        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 660)
+        Me.PANEL_SETTINGS.TabIndex = 2
+        '
         'HOME_PANEL
         '
         Me.HOME_PANEL.BackColor = System.Drawing.Color.White
-        Me.HOME_PANEL.Controls.Add(Me.APP_LABEL)
         Me.HOME_PANEL.Controls.Add(Me.Panel6)
         Me.HOME_PANEL.Controls.Add(Me.DAY_LOG_PANEL)
         Me.HOME_PANEL.Controls.Add(Me.Panel2)
+        Me.HOME_PANEL.Controls.Add(Me.APP_LABEL)
         Me.HOME_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HOME_PANEL.Location = New System.Drawing.Point(0, 0)
         Me.HOME_PANEL.Name = "HOME_PANEL"
         Me.HOME_PANEL.Size = New System.Drawing.Size(881, 660)
         Me.HOME_PANEL.TabIndex = 0
-        '
-        'APP_LABEL
-        '
-        Me.APP_LABEL.BackColor = System.Drawing.Color.Transparent
-        Me.APP_LABEL.Font = New System.Drawing.Font("Bahnschrift SemiBold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.APP_LABEL.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.APP_LABEL.Location = New System.Drawing.Point(11, 25)
-        Me.APP_LABEL.Name = "APP_LABEL"
-        Me.APP_LABEL.Size = New System.Drawing.Size(839, 80)
-        Me.APP_LABEL.TabIndex = 14
-        Me.APP_LABEL.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
-        Me.APP_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Panel6
         '
@@ -599,385 +968,17 @@ Partial Class Form1
         Me.HOME_STOCK_OUT_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HOME_STOCK_OUT_BTN.UseVisualStyleBackColor = False
         '
-        'ITEM_PANEL
+        'APP_LABEL
         '
-        Me.ITEM_PANEL.Controls.Add(Me.ITM_FLAG_ITEM_BTN)
-        Me.ITEM_PANEL.Controls.Add(Me.PANEL_ITEM_FLAGGING)
-        Me.ITEM_PANEL.Controls.Add(Me.Panel8)
-        Me.ITEM_PANEL.Controls.Add(Me.ITM_EDIT_ITEM_BTN)
-        Me.ITEM_PANEL.Controls.Add(Me.ITM_DELETE_ITEM_BTN)
-        Me.ITEM_PANEL.Controls.Add(Me.ITM_ADD_ITEM_BTN)
-        Me.ITEM_PANEL.Controls.Add(Me.Panel7)
-        Me.ITEM_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ITEM_PANEL.Location = New System.Drawing.Point(0, 0)
-        Me.ITEM_PANEL.Margin = New System.Windows.Forms.Padding(3, 3, 3, 5)
-        Me.ITEM_PANEL.Name = "ITEM_PANEL"
-        Me.ITEM_PANEL.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.ITEM_PANEL.Size = New System.Drawing.Size(881, 660)
-        Me.ITEM_PANEL.TabIndex = 0
-        Me.ITEM_PANEL.Visible = False
-        '
-        'ITM_FLAG_ITEM_BTN
-        '
-        Me.ITM_FLAG_ITEM_BTN.BackColor = System.Drawing.Color.Black
-        Me.ITM_FLAG_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_FLAG_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_FLAG_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_FLAG_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.ITM_FLAG_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_FLAG_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_FLAG_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
-        Me.ITM_FLAG_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_FLAG_ITEM_BTN.Location = New System.Drawing.Point(15, 541)
-        Me.ITM_FLAG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
-        Me.ITM_FLAG_ITEM_BTN.Name = "ITM_FLAG_ITEM_BTN"
-        Me.ITM_FLAG_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
-        Me.ITM_FLAG_ITEM_BTN.TabIndex = 9
-        Me.ITM_FLAG_ITEM_BTN.TabStop = False
-        Me.ITM_FLAG_ITEM_BTN.Text = "FLAG ITEM"
-        Me.ITM_FLAG_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'PANEL_ITEM_FLAGGING
-        '
-        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_RESET_ITEM_BTN)
-        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_DEF_ITEM_BTN)
-        Me.PANEL_ITEM_FLAGGING.Controls.Add(Me.ITM_DMG_ITEM_BTN)
-        Me.PANEL_ITEM_FLAGGING.Location = New System.Drawing.Point(57, 541)
-        Me.PANEL_ITEM_FLAGGING.Name = "PANEL_ITEM_FLAGGING"
-        Me.PANEL_ITEM_FLAGGING.Size = New System.Drawing.Size(10, 45)
-        Me.PANEL_ITEM_FLAGGING.TabIndex = 17
-        '
-        'ITM_RESET_ITEM_BTN
-        '
-        Me.ITM_RESET_ITEM_BTN.BackColor = System.Drawing.Color.Green
-        Me.ITM_RESET_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_RESET_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_RESET_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_RESET_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ITM_RESET_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_RESET_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_RESET_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
-        Me.ITM_RESET_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_RESET_ITEM_BTN.Location = New System.Drawing.Point(183, 0)
-        Me.ITM_RESET_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
-        Me.ITM_RESET_ITEM_BTN.Name = "ITM_RESET_ITEM_BTN"
-        Me.ITM_RESET_ITEM_BTN.Size = New System.Drawing.Size(62, 45)
-        Me.ITM_RESET_ITEM_BTN.TabIndex = 20
-        Me.ITM_RESET_ITEM_BTN.Text = "RESET"
-        Me.ITM_RESET_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'ITM_DEF_ITEM_BTN
-        '
-        Me.ITM_DEF_ITEM_BTN.BackColor = System.Drawing.Color.Black
-        Me.ITM_DEF_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_DEF_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_DEF_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_DEF_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_DEF_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_DEF_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_DEF_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
-        Me.ITM_DEF_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_DEF_ITEM_BTN.Location = New System.Drawing.Point(91, 0)
-        Me.ITM_DEF_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
-        Me.ITM_DEF_ITEM_BTN.Name = "ITM_DEF_ITEM_BTN"
-        Me.ITM_DEF_ITEM_BTN.Size = New System.Drawing.Size(90, 45)
-        Me.ITM_DEF_ITEM_BTN.TabIndex = 19
-        Me.ITM_DEF_ITEM_BTN.Text = "DEFECTIVE"
-        Me.ITM_DEF_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'ITM_DMG_ITEM_BTN
-        '
-        Me.ITM_DMG_ITEM_BTN.BackColor = System.Drawing.SystemColors.Desktop
-        Me.ITM_DMG_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_DMG_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_DMG_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_DMG_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_DMG_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_DMG_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_DMG_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!)
-        Me.ITM_DMG_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_DMG_ITEM_BTN.Location = New System.Drawing.Point(-1, 0)
-        Me.ITM_DMG_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
-        Me.ITM_DMG_ITEM_BTN.Name = "ITM_DMG_ITEM_BTN"
-        Me.ITM_DMG_ITEM_BTN.Size = New System.Drawing.Size(90, 45)
-        Me.ITM_DMG_ITEM_BTN.TabIndex = 18
-        Me.ITM_DMG_ITEM_BTN.Text = "DAMAGED"
-        Me.ITM_DMG_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'Panel8
-        '
-        Me.Panel8.Controls.Add(Me.ITM_FLTR_BTN)
-        Me.Panel8.Controls.Add(Me.ITM_FLTSET_ITEM_CBX)
-        Me.Panel8.Controls.Add(Me.ITM_SEARCH_TBX)
-        Me.Panel8.Controls.Add(Me.ITM_STOCKOUT_ITEM_BTN)
-        Me.Panel8.Controls.Add(Me.ITM_FLTVAL_ITEM_CBX)
-        Me.Panel8.Controls.Add(Me.ITM_STOCKIN_ITEM_BTN)
-        Me.Panel8.Location = New System.Drawing.Point(15, 45)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(850, 48)
-        Me.Panel8.TabIndex = 16
-        '
-        'ITM_FLTR_BTN
-        '
-        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.DarkRed
-        Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(820, 13)
-        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
-        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(30, 29)
-        Me.ITM_FLTR_BTN.TabIndex = 16
-        Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
-        '
-        'ITM_FLTSET_ITEM_CBX
-        '
-        Me.ITM_FLTSET_ITEM_CBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.ITM_FLTSET_ITEM_CBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ITM_FLTSET_ITEM_CBX.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ITM_FLTSET_ITEM_CBX.Font = New System.Drawing.Font("Bahnschrift", 13.0!)
-        Me.ITM_FLTSET_ITEM_CBX.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ITM_FLTSET_ITEM_CBX.FormattingEnabled = True
-        Me.ITM_FLTSET_ITEM_CBX.Items.AddRange(New Object() {"Brand", "Category", "Holding Status", "Repair Status", "Stock Status", "Supplier"})
-        Me.ITM_FLTSET_ITEM_CBX.Location = New System.Drawing.Point(534, 13)
-        Me.ITM_FLTSET_ITEM_CBX.Margin = New System.Windows.Forms.Padding(5, 3, 5, 10)
-        Me.ITM_FLTSET_ITEM_CBX.MaximumSize = New System.Drawing.Size(140, 0)
-        Me.ITM_FLTSET_ITEM_CBX.MinimumSize = New System.Drawing.Size(140, 0)
-        Me.ITM_FLTSET_ITEM_CBX.Name = "ITM_FLTSET_ITEM_CBX"
-        Me.ITM_FLTSET_ITEM_CBX.Size = New System.Drawing.Size(140, 29)
-        Me.ITM_FLTSET_ITEM_CBX.TabIndex = 2
-        Me.ITM_FLTSET_ITEM_CBX.Text = "Filter By:"
-        '
-        'ITM_SEARCH_TBX
-        '
-        Me.ITM_SEARCH_TBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.ITM_SEARCH_TBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.ITM_SEARCH_TBX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ITM_SEARCH_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_SEARCH_TBX.Location = New System.Drawing.Point(185, 13)
-        Me.ITM_SEARCH_TBX.Margin = New System.Windows.Forms.Padding(5, 3, 0, 5)
-        Me.ITM_SEARCH_TBX.MaximumSize = New System.Drawing.Size(340, 30)
-        Me.ITM_SEARCH_TBX.MinimumSize = New System.Drawing.Size(310, 30)
-        Me.ITM_SEARCH_TBX.Name = "ITM_SEARCH_TBX"
-        Me.ITM_SEARCH_TBX.Size = New System.Drawing.Size(340, 29)
-        Me.ITM_SEARCH_TBX.TabIndex = 1
-        '
-        'ITM_STOCKOUT_ITEM_BTN
-        '
-        Me.ITM_STOCKOUT_ITEM_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_STOCKOUT_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_STOCKOUT_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_STOCKOUT_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_STOCKOUT_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.ITM_STOCKOUT_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.ITM_STOCKOUT_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_STOCKOUT_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_STOCKOUT_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_STOCKOUT_ITEM_BTN.Location = New System.Drawing.Point(-1, 13)
-        Me.ITM_STOCKOUT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 10)
-        Me.ITM_STOCKOUT_ITEM_BTN.Name = "ITM_STOCKOUT_ITEM_BTN"
-        Me.ITM_STOCKOUT_ITEM_BTN.Size = New System.Drawing.Size(90, 30)
-        Me.ITM_STOCKOUT_ITEM_BTN.TabIndex = 10
-        Me.ITM_STOCKOUT_ITEM_BTN.TabStop = False
-        Me.ITM_STOCKOUT_ITEM_BTN.Text = "STOCK OUT"
-        Me.ITM_STOCKOUT_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'ITM_FLTVAL_ITEM_CBX
-        '
-        Me.ITM_FLTVAL_ITEM_CBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.ITM_FLTVAL_ITEM_CBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ITM_FLTVAL_ITEM_CBX.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ITM_FLTVAL_ITEM_CBX.Font = New System.Drawing.Font("Bahnschrift", 13.0!)
-        Me.ITM_FLTVAL_ITEM_CBX.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ITM_FLTVAL_ITEM_CBX.FormattingEnabled = True
-        Me.ITM_FLTVAL_ITEM_CBX.Location = New System.Drawing.Point(676, 13)
-        Me.ITM_FLTVAL_ITEM_CBX.Margin = New System.Windows.Forms.Padding(5, 3, 0, 10)
-        Me.ITM_FLTVAL_ITEM_CBX.MaximumSize = New System.Drawing.Size(140, 0)
-        Me.ITM_FLTVAL_ITEM_CBX.MinimumSize = New System.Drawing.Size(140, 0)
-        Me.ITM_FLTVAL_ITEM_CBX.Name = "ITM_FLTVAL_ITEM_CBX"
-        Me.ITM_FLTVAL_ITEM_CBX.Size = New System.Drawing.Size(140, 29)
-        Me.ITM_FLTVAL_ITEM_CBX.TabIndex = 3
-        Me.ITM_FLTVAL_ITEM_CBX.Text = "Value:"
-        '
-        'ITM_STOCKIN_ITEM_BTN
-        '
-        Me.ITM_STOCKIN_ITEM_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ITM_STOCKIN_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_STOCKIN_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_STOCKIN_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_STOCKIN_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ITM_STOCKIN_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ITM_STOCKIN_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_STOCKIN_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_STOCKIN_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_STOCKIN_ITEM_BTN.Location = New System.Drawing.Point(92, 13)
-        Me.ITM_STOCKIN_ITEM_BTN.Margin = New System.Windows.Forms.Padding(5, 10, 0, 10)
-        Me.ITM_STOCKIN_ITEM_BTN.Name = "ITM_STOCKIN_ITEM_BTN"
-        Me.ITM_STOCKIN_ITEM_BTN.Size = New System.Drawing.Size(90, 30)
-        Me.ITM_STOCKIN_ITEM_BTN.TabIndex = 11
-        Me.ITM_STOCKIN_ITEM_BTN.TabStop = False
-        Me.ITM_STOCKIN_ITEM_BTN.Text = "STOCK IN"
-        Me.ITM_STOCKIN_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'ITM_EDIT_ITEM_BTN
-        '
-        Me.ITM_EDIT_ITEM_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_EDIT_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_EDIT_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_EDIT_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_EDIT_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.ITM_EDIT_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.ITM_EDIT_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_EDIT_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_EDIT_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_EDIT_ITEM_BTN.Location = New System.Drawing.Point(464, 541)
-        Me.ITM_EDIT_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
-        Me.ITM_EDIT_ITEM_BTN.Name = "ITM_EDIT_ITEM_BTN"
-        Me.ITM_EDIT_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
-        Me.ITM_EDIT_ITEM_BTN.TabIndex = 8
-        Me.ITM_EDIT_ITEM_BTN.TabStop = False
-        Me.ITM_EDIT_ITEM_BTN.Text = "EDIT DETAILS"
-        Me.ITM_EDIT_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'ITM_DELETE_ITEM_BTN
-        '
-        Me.ITM_DELETE_ITEM_BTN.BackColor = System.Drawing.Color.DarkRed
-        Me.ITM_DELETE_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_DELETE_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_DELETE_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_DELETE_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.ITM_DELETE_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.ITM_DELETE_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_DELETE_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_DELETE_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_DELETE_ITEM_BTN.Location = New System.Drawing.Point(601, 541)
-        Me.ITM_DELETE_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
-        Me.ITM_DELETE_ITEM_BTN.Name = "ITM_DELETE_ITEM_BTN"
-        Me.ITM_DELETE_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
-        Me.ITM_DELETE_ITEM_BTN.TabIndex = 7
-        Me.ITM_DELETE_ITEM_BTN.TabStop = False
-        Me.ITM_DELETE_ITEM_BTN.Text = "DELETE"
-        Me.ITM_DELETE_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'ITM_ADD_ITEM_BTN
-        '
-        Me.ITM_ADD_ITEM_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ITM_ADD_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_ADD_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_ADD_ITEM_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_ADD_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ITM_ADD_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ITM_ADD_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_ADD_ITEM_BTN.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_ADD_ITEM_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_ADD_ITEM_BTN.Location = New System.Drawing.Point(738, 541)
-        Me.ITM_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 0, 0)
-        Me.ITM_ADD_ITEM_BTN.Name = "ITM_ADD_ITEM_BTN"
-        Me.ITM_ADD_ITEM_BTN.Size = New System.Drawing.Size(127, 45)
-        Me.ITM_ADD_ITEM_BTN.TabIndex = 6
-        Me.ITM_ADD_ITEM_BTN.TabStop = False
-        Me.ITM_ADD_ITEM_BTN.Text = "ADD NEW ITEM"
-        Me.ITM_ADD_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.DarkGray
-        Me.Panel7.Controls.Add(Me.DataGridView1)
-        Me.Panel7.Location = New System.Drawing.Point(15, 97)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(850, 431)
-        Me.Panel7.TabIndex = 1
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeight = 40
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cbx_column})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.EnableHeadersVisualStyles = False
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.MaximumSize = New System.Drawing.Size(850, 431)
-        Me.DataGridView1.MinimumSize = New System.Drawing.Size(850, 431)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.RowHeadersVisible = False
-        DataGridViewCellStyle4.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridView1.Size = New System.Drawing.Size(850, 431)
-        Me.DataGridView1.TabIndex = 0
-        Me.DataGridView1.TabStop = False
-        '
-        'cbx_column
-        '
-        Me.cbx_column.FalseValue = "Not"
-        Me.cbx_column.HeaderText = "*"
-        Me.cbx_column.Name = "cbx_column"
-        Me.cbx_column.TrueValue = "Yes"
-        Me.cbx_column.Width = 850
-        '
-        'LOG_PANEL
-        '
-        Me.LOG_PANEL.BackColor = System.Drawing.SystemColors.Control
-        Me.LOG_PANEL.Controls.Add(Me.Label3)
-        Me.LOG_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LOG_PANEL.Location = New System.Drawing.Point(0, 0)
-        Me.LOG_PANEL.Name = "LOG_PANEL"
-        Me.LOG_PANEL.Size = New System.Drawing.Size(881, 660)
-        Me.LOG_PANEL.TabIndex = 1
-        Me.LOG_PANEL.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 12)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 13)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "LOG PANEL"
-        '
-        'PANEL_SETTINGS
-        '
-        Me.PANEL_SETTINGS.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PANEL_SETTINGS.Location = New System.Drawing.Point(0, 0)
-        Me.PANEL_SETTINGS.Name = "PANEL_SETTINGS"
-        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 660)
-        Me.PANEL_SETTINGS.TabIndex = 2
+        Me.APP_LABEL.BackColor = System.Drawing.Color.Transparent
+        Me.APP_LABEL.Font = New System.Drawing.Font("Bahnschrift SemiBold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.APP_LABEL.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.APP_LABEL.Location = New System.Drawing.Point(11, 25)
+        Me.APP_LABEL.Name = "APP_LABEL"
+        Me.APP_LABEL.Size = New System.Drawing.Size(839, 80)
+        Me.APP_LABEL.TabIndex = 14
+        Me.APP_LABEL.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
+        Me.APP_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Form1
         '
@@ -993,17 +994,9 @@ Partial Class Form1
         Me.MinimumSize = New System.Drawing.Size(1119, 699)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "HOME"
         Me.Panel1.ResumeLayout(False)
         Me.Base_Panel.ResumeLayout(False)
-        Me.HOME_PANEL.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
-        Me.INFO_LBL_ITEMS.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.DAY_LOG_PANEL.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
         Me.ITEM_PANEL.ResumeLayout(False)
         Me.PANEL_ITEM_FLAGGING.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
@@ -1012,6 +1005,14 @@ Partial Class Form1
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LOG_PANEL.ResumeLayout(False)
         Me.LOG_PANEL.PerformLayout()
+        Me.HOME_PANEL.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
+        Me.INFO_LBL_ITEMS.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.DAY_LOG_PANEL.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
