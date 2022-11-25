@@ -27,8 +27,9 @@ Public Class Form_Add_Item
 
         ElseIf Label13.Text = "EDIT ITEM DETAILS" Then
 
-            Confirm = "ITEM SUCCESSFULY UPDATED"
             Form1.Edit_Details()
+            Confirm = "ITEM SUCCESSFULY UPDATED"
+
             Query = 1
 
             FAI_TBX_ITEM_ID.Visible = True
@@ -36,8 +37,6 @@ Public Class Form_Add_Item
 
             FAI_TBX_ITEM_INIT.BackColor = Color.DimGray
             FAI_TBX_ITEM_INIT.ReadOnly = True
-
-
 
         End If
 
@@ -269,7 +268,4 @@ Public Class Form_Add_Item
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 End Class

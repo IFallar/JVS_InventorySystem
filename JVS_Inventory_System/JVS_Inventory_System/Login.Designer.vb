@@ -37,7 +37,7 @@ Partial Class Login
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.JVS_Inventory_System.My.Resources.Resources.icons8_circled_user_male_skin_type_5_64
-        Me.PictureBox2.Location = New System.Drawing.Point(596, 119)
+        Me.PictureBox2.Location = New System.Drawing.Point(595, 125)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(100, 99)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -62,7 +62,7 @@ Partial Class Login
         Me.userType.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.userType.FormattingEnabled = True
         Me.userType.Items.AddRange(New Object() {"Admin", "User"})
-        Me.userType.Location = New System.Drawing.Point(586, 224)
+        Me.userType.Location = New System.Drawing.Point(586, 230)
         Me.userType.Name = "userType"
         Me.userType.Size = New System.Drawing.Size(121, 23)
         Me.userType.TabIndex = 1
@@ -74,9 +74,9 @@ Partial Class Login
         Me.userName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.userName.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.userName.ForeColor = System.Drawing.Color.Silver
-        Me.userName.Location = New System.Drawing.Point(563, 253)
+        Me.userName.Location = New System.Drawing.Point(539, 259)
         Me.userName.Name = "userName"
-        Me.userName.Size = New System.Drawing.Size(170, 25)
+        Me.userName.Size = New System.Drawing.Size(210, 25)
         Me.userName.TabIndex = 2
         Me.userName.Text = "USERNAME"
         Me.userName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -86,9 +86,9 @@ Partial Class Login
         Me.pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pass.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pass.ForeColor = System.Drawing.Color.Silver
-        Me.pass.Location = New System.Drawing.Point(563, 284)
+        Me.pass.Location = New System.Drawing.Point(539, 290)
         Me.pass.Name = "pass"
-        Me.pass.Size = New System.Drawing.Size(170, 25)
+        Me.pass.Size = New System.Drawing.Size(210, 25)
         Me.pass.TabIndex = 3
         Me.pass.Text = "PASSWORD"
         Me.pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -102,9 +102,9 @@ Partial Class Login
         Me.log_in.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.log_in.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.log_in.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.log_in.Location = New System.Drawing.Point(563, 315)
+        Me.log_in.Location = New System.Drawing.Point(539, 321)
         Me.log_in.Name = "log_in"
-        Me.log_in.Size = New System.Drawing.Size(170, 25)
+        Me.log_in.Size = New System.Drawing.Size(210, 25)
         Me.log_in.TabIndex = 4
         Me.log_in.Text = "LOG-IN"
         Me.log_in.UseVisualStyleBackColor = False
@@ -112,11 +112,11 @@ Partial Class Login
         'Button1
         '
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI Symbol", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(748, 0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(37, 30)

@@ -10,13 +10,12 @@ Public Class Form1
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `ITEM_NAME`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE` FROM `products` WHERE `ITEM_ID` = '" & Selected & "'"
+        cmd.CommandText = "SELECT `ITEM_NAME`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE` FROM `products` WHERE `ITEM_ID` = '" & Selected_Item & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
 
-        Form_Stock_IS.FSIS_ID_HOLD.Text = Selected
-
+        Form_Stock_IS.FSIS_ID_HOLD.Text = Selected_Item
 
         While cmdreader.Read
 
@@ -43,35 +42,25 @@ Public Class Form1
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `ITEM_NAME`, `ITEM_BRAND`, `CATEGORY`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `THRESHOLD`, `HOLDING_STATUS`, `SUPPLIER` FROM `products` WHERE `ITEM_ID` = '" & Selected & "'"
+        cmd.CommandText = "SELECT `ITEM_NAME`, `ITEM_BRAND`, `CATEGORY`, `VARIANT`, `UNIT_PRICE`, `QUANTITY`, `MIN_SELL`, `MAX_SELL`, `THRESHOLD`, `HOLDING_STATUS`, `SUPPLIER` FROM `products` WHERE `ITEM_ID` = '" & Form_Add_Item.FAI_TBX_ITEM_ID.Text & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
 
-        Form_Add_Item.FAI_TBX_ITEM_ID.Text = Selected
-
         While cmdreader.Read
 
-            Try
-
-                Form_Add_Item.FAI_TBX_ITEM_NAME.Text = cmdreader.GetValue(0)
-                Form_Add_Item.FAI_CBX_ITEM_BRAND.Text = cmdreader.GetValue(1)
-                Form_Add_Item.FAI_CBX_ITEM_CAT.Text = cmdreader.GetValue(2)
-                Form_Add_Item.FAI_CBX_ITEM_HLDSTAT.Text = cmdreader.GetValue(9)
-                Form_Add_Item.FAI_CBX_ITEM_MODEL.Text = cmdreader.GetValue(3)
-                Form_Add_Item.FAI_CBX_ITEM_SP.Text = cmdreader.GetValue(10)
-
-                Form_Add_Item.FAI_TBX_ITEM_INIT.Text = cmdreader.GetValue(5)
-                Form_Add_Item.FAI_TBX_ITEM_TRHD.Text = cmdreader.GetValue(8)
-                Form_Add_Item.FAI_TBX_TOPAY.Text = 0
-                Form_Add_Item.FAI_TBX_ITEM_PC.Text = cmdreader.GetValue(4)
-                Form_Add_Item.FAI_TBX_ITEM_MAX.Text = cmdreader.GetValue(7)
-                Form_Add_Item.FAI_TBX_ITEM_MIN.Text = cmdreader.GetValue(6)
-
-
-            Catch ex As System.InvalidCastException
-
-            End Try
+            Form_Add_Item.FAI_TBX_ITEM_NAME.Text = cmdreader.GetString(0)
+            Form_Add_Item.FAI_CBX_ITEM_BRAND.Text = cmdreader.GetString(1)
+            Form_Add_Item.FAI_CBX_ITEM_CAT.Text = cmdreader.GetString(2)
+            Form_Add_Item.FAI_CBX_ITEM_MODEL.Text = cmdreader.GetString(3)
+            Form_Add_Item.FAI_TBX_ITEM_PC.Text = cmdreader.GetString(4)
+            Form_Add_Item.FAI_TBX_ITEM_INIT.Text = cmdreader.GetString(5)
+            Form_Add_Item.FAI_TBX_ITEM_MIN.Text = cmdreader.GetString(6)
+            Form_Add_Item.FAI_TBX_ITEM_MAX.Text = cmdreader.GetString(7)
+            Form_Add_Item.FAI_TBX_ITEM_TRHD.Text = cmdreader.GetString(8)
+            Form_Add_Item.FAI_CBX_ITEM_HLDSTAT.Text = cmdreader.GetString(9)
+            Form_Add_Item.FAI_CBX_ITEM_SP.Text = cmdreader.GetString(10)
+            Form_Add_Item.FAI_TBX_TOPAY.Text = 0
 
         End While
 
@@ -165,7 +154,7 @@ Public Class Form1
     End Sub
 
     Public Sub UPDATE_RPR_STATUS()
-        If Selected = Nothing Then
+        If Selected_Item = Nothing Then
             MsgBox("Select an Item to Flag.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
@@ -173,7 +162,7 @@ Public Class Form1
                 opencon()
 
                 cmd.Connection = con
-                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & Selected & "'"
+                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & Selected_Item & "'"
                 cmd.Prepare()
 
                 cmdreader = cmd.ExecuteReader
@@ -191,7 +180,7 @@ Public Class Form1
                             cmd.Connection = strconn
                             strconn.Open()
 
-                            cmd.CommandText = "UPDATE `products` SET `REPAIR_STATUS`='" & FLAGGED_VAL & "' WHERE `ITEM_ID` = '" & Selected & "'"
+                            cmd.CommandText = "UPDATE `products` SET `REPAIR_STATUS`='" & FLAGGED_VAL & "' WHERE `ITEM_ID` = '" & Selected_Item & "'"
                             cmd.ExecuteNonQuery()
 
                             strconn.Close()
@@ -360,14 +349,13 @@ Public Class Form1
         End If
     End Sub
 
-    Dim Selected As Integer = Nothing
-
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
 
         If (DataGridView1.Columns(0).Name = "cbx_column") Then
 
             If DataGridView1.CurrentRow.Cells(0).Value = "Yes" Then
-                Selected = DataGridView1.CurrentRow.Cells(1).Value
+                Selected_Item = DataGridView1.CurrentRow.Cells(1).Value
+                MsgBox(Selected_Item, MsgBoxStyle.OkOnly, "Action Confirmation")
             End If
 
         End If
@@ -595,13 +583,11 @@ Public Class Form1
 
     End Sub
 
-    Private Sub VALUE_LOWSTOCK_Click(sender As Object, e As EventArgs) Handles VALUE_LOWSTOCK.Click
-
-    End Sub
-
     'ITEM SCREEN ================================================================================================================
 
     '++++++++++++++++ ITEM SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Dim Selected_Item As Integer
 
     Private Sub ITM_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
         Dim ADD_ITEM_MODAL As New Form
@@ -619,17 +605,19 @@ Public Class Form1
 
     Private Sub ITM_EDIT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_EDIT_ITEM_BTN.Click
 
-        If Selected = Nothing Then
+        If Selected_Item = Nothing Then
             MsgBox("Select an Item to Edit.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
                 Dim Modal As New Form_Add_Item
                 Form_Add_Item.Label13.Text = "EDIT ITEM DETAILS"
+                Form_Add_Item.FAI_TBX_ITEM_ID.Text = Selected_Item
                 Form_Add_Item.ShowDialog()
 
             Catch ex As Exception
 
             End Try
+
         End If
 
     End Sub
@@ -638,7 +626,7 @@ Public Class Form1
 
         Dim TO_DELETE As String
 
-        If Selected = Nothing Then
+        If Selected_Item = Nothing Then
             MsgBox("Select an Item to Edit.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
@@ -646,7 +634,7 @@ Public Class Form1
                 opencon()
 
                 cmd.Connection = con
-                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & Selected & "'"
+                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & Selected_Item & "'"
                 cmd.Prepare()
 
                 cmdreader = cmd.ExecuteReader
@@ -664,7 +652,7 @@ Public Class Form1
                             cmd.Connection = strconn
                             strconn.Open()
 
-                            cmd.CommandText = "DELETE FROM `products` WHERE `ITEM_ID` = '" & Selected & "'"
+                            cmd.CommandText = "SET FOREIGN_KEY_CHECKS=0; DELETE FROM `products` WHERE `ITEM_ID` = '" & Selected_Item & "'; SET FOREIGN_KEY_CHECKS=1"
                             cmd.ExecuteNonQuery()
 
                             strconn.Close()
@@ -699,7 +687,7 @@ Public Class Form1
 
     Private Sub ITM_STOCKIN_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_STOCKIN_ITEM_BTN.Click
 
-        If Selected = Nothing Then
+        If Selected_Item = Nothing Then
             MsgBox("Please Select an Item.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
@@ -716,7 +704,7 @@ Public Class Form1
 
     Private Sub ITM_STOCKOUT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_STOCKOUT_ITEM_BTN.Click
 
-        If Selected = Nothing Then
+        If Selected_Item = Nothing Then
             MsgBox("Please Select an Item.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
