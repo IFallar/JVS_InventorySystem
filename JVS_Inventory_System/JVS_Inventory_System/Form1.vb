@@ -275,7 +275,7 @@ Public Class Form1
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `r_transtaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT,'" & acc_id_log & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
+        cmd.CommandText = "SET FOREIGN_KEY_CHECKS=0; INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `r_transtaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT,'" & acc_id_log & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "'); SET FOREIGN_KEY_CHECKS=1"
         cmd.ExecuteNonQuery()
 
         strconn.Close()
@@ -355,7 +355,6 @@ Public Class Form1
 
             If DataGridView1.CurrentRow.Cells(0).Value = "Yes" Then
                 Selected_Item = DataGridView1.CurrentRow.Cells(1).Value
-                MsgBox(Selected_Item, MsgBoxStyle.OkOnly, "Action Confirmation")
             End If
 
         End If
@@ -876,6 +875,7 @@ Public Class Form1
         Search_Bar()
 
     End Sub
+
 
 
     'SETTINGS ================================================================================================================

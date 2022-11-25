@@ -74,7 +74,6 @@
 
         Stock_Function()
 
-
     End Sub
 
     Private Sub FSIS_ADD_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_ADD_BTN.Click

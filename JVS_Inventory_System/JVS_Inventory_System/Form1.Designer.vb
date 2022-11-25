@@ -36,6 +36,7 @@ Partial Class Form1
         Me.SIDE_ITEM_BTN = New System.Windows.Forms.Button()
         Me.Base_Panel = New System.Windows.Forms.Panel()
         Me.HOME_PANEL = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.INFO_LBL_ITEMS = New System.Windows.Forms.Panel()
         Me.HEADER_ITEMS = New System.Windows.Forms.Label()
@@ -80,9 +81,11 @@ Partial Class Form1
         Me.LOG_PANEL = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PANEL_SETTINGS = New System.Windows.Forms.Panel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
         Me.HOME_PANEL.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.INFO_LBL_ITEMS.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -96,6 +99,7 @@ Partial Class Form1
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LOG_PANEL.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -238,9 +242,9 @@ Partial Class Form1
         'HOME_PANEL
         '
         Me.HOME_PANEL.BackColor = System.Drawing.Color.White
-        Me.HOME_PANEL.Controls.Add(Me.Panel6)
+        Me.HOME_PANEL.Controls.Add(Me.GroupBox2)
+        Me.HOME_PANEL.Controls.Add(Me.GroupBox1)
         Me.HOME_PANEL.Controls.Add(Me.DAY_LOG_PANEL)
-        Me.HOME_PANEL.Controls.Add(Me.Panel2)
         Me.HOME_PANEL.Controls.Add(Me.APP_LABEL)
         Me.HOME_PANEL.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HOME_PANEL.Location = New System.Drawing.Point(0, 0)
@@ -248,15 +252,27 @@ Partial Class Form1
         Me.HOME_PANEL.Size = New System.Drawing.Size(881, 660)
         Me.HOME_PANEL.TabIndex = 0
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Panel6)
+        Me.GroupBox1.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        Me.GroupBox1.Location = New System.Drawing.Point(15, 125)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(854, 141)
+        Me.GroupBox1.TabIndex = 15
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "AT A GLANCE"
+        '
         'Panel6
         '
         Me.Panel6.Controls.Add(Me.INFO_LBL_ITEMS)
         Me.Panel6.Controls.Add(Me.Panel5)
         Me.Panel6.Controls.Add(Me.Panel3)
         Me.Panel6.Controls.Add(Me.Panel4)
-        Me.Panel6.Location = New System.Drawing.Point(11, 143)
+        Me.Panel6.Location = New System.Drawing.Point(20, 25)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(815, 103)
+        Me.Panel6.Size = New System.Drawing.Size(827, 97)
         Me.Panel6.TabIndex = 13
         '
         'INFO_LBL_ITEMS
@@ -448,9 +464,9 @@ Partial Class Form1
         Me.DAY_LOG_PANEL.BackColor = System.Drawing.Color.LightGray
         Me.DAY_LOG_PANEL.Controls.Add(Me.DO_LIST)
         Me.DAY_LOG_PANEL.Controls.Add(Me.DO_LABEL)
-        Me.DAY_LOG_PANEL.Location = New System.Drawing.Point(552, 284)
+        Me.DAY_LOG_PANEL.Location = New System.Drawing.Point(552, 281)
         Me.DAY_LOG_PANEL.Name = "DAY_LOG_PANEL"
-        Me.DAY_LOG_PANEL.Size = New System.Drawing.Size(319, 377)
+        Me.DAY_LOG_PANEL.Size = New System.Drawing.Size(319, 389)
         Me.DAY_LOG_PANEL.TabIndex = 5
         '
         'DO_LIST
@@ -485,14 +501,16 @@ Partial Class Form1
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.LightGray
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.Controls.Add(Me.HOME_STOCK_IN_BTN)
         Me.Panel2.Controls.Add(Me.HOME_ADD_ITEM_BTN)
         Me.Panel2.Controls.Add(Me.HOME_INVENTORY_LOG_BTN)
         Me.Panel2.Controls.Add(Me.HOME_STOCK_OUT_BTN)
-        Me.Panel2.Location = New System.Drawing.Point(11, 284)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(3, 22)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(521, 377)
+        Me.Panel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel2.Size = New System.Drawing.Size(519, 364)
         Me.Panel2.TabIndex = 3
         '
         'HOME_STOCK_IN_BTN
@@ -502,13 +520,12 @@ Partial Class Form1
         Me.HOME_STOCK_IN_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.HOME_STOCK_IN_BTN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.HOME_STOCK_IN_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_STOCK_IN_BTN.FlatAppearance.BorderSize = 0
         Me.HOME_STOCK_IN_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.HOME_STOCK_IN_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
         Me.HOME_STOCK_IN_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_STOCK_IN_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_STOCK_IN_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_STOCK_IN_BTN.Location = New System.Drawing.Point(20, 198)
+        Me.HOME_STOCK_IN_BTN.Location = New System.Drawing.Point(19, 189)
         Me.HOME_STOCK_IN_BTN.Margin = New System.Windows.Forms.Padding(20, 10, 10, 10)
         Me.HOME_STOCK_IN_BTN.Name = "HOME_STOCK_IN_BTN"
         Me.HOME_STOCK_IN_BTN.Size = New System.Drawing.Size(230, 160)
@@ -525,13 +542,12 @@ Partial Class Form1
         Me.HOME_ADD_ITEM_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.HOME_ADD_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.HOME_ADD_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_ADD_ITEM_BTN.FlatAppearance.BorderSize = 0
         Me.HOME_ADD_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.HOME_ADD_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
         Me.HOME_ADD_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_ADD_ITEM_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_ADD_ITEM_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_ADD_ITEM_BTN.Location = New System.Drawing.Point(20, 20)
+        Me.HOME_ADD_ITEM_BTN.Location = New System.Drawing.Point(19, 11)
         Me.HOME_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(20, 20, 10, 10)
         Me.HOME_ADD_ITEM_BTN.Name = "HOME_ADD_ITEM_BTN"
         Me.HOME_ADD_ITEM_BTN.Size = New System.Drawing.Size(230, 160)
@@ -548,13 +564,12 @@ Partial Class Form1
         Me.HOME_INVENTORY_LOG_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.HOME_INVENTORY_LOG_BTN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.BorderSize = 0
         Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
         Me.HOME_INVENTORY_LOG_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_INVENTORY_LOG_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_INVENTORY_LOG_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_INVENTORY_LOG_BTN.Location = New System.Drawing.Point(270, 20)
+        Me.HOME_INVENTORY_LOG_BTN.Location = New System.Drawing.Point(270, 11)
         Me.HOME_INVENTORY_LOG_BTN.Margin = New System.Windows.Forms.Padding(10, 20, 20, 10)
         Me.HOME_INVENTORY_LOG_BTN.Name = "HOME_INVENTORY_LOG_BTN"
         Me.HOME_INVENTORY_LOG_BTN.Size = New System.Drawing.Size(230, 160)
@@ -571,13 +586,12 @@ Partial Class Form1
         Me.HOME_STOCK_OUT_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.HOME_STOCK_OUT_BTN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.HOME_STOCK_OUT_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_STOCK_OUT_BTN.FlatAppearance.BorderSize = 0
         Me.HOME_STOCK_OUT_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.HOME_STOCK_OUT_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
         Me.HOME_STOCK_OUT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_STOCK_OUT_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_STOCK_OUT_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_STOCK_OUT_BTN.Location = New System.Drawing.Point(270, 198)
+        Me.HOME_STOCK_OUT_BTN.Location = New System.Drawing.Point(270, 189)
         Me.HOME_STOCK_OUT_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 20, 10)
         Me.HOME_STOCK_OUT_BTN.Name = "HOME_STOCK_OUT_BTN"
         Me.HOME_STOCK_OUT_BTN.Size = New System.Drawing.Size(230, 160)
@@ -592,9 +606,9 @@ Partial Class Form1
         Me.APP_LABEL.BackColor = System.Drawing.Color.Transparent
         Me.APP_LABEL.Font = New System.Drawing.Font("Bahnschrift SemiBold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.APP_LABEL.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.APP_LABEL.Location = New System.Drawing.Point(14, 11)
+        Me.APP_LABEL.Location = New System.Drawing.Point(18, 12)
         Me.APP_LABEL.Name = "APP_LABEL"
-        Me.APP_LABEL.Size = New System.Drawing.Size(698, 44)
+        Me.APP_LABEL.Size = New System.Drawing.Size(500, 92)
         Me.APP_LABEL.TabIndex = 14
         Me.APP_LABEL.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
         Me.APP_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -720,6 +734,8 @@ Partial Class Form1
         'ITM_FLTR_BTN
         '
         Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.DarkRed
+        Me.ITM_FLTR_BTN.BackgroundImage = CType(resources.GetObject("ITM_FLTR_BTN.BackgroundImage"), System.Drawing.Image)
+        Me.ITM_FLTR_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
@@ -728,10 +744,10 @@ Partial Class Form1
         Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(820, 13)
+        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(819, 13)
         Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
         Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
-        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(30, 29)
+        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(29, 29)
         Me.ITM_FLTR_BTN.TabIndex = 16
         Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
         '
@@ -980,15 +996,30 @@ Partial Class Form1
         Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 660)
         Me.PANEL_SETTINGS.TabIndex = 2
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.Panel2)
+        Me.GroupBox2.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        Me.GroupBox2.Location = New System.Drawing.Point(15, 272)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(525, 389)
+        Me.GroupBox2.TabIndex = 16
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "ACTIONS"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1103, 660)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Base_Panel)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximumSize = New System.Drawing.Size(1119, 699)
         Me.MinimumSize = New System.Drawing.Size(1119, 699)
@@ -998,6 +1029,7 @@ Partial Class Form1
         Me.Panel1.ResumeLayout(False)
         Me.Base_Panel.ResumeLayout(False)
         Me.HOME_PANEL.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.INFO_LBL_ITEMS.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
@@ -1013,6 +1045,7 @@ Partial Class Form1
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LOG_PANEL.ResumeLayout(False)
         Me.LOG_PANEL.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1025,14 +1058,9 @@ Partial Class Form1
     Friend WithEvents ITEM_PANEL As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents DO_LABEL As Label
-    Friend WithEvents HOME_STOCK_IN_BTN As Button
-    Friend WithEvents HOME_ADD_ITEM_BTN As Button
-    Friend WithEvents HOME_INVENTORY_LOG_BTN As Button
-    Friend WithEvents HOME_STOCK_OUT_BTN As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DAY_LOG_PANEL As Panel
     Friend WithEvents DO_LIST As ListBox
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents INFO_LBL_ITEMS As Panel
     Friend WithEvents VALUE_ITEMS As Button
@@ -1069,4 +1097,11 @@ Partial Class Form1
     Friend WithEvents PANEL_SETTINGS As Panel
     Friend WithEvents acc_type_lbl As Label
     Friend WithEvents acc_name_lbl As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents HOME_STOCK_IN_BTN As Button
+    Friend WithEvents HOME_ADD_ITEM_BTN As Button
+    Friend WithEvents HOME_INVENTORY_LOG_BTN As Button
+    Friend WithEvents HOME_STOCK_OUT_BTN As Button
+    Friend WithEvents GroupBox2 As GroupBox
 End Class

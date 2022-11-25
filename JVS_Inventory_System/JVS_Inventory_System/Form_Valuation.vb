@@ -57,7 +57,7 @@
 
     Private Sub VALUE_GRID_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles VALUE_GRID.DataBindingComplete
 
-        VALUE_GRID.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        VALUE_GRID.Columns(0).Width = 105
         VALUE_GRID.Columns(1).Width = 80
         VALUE_GRID.Columns(2).Width = 100
         VALUE_GRID.Columns(3).Width = 100
