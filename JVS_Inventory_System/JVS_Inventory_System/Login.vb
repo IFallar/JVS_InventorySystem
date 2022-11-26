@@ -29,6 +29,7 @@ Public Class Login
                 a.acc_name_lbl.Text = userName.Text
                 a.acc_type_lbl.Text = userType.SelectedItem
                 Form1.GlobalVariables.UserID = table.Rows(0)(0)
+                Form1.GlobalVariables.logged = 1
 
                 a.Show()
                 Me.Hide()

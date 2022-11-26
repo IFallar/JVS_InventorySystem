@@ -8,6 +8,7 @@ Public Class Form1
     Public Class GlobalVariables
         Public Shared UserID As Integer
         Public Shared Selected_Item As Integer
+        Public Shared logged As Integer = 0
     End Class
 
     Dim FLD As String
@@ -339,11 +340,17 @@ Public Class Form1
 
     'PRIVATES ================================================================================================================
 
-    Dim tablemode As Integer = 1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        If GlobalVariables.logged = 0 Then
+            Login.ShowDialog()
+            Me.Close()
+        Else
+
+        End If
 
         Load_Table_Main()
         Set_Home_Value()
