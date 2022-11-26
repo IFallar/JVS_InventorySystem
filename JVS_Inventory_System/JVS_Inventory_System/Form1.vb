@@ -559,16 +559,16 @@ Public Class Form1
 
     'MAIN SCREEN ================================================================================================================
 
+    Dim FORM_MODAL As New Form
+
     '++++++++++++++++ MAIN SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
 
-        Dim ADD_ITEM_MODAL As New Form
-
         Try
             Dim Modal As New Form_Add_Item
             Form_Add_Item.Label13.Text = "ADD NEW ITEM"
-            Form_Add_Item.ShowDialog()
+            FORM_MODAL.ShowDialog()
 
         Catch ex As Exception
 
@@ -608,8 +608,6 @@ Public Class Form1
 
     Private Sub VALUE_ITEMS_Click(sender As Object, e As EventArgs) Handles VALUE_ITEMS.Click
 
-        Dim ADD_ITEM_MODAL As New Form
-
         Try
             Dim Modal As New Form_Valuation
             Form_Valuation.FV_HEAD_LBL.Text = "INVENTORY VALUE BREAKDOWN"
@@ -626,7 +624,6 @@ Public Class Form1
     '++++++++++++++++ ITEM SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub ITM_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
-        Dim ADD_ITEM_MODAL As New Form
 
         Try
             Dim Modal As New Form_Add_Item
