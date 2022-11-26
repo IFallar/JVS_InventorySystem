@@ -6,7 +6,8 @@ Public Class Form1
     'PUBLICS ================================================================================================================
 
     Public Class GlobalVariables
-        Public Shared UserID As Integer = 39
+        Public Shared UserID As Integer
+        Public Shared Selected_Item As Integer
     End Class
 
     Dim FLD As String
@@ -54,21 +55,21 @@ Public Class Form1
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `ITEM_NAME`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE` FROM `products` WHERE `ITEM_ID` = '" & Selected_Item & "'"
+        cmd.CommandText = "SELECT `ITEM_NAME`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE` FROM `products` WHERE `ITEM_ID` = '" & GlobalVariables.Selected_Item & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
 
-        Form_Stock_IS.FSIS_ID_HOLD.Text = Selected_Item
+        Form_Stock_IS.FSIS_ID_HOLD.Text = GlobalVariables.Selected_Item
 
         While cmdreader.Read
 
             Try
 
-                Form_Stock_IS.FSIS_ITEM_TBX.Text = cmdreader.GetValue(0)
-                Form_Stock_IS.FSIS_QTY_HOLD.Text = cmdreader.GetValue(1)
-                Form_Stock_IS.FSIS_TRH_HOLD.Text = cmdreader.GetValue(2)
-                Form_Stock_IS.FSIS_PRC_HOLD.Text = cmdreader.GetValue(3)
+                Form_Stock_IS.FSIS_ITEM_TBX.Text = cmdreader.GetString(0)
+                Form_Stock_IS.FSIS_QTY_HOLD.Text = cmdreader.GetString(1)
+                Form_Stock_IS.FSIS_TRH_HOLD.Text = cmdreader.GetString(2)
+                Form_Stock_IS.FSIS_PRC_HOLD.Text = cmdreader.GetString(3)
 
             Catch ex As System.InvalidCastException
 
@@ -115,35 +116,34 @@ Public Class Form1
 
     Public Sub Load_Table_Main()
 
-        Dim Filter_Value As String = ITM_FLTVAL_ITEM_CBX.Text
+        Dim Filter_Value As String = Me.ITM_FLTVAL_ITEM_CBX.Text
 
-        If ITM_FLTSET_ITEM_CBX.SelectedIndex = 0 Then
-            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_BRAND = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", DataGridView1)
+        If Me.ITM_FLTSET_ITEM_CBX.SelectedIndex = 0 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_BRAND = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", Me.DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 1 Then
-            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE CATEGORY = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", DataGridView1)
+        ElseIf Me.ITM_FLTSET_ITEM_CBX.SelectedIndex = 1 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE CATEGORY = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", Me.DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 2 Then
-            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE HOLDING_STATUS = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", DataGridView1)
+        ElseIf Me.ITM_FLTSET_ITEM_CBX.SelectedIndex = 2 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE HOLDING_STATUS = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", Me.DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 3 Then
-            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = '" & Filter_Value & "'", DataGridView1)
+        ElseIf Me.ITM_FLTSET_ITEM_CBX.SelectedIndex = 3 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = '" & Filter_Value & "'", Me.DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 4 Then
-            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE STOCK_STATUS = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", DataGridView1)
+        ElseIf Me.ITM_FLTSET_ITEM_CBX.SelectedIndex = 4 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE STOCK_STATUS = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", Me.DataGridView1)
             strconn.Close()
 
-        ElseIf ITM_FLTSET_ITEM_CBX.SelectedIndex = 5 Then
-            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE SUPPLIER = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", DataGridView1)
+        ElseIf Me.ITM_FLTSET_ITEM_CBX.SelectedIndex = 5 Then
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE SUPPLIER = '" & Filter_Value & "' AND REPAIR_STATUS = 'NORMAL'", Me.DataGridView1)
             strconn.Close()
         Else
-            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = 'NORMAL'", DataGridView1)
+            tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE REPAIR_STATUS = 'NORMAL'", Me.DataGridView1)
             strconn.Close()
-
         End If
 
     End Sub
@@ -170,16 +170,16 @@ Public Class Form1
             Try
 
                 home_item_valuation = cmdreader.GetValue(0)
-                VALUE_ITEMS.Text = "P" + home_item_valuation
+                Me.VALUE_ITEMS.Text = "P" + home_item_valuation
 
                 home_item_qty = cmdreader.GetValue(1)
-                VALUE_COUNT.Text = home_item_qty
+                Me.VALUE_COUNT.Text = home_item_qty
 
                 home_item_lowstock = cmdreader.GetValue(2)
-                VALUE_LOWSTOCK.Text = home_item_lowstock
+                Me.VALUE_LOWSTOCK.Text = home_item_lowstock
 
                 home_item_laststock = cmdreader.GetValue(3)
-                VALUE_LASTSTOCK.Text = home_item_laststock
+                Me.VALUE_LASTSTOCK.Text = home_item_laststock
 
             Catch ex As System.InvalidCastException
 
@@ -198,7 +198,7 @@ Public Class Form1
     End Sub
 
     Public Sub UPDATE_RPR_STATUS()
-        If Selected_Item = Nothing Then
+        If GlobalVariables.Selected_Item = Nothing Then
             MsgBox("Select an Item to Flag.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
@@ -206,7 +206,7 @@ Public Class Form1
                 opencon()
 
                 cmd.Connection = con
-                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & Selected_Item & "'"
+                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & GlobalVariables.Selected_Item & "'"
                 cmd.Prepare()
 
                 cmdreader = cmd.ExecuteReader
@@ -224,7 +224,7 @@ Public Class Form1
                             cmd.Connection = strconn
                             strconn.Open()
 
-                            cmd.CommandText = "UPDATE `products` SET `REPAIR_STATUS`='" & FLAGGED_VAL & "' WHERE `ITEM_ID` = '" & Selected_Item & "'"
+                            cmd.CommandText = "UPDATE `products` SET `REPAIR_STATUS`='" & FLAGGED_VAL & "' WHERE `ITEM_ID` = '" & GlobalVariables.Selected_Item & "'"
                             cmd.ExecuteNonQuery()
 
                             strconn.Close()
@@ -277,9 +277,11 @@ Public Class Form1
         Dim transaction_date = log_date.ToString("yyyy\-MM\-dd")
         Dim transaction_time As String = TimeOfDay.ToString("hh:mm")
 
+        Dim in_out As String = ""
+
         If Token = 1 Then
 
-            transaction_type = "NEW ITEM"
+            transaction_type = "New Item"
 
             opencon()
 
@@ -299,10 +301,12 @@ Public Class Form1
         ElseIf Token = 2 Then
 
             transaction_type = "Restock"
+            in_out = "+"
 
         ElseIf Token = 3 Then
 
             transaction_type = "Stock Out"
+            in_out = "-"
 
         ElseIf Token = 4 Then
 
@@ -325,7 +329,7 @@ Public Class Form1
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `transaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT, '" & acc_id_log & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
+        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `transaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT, '" & acc_id_log & "','" & item_id_log & "','" & transaction_type & "','" & in_out & "" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
         cmd.ExecuteNonQuery()
 
         strconn.Close()
@@ -401,7 +405,7 @@ Public Class Form1
         If (DataGridView1.Columns(0).Name = "cbx_column") Then
 
             If DataGridView1.CurrentRow.Cells(0).Value = "Yes" Then
-                Selected_Item = DataGridView1.CurrentRow.Cells(1).Value
+                GlobalVariables.Selected_Item = DataGridView1.CurrentRow.Cells(1).Value
             End If
 
         End If
@@ -558,6 +562,7 @@ Public Class Form1
     '++++++++++++++++ MAIN SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
+
         Dim ADD_ITEM_MODAL As New Form
 
         Try
@@ -572,6 +577,8 @@ Public Class Form1
     End Sub
 
     Private Sub HOME_STOCK_IN_BTN_Click(sender As Object, e As EventArgs) Handles HOME_STOCK_IN_BTN.Click
+
+
 
         Try
             Dim Modal As New Form_Stock_HS
@@ -618,8 +625,6 @@ Public Class Form1
 
     '++++++++++++++++ ITEM SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    Dim Selected_Item As Integer
-
     Private Sub ITM_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_ADD_ITEM_BTN.Click
         Dim ADD_ITEM_MODAL As New Form
 
@@ -636,13 +641,13 @@ Public Class Form1
 
     Private Sub ITM_EDIT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_EDIT_ITEM_BTN.Click
 
-        If Selected_Item = Nothing Then
+        If GlobalVariables.Selected_Item = Nothing Then
             MsgBox("Select an Item to Edit.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
                 Dim Modal As New Form_Add_Item
                 Form_Add_Item.Label13.Text = "EDIT ITEM DETAILS"
-                Form_Add_Item.FAI_TBX_ITEM_ID.Text = Selected_Item
+                Form_Add_Item.FAI_TBX_ITEM_ID.Text = GlobalVariables.Selected_Item
                 Form_Add_Item.ShowDialog()
 
             Catch ex As Exception
@@ -657,7 +662,7 @@ Public Class Form1
 
         Dim TO_DELETE As String
 
-        If Selected_Item = Nothing Then
+        If GlobalVariables.Selected_Item = Nothing Then
             MsgBox("Select an Item to Edit.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
@@ -665,7 +670,7 @@ Public Class Form1
                 opencon()
 
                 cmd.Connection = con
-                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & Selected_Item & "'"
+                cmd.CommandText = "SELECT `ITEM_NAME` FROM products WHERE `ITEM_ID` = '" & GlobalVariables.Selected_Item & "'"
                 cmd.Prepare()
 
                 cmdreader = cmd.ExecuteReader
@@ -683,7 +688,7 @@ Public Class Form1
                             cmd.Connection = strconn
                             strconn.Open()
 
-                            cmd.CommandText = "SET FOREIGN_KEY_CHECKS=0; DELETE FROM `products` WHERE `ITEM_ID` = '" & Selected_Item & "'; SET FOREIGN_KEY_CHECKS=1"
+                            cmd.CommandText = "SET FOREIGN_KEY_CHECKS=0; DELETE FROM `products` WHERE `ITEM_ID` = '" & GlobalVariables.Selected_Item & "'; SET FOREIGN_KEY_CHECKS=1"
                             cmd.ExecuteNonQuery()
 
                             strconn.Close()
@@ -714,11 +719,13 @@ Public Class Form1
 
         End If
 
+        Add_Log(5, "--", GlobalVariables.Selected_Item)
+
     End Sub
 
     Private Sub ITM_STOCKIN_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_STOCKIN_ITEM_BTN.Click
 
-        If Selected_Item = Nothing Then
+        If GlobalVariables.Selected_Item = Nothing Then
             MsgBox("Please Select an Item.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
@@ -735,7 +742,7 @@ Public Class Form1
 
     Private Sub ITM_STOCKOUT_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles ITM_STOCKOUT_ITEM_BTN.Click
 
-        If Selected_Item = Nothing Then
+        If GlobalVariables.Selected_Item = Nothing Then
             MsgBox("Please Select an Item.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
             Try
@@ -780,6 +787,7 @@ Public Class Form1
         FLAGGED_MSG = " as Damaged?"
         FLAGGED_VAL = "DAMAGED"
         UPDATE_RPR_STATUS()
+        Add_Log(6, "Flagged as Damaged", GlobalVariables.Selected_Item)
 
     End Sub
 
@@ -788,6 +796,7 @@ Public Class Form1
         FLAGGED_MSG = " as Defective?"
         FLAGGED_VAL = "DEFECTIVE"
         UPDATE_RPR_STATUS()
+        Add_Log(6, "Flagged as Defective", GlobalVariables.Selected_Item)
 
     End Sub
 
@@ -796,6 +805,7 @@ Public Class Form1
         FLAGGED_MSG = " as Normal?"
         FLAGGED_VAL = "NORMAL"
         UPDATE_RPR_STATUS()
+        Add_Log(6, "Flagged as Normal", GlobalVariables.Selected_Item)
 
     End Sub
 

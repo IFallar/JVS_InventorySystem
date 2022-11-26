@@ -2,11 +2,10 @@
 
     Public Sub Stock_Function()
 
-        Dim ID As String = FSIS_ID_HOLD.Text
+        Dim ID As String = Form1.GlobalVariables.Selected_Item
         Dim ITEM_INIT As Integer = FSIS_QTY_HOLD.Text
         Dim THRESHOLD As Integer = FSIS_TRH_HOLD.Text
         Dim UNIT_PRICE As Integer = FSIS_PRC_HOLD.Text
-
 
         Dim FINAL_AMOUNT As Integer
         Dim NEW_TOTAL As Integer
@@ -37,6 +36,8 @@
 
             NEW_TOTAL = UNIT_PRICE * FINAL_AMOUNT
 
+
+
         Catch ex As Exception
 
             MsgBox("Please Enter a number!", MsgBoxStyle.OkOnly, "Incomplete Information")
@@ -53,6 +54,7 @@
         MsgBox("Success", MsgBoxStyle.OkOnly, "Action Confirmation")
         strconn.Close()
 
+
         Form1.Load_Table_Main()
         Form1.Set_Home_Value()
 
@@ -60,7 +62,32 @@
 
     Private Sub Form_Stock_IS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Form1.Get_ITMNAME()
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `ITEM_NAME`, `QUANTITY`, `THRESHOLD`, `UNIT_PRICE` FROM `products` WHERE `ITEM_ID` = '" & Form1.GlobalVariables.Selected_Item & "'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Try
+
+                FSIS_ITEM_TBX.Text = cmdreader.GetString(0)
+                FSIS_QTY_HOLD.Text = cmdreader.GetString(1)
+                FSIS_TRH_HOLD.Text = cmdreader.GetString(2)
+                FSIS_PRC_HOLD.Text = cmdreader.GetString(3)
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
         FSIS_NUM_TBX.Text = 0
 
     End Sub
@@ -70,11 +97,17 @@
 
     Private Sub FSIS_SAVE_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_SAVE_BTN.Click
 
-        Form1.Get_LastDate(FSIS_ID_HOLD.Text)
+        Form1.Get_LastDate(Form1.GlobalVariables.Selected_Item)
 
         STOCK_AMOUNT = FSIS_NUM_TBX.Text
 
         Stock_Function()
+
+        If FSIS_HEAD_LBL.Text = "RESTOCK" Then
+            Form1.Add_Log(2, STOCK_AMOUNT, Form1.GlobalVariables.Selected_Item)
+        Else
+            Form1.Add_Log(3, STOCK_AMOUNT, Form1.GlobalVariables.Selected_Item)
+        End If
 
     End Sub
 
@@ -112,9 +145,6 @@
         Catch ex As Exception
 
         End Try
-
-        Form1.Load_Table_Main()
-        Form1.Set_Home_Value()
 
     End Sub
 End Class

@@ -217,6 +217,13 @@ Public Class Form_Add_Item
 
         End Try
 
+        If Query = 0 Then
+            Form1.Add_Log(1, FAI_TBX_ITEM_INIT.Text, 1)
+        ElseIf Query = 1 Then
+            Form1.Add_Log(4, FAI_TBX_ITEM_INIT.Text, FAI_TBX_ITEM_ID.Text)
+        End If
+
+
     End Sub
 
     Public Sub AllClear()

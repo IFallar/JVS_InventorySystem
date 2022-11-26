@@ -333,7 +333,14 @@
         STOCK_AMOUNT = FSHS_NUM_TBX.Text
         Stock_Function()
 
-        Form1.Add_Log(2, STOCK_AMOUNT, FSHS_ID_HOLD.Text)
+        If FSHS_HEAD_LBL.Text = "RESTOCK" Then
+            Form1.Add_Log(2, STOCK_AMOUNT, FSHS_ID_HOLD.Text)
+        Else
+            Form1.Add_Log(3, STOCK_AMOUNT, FSHS_ID_HOLD.Text)
+        End If
+
+        Form1.Load_Table_Main()
+        Form1.Set_Home_Value()
 
     End Sub
 
