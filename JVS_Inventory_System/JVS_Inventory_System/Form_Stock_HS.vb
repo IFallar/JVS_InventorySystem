@@ -342,6 +342,8 @@
         Form1.Load_Table_Main()
         Form1.Set_Home_Value()
 
+
+
     End Sub
 
     Private Sub FSHS_CNC_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_CNC_BTN.Click

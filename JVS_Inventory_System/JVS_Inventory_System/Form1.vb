@@ -559,7 +559,7 @@ Public Class Form1
 
     'MAIN SCREEN ================================================================================================================
 
-    Dim FORM_MODAL As New Form
+
 
     '++++++++++++++++ MAIN SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -568,7 +568,7 @@ Public Class Form1
         Try
             Dim Modal As New Form_Add_Item
             Form_Add_Item.Label13.Text = "ADD NEW ITEM"
-            FORM_MODAL.ShowDialog()
+            Form_Add_Item.ShowDialog()
 
         Catch ex As Exception
 
@@ -577,8 +577,6 @@ Public Class Form1
     End Sub
 
     Private Sub HOME_STOCK_IN_BTN_Click(sender As Object, e As EventArgs) Handles HOME_STOCK_IN_BTN.Click
-
-
 
         Try
             Dim Modal As New Form_Stock_HS

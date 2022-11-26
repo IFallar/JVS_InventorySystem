@@ -109,6 +109,8 @@
             Form1.Add_Log(3, STOCK_AMOUNT, Form1.GlobalVariables.Selected_Item)
         End If
 
+    
+
     End Sub
 
     Private Sub FSIS_ADD_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_ADD_BTN.Click
