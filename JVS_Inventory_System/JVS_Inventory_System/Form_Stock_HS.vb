@@ -5,8 +5,6 @@
 
     Public Sub Stock_Function()
 
-        Form1.Get_LastDate()
-
         Dim ID As String = FSHS_ID_HOLD.Text
         Dim ITEM_INIT As Integer = FSHS_QTY_HOLD.Text
         Dim THRESHOLD As Integer = FSHS_TRH_HOLD.Text
@@ -52,7 +50,7 @@
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "', `PREV_ORDER`='" & OLD_DATE_HOLDER.Text & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
+        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "',`PRV_ORDQ`='" & STOCK_AMOUNT & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
         cmd.ExecuteNonQuery()
         MsgBox("Success", MsgBoxStyle.OkOnly, "Action Confirmation")
         strconn.Close()
@@ -296,7 +294,7 @@
 
         If FSHS_NUM_TBX.Text = Nothing Then
             FSHS_NUM_TBX.Text = 1
-        ElseIf FSHS_NUM_TBX.Text = QTY Then
+        ElseIf FSHS_NUM_TBX.Text = QTY And FSHS_HEAD_LBL.Text = "STOCK OUT" Then
             MsgBox("Exceeds Inventory Quantity.", MsgBoxStyle.OkOnly, "Insufficient Stock")
         Else
             Dim R_Value As Integer = FSHS_NUM_TBX.Text
@@ -330,8 +328,12 @@
 
     Private Sub FSHS_SAVE_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_SAVE_BTN.Click
 
+        Form1.Get_LastDate(FSHS_ID_HOLD.Text)
+
         STOCK_AMOUNT = FSHS_NUM_TBX.Text
         Stock_Function()
+
+        Form1.Add_Log(2, STOCK_AMOUNT, FSHS_ID_HOLD.Text)
 
     End Sub
 

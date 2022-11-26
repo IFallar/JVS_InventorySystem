@@ -5,23 +5,28 @@ Public Class Form1
 
     'PUBLICS ================================================================================================================
 
-    Public Sub Get_LastDate()
+    Public Class GlobalVariables
+        Public Shared UserID As Integer = 39
+    End Class
+
+    Dim FLD As String
+
+    Public Sub Get_LastDate(SID As String)
 
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `LAST_STOCK` from `products` WHERE `ITEM_ID` = '" & Selected_Item & "'"
+        cmd.CommandText = "SELECT `LAST_STOCK` FROM `products` WHERE `ITEM_ID` = '" & SID & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
-
-        Dim LastDate As Date
 
         While cmdreader.Read
 
             Try
 
-                LastDate = cmdreader.GetValue(0)
+                Dim LastDate As Date = cmdreader.GetValue(0)
+                FLD = LastDate.ToString("yyyy\-MM\-dd")
 
             Catch ex As System.InvalidCastException
 
@@ -29,10 +34,18 @@ Public Class Form1
 
         End While
 
-        Form_Stock_HS.OLD_DATE_HOLDER.Text = LastDate.ToString("yyyy\-MM\-dd")
-
         cmdreader.Close()
         con.Close()
+
+        strconnection()
+
+        cmd.Connection = strconn
+        strconn.Open()
+
+        cmd.CommandText = "UPDATE `products` SET `PREV_ORDER` = '" & FLD & "' WHERE `ITEM_ID` = '" & SID & "'"
+        cmd.ExecuteNonQuery()
+
+        strconn.Close()
 
     End Sub
 
@@ -256,29 +269,13 @@ Public Class Form1
 
         '++++++++++++++++ VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        Dim acc_id_log As Integer
+        Dim acc_id_log As Integer = GlobalVariables.UserID
         Dim item_id_log As Integer = itid
         Dim transaction_type As String = ""
         Dim transaction_qty As String = transac_qty
         Dim log_date As Date = Date.Now()
         Dim transaction_date = log_date.ToString("yyyy\-MM\-dd")
         Dim transaction_time As String = TimeOfDay.ToString("hh:mm")
-
-        opencon()
-
-        cmd.Connection = con
-        cmd.CommandText = "SELECT `acc_id` FROM account WHERE CONCAT(`acc_fn`, ' ' , `acc_ln`) = '" & acc_name_lbl.Text & "'"
-        cmd.Prepare()
-
-        cmdreader = cmd.ExecuteReader
-
-        While cmdreader.Read
-            acc_id_log = cmdreader.GetValue(0)
-        End While
-
-        cmdreader.Close()
-        con.Close()
-
 
         If Token = 1 Then
 
@@ -299,6 +296,28 @@ Public Class Form1
             cmdreader.Close()
             con.Close()
 
+        ElseIf Token = 2 Then
+
+            transaction_type = "Restock"
+
+        ElseIf Token = 3 Then
+
+            transaction_type = "Stock Out"
+
+        ElseIf Token = 4 Then
+
+            transaction_type = "Edited Info"
+            transaction_qty = "---"
+
+        ElseIf Token = 5 Then
+
+            transaction_type = "Item Deleted"
+            transaction_qty = "---"
+
+        ElseIf Token = 6 Then
+
+            transaction_type = "Flagged"
+
         End If
 
         strconnection()
@@ -306,14 +325,13 @@ Public Class Form1
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "SET FOREIGN_KEY_CHECKS=0; INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `r_transtaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT,'" & acc_id_log & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "'); SET FOREIGN_KEY_CHECKS=1"
+        cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `r_acc_id`, `r_item_id`, `transaction_type`, `r_qty`, `r_time`, `r_date`) VALUES (DEFAULT, '" & acc_id_log & "','" & item_id_log & "','" & transaction_type & "','" & transaction_qty & "','" & transaction_time & "','" & transaction_date & "')"
         cmd.ExecuteNonQuery()
 
         strconn.Close()
 
+
     End Sub
-
-
 
     'PRIVATES ================================================================================================================
 
@@ -322,8 +340,6 @@ Public Class Form1
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-        Add_Log(1, 4, 0)
 
         Load_Table_Main()
         Set_Home_Value()
@@ -386,7 +402,6 @@ Public Class Form1
 
             If DataGridView1.CurrentRow.Cells(0).Value = "Yes" Then
                 Selected_Item = DataGridView1.CurrentRow.Cells(1).Value
-                Get_LastDate()
             End If
 
         End If

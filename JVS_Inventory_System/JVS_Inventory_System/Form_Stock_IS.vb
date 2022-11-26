@@ -48,7 +48,7 @@
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
+        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "',`PRV_ORDQ`='" & STOCK_AMOUNT & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
         cmd.ExecuteNonQuery()
         MsgBox("Success", MsgBoxStyle.OkOnly, "Action Confirmation")
         strconn.Close()
@@ -69,6 +69,8 @@
 
 
     Private Sub FSIS_SAVE_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_SAVE_BTN.Click
+
+        Form1.Get_LastDate(FSIS_ID_HOLD.Text)
 
         STOCK_AMOUNT = FSIS_NUM_TBX.Text
 
