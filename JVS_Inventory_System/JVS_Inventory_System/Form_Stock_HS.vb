@@ -5,11 +5,12 @@
 
     Public Sub Stock_Function()
 
+        Form1.Get_LastDate()
+
         Dim ID As String = FSHS_ID_HOLD.Text
         Dim ITEM_INIT As Integer = FSHS_QTY_HOLD.Text
         Dim THRESHOLD As Integer = FSHS_TRH_HOLD.Text
         Dim UNIT_PRICE As Integer = FSHS_PRC_HOLD.Text
-
 
         Dim FINAL_AMOUNT As Integer
         Dim NEW_TOTAL As Integer
@@ -51,7 +52,7 @@
         cmd.Connection = strconn
         strconn.Open()
 
-        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
+        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "', `PREV_ORDER`='" & OLD_DATE_HOLDER.Text & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
         cmd.ExecuteNonQuery()
         MsgBox("Success", MsgBoxStyle.OkOnly, "Action Confirmation")
         strconn.Close()
@@ -130,6 +131,8 @@
     End Sub
 
     Private Sub Form_Stock_HS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        FSHS_ITEM_TBX.Text = ""
 
         FSHS_FLT1_TBX.ReadOnly = True
         FSHS_FLT2_TBX.ReadOnly = True
@@ -289,7 +292,6 @@
 
 
     Private Sub FSHS_ADD_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_ADD_BTN.Click
-
 
 
         If FSHS_NUM_TBX.Text = Nothing Then

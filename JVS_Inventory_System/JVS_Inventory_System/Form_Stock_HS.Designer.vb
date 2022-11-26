@@ -45,6 +45,7 @@ Partial Class Form_Stock_HS
         Me.FSHS_TRH_HOLD = New System.Windows.Forms.Label()
         Me.FSHS_QTY_HOLD = New System.Windows.Forms.Label()
         Me.FSHS_ID_HOLD = New System.Windows.Forms.Label()
+        Me.OLD_DATE_HOLDER = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.SEARCH_GRID, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -300,7 +301,7 @@ Partial Class Form_Stock_HS
         Me.FSHS_PRC_HOLD.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FSHS_PRC_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FSHS_PRC_HOLD.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.FSHS_PRC_HOLD.Location = New System.Drawing.Point(491, 124)
+        Me.FSHS_PRC_HOLD.Location = New System.Drawing.Point(491, 99)
         Me.FSHS_PRC_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FSHS_PRC_HOLD.Name = "FSHS_PRC_HOLD"
         Me.FSHS_PRC_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
@@ -314,7 +315,7 @@ Partial Class Form_Stock_HS
         Me.FSHS_TRH_HOLD.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FSHS_TRH_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FSHS_TRH_HOLD.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.FSHS_TRH_HOLD.Location = New System.Drawing.Point(433, 124)
+        Me.FSHS_TRH_HOLD.Location = New System.Drawing.Point(433, 99)
         Me.FSHS_TRH_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FSHS_TRH_HOLD.Name = "FSHS_TRH_HOLD"
         Me.FSHS_TRH_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
@@ -328,7 +329,7 @@ Partial Class Form_Stock_HS
         Me.FSHS_QTY_HOLD.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FSHS_QTY_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FSHS_QTY_HOLD.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.FSHS_QTY_HOLD.Location = New System.Drawing.Point(433, 178)
+        Me.FSHS_QTY_HOLD.Location = New System.Drawing.Point(433, 153)
         Me.FSHS_QTY_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FSHS_QTY_HOLD.Name = "FSHS_QTY_HOLD"
         Me.FSHS_QTY_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
@@ -342,7 +343,7 @@ Partial Class Form_Stock_HS
         Me.FSHS_ID_HOLD.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FSHS_ID_HOLD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FSHS_ID_HOLD.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.FSHS_ID_HOLD.Location = New System.Drawing.Point(491, 178)
+        Me.FSHS_ID_HOLD.Location = New System.Drawing.Point(491, 153)
         Me.FSHS_ID_HOLD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
         Me.FSHS_ID_HOLD.Name = "FSHS_ID_HOLD"
         Me.FSHS_ID_HOLD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
@@ -351,12 +352,27 @@ Partial Class Form_Stock_HS
         Me.FSHS_ID_HOLD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.FSHS_ID_HOLD.Visible = False
         '
+        'OLD_DATE_HOLDER
+        '
+        Me.OLD_DATE_HOLDER.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.OLD_DATE_HOLDER.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OLD_DATE_HOLDER.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.OLD_DATE_HOLDER.Location = New System.Drawing.Point(436, 208)
+        Me.OLD_DATE_HOLDER.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.OLD_DATE_HOLDER.Name = "OLD_DATE_HOLDER"
+        Me.OLD_DATE_HOLDER.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.OLD_DATE_HOLDER.Size = New System.Drawing.Size(102, 29)
+        Me.OLD_DATE_HOLDER.TabIndex = 53
+        Me.OLD_DATE_HOLDER.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.OLD_DATE_HOLDER.Visible = False
+        '
         'Form_Stock_HS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(562, 326)
+        Me.Controls.Add(Me.OLD_DATE_HOLDER)
         Me.Controls.Add(Me.FSHS_PRC_HOLD)
         Me.Controls.Add(Me.FSHS_TRH_HOLD)
         Me.Controls.Add(Me.Label3)
@@ -412,4 +428,5 @@ Partial Class Form_Stock_HS
     Friend WithEvents FSHS_TRH_HOLD As Label
     Friend WithEvents FSHS_QTY_HOLD As Label
     Friend WithEvents FSHS_ID_HOLD As Label
+    Friend WithEvents OLD_DATE_HOLDER As Label
 End Class

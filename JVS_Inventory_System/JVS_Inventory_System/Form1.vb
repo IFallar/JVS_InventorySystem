@@ -5,6 +5,37 @@ Public Class Form1
 
     'PUBLICS ================================================================================================================
 
+    Public Sub Get_LastDate()
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `LAST_STOCK` from `products` WHERE `ITEM_ID` = '" & Selected_Item & "'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        Dim LastDate As Date
+
+        While cmdreader.Read
+
+            Try
+
+                LastDate = cmdreader.GetValue(0)
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        Form_Stock_HS.OLD_DATE_HOLDER.Text = LastDate.ToString("yyyy\-MM\-dd")
+
+        cmdreader.Close()
+        con.Close()
+
+    End Sub
+
     Public Sub Get_ITMNAME()
 
         opencon()
@@ -355,6 +386,7 @@ Public Class Form1
 
             If DataGridView1.CurrentRow.Cells(0).Value = "Yes" Then
                 Selected_Item = DataGridView1.CurrentRow.Cells(1).Value
+                Get_LastDate()
             End If
 
         End If
@@ -509,21 +541,6 @@ Public Class Form1
     'MAIN SCREEN ================================================================================================================
 
     '++++++++++++++++ MAIN SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-    Private Sub Darken_BG()
-        Dim ADD_ITEM_MODAL As New Form
-
-        ADD_ITEM_MODAL.StartPosition = FormStartPosition.Manual
-        ADD_ITEM_MODAL.FormBorderStyle = FormBorderStyle.None
-        ADD_ITEM_MODAL.Opacity = 0.5D
-        ADD_ITEM_MODAL.BackColor = Color.Black
-        ADD_ITEM_MODAL.WindowState = FormWindowState.Maximized
-        ADD_ITEM_MODAL.TopMost = True
-        ADD_ITEM_MODAL.Location = Location
-        ADD_ITEM_MODAL.ShowInTaskbar = False
-        ADD_ITEM_MODAL.Show()
-
-    End Sub 'UNUSED SNIPPETS
 
     Private Sub HOME_ADD_ITEM_BTN_Click(sender As Object, e As EventArgs) Handles HOME_ADD_ITEM_BTN.Click
         Dim ADD_ITEM_MODAL As New Form
