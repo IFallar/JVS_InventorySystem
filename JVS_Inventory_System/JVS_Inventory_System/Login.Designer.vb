@@ -22,37 +22,17 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.userType = New System.Windows.Forms.ComboBox()
         Me.userName = New System.Windows.Forms.TextBox()
         Me.pass = New System.Windows.Forms.TextBox()
         Me.log_in = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.JVS_Inventory_System.My.Resources.Resources.icons8_circled_user_male_skin_type_5_64
-        Me.PictureBox2.Location = New System.Drawing.Point(595, 125)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 99)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.JVS_Inventory_System.My.Resources.Resources._213965982_978436666253882_1246474777397895940_n
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, -1)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(503, 461)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'userType
         '
@@ -139,6 +119,26 @@ Partial Class Login
         Me.Button2.Text = "_"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.JVS_Inventory_System.My.Resources.Resources.icons8_circled_user_male_skin_type_5_64
+        Me.PictureBox2.Location = New System.Drawing.Point(595, 125)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 99)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.JVS_Inventory_System.My.Resources.Resources._213965982_978436666253882_1246474777397895940_n
+        Me.PictureBox1.Location = New System.Drawing.Point(-1, -1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(503, 461)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Login
         '
