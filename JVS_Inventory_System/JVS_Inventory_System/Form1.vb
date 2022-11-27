@@ -8,7 +8,7 @@ Public Class Form1
     Public Class GlobalVariables
         Public Shared UserID As Integer
         Public Shared Selected_Item As Integer
-        Public Shared logged As Integer = 0
+        Public Shared logged As Integer = 1
     End Class
 
     Dim FLD As String
@@ -198,6 +198,55 @@ Public Class Form1
 
     End Sub
 
+    Public Sub Set_Log_Value()
+
+        '++++++++++++++++ SET QUICK INFO VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        Dim log_out As Integer
+        Dim log_in As Integer
+        Dim log_add As Integer
+        Dim log_change As Integer
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT (SELECT SUM(SUBSTRING(r_qty,2, LENGTH(r_qty) -1)) FROM transaction_log WHERE transaction_type = 'Stock Out') AS 'OUT', (SELECT SUM(SUBSTRING(r_qty,2,(r_qty))) FROM transaction_log WHERE transaction_type = 'Restock') AS 'ADD', (SELECT COUNT(*) FROM transaction_log WHERE transaction_type = 'New Item') as 'New', (SELECT COUNT(*) FROM transaction_log WHERE transaction_type = 'Edited Info') AS 'Edited'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Try
+
+                log_out = cmdreader.GetValue(0)
+                Me.TD_BTN1.Text = log_out
+
+                log_in = cmdreader.GetValue(1)
+                Me.TD_BTN2.Text = log_in
+
+                log_add = cmdreader.GetValue(2)
+                Me.TD_BTN3.Text = log_add
+
+                log_change = cmdreader.GetValue(3)
+                Me.TD_BTN4.Text = log_change
+
+            Catch ex As System.InvalidCastException
+
+                TD_BTN1.Text = 0
+                TD_BTN2.Text = 0
+                TD_BTN3.Text = 0
+                TD_BTN3.Text = 0
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+    End Sub
+
     Public Sub UPDATE_RPR_STATUS()
         If GlobalVariables.Selected_Item = Nothing Then
             MsgBox("Select an Item to Flag.", MsgBoxStyle.OkOnly, "No Item Selected")
@@ -261,6 +310,27 @@ Public Class Form1
 
         tableload("SELECT `ITEM_ID` as ID, `ITEM_NAME` as Name, `ITEM_BRAND` as Brand, `VARIANT` as Variant, `CATEGORY` as Category, `UNIT_PRICE` as 'Unit Cost', `QUANTITY` as QTY, `STOCK_STATUS` as 'Stock Level', `HOLDING_STATUS` 'Holding Status', `MAX_SELL` as 'Max Price', `TOTAL_PRICE` as Total, `LAST_STOCK` as 'Last Restock' FROM `products` WHERE ITEM_NAME LIKE '%" & ITM_SEARCH_TBX.Text & "%' OR ITEM_BRAND LIKE '%" & ITM_SEARCH_TBX.Text & "%' OR VARIANT LIKE '%" & ITM_SEARCH_TBX.Text & "%'", DataGridView1)
         strconn.Close()
+
+    End Sub
+
+    Public Sub Search_Bar_Log()
+
+        tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) LIKE '%" & LOG_SEARCH_BOX.Text & "%' OR (SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`) LIKE '%" & LOG_SEARCH_BOX.Text & "%' OR transaction_type LIKE '%" & LOG_SEARCH_BOX.Text & "%'", DataGridView2)
+        strconn.Close()
+
+    End Sub
+
+    Public Sub LoadHistory()
+
+        If ACT_FLT.Text = "Action:" Then
+            tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE 1", Me.DataGridView2)
+            strconn.Close()
+        Else
+            tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE transaction_type = '" & ACT_FLT.Text & "'", Me.DataGridView2)
+            strconn.Close()
+        End If
+
+
 
     End Sub
 
@@ -396,6 +466,22 @@ Public Class Form1
         DataGridView1.Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         DataGridView1.RowTemplate.MinimumHeight = 50
+
+    End Sub
+
+    Private Sub DataGridView2_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles DataGridView2.DataBindingComplete
+
+        DataGridView2.RowTemplate.Resizable = False
+        DataGridView2.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView2.Columns(1).MinimumWidth = 120
+        DataGridView2.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView2.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView2.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView2.Columns(4).Width = 140
+        DataGridView2.Columns(5).Width = 90
+        DataGridView2.Columns(6).Width = 90
+
+        DataGridView2.RowTemplate.MinimumHeight = 40
 
     End Sub
 
@@ -540,6 +626,9 @@ Public Class Form1
         SIDE_SET_BTN.ForeColor = System.Drawing.Color.White
 
         Set_Home_Value()
+        DataGridView2.RowTemplate.MinimumHeight = 40
+        Set_Log_Value()
+        LoadHistory()
 
     End Sub
 
@@ -920,7 +1009,34 @@ Public Class Form1
 
     End Sub
 
+    Private Sub LOG_SEARCH_BOX_TextChanged(sender As Object, e As EventArgs) Handles LOG_SEARCH_BOX.TextChanged
 
+        Search_Bar_Log()
+
+    End Sub
+
+    Private Sub ACT_FLT_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ACT_FLT.SelectedIndexChanged
+
+        LoadHistory()
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        ACT_FLT.Text = "Action:"
+        LoadHistory()
+
+    End Sub
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+
+        Dim LogDate As Date = DateTimePicker1.Value
+        Dim NewDate = LogDate.ToString("yyyy\-MM\-dd")
+
+        tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE r_date = '" & NewDate & "'", Me.DataGridView2)
+        strconn.Close()
+
+    End Sub
 
     'SETTINGS ================================================================================================================
 
