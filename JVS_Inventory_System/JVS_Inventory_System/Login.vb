@@ -4,23 +4,43 @@ Imports MySql.Data.MySqlClient
 
 Public Class Login
 
-    Private Sub userName_TextChanged(sender As Object, e As EventArgs) Handles userName.TextChanged
-
-    End Sub
+    Dim acc_id As String
+    Dim usetype As String
+    Dim usename As String
+    Dim userpass As String
+    Dim valid As Boolean = False
 
     Private Sub log_in_Click(sender As Object, e As EventArgs) Handles log_in.Click
+
         opencon()
+
         cmd.Connection = con
         cmd.CommandText = "SELECT `acc_id`,`usertype`, CONCAT(`acc_fn`, ' ' , `acc_ln`) as `UserName`, `acc_pass` FROM `account` WHERE usertype = '" & userType.SelectedItem & "' and CONCAT(`acc_fn`, ' ' , `acc_ln`) = '" & userName.Text & "' and acc_pass = '" & pass.Text & "'"
         cmd.Prepare()
-        adapter = New MySqlDataAdapter(cmd)
-        table = New DataTable
-        adapter.Fill(table)
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Try
+
+                acc_id = cmdreader.GetValue(0)
+                usetype = cmdreader.GetValue(1)
+                usename = cmdreader.GetValue(2)
+                userpass = cmdreader.GetValue(3)
+                valid = True
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
         con.Close()
 
-
-        If table.Rows.Count > 0 Then
-            MessageBox.Show("Welcome " + table.Rows(0)(2) + "!")
+        If valid = True Then
+            MessageBox.Show("Welcome " + usename + "!")
 
             If userType.SelectedIndex = 0 Then
                 'tentative showing form1'
@@ -28,7 +48,7 @@ Public Class Login
 
                 a.acc_name_lbl.Text = userName.Text
                 a.acc_type_lbl.Text = userType.SelectedItem
-                Form1.GlobalVariables.UserID = table.Rows(0)(0)
+                Form1.GlobalVariables.UserID = acc_id
                 Form1.GlobalVariables.logged = 1
 
                 a.Show()

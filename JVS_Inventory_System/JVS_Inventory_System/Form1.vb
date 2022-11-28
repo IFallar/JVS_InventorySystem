@@ -1038,11 +1038,60 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    'SETTINGS ================================================================================================================
+
+    Private Sub TBX_SUPNAME_GotFocus(sender As Object, e As EventArgs) Handles TBX_SUPNAME.GotFocus
+        TBX_SUPNAME.Text = ""
+        TBX_SUPNAME.ForeColor = Color.Black
+    End Sub
+
+    Private Sub TBX_SUPNUM_GotFocus(sender As Object, e As EventArgs) Handles TBX_SUPNUM.GotFocus
+        TBX_SUPNUM.Text = ""
+        TBX_SUPNUM.ForeColor = Color.Black
+    End Sub
+
+    Private Sub TBX_SUPMAIL_GotFocus(sender As Object, e As EventArgs) Handles TBX_SUPMAIL.GotFocus
+        TBX_SUPMAIL.Text = ""
+        TBX_SUPMAIL.ForeColor = Color.Black
+    End Sub
+
+    Private Sub TBX_SUPMED_GotFocus(sender As Object, e As EventArgs) Handles TBX_SUPMED.GotFocus
+        TBX_SUPMED.Text = ""
+        TBX_SUPMED.ForeColor = Color.Black
+    End Sub
+
+    Private Sub TBX_SUPNAME_LoseFocus(sender As Object, e As EventArgs) Handles TBX_SUPNAME.LostFocus
+        If TBX_SUPNAME.Text = "" Then
+            TBX_SUPNAME.Text = "Name"
+            TBX_SUPNAME.ForeColor = Color.Gray
+        End If
 
     End Sub
 
-    'SETTINGS ================================================================================================================
+    Private Sub TBX_SUPNUM_LoseFocus(sender As Object, e As EventArgs) Handles TBX_SUPNUM.LostFocus
+        If TBX_SUPNUM.Text = "" Then
+            TBX_SUPNUM.Text = "Number"
+            TBX_SUPNUM.ForeColor = Color.Gray
+        End If
+
+    End Sub
+
+    Private Sub TBX_SUPMAIL_LoseFocus(sender As Object, e As EventArgs) Handles TBX_SUPMAIL.LostFocus
+        If TBX_SUPMAIL.Text = "" Then
+            TBX_SUPMAIL.Text = "Email"
+            TBX_SUPMAIL.ForeColor = Color.Gray
+        End If
+
+    End Sub
+
+    Private Sub TBX_SUPMED_LoseFocus(sender As Object, e As EventArgs) Handles TBX_SUPMED.LostFocus
+        If TBX_SUPMED.Text = "" Then
+            TBX_SUPMED.Text = "Other Links"
+            TBX_SUPMED.ForeColor = Color.Gray
+        End If
+
+    End Sub
 
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

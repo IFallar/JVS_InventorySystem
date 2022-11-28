@@ -39,6 +39,60 @@ Partial Class Form1
         Me.SIDE_LOG_BTN = New System.Windows.Forms.Button()
         Me.SIDE_ITEM_BTN = New System.Windows.Forms.Button()
         Me.Base_Panel = New System.Windows.Forms.Panel()
+        Me.PANEL_SETTINGS = New System.Windows.Forms.Panel()
+        Me.SAV_CAT = New System.Windows.Forms.TabControl()
+        Me.TAB_BRAND = New System.Windows.Forms.TabPage()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.DEL_BRAND = New System.Windows.Forms.Button()
+        Me.SAV_BRAND = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TBX_BRNAME = New System.Windows.Forms.TextBox()
+        Me.SBX_BRAND = New System.Windows.Forms.TextBox()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.TAB_VARIANT = New System.Windows.Forms.TabPage()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.DEL_VAR = New System.Windows.Forms.Button()
+        Me.SAV_VAR = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TBX_VARNAME = New System.Windows.Forms.TextBox()
+        Me.SBX_VAR = New System.Windows.Forms.TextBox()
+        Me.CheckedListBox2 = New System.Windows.Forms.CheckedListBox()
+        Me.TAB_CAT = New System.Windows.Forms.TabPage()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.DEL_CAT = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TBX_CATNAME = New System.Windows.Forms.TextBox()
+        Me.SBX_CAT = New System.Windows.Forms.TextBox()
+        Me.CheckedListBox3 = New System.Windows.Forms.CheckedListBox()
+        Me.TAB_SUP = New System.Windows.Forms.TabPage()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.DEL_SUP = New System.Windows.Forms.Button()
+        Me.SAV_SUP = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TBX_SUPMED = New System.Windows.Forms.TextBox()
+        Me.TBX_SUPMAIL = New System.Windows.Forms.TextBox()
+        Me.TBX_SUPNUM = New System.Windows.Forms.TextBox()
+        Me.TBX_SUPNAME = New System.Windows.Forms.TextBox()
+        Me.SBX_SUP = New System.Windows.Forms.TextBox()
+        Me.CheckedListBox4 = New System.Windows.Forms.CheckedListBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.NEW_ACC_BTN = New System.Windows.Forms.Button()
+        Me.UPDATE_BTN = New System.Windows.Forms.Button()
+        Me.RESET_BTN = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.L_NAME = New System.Windows.Forms.Label()
+        Me.ADDRESS_TBX = New System.Windows.Forms.TextBox()
+        Me.ADDRESS = New System.Windows.Forms.Label()
+        Me.F_NAME = New System.Windows.Forms.Label()
+        Me.F_NAME_TBX = New System.Windows.Forms.TextBox()
+        Me.EMAIL_TBX = New System.Windows.Forms.TextBox()
+        Me.EMAIL = New System.Windows.Forms.Label()
+        Me.PASSWORD_TBX = New System.Windows.Forms.TextBox()
+        Me.NUMBER_TBX = New System.Windows.Forms.TextBox()
+        Me.PASSWORD = New System.Windows.Forms.Label()
+        Me.NUMBER = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.HOME_PANEL = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -103,9 +157,15 @@ Partial Class Form1
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.TD_LBL3 = New System.Windows.Forms.Label()
         Me.TD_BTN3 = New System.Windows.Forms.Button()
-        Me.PANEL_SETTINGS = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
+        Me.PANEL_SETTINGS.SuspendLayout()
+        Me.SAV_CAT.SuspendLayout()
+        Me.TAB_BRAND.SuspendLayout()
+        Me.TAB_VARIANT.SuspendLayout()
+        Me.TAB_CAT.SuspendLayout()
+        Me.TAB_SUP.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.HOME_PANEL.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -267,6 +327,652 @@ Partial Class Form1
         Me.Base_Panel.Name = "Base_Panel"
         Me.Base_Panel.Size = New System.Drawing.Size(881, 660)
         Me.Base_Panel.TabIndex = 2
+        '
+        'PANEL_SETTINGS
+        '
+        Me.PANEL_SETTINGS.Controls.Add(Me.SAV_CAT)
+        Me.PANEL_SETTINGS.Controls.Add(Me.GroupBox4)
+        Me.PANEL_SETTINGS.Controls.Add(Me.Label2)
+        Me.PANEL_SETTINGS.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PANEL_SETTINGS.Location = New System.Drawing.Point(0, 0)
+        Me.PANEL_SETTINGS.Name = "PANEL_SETTINGS"
+        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 660)
+        Me.PANEL_SETTINGS.TabIndex = 2
+        '
+        'SAV_CAT
+        '
+        Me.SAV_CAT.Controls.Add(Me.TAB_BRAND)
+        Me.SAV_CAT.Controls.Add(Me.TAB_VARIANT)
+        Me.SAV_CAT.Controls.Add(Me.TAB_CAT)
+        Me.SAV_CAT.Controls.Add(Me.TAB_SUP)
+        Me.SAV_CAT.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        Me.SAV_CAT.Location = New System.Drawing.Point(34, 305)
+        Me.SAV_CAT.Name = "SAV_CAT"
+        Me.SAV_CAT.SelectedIndex = 0
+        Me.SAV_CAT.Size = New System.Drawing.Size(596, 312)
+        Me.SAV_CAT.TabIndex = 67
+        '
+        'TAB_BRAND
+        '
+        Me.TAB_BRAND.Controls.Add(Me.Panel15)
+        Me.TAB_BRAND.Controls.Add(Me.DEL_BRAND)
+        Me.TAB_BRAND.Controls.Add(Me.SAV_BRAND)
+        Me.TAB_BRAND.Controls.Add(Me.Label3)
+        Me.TAB_BRAND.Controls.Add(Me.TBX_BRNAME)
+        Me.TAB_BRAND.Controls.Add(Me.SBX_BRAND)
+        Me.TAB_BRAND.Controls.Add(Me.CheckedListBox1)
+        Me.TAB_BRAND.Location = New System.Drawing.Point(4, 29)
+        Me.TAB_BRAND.Name = "TAB_BRAND"
+        Me.TAB_BRAND.Padding = New System.Windows.Forms.Padding(3)
+        Me.TAB_BRAND.Size = New System.Drawing.Size(588, 279)
+        Me.TAB_BRAND.TabIndex = 0
+        Me.TAB_BRAND.Text = "BRANDS"
+        Me.TAB_BRAND.UseVisualStyleBackColor = True
+        '
+        'Panel15
+        '
+        Me.Panel15.BackColor = System.Drawing.Color.DimGray
+        Me.Panel15.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel15.Location = New System.Drawing.Point(13, 55)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(235, 2)
+        Me.Panel15.TabIndex = 80
+        '
+        'DEL_BRAND
+        '
+        Me.DEL_BRAND.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DEL_BRAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DEL_BRAND.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.DEL_BRAND.ForeColor = System.Drawing.SystemColors.Control
+        Me.DEL_BRAND.Location = New System.Drawing.Point(13, 120)
+        Me.DEL_BRAND.Name = "DEL_BRAND"
+        Me.DEL_BRAND.Size = New System.Drawing.Size(75, 26)
+        Me.DEL_BRAND.TabIndex = 74
+        Me.DEL_BRAND.Text = "DELETE"
+        Me.DEL_BRAND.UseVisualStyleBackColor = False
+        '
+        'SAV_BRAND
+        '
+        Me.SAV_BRAND.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SAV_BRAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SAV_BRAND.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.SAV_BRAND.ForeColor = System.Drawing.SystemColors.Control
+        Me.SAV_BRAND.Location = New System.Drawing.Point(172, 120)
+        Me.SAV_BRAND.Name = "SAV_BRAND"
+        Me.SAV_BRAND.Size = New System.Drawing.Size(75, 26)
+        Me.SAV_BRAND.TabIndex = 77
+        Me.SAV_BRAND.Text = "SAVE"
+        Me.SAV_BRAND.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Gray
+        Me.Label3.Location = New System.Drawing.Point(10, 66)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label3.Size = New System.Drawing.Size(87, 16)
+        Me.Label3.TabIndex = 75
+        Me.Label3.Text = "BRAND NAME"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TBX_BRNAME
+        '
+        Me.TBX_BRNAME.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_BRNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_BRNAME.Location = New System.Drawing.Point(13, 85)
+        Me.TBX_BRNAME.Name = "TBX_BRNAME"
+        Me.TBX_BRNAME.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_BRNAME.TabIndex = 78
+        '
+        'SBX_BRAND
+        '
+        Me.SBX_BRAND.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SBX_BRAND.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SBX_BRAND.Location = New System.Drawing.Point(13, 18)
+        Me.SBX_BRAND.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
+        Me.SBX_BRAND.Name = "SBX_BRAND"
+        Me.SBX_BRAND.Size = New System.Drawing.Size(235, 26)
+        Me.SBX_BRAND.TabIndex = 76
+        '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Location = New System.Drawing.Point(259, 11)
+        Me.CheckedListBox1.Margin = New System.Windows.Forms.Padding(3, 8, 8, 3)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(318, 256)
+        Me.CheckedListBox1.TabIndex = 0
+        '
+        'TAB_VARIANT
+        '
+        Me.TAB_VARIANT.Controls.Add(Me.Panel16)
+        Me.TAB_VARIANT.Controls.Add(Me.DEL_VAR)
+        Me.TAB_VARIANT.Controls.Add(Me.SAV_VAR)
+        Me.TAB_VARIANT.Controls.Add(Me.Label4)
+        Me.TAB_VARIANT.Controls.Add(Me.TBX_VARNAME)
+        Me.TAB_VARIANT.Controls.Add(Me.SBX_VAR)
+        Me.TAB_VARIANT.Controls.Add(Me.CheckedListBox2)
+        Me.TAB_VARIANT.Location = New System.Drawing.Point(4, 29)
+        Me.TAB_VARIANT.Name = "TAB_VARIANT"
+        Me.TAB_VARIANT.Padding = New System.Windows.Forms.Padding(3)
+        Me.TAB_VARIANT.Size = New System.Drawing.Size(588, 279)
+        Me.TAB_VARIANT.TabIndex = 1
+        Me.TAB_VARIANT.Text = "VARIANTS"
+        Me.TAB_VARIANT.UseVisualStyleBackColor = True
+        '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.DimGray
+        Me.Panel16.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel16.Location = New System.Drawing.Point(13, 55)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(235, 2)
+        Me.Panel16.TabIndex = 86
+        '
+        'DEL_VAR
+        '
+        Me.DEL_VAR.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DEL_VAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DEL_VAR.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.DEL_VAR.ForeColor = System.Drawing.SystemColors.Control
+        Me.DEL_VAR.Location = New System.Drawing.Point(13, 120)
+        Me.DEL_VAR.Name = "DEL_VAR"
+        Me.DEL_VAR.Size = New System.Drawing.Size(75, 26)
+        Me.DEL_VAR.TabIndex = 81
+        Me.DEL_VAR.Text = "DELETE"
+        Me.DEL_VAR.UseVisualStyleBackColor = False
+        '
+        'SAV_VAR
+        '
+        Me.SAV_VAR.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SAV_VAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SAV_VAR.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.SAV_VAR.ForeColor = System.Drawing.SystemColors.Control
+        Me.SAV_VAR.Location = New System.Drawing.Point(172, 120)
+        Me.SAV_VAR.Name = "SAV_VAR"
+        Me.SAV_VAR.Size = New System.Drawing.Size(75, 26)
+        Me.SAV_VAR.TabIndex = 84
+        Me.SAV_VAR.Text = "SAVE"
+        Me.SAV_VAR.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Gray
+        Me.Label4.Location = New System.Drawing.Point(10, 66)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label4.Size = New System.Drawing.Size(66, 16)
+        Me.Label4.TabIndex = 82
+        Me.Label4.Text = "VARIANTS"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TBX_VARNAME
+        '
+        Me.TBX_VARNAME.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_VARNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_VARNAME.Location = New System.Drawing.Point(13, 85)
+        Me.TBX_VARNAME.Name = "TBX_VARNAME"
+        Me.TBX_VARNAME.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_VARNAME.TabIndex = 85
+        '
+        'SBX_VAR
+        '
+        Me.SBX_VAR.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SBX_VAR.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SBX_VAR.Location = New System.Drawing.Point(13, 18)
+        Me.SBX_VAR.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
+        Me.SBX_VAR.Name = "SBX_VAR"
+        Me.SBX_VAR.Size = New System.Drawing.Size(235, 26)
+        Me.SBX_VAR.TabIndex = 83
+        '
+        'CheckedListBox2
+        '
+        Me.CheckedListBox2.FormattingEnabled = True
+        Me.CheckedListBox2.Location = New System.Drawing.Point(259, 11)
+        Me.CheckedListBox2.Margin = New System.Windows.Forms.Padding(3, 8, 8, 3)
+        Me.CheckedListBox2.Name = "CheckedListBox2"
+        Me.CheckedListBox2.Size = New System.Drawing.Size(318, 256)
+        Me.CheckedListBox2.TabIndex = 1
+        '
+        'TAB_CAT
+        '
+        Me.TAB_CAT.Controls.Add(Me.Panel17)
+        Me.TAB_CAT.Controls.Add(Me.DEL_CAT)
+        Me.TAB_CAT.Controls.Add(Me.Button9)
+        Me.TAB_CAT.Controls.Add(Me.Label5)
+        Me.TAB_CAT.Controls.Add(Me.TBX_CATNAME)
+        Me.TAB_CAT.Controls.Add(Me.SBX_CAT)
+        Me.TAB_CAT.Controls.Add(Me.CheckedListBox3)
+        Me.TAB_CAT.Location = New System.Drawing.Point(4, 29)
+        Me.TAB_CAT.Name = "TAB_CAT"
+        Me.TAB_CAT.Padding = New System.Windows.Forms.Padding(3)
+        Me.TAB_CAT.Size = New System.Drawing.Size(588, 279)
+        Me.TAB_CAT.TabIndex = 2
+        Me.TAB_CAT.Text = "CATEGORIES"
+        Me.TAB_CAT.UseVisualStyleBackColor = True
+        '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.DimGray
+        Me.Panel17.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel17.Location = New System.Drawing.Point(13, 55)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(235, 2)
+        Me.Panel17.TabIndex = 86
+        '
+        'DEL_CAT
+        '
+        Me.DEL_CAT.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DEL_CAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DEL_CAT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.DEL_CAT.ForeColor = System.Drawing.SystemColors.Control
+        Me.DEL_CAT.Location = New System.Drawing.Point(13, 120)
+        Me.DEL_CAT.Name = "DEL_CAT"
+        Me.DEL_CAT.Size = New System.Drawing.Size(75, 26)
+        Me.DEL_CAT.TabIndex = 81
+        Me.DEL_CAT.Text = "DELETE"
+        Me.DEL_CAT.UseVisualStyleBackColor = False
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.Button9.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button9.Location = New System.Drawing.Point(172, 120)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 26)
+        Me.Button9.TabIndex = 84
+        Me.Button9.Text = "SAVE"
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gray
+        Me.Label5.Location = New System.Drawing.Point(10, 66)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label5.Size = New System.Drawing.Size(83, 16)
+        Me.Label5.TabIndex = 82
+        Me.Label5.Text = "CATEGORIES"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TBX_CATNAME
+        '
+        Me.TBX_CATNAME.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_CATNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_CATNAME.Location = New System.Drawing.Point(13, 85)
+        Me.TBX_CATNAME.Name = "TBX_CATNAME"
+        Me.TBX_CATNAME.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_CATNAME.TabIndex = 85
+        '
+        'SBX_CAT
+        '
+        Me.SBX_CAT.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SBX_CAT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SBX_CAT.Location = New System.Drawing.Point(13, 18)
+        Me.SBX_CAT.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
+        Me.SBX_CAT.Name = "SBX_CAT"
+        Me.SBX_CAT.Size = New System.Drawing.Size(235, 26)
+        Me.SBX_CAT.TabIndex = 83
+        '
+        'CheckedListBox3
+        '
+        Me.CheckedListBox3.FormattingEnabled = True
+        Me.CheckedListBox3.Location = New System.Drawing.Point(259, 11)
+        Me.CheckedListBox3.Margin = New System.Windows.Forms.Padding(3, 8, 8, 3)
+        Me.CheckedListBox3.Name = "CheckedListBox3"
+        Me.CheckedListBox3.Size = New System.Drawing.Size(318, 256)
+        Me.CheckedListBox3.TabIndex = 1
+        '
+        'TAB_SUP
+        '
+        Me.TAB_SUP.Controls.Add(Me.Panel14)
+        Me.TAB_SUP.Controls.Add(Me.DEL_SUP)
+        Me.TAB_SUP.Controls.Add(Me.SAV_SUP)
+        Me.TAB_SUP.Controls.Add(Me.Label1)
+        Me.TAB_SUP.Controls.Add(Me.TBX_SUPMED)
+        Me.TAB_SUP.Controls.Add(Me.TBX_SUPMAIL)
+        Me.TAB_SUP.Controls.Add(Me.TBX_SUPNUM)
+        Me.TAB_SUP.Controls.Add(Me.TBX_SUPNAME)
+        Me.TAB_SUP.Controls.Add(Me.SBX_SUP)
+        Me.TAB_SUP.Controls.Add(Me.CheckedListBox4)
+        Me.TAB_SUP.Location = New System.Drawing.Point(4, 29)
+        Me.TAB_SUP.Name = "TAB_SUP"
+        Me.TAB_SUP.Padding = New System.Windows.Forms.Padding(3)
+        Me.TAB_SUP.Size = New System.Drawing.Size(588, 279)
+        Me.TAB_SUP.TabIndex = 3
+        Me.TAB_SUP.Text = "SUPPLIERS"
+        Me.TAB_SUP.UseVisualStyleBackColor = True
+        '
+        'Panel14
+        '
+        Me.Panel14.BackColor = System.Drawing.Color.DimGray
+        Me.Panel14.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel14.Location = New System.Drawing.Point(13, 55)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(235, 2)
+        Me.Panel14.TabIndex = 73
+        '
+        'DEL_SUP
+        '
+        Me.DEL_SUP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DEL_SUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DEL_SUP.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.DEL_SUP.ForeColor = System.Drawing.SystemColors.Control
+        Me.DEL_SUP.Location = New System.Drawing.Point(14, 226)
+        Me.DEL_SUP.Name = "DEL_SUP"
+        Me.DEL_SUP.Size = New System.Drawing.Size(75, 26)
+        Me.DEL_SUP.TabIndex = 68
+        Me.DEL_SUP.Text = "DELETE"
+        Me.DEL_SUP.UseVisualStyleBackColor = False
+        '
+        'SAV_SUP
+        '
+        Me.SAV_SUP.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SAV_SUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SAV_SUP.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.SAV_SUP.ForeColor = System.Drawing.SystemColors.Control
+        Me.SAV_SUP.Location = New System.Drawing.Point(173, 226)
+        Me.SAV_SUP.Name = "SAV_SUP"
+        Me.SAV_SUP.Size = New System.Drawing.Size(75, 26)
+        Me.SAV_SUP.TabIndex = 69
+        Me.SAV_SUP.Text = "SAVE"
+        Me.SAV_SUP.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(10, 66)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(93, 16)
+        Me.Label1.TabIndex = 68
+        Me.Label1.Text = "SUPPLIER INFO"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TBX_SUPMED
+        '
+        Me.TBX_SUPMED.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_SUPMED.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_SUPMED.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TBX_SUPMED.Location = New System.Drawing.Point(13, 183)
+        Me.TBX_SUPMED.Name = "TBX_SUPMED"
+        Me.TBX_SUPMED.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_SUPMED.TabIndex = 72
+        Me.TBX_SUPMED.Text = "Other Links"
+        '
+        'TBX_SUPMAIL
+        '
+        Me.TBX_SUPMAIL.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_SUPMAIL.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_SUPMAIL.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TBX_SUPMAIL.Location = New System.Drawing.Point(13, 151)
+        Me.TBX_SUPMAIL.Name = "TBX_SUPMAIL"
+        Me.TBX_SUPMAIL.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_SUPMAIL.TabIndex = 71
+        Me.TBX_SUPMAIL.Text = "Email"
+        '
+        'TBX_SUPNUM
+        '
+        Me.TBX_SUPNUM.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_SUPNUM.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_SUPNUM.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TBX_SUPNUM.Location = New System.Drawing.Point(13, 118)
+        Me.TBX_SUPNUM.Name = "TBX_SUPNUM"
+        Me.TBX_SUPNUM.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_SUPNUM.TabIndex = 70
+        Me.TBX_SUPNUM.Text = "Number"
+        '
+        'TBX_SUPNAME
+        '
+        Me.TBX_SUPNAME.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_SUPNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_SUPNAME.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TBX_SUPNAME.Location = New System.Drawing.Point(13, 85)
+        Me.TBX_SUPNAME.Name = "TBX_SUPNAME"
+        Me.TBX_SUPNAME.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_SUPNAME.TabIndex = 69
+        Me.TBX_SUPNAME.Text = "Name"
+        '
+        'SBX_SUP
+        '
+        Me.SBX_SUP.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SBX_SUP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SBX_SUP.Location = New System.Drawing.Point(13, 18)
+        Me.SBX_SUP.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
+        Me.SBX_SUP.Name = "SBX_SUP"
+        Me.SBX_SUP.Size = New System.Drawing.Size(235, 26)
+        Me.SBX_SUP.TabIndex = 68
+        '
+        'CheckedListBox4
+        '
+        Me.CheckedListBox4.FormattingEnabled = True
+        Me.CheckedListBox4.Location = New System.Drawing.Point(259, 11)
+        Me.CheckedListBox4.Margin = New System.Windows.Forms.Padding(3, 8, 8, 3)
+        Me.CheckedListBox4.Name = "CheckedListBox4"
+        Me.CheckedListBox4.Size = New System.Drawing.Size(318, 256)
+        Me.CheckedListBox4.TabIndex = 1
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.NEW_ACC_BTN)
+        Me.GroupBox4.Controls.Add(Me.UPDATE_BTN)
+        Me.GroupBox4.Controls.Add(Me.RESET_BTN)
+        Me.GroupBox4.Controls.Add(Me.TextBox1)
+        Me.GroupBox4.Controls.Add(Me.L_NAME)
+        Me.GroupBox4.Controls.Add(Me.ADDRESS_TBX)
+        Me.GroupBox4.Controls.Add(Me.ADDRESS)
+        Me.GroupBox4.Controls.Add(Me.F_NAME)
+        Me.GroupBox4.Controls.Add(Me.F_NAME_TBX)
+        Me.GroupBox4.Controls.Add(Me.EMAIL_TBX)
+        Me.GroupBox4.Controls.Add(Me.EMAIL)
+        Me.GroupBox4.Controls.Add(Me.PASSWORD_TBX)
+        Me.GroupBox4.Controls.Add(Me.NUMBER_TBX)
+        Me.GroupBox4.Controls.Add(Me.PASSWORD)
+        Me.GroupBox4.Controls.Add(Me.NUMBER)
+        Me.GroupBox4.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        Me.GroupBox4.Location = New System.Drawing.Point(34, 79)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(592, 203)
+        Me.GroupBox4.TabIndex = 66
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "PROFILE"
+        '
+        'NEW_ACC_BTN
+        '
+        Me.NEW_ACC_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.NEW_ACC_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NEW_ACC_BTN.Font = New System.Drawing.Font("Tw Cen MT", 10.0!)
+        Me.NEW_ACC_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.NEW_ACC_BTN.Location = New System.Drawing.Point(468, 0)
+        Me.NEW_ACC_BTN.Name = "NEW_ACC_BTN"
+        Me.NEW_ACC_BTN.Size = New System.Drawing.Size(104, 26)
+        Me.NEW_ACC_BTN.TabIndex = 67
+        Me.NEW_ACC_BTN.Text = "+ New Account"
+        Me.NEW_ACC_BTN.UseVisualStyleBackColor = False
+        '
+        'UPDATE_BTN
+        '
+        Me.UPDATE_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.UPDATE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UPDATE_BTN.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.UPDATE_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.UPDATE_BTN.Location = New System.Drawing.Point(495, 157)
+        Me.UPDATE_BTN.Name = "UPDATE_BTN"
+        Me.UPDATE_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.UPDATE_BTN.TabIndex = 67
+        Me.UPDATE_BTN.Text = "UPDATE"
+        Me.UPDATE_BTN.UseVisualStyleBackColor = False
+        '
+        'RESET_BTN
+        '
+        Me.RESET_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.RESET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RESET_BTN.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.RESET_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.RESET_BTN.Location = New System.Drawing.Point(411, 157)
+        Me.RESET_BTN.Name = "RESET_BTN"
+        Me.RESET_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.RESET_BTN.TabIndex = 66
+        Me.RESET_BTN.Text = "RESET"
+        Me.RESET_BTN.UseVisualStyleBackColor = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(159, 49)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(126, 26)
+        Me.TextBox1.TabIndex = 64
+        '
+        'L_NAME
+        '
+        Me.L_NAME.AutoSize = True
+        Me.L_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_NAME.ForeColor = System.Drawing.Color.Gray
+        Me.L_NAME.Location = New System.Drawing.Point(156, 30)
+        Me.L_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.L_NAME.Name = "L_NAME"
+        Me.L_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.L_NAME.Size = New System.Drawing.Size(74, 16)
+        Me.L_NAME.TabIndex = 57
+        Me.L_NAME.Text = "LAST NAME"
+        Me.L_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ADDRESS_TBX
+        '
+        Me.ADDRESS_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADDRESS_TBX.Location = New System.Drawing.Point(308, 103)
+        Me.ADDRESS_TBX.Name = "ADDRESS_TBX"
+        Me.ADDRESS_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.ADDRESS_TBX.TabIndex = 64
+        '
+        'ADDRESS
+        '
+        Me.ADDRESS.AutoSize = True
+        Me.ADDRESS.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADDRESS.ForeColor = System.Drawing.Color.Gray
+        Me.ADDRESS.Location = New System.Drawing.Point(305, 84)
+        Me.ADDRESS.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.ADDRESS.Name = "ADDRESS"
+        Me.ADDRESS.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.ADDRESS.Size = New System.Drawing.Size(61, 16)
+        Me.ADDRESS.TabIndex = 65
+        Me.ADDRESS.Text = "ADDRESS"
+        Me.ADDRESS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'F_NAME
+        '
+        Me.F_NAME.AutoSize = True
+        Me.F_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.F_NAME.ForeColor = System.Drawing.Color.Gray
+        Me.F_NAME.Location = New System.Drawing.Point(19, 30)
+        Me.F_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.F_NAME.Name = "F_NAME"
+        Me.F_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.F_NAME.Size = New System.Drawing.Size(77, 16)
+        Me.F_NAME.TabIndex = 56
+        Me.F_NAME.Text = "FIRST NAME"
+        Me.F_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'F_NAME_TBX
+        '
+        Me.F_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.F_NAME_TBX.Location = New System.Drawing.Point(22, 49)
+        Me.F_NAME_TBX.Name = "F_NAME_TBX"
+        Me.F_NAME_TBX.Size = New System.Drawing.Size(126, 26)
+        Me.F_NAME_TBX.TabIndex = 55
+        '
+        'EMAIL_TBX
+        '
+        Me.EMAIL_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EMAIL_TBX.Location = New System.Drawing.Point(308, 49)
+        Me.EMAIL_TBX.Name = "EMAIL_TBX"
+        Me.EMAIL_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.EMAIL_TBX.TabIndex = 60
+        '
+        'EMAIL
+        '
+        Me.EMAIL.AutoSize = True
+        Me.EMAIL.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EMAIL.ForeColor = System.Drawing.Color.Gray
+        Me.EMAIL.Location = New System.Drawing.Point(305, 30)
+        Me.EMAIL.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.EMAIL.Name = "EMAIL"
+        Me.EMAIL.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.EMAIL.Size = New System.Drawing.Size(43, 16)
+        Me.EMAIL.TabIndex = 61
+        Me.EMAIL.Text = "EMAIL"
+        Me.EMAIL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PASSWORD_TBX
+        '
+        Me.PASSWORD_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PASSWORD_TBX.Location = New System.Drawing.Point(23, 103)
+        Me.PASSWORD_TBX.Name = "PASSWORD_TBX"
+        Me.PASSWORD_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.PASSWORD_TBX.TabIndex = 58
+        '
+        'NUMBER_TBX
+        '
+        Me.NUMBER_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NUMBER_TBX.Location = New System.Drawing.Point(23, 157)
+        Me.NUMBER_TBX.Name = "NUMBER_TBX"
+        Me.NUMBER_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.NUMBER_TBX.TabIndex = 62
+        '
+        'PASSWORD
+        '
+        Me.PASSWORD.AutoSize = True
+        Me.PASSWORD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PASSWORD.ForeColor = System.Drawing.Color.Gray
+        Me.PASSWORD.Location = New System.Drawing.Point(20, 84)
+        Me.PASSWORD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.PASSWORD.Name = "PASSWORD"
+        Me.PASSWORD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.PASSWORD.Size = New System.Drawing.Size(79, 16)
+        Me.PASSWORD.TabIndex = 59
+        Me.PASSWORD.Text = "PASSWORD"
+        Me.PASSWORD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'NUMBER
+        '
+        Me.NUMBER.AutoSize = True
+        Me.NUMBER.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NUMBER.ForeColor = System.Drawing.Color.Gray
+        Me.NUMBER.Location = New System.Drawing.Point(20, 138)
+        Me.NUMBER.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.NUMBER.Name = "NUMBER"
+        Me.NUMBER.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.NUMBER.Size = New System.Drawing.Size(58, 16)
+        Me.NUMBER.TabIndex = 63
+        Me.NUMBER.Text = "NUMBER"
+        Me.NUMBER.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Label2.Location = New System.Drawing.Point(29, 22)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(292, 33)
+        Me.Label2.TabIndex = 54
+        Me.Label2.Text = "ACCOUNT AND SETTINGS"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'HOME_PANEL
         '
@@ -1343,14 +2049,6 @@ Partial Class Form1
         Me.TD_BTN3.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.TD_BTN3.UseVisualStyleBackColor = False
         '
-        'PANEL_SETTINGS
-        '
-        Me.PANEL_SETTINGS.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PANEL_SETTINGS.Location = New System.Drawing.Point(0, 0)
-        Me.PANEL_SETTINGS.Name = "PANEL_SETTINGS"
-        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 660)
-        Me.PANEL_SETTINGS.TabIndex = 2
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1371,6 +2069,18 @@ Partial Class Form1
         Me.Text = "HOME"
         Me.Panel1.ResumeLayout(False)
         Me.Base_Panel.ResumeLayout(False)
+        Me.PANEL_SETTINGS.ResumeLayout(False)
+        Me.SAV_CAT.ResumeLayout(False)
+        Me.TAB_BRAND.ResumeLayout(False)
+        Me.TAB_BRAND.PerformLayout()
+        Me.TAB_VARIANT.ResumeLayout(False)
+        Me.TAB_VARIANT.PerformLayout()
+        Me.TAB_CAT.ResumeLayout(False)
+        Me.TAB_CAT.PerformLayout()
+        Me.TAB_SUP.ResumeLayout(False)
+        Me.TAB_SUP.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.HOME_PANEL.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -1472,4 +2182,57 @@ Partial Class Form1
     Friend WithEvents LOG_SEARCH_BOX As TextBox
     Friend WithEvents ACT_FLT As ComboBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents ADDRESS_TBX As TextBox
+    Friend WithEvents ADDRESS As Label
+    Friend WithEvents NUMBER_TBX As TextBox
+    Friend WithEvents NUMBER As Label
+    Friend WithEvents EMAIL_TBX As TextBox
+    Friend WithEvents EMAIL As Label
+    Friend WithEvents PASSWORD_TBX As TextBox
+    Friend WithEvents PASSWORD As Label
+    Friend WithEvents L_NAME As Label
+    Friend WithEvents F_NAME_TBX As TextBox
+    Friend WithEvents F_NAME As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents UPDATE_BTN As Button
+    Friend WithEvents RESET_BTN As Button
+    Friend WithEvents SAV_CAT As TabControl
+    Friend WithEvents TAB_BRAND As TabPage
+    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents TAB_VARIANT As TabPage
+    Friend WithEvents CheckedListBox2 As CheckedListBox
+    Friend WithEvents TAB_CAT As TabPage
+    Friend WithEvents CheckedListBox3 As CheckedListBox
+    Friend WithEvents TAB_SUP As TabPage
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TBX_SUPMED As TextBox
+    Friend WithEvents TBX_SUPMAIL As TextBox
+    Friend WithEvents TBX_SUPNUM As TextBox
+    Friend WithEvents TBX_SUPNAME As TextBox
+    Friend WithEvents SBX_SUP As TextBox
+    Friend WithEvents CheckedListBox4 As CheckedListBox
+    Friend WithEvents SAV_SUP As Button
+    Friend WithEvents NEW_ACC_BTN As Button
+    Friend WithEvents Panel15 As Panel
+    Friend WithEvents DEL_BRAND As Button
+    Friend WithEvents SAV_BRAND As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TBX_BRNAME As TextBox
+    Friend WithEvents SBX_BRAND As TextBox
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents DEL_VAR As Button
+    Friend WithEvents SAV_VAR As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TBX_VARNAME As TextBox
+    Friend WithEvents SBX_VAR As TextBox
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents DEL_CAT As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TBX_CATNAME As TextBox
+    Friend WithEvents SBX_CAT As TextBox
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents DEL_SUP As Button
 End Class

@@ -24,6 +24,31 @@ Partial Class Settings
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settings))
         Me.SETTINGS_PANEL_SB = New System.Windows.Forms.Panel()
+        Me.SETTINGS_PANEL = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BRAND_CBX = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.SETTINGS_UP_BTN = New System.Windows.Forms.Button()
+        Me.SETTINGS_DLT_BTN = New System.Windows.Forms.Button()
+        Me.SETTINGS_ADD_BTN = New System.Windows.Forms.Button()
+        Me.UPDATE_BTN = New System.Windows.Forms.Button()
+        Me.RESET_BTN = New System.Windows.Forms.Button()
+        Me.NEW_ACC_BTN = New System.Windows.Forms.Button()
+        Me.ADDRESS_TBX = New System.Windows.Forms.TextBox()
+        Me.ADDRESS = New System.Windows.Forms.Label()
+        Me.NUMBER_TBX = New System.Windows.Forms.TextBox()
+        Me.NUMBER = New System.Windows.Forms.Label()
+        Me.EMAIL_TBX = New System.Windows.Forms.TextBox()
+        Me.EMAIL = New System.Windows.Forms.Label()
+        Me.PASSWORD_TBX = New System.Windows.Forms.TextBox()
+        Me.PASSWORD = New System.Windows.Forms.Label()
+        Me.L_NAME_TBX = New System.Windows.Forms.TextBox()
+        Me.L_NAME = New System.Windows.Forms.Label()
+        Me.F_NAME_TBX = New System.Windows.Forms.TextBox()
+        Me.F_NAME = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.acc_type_lbl = New System.Windows.Forms.Label()
         Me.acc_name_lbl = New System.Windows.Forms.Label()
         Me.SIDE_SET_BTN = New System.Windows.Forms.Button()
@@ -33,6 +58,10 @@ Partial Class Settings
         Me.HOME_PANEL = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.HOME_STOCK_IN_BTN = New System.Windows.Forms.Button()
+        Me.HOME_ADD_ITEM_BTN = New System.Windows.Forms.Button()
+        Me.HOME_INVENTORY_LOG_BTN = New System.Windows.Forms.Button()
+        Me.HOME_STOCK_OUT_BTN = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.INFO_LBL_ITEMS = New System.Windows.Forms.Panel()
@@ -51,36 +80,11 @@ Partial Class Settings
         Me.DO_LIST = New System.Windows.Forms.ListBox()
         Me.DO_LABEL = New System.Windows.Forms.Label()
         Me.APP_LABEL = New System.Windows.Forms.Label()
-        Me.SETTINGS_PANEL = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.F_NAME_TBX = New System.Windows.Forms.TextBox()
-        Me.F_NAME = New System.Windows.Forms.Label()
-        Me.L_NAME_TBX = New System.Windows.Forms.TextBox()
-        Me.L_NAME = New System.Windows.Forms.Label()
-        Me.EMAIL_TBX = New System.Windows.Forms.TextBox()
-        Me.EMAIL = New System.Windows.Forms.Label()
-        Me.PASSWORD_TBX = New System.Windows.Forms.TextBox()
-        Me.PASSWORD = New System.Windows.Forms.Label()
-        Me.ADDRESS_TBX = New System.Windows.Forms.TextBox()
-        Me.ADDRESS = New System.Windows.Forms.Label()
-        Me.NUMBER_TBX = New System.Windows.Forms.TextBox()
-        Me.NUMBER = New System.Windows.Forms.Label()
-        Me.SETTINGS_DLT_BTN = New System.Windows.Forms.Button()
-        Me.SETTINGS_ADD_BTN = New System.Windows.Forms.Button()
-        Me.NEW_ACC_BTN = New System.Windows.Forms.Button()
-        Me.RESET_BTN = New System.Windows.Forms.Button()
-        Me.UPDATE_BTN = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.HOME_STOCK_IN_BTN = New System.Windows.Forms.Button()
-        Me.HOME_ADD_ITEM_BTN = New System.Windows.Forms.Button()
-        Me.HOME_INVENTORY_LOG_BTN = New System.Windows.Forms.Button()
-        Me.HOME_STOCK_OUT_BTN = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.SETTINGS_UP_BTN = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.BRAND_CBX = New System.Windows.Forms.ComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.SETTINGS_PANEL_SB.SuspendLayout()
+        Me.SETTINGS_PANEL.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.HOME_PANEL.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -91,10 +95,6 @@ Partial Class Settings
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.DAY_LOG_PANEL.SuspendLayout()
-        Me.SETTINGS_PANEL.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SETTINGS_PANEL_SB
@@ -114,6 +114,306 @@ Partial Class Settings
         Me.SETTINGS_PANEL_SB.Name = "SETTINGS_PANEL_SB"
         Me.SETTINGS_PANEL_SB.Size = New System.Drawing.Size(865, 621)
         Me.SETTINGS_PANEL_SB.TabIndex = 3
+        '
+        'SETTINGS_PANEL
+        '
+        Me.SETTINGS_PANEL.BackColor = System.Drawing.Color.White
+        Me.SETTINGS_PANEL.Controls.Add(Me.Panel1)
+        Me.SETTINGS_PANEL.Controls.Add(Me.UPDATE_BTN)
+        Me.SETTINGS_PANEL.Controls.Add(Me.RESET_BTN)
+        Me.SETTINGS_PANEL.Controls.Add(Me.NEW_ACC_BTN)
+        Me.SETTINGS_PANEL.Controls.Add(Me.ADDRESS_TBX)
+        Me.SETTINGS_PANEL.Controls.Add(Me.ADDRESS)
+        Me.SETTINGS_PANEL.Controls.Add(Me.NUMBER_TBX)
+        Me.SETTINGS_PANEL.Controls.Add(Me.NUMBER)
+        Me.SETTINGS_PANEL.Controls.Add(Me.EMAIL_TBX)
+        Me.SETTINGS_PANEL.Controls.Add(Me.EMAIL)
+        Me.SETTINGS_PANEL.Controls.Add(Me.PASSWORD_TBX)
+        Me.SETTINGS_PANEL.Controls.Add(Me.PASSWORD)
+        Me.SETTINGS_PANEL.Controls.Add(Me.L_NAME_TBX)
+        Me.SETTINGS_PANEL.Controls.Add(Me.L_NAME)
+        Me.SETTINGS_PANEL.Controls.Add(Me.F_NAME_TBX)
+        Me.SETTINGS_PANEL.Controls.Add(Me.F_NAME)
+        Me.SETTINGS_PANEL.Controls.Add(Me.Label2)
+        Me.SETTINGS_PANEL.Controls.Add(Me.PictureBox1)
+        Me.SETTINGS_PANEL.Location = New System.Drawing.Point(223, 0)
+        Me.SETTINGS_PANEL.Name = "SETTINGS_PANEL"
+        Me.SETTINGS_PANEL.Size = New System.Drawing.Size(899, 660)
+        Me.SETTINGS_PANEL.TabIndex = 13
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.BRAND_CBX)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.SETTINGS_UP_BTN)
+        Me.Panel1.Controls.Add(Me.SETTINGS_DLT_BTN)
+        Me.Panel1.Controls.Add(Me.SETTINGS_ADD_BTN)
+        Me.Panel1.Location = New System.Drawing.Point(37, 294)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(558, 263)
+        Me.Panel1.TabIndex = 61
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(273, 89)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(276, 158)
+        Me.DataGridView1.TabIndex = 63
+        '
+        'BRAND_CBX
+        '
+        Me.BRAND_CBX.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BRAND_CBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BRAND_CBX.Font = New System.Drawing.Font("Tw Cen MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BRAND_CBX.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BRAND_CBX.FormattingEnabled = True
+        Me.BRAND_CBX.ItemHeight = 15
+        Me.BRAND_CBX.Items.AddRange(New Object() {"Admin", "User"})
+        Me.BRAND_CBX.Location = New System.Drawing.Point(28, 137)
+        Me.BRAND_CBX.Name = "BRAND_CBX"
+        Me.BRAND_CBX.Size = New System.Drawing.Size(235, 23)
+        Me.BRAND_CBX.TabIndex = 62
+        Me.BRAND_CBX.Text = "BRAND"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(27, 166)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(235, 26)
+        Me.TextBox1.TabIndex = 62
+        '
+        'SETTINGS_UP_BTN
+        '
+        Me.SETTINGS_UP_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.SETTINGS_UP_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SETTINGS_UP_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.SETTINGS_UP_BTN.Location = New System.Drawing.Point(108, 220)
+        Me.SETTINGS_UP_BTN.Name = "SETTINGS_UP_BTN"
+        Me.SETTINGS_UP_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.SETTINGS_UP_BTN.TabIndex = 62
+        Me.SETTINGS_UP_BTN.Text = "UPDATE"
+        Me.SETTINGS_UP_BTN.UseVisualStyleBackColor = False
+        '
+        'SETTINGS_DLT_BTN
+        '
+        Me.SETTINGS_DLT_BTN.BackColor = System.Drawing.Color.DarkRed
+        Me.SETTINGS_DLT_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.SETTINGS_DLT_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.SETTINGS_DLT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SETTINGS_DLT_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.SETTINGS_DLT_BTN.Location = New System.Drawing.Point(27, 220)
+        Me.SETTINGS_DLT_BTN.Name = "SETTINGS_DLT_BTN"
+        Me.SETTINGS_DLT_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.SETTINGS_DLT_BTN.TabIndex = 55
+        Me.SETTINGS_DLT_BTN.Text = "DELETE"
+        Me.SETTINGS_DLT_BTN.UseVisualStyleBackColor = False
+        '
+        'SETTINGS_ADD_BTN
+        '
+        Me.SETTINGS_ADD_BTN.BackColor = System.Drawing.Color.Green
+        Me.SETTINGS_ADD_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.SETTINGS_ADD_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
+        Me.SETTINGS_ADD_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SETTINGS_ADD_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.SETTINGS_ADD_BTN.Location = New System.Drawing.Point(187, 220)
+        Me.SETTINGS_ADD_BTN.Name = "SETTINGS_ADD_BTN"
+        Me.SETTINGS_ADD_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.SETTINGS_ADD_BTN.TabIndex = 54
+        Me.SETTINGS_ADD_BTN.Text = "ADD"
+        Me.SETTINGS_ADD_BTN.UseVisualStyleBackColor = False
+        '
+        'UPDATE_BTN
+        '
+        Me.UPDATE_BTN.BackColor = System.Drawing.Color.Green
+        Me.UPDATE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UPDATE_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.UPDATE_BTN.Location = New System.Drawing.Point(520, 232)
+        Me.UPDATE_BTN.Name = "UPDATE_BTN"
+        Me.UPDATE_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.UPDATE_BTN.TabIndex = 59
+        Me.UPDATE_BTN.Text = "UPDATE"
+        Me.UPDATE_BTN.UseVisualStyleBackColor = False
+        '
+        'RESET_BTN
+        '
+        Me.RESET_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.RESET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RESET_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.RESET_BTN.Location = New System.Drawing.Point(436, 232)
+        Me.RESET_BTN.Name = "RESET_BTN"
+        Me.RESET_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.RESET_BTN.TabIndex = 58
+        Me.RESET_BTN.Text = "RESET"
+        Me.RESET_BTN.UseVisualStyleBackColor = False
+        '
+        'NEW_ACC_BTN
+        '
+        Me.NEW_ACC_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.NEW_ACC_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NEW_ACC_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.NEW_ACC_BTN.Location = New System.Drawing.Point(37, 229)
+        Me.NEW_ACC_BTN.Name = "NEW_ACC_BTN"
+        Me.NEW_ACC_BTN.Size = New System.Drawing.Size(104, 29)
+        Me.NEW_ACC_BTN.TabIndex = 57
+        Me.NEW_ACC_BTN.Text = "+ New Account"
+        Me.NEW_ACC_BTN.UseVisualStyleBackColor = False
+        '
+        'ADDRESS_TBX
+        '
+        Me.ADDRESS_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADDRESS_TBX.Location = New System.Drawing.Point(333, 175)
+        Me.ADDRESS_TBX.Name = "ADDRESS_TBX"
+        Me.ADDRESS_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.ADDRESS_TBX.TabIndex = 52
+        '
+        'ADDRESS
+        '
+        Me.ADDRESS.AutoSize = True
+        Me.ADDRESS.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADDRESS.ForeColor = System.Drawing.Color.Gray
+        Me.ADDRESS.Location = New System.Drawing.Point(330, 156)
+        Me.ADDRESS.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.ADDRESS.Name = "ADDRESS"
+        Me.ADDRESS.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.ADDRESS.Size = New System.Drawing.Size(61, 16)
+        Me.ADDRESS.TabIndex = 53
+        Me.ADDRESS.Text = "ADDRESS"
+        Me.ADDRESS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'NUMBER_TBX
+        '
+        Me.NUMBER_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NUMBER_TBX.Location = New System.Drawing.Point(37, 175)
+        Me.NUMBER_TBX.Name = "NUMBER_TBX"
+        Me.NUMBER_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.NUMBER_TBX.TabIndex = 50
+        '
+        'NUMBER
+        '
+        Me.NUMBER.AutoSize = True
+        Me.NUMBER.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NUMBER.ForeColor = System.Drawing.Color.Gray
+        Me.NUMBER.Location = New System.Drawing.Point(34, 156)
+        Me.NUMBER.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.NUMBER.Name = "NUMBER"
+        Me.NUMBER.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.NUMBER.Size = New System.Drawing.Size(58, 16)
+        Me.NUMBER.TabIndex = 51
+        Me.NUMBER.Text = "NUMBER"
+        Me.NUMBER.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'EMAIL_TBX
+        '
+        Me.EMAIL_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EMAIL_TBX.Location = New System.Drawing.Point(333, 125)
+        Me.EMAIL_TBX.Name = "EMAIL_TBX"
+        Me.EMAIL_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.EMAIL_TBX.TabIndex = 48
+        '
+        'EMAIL
+        '
+        Me.EMAIL.AutoSize = True
+        Me.EMAIL.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EMAIL.ForeColor = System.Drawing.Color.Gray
+        Me.EMAIL.Location = New System.Drawing.Point(330, 106)
+        Me.EMAIL.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.EMAIL.Name = "EMAIL"
+        Me.EMAIL.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.EMAIL.Size = New System.Drawing.Size(43, 16)
+        Me.EMAIL.TabIndex = 49
+        Me.EMAIL.Text = "EMAIL"
+        Me.EMAIL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PASSWORD_TBX
+        '
+        Me.PASSWORD_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PASSWORD_TBX.Location = New System.Drawing.Point(37, 125)
+        Me.PASSWORD_TBX.Name = "PASSWORD_TBX"
+        Me.PASSWORD_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.PASSWORD_TBX.TabIndex = 46
+        '
+        'PASSWORD
+        '
+        Me.PASSWORD.AutoSize = True
+        Me.PASSWORD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PASSWORD.ForeColor = System.Drawing.Color.Gray
+        Me.PASSWORD.Location = New System.Drawing.Point(34, 106)
+        Me.PASSWORD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.PASSWORD.Name = "PASSWORD"
+        Me.PASSWORD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.PASSWORD.Size = New System.Drawing.Size(79, 16)
+        Me.PASSWORD.TabIndex = 47
+        Me.PASSWORD.Text = "PASSWORD"
+        Me.PASSWORD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'L_NAME_TBX
+        '
+        Me.L_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_NAME_TBX.Location = New System.Drawing.Point(333, 77)
+        Me.L_NAME_TBX.Name = "L_NAME_TBX"
+        Me.L_NAME_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.L_NAME_TBX.TabIndex = 44
+        '
+        'L_NAME
+        '
+        Me.L_NAME.AutoSize = True
+        Me.L_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_NAME.ForeColor = System.Drawing.Color.Gray
+        Me.L_NAME.Location = New System.Drawing.Point(330, 58)
+        Me.L_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.L_NAME.Name = "L_NAME"
+        Me.L_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.L_NAME.Size = New System.Drawing.Size(74, 16)
+        Me.L_NAME.TabIndex = 45
+        Me.L_NAME.Text = "LAST NAME"
+        Me.L_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'F_NAME_TBX
+        '
+        Me.F_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.F_NAME_TBX.Location = New System.Drawing.Point(37, 77)
+        Me.F_NAME_TBX.Name = "F_NAME_TBX"
+        Me.F_NAME_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.F_NAME_TBX.TabIndex = 42
+        '
+        'F_NAME
+        '
+        Me.F_NAME.AutoSize = True
+        Me.F_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.F_NAME.ForeColor = System.Drawing.Color.Gray
+        Me.F_NAME.Location = New System.Drawing.Point(34, 58)
+        Me.F_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.F_NAME.Name = "F_NAME"
+        Me.F_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.F_NAME.Size = New System.Drawing.Size(77, 16)
+        Me.F_NAME.TabIndex = 43
+        Me.F_NAME.Text = "FIRST NAME"
+        Me.F_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Label2.Location = New System.Drawing.Point(41, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(292, 33)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "ACCOUNT AND SETTINGS"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.JVS_Inventory_System.My.Resources.Resources.line_png_16805
+        Me.PictureBox1.Location = New System.Drawing.Point(-108, 246)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(837, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 60
+        Me.PictureBox1.TabStop = False
         '
         'acc_type_lbl
         '
@@ -259,6 +559,94 @@ Partial Class Settings
         Me.Panel2.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel2.Size = New System.Drawing.Size(519, 364)
         Me.Panel2.TabIndex = 3
+        '
+        'HOME_STOCK_IN_BTN
+        '
+        Me.HOME_STOCK_IN_BTN.BackColor = System.Drawing.Color.White
+        Me.HOME_STOCK_IN_BTN.BackgroundImage = CType(resources.GetObject("HOME_STOCK_IN_BTN.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_STOCK_IN_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_STOCK_IN_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HOME_STOCK_IN_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HOME_STOCK_IN_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.HOME_STOCK_IN_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
+        Me.HOME_STOCK_IN_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_STOCK_IN_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_STOCK_IN_BTN.ForeColor = System.Drawing.Color.Black
+        Me.HOME_STOCK_IN_BTN.Location = New System.Drawing.Point(19, 189)
+        Me.HOME_STOCK_IN_BTN.Margin = New System.Windows.Forms.Padding(20, 10, 10, 10)
+        Me.HOME_STOCK_IN_BTN.Name = "HOME_STOCK_IN_BTN"
+        Me.HOME_STOCK_IN_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_STOCK_IN_BTN.TabIndex = 9
+        Me.HOME_STOCK_IN_BTN.TabStop = False
+        Me.HOME_STOCK_IN_BTN.Text = "ITEM IN"
+        Me.HOME_STOCK_IN_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_STOCK_IN_BTN.UseVisualStyleBackColor = False
+        '
+        'HOME_ADD_ITEM_BTN
+        '
+        Me.HOME_ADD_ITEM_BTN.BackColor = System.Drawing.Color.White
+        Me.HOME_ADD_ITEM_BTN.BackgroundImage = CType(resources.GetObject("HOME_ADD_ITEM_BTN.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_ADD_ITEM_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_ADD_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HOME_ADD_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HOME_ADD_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.HOME_ADD_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
+        Me.HOME_ADD_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_ADD_ITEM_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_ADD_ITEM_BTN.ForeColor = System.Drawing.Color.Black
+        Me.HOME_ADD_ITEM_BTN.Location = New System.Drawing.Point(19, 11)
+        Me.HOME_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(20, 20, 10, 10)
+        Me.HOME_ADD_ITEM_BTN.Name = "HOME_ADD_ITEM_BTN"
+        Me.HOME_ADD_ITEM_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_ADD_ITEM_BTN.TabIndex = 7
+        Me.HOME_ADD_ITEM_BTN.TabStop = False
+        Me.HOME_ADD_ITEM_BTN.Text = "ADD NEW ITEM"
+        Me.HOME_ADD_ITEM_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_ADD_ITEM_BTN.UseVisualStyleBackColor = False
+        '
+        'HOME_INVENTORY_LOG_BTN
+        '
+        Me.HOME_INVENTORY_LOG_BTN.BackColor = System.Drawing.Color.White
+        Me.HOME_INVENTORY_LOG_BTN.BackgroundImage = CType(resources.GetObject("HOME_INVENTORY_LOG_BTN.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_INVENTORY_LOG_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.HOME_INVENTORY_LOG_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
+        Me.HOME_INVENTORY_LOG_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_INVENTORY_LOG_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_INVENTORY_LOG_BTN.ForeColor = System.Drawing.Color.Black
+        Me.HOME_INVENTORY_LOG_BTN.Location = New System.Drawing.Point(270, 11)
+        Me.HOME_INVENTORY_LOG_BTN.Margin = New System.Windows.Forms.Padding(10, 20, 20, 10)
+        Me.HOME_INVENTORY_LOG_BTN.Name = "HOME_INVENTORY_LOG_BTN"
+        Me.HOME_INVENTORY_LOG_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_INVENTORY_LOG_BTN.TabIndex = 8
+        Me.HOME_INVENTORY_LOG_BTN.TabStop = False
+        Me.HOME_INVENTORY_LOG_BTN.Text = "INVENTORY LOG"
+        Me.HOME_INVENTORY_LOG_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_INVENTORY_LOG_BTN.UseVisualStyleBackColor = False
+        '
+        'HOME_STOCK_OUT_BTN
+        '
+        Me.HOME_STOCK_OUT_BTN.BackColor = System.Drawing.Color.White
+        Me.HOME_STOCK_OUT_BTN.BackgroundImage = CType(resources.GetObject("HOME_STOCK_OUT_BTN.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_STOCK_OUT_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_STOCK_OUT_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HOME_STOCK_OUT_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HOME_STOCK_OUT_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.HOME_STOCK_OUT_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
+        Me.HOME_STOCK_OUT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_STOCK_OUT_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_STOCK_OUT_BTN.ForeColor = System.Drawing.Color.Black
+        Me.HOME_STOCK_OUT_BTN.Location = New System.Drawing.Point(270, 189)
+        Me.HOME_STOCK_OUT_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 20, 10)
+        Me.HOME_STOCK_OUT_BTN.Name = "HOME_STOCK_OUT_BTN"
+        Me.HOME_STOCK_OUT_BTN.Size = New System.Drawing.Size(230, 160)
+        Me.HOME_STOCK_OUT_BTN.TabIndex = 6
+        Me.HOME_STOCK_OUT_BTN.TabStop = False
+        Me.HOME_STOCK_OUT_BTN.Text = "ITEM OUT"
+        Me.HOME_STOCK_OUT_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_STOCK_OUT_BTN.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -519,394 +907,6 @@ Partial Class Settings
         Me.APP_LABEL.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
         Me.APP_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'SETTINGS_PANEL
-        '
-        Me.SETTINGS_PANEL.BackColor = System.Drawing.Color.White
-        Me.SETTINGS_PANEL.Controls.Add(Me.Panel1)
-        Me.SETTINGS_PANEL.Controls.Add(Me.UPDATE_BTN)
-        Me.SETTINGS_PANEL.Controls.Add(Me.RESET_BTN)
-        Me.SETTINGS_PANEL.Controls.Add(Me.NEW_ACC_BTN)
-        Me.SETTINGS_PANEL.Controls.Add(Me.ADDRESS_TBX)
-        Me.SETTINGS_PANEL.Controls.Add(Me.ADDRESS)
-        Me.SETTINGS_PANEL.Controls.Add(Me.NUMBER_TBX)
-        Me.SETTINGS_PANEL.Controls.Add(Me.NUMBER)
-        Me.SETTINGS_PANEL.Controls.Add(Me.EMAIL_TBX)
-        Me.SETTINGS_PANEL.Controls.Add(Me.EMAIL)
-        Me.SETTINGS_PANEL.Controls.Add(Me.PASSWORD_TBX)
-        Me.SETTINGS_PANEL.Controls.Add(Me.PASSWORD)
-        Me.SETTINGS_PANEL.Controls.Add(Me.L_NAME_TBX)
-        Me.SETTINGS_PANEL.Controls.Add(Me.L_NAME)
-        Me.SETTINGS_PANEL.Controls.Add(Me.F_NAME_TBX)
-        Me.SETTINGS_PANEL.Controls.Add(Me.F_NAME)
-        Me.SETTINGS_PANEL.Controls.Add(Me.Label2)
-        Me.SETTINGS_PANEL.Controls.Add(Me.PictureBox1)
-        Me.SETTINGS_PANEL.Location = New System.Drawing.Point(223, 0)
-        Me.SETTINGS_PANEL.Name = "SETTINGS_PANEL"
-        Me.SETTINGS_PANEL.Size = New System.Drawing.Size(899, 660)
-        Me.SETTINGS_PANEL.TabIndex = 13
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Label2.Location = New System.Drawing.Point(41, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(292, 33)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "ACCOUNT AND SETTINGS"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'F_NAME_TBX
-        '
-        Me.F_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.F_NAME_TBX.Location = New System.Drawing.Point(37, 77)
-        Me.F_NAME_TBX.Name = "F_NAME_TBX"
-        Me.F_NAME_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.F_NAME_TBX.TabIndex = 42
-        '
-        'F_NAME
-        '
-        Me.F_NAME.AutoSize = True
-        Me.F_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.F_NAME.ForeColor = System.Drawing.Color.Gray
-        Me.F_NAME.Location = New System.Drawing.Point(34, 58)
-        Me.F_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.F_NAME.Name = "F_NAME"
-        Me.F_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.F_NAME.Size = New System.Drawing.Size(77, 16)
-        Me.F_NAME.TabIndex = 43
-        Me.F_NAME.Text = "FIRST NAME"
-        Me.F_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'L_NAME_TBX
-        '
-        Me.L_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_NAME_TBX.Location = New System.Drawing.Point(333, 77)
-        Me.L_NAME_TBX.Name = "L_NAME_TBX"
-        Me.L_NAME_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.L_NAME_TBX.TabIndex = 44
-        '
-        'L_NAME
-        '
-        Me.L_NAME.AutoSize = True
-        Me.L_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_NAME.ForeColor = System.Drawing.Color.Gray
-        Me.L_NAME.Location = New System.Drawing.Point(330, 58)
-        Me.L_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.L_NAME.Name = "L_NAME"
-        Me.L_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.L_NAME.Size = New System.Drawing.Size(74, 16)
-        Me.L_NAME.TabIndex = 45
-        Me.L_NAME.Text = "LAST NAME"
-        Me.L_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'EMAIL_TBX
-        '
-        Me.EMAIL_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EMAIL_TBX.Location = New System.Drawing.Point(333, 125)
-        Me.EMAIL_TBX.Name = "EMAIL_TBX"
-        Me.EMAIL_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.EMAIL_TBX.TabIndex = 48
-        '
-        'EMAIL
-        '
-        Me.EMAIL.AutoSize = True
-        Me.EMAIL.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EMAIL.ForeColor = System.Drawing.Color.Gray
-        Me.EMAIL.Location = New System.Drawing.Point(330, 106)
-        Me.EMAIL.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.EMAIL.Name = "EMAIL"
-        Me.EMAIL.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.EMAIL.Size = New System.Drawing.Size(43, 16)
-        Me.EMAIL.TabIndex = 49
-        Me.EMAIL.Text = "EMAIL"
-        Me.EMAIL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PASSWORD_TBX
-        '
-        Me.PASSWORD_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PASSWORD_TBX.Location = New System.Drawing.Point(37, 125)
-        Me.PASSWORD_TBX.Name = "PASSWORD_TBX"
-        Me.PASSWORD_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.PASSWORD_TBX.TabIndex = 46
-        '
-        'PASSWORD
-        '
-        Me.PASSWORD.AutoSize = True
-        Me.PASSWORD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PASSWORD.ForeColor = System.Drawing.Color.Gray
-        Me.PASSWORD.Location = New System.Drawing.Point(34, 106)
-        Me.PASSWORD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.PASSWORD.Name = "PASSWORD"
-        Me.PASSWORD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.PASSWORD.Size = New System.Drawing.Size(79, 16)
-        Me.PASSWORD.TabIndex = 47
-        Me.PASSWORD.Text = "PASSWORD"
-        Me.PASSWORD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'ADDRESS_TBX
-        '
-        Me.ADDRESS_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ADDRESS_TBX.Location = New System.Drawing.Point(333, 175)
-        Me.ADDRESS_TBX.Name = "ADDRESS_TBX"
-        Me.ADDRESS_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.ADDRESS_TBX.TabIndex = 52
-        '
-        'ADDRESS
-        '
-        Me.ADDRESS.AutoSize = True
-        Me.ADDRESS.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ADDRESS.ForeColor = System.Drawing.Color.Gray
-        Me.ADDRESS.Location = New System.Drawing.Point(330, 156)
-        Me.ADDRESS.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.ADDRESS.Name = "ADDRESS"
-        Me.ADDRESS.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.ADDRESS.Size = New System.Drawing.Size(61, 16)
-        Me.ADDRESS.TabIndex = 53
-        Me.ADDRESS.Text = "ADDRESS"
-        Me.ADDRESS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'NUMBER_TBX
-        '
-        Me.NUMBER_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NUMBER_TBX.Location = New System.Drawing.Point(37, 175)
-        Me.NUMBER_TBX.Name = "NUMBER_TBX"
-        Me.NUMBER_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.NUMBER_TBX.TabIndex = 50
-        '
-        'NUMBER
-        '
-        Me.NUMBER.AutoSize = True
-        Me.NUMBER.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NUMBER.ForeColor = System.Drawing.Color.Gray
-        Me.NUMBER.Location = New System.Drawing.Point(34, 156)
-        Me.NUMBER.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.NUMBER.Name = "NUMBER"
-        Me.NUMBER.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.NUMBER.Size = New System.Drawing.Size(58, 16)
-        Me.NUMBER.TabIndex = 51
-        Me.NUMBER.Text = "NUMBER"
-        Me.NUMBER.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'SETTINGS_DLT_BTN
-        '
-        Me.SETTINGS_DLT_BTN.BackColor = System.Drawing.Color.DarkRed
-        Me.SETTINGS_DLT_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.SETTINGS_DLT_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.SETTINGS_DLT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SETTINGS_DLT_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.SETTINGS_DLT_BTN.Location = New System.Drawing.Point(27, 220)
-        Me.SETTINGS_DLT_BTN.Name = "SETTINGS_DLT_BTN"
-        Me.SETTINGS_DLT_BTN.Size = New System.Drawing.Size(75, 26)
-        Me.SETTINGS_DLT_BTN.TabIndex = 55
-        Me.SETTINGS_DLT_BTN.Text = "DELETE"
-        Me.SETTINGS_DLT_BTN.UseVisualStyleBackColor = False
-        '
-        'SETTINGS_ADD_BTN
-        '
-        Me.SETTINGS_ADD_BTN.BackColor = System.Drawing.Color.Green
-        Me.SETTINGS_ADD_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
-        Me.SETTINGS_ADD_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
-        Me.SETTINGS_ADD_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SETTINGS_ADD_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.SETTINGS_ADD_BTN.Location = New System.Drawing.Point(187, 220)
-        Me.SETTINGS_ADD_BTN.Name = "SETTINGS_ADD_BTN"
-        Me.SETTINGS_ADD_BTN.Size = New System.Drawing.Size(75, 26)
-        Me.SETTINGS_ADD_BTN.TabIndex = 54
-        Me.SETTINGS_ADD_BTN.Text = "ADD"
-        Me.SETTINGS_ADD_BTN.UseVisualStyleBackColor = False
-        '
-        'NEW_ACC_BTN
-        '
-        Me.NEW_ACC_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.NEW_ACC_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.NEW_ACC_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.NEW_ACC_BTN.Location = New System.Drawing.Point(37, 229)
-        Me.NEW_ACC_BTN.Name = "NEW_ACC_BTN"
-        Me.NEW_ACC_BTN.Size = New System.Drawing.Size(104, 29)
-        Me.NEW_ACC_BTN.TabIndex = 57
-        Me.NEW_ACC_BTN.Text = "+ New Account"
-        Me.NEW_ACC_BTN.UseVisualStyleBackColor = False
-        '
-        'RESET_BTN
-        '
-        Me.RESET_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.RESET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RESET_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.RESET_BTN.Location = New System.Drawing.Point(436, 232)
-        Me.RESET_BTN.Name = "RESET_BTN"
-        Me.RESET_BTN.Size = New System.Drawing.Size(75, 26)
-        Me.RESET_BTN.TabIndex = 58
-        Me.RESET_BTN.Text = "RESET"
-        Me.RESET_BTN.UseVisualStyleBackColor = False
-        '
-        'UPDATE_BTN
-        '
-        Me.UPDATE_BTN.BackColor = System.Drawing.Color.Green
-        Me.UPDATE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.UPDATE_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.UPDATE_BTN.Location = New System.Drawing.Point(520, 232)
-        Me.UPDATE_BTN.Name = "UPDATE_BTN"
-        Me.UPDATE_BTN.Size = New System.Drawing.Size(75, 26)
-        Me.UPDATE_BTN.TabIndex = 59
-        Me.UPDATE_BTN.Text = "UPDATE"
-        Me.UPDATE_BTN.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.JVS_Inventory_System.My.Resources.Resources.line_png_16805
-        Me.PictureBox1.Location = New System.Drawing.Point(-108, 246)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(837, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 60
-        Me.PictureBox1.TabStop = False
-        '
-        'HOME_STOCK_IN_BTN
-        '
-        Me.HOME_STOCK_IN_BTN.BackColor = System.Drawing.Color.White
-        Me.HOME_STOCK_IN_BTN.BackgroundImage = CType(resources.GetObject("HOME_STOCK_IN_BTN.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_STOCK_IN_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_STOCK_IN_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.HOME_STOCK_IN_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_STOCK_IN_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.HOME_STOCK_IN_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
-        Me.HOME_STOCK_IN_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_STOCK_IN_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_STOCK_IN_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_STOCK_IN_BTN.Location = New System.Drawing.Point(19, 189)
-        Me.HOME_STOCK_IN_BTN.Margin = New System.Windows.Forms.Padding(20, 10, 10, 10)
-        Me.HOME_STOCK_IN_BTN.Name = "HOME_STOCK_IN_BTN"
-        Me.HOME_STOCK_IN_BTN.Size = New System.Drawing.Size(230, 160)
-        Me.HOME_STOCK_IN_BTN.TabIndex = 9
-        Me.HOME_STOCK_IN_BTN.TabStop = False
-        Me.HOME_STOCK_IN_BTN.Text = "ITEM IN"
-        Me.HOME_STOCK_IN_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_STOCK_IN_BTN.UseVisualStyleBackColor = False
-        '
-        'HOME_ADD_ITEM_BTN
-        '
-        Me.HOME_ADD_ITEM_BTN.BackColor = System.Drawing.Color.White
-        Me.HOME_ADD_ITEM_BTN.BackgroundImage = CType(resources.GetObject("HOME_ADD_ITEM_BTN.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_ADD_ITEM_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_ADD_ITEM_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.HOME_ADD_ITEM_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_ADD_ITEM_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.HOME_ADD_ITEM_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
-        Me.HOME_ADD_ITEM_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_ADD_ITEM_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_ADD_ITEM_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_ADD_ITEM_BTN.Location = New System.Drawing.Point(19, 11)
-        Me.HOME_ADD_ITEM_BTN.Margin = New System.Windows.Forms.Padding(20, 20, 10, 10)
-        Me.HOME_ADD_ITEM_BTN.Name = "HOME_ADD_ITEM_BTN"
-        Me.HOME_ADD_ITEM_BTN.Size = New System.Drawing.Size(230, 160)
-        Me.HOME_ADD_ITEM_BTN.TabIndex = 7
-        Me.HOME_ADD_ITEM_BTN.TabStop = False
-        Me.HOME_ADD_ITEM_BTN.Text = "ADD NEW ITEM"
-        Me.HOME_ADD_ITEM_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_ADD_ITEM_BTN.UseVisualStyleBackColor = False
-        '
-        'HOME_INVENTORY_LOG_BTN
-        '
-        Me.HOME_INVENTORY_LOG_BTN.BackColor = System.Drawing.Color.White
-        Me.HOME_INVENTORY_LOG_BTN.BackgroundImage = CType(resources.GetObject("HOME_INVENTORY_LOG_BTN.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_INVENTORY_LOG_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.HOME_INVENTORY_LOG_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.HOME_INVENTORY_LOG_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
-        Me.HOME_INVENTORY_LOG_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_INVENTORY_LOG_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_INVENTORY_LOG_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_INVENTORY_LOG_BTN.Location = New System.Drawing.Point(270, 11)
-        Me.HOME_INVENTORY_LOG_BTN.Margin = New System.Windows.Forms.Padding(10, 20, 20, 10)
-        Me.HOME_INVENTORY_LOG_BTN.Name = "HOME_INVENTORY_LOG_BTN"
-        Me.HOME_INVENTORY_LOG_BTN.Size = New System.Drawing.Size(230, 160)
-        Me.HOME_INVENTORY_LOG_BTN.TabIndex = 8
-        Me.HOME_INVENTORY_LOG_BTN.TabStop = False
-        Me.HOME_INVENTORY_LOG_BTN.Text = "INVENTORY LOG"
-        Me.HOME_INVENTORY_LOG_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_INVENTORY_LOG_BTN.UseVisualStyleBackColor = False
-        '
-        'HOME_STOCK_OUT_BTN
-        '
-        Me.HOME_STOCK_OUT_BTN.BackColor = System.Drawing.Color.White
-        Me.HOME_STOCK_OUT_BTN.BackgroundImage = CType(resources.GetObject("HOME_STOCK_OUT_BTN.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_STOCK_OUT_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_STOCK_OUT_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.HOME_STOCK_OUT_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HOME_STOCK_OUT_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.HOME_STOCK_OUT_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
-        Me.HOME_STOCK_OUT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_STOCK_OUT_BTN.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_STOCK_OUT_BTN.ForeColor = System.Drawing.Color.Black
-        Me.HOME_STOCK_OUT_BTN.Location = New System.Drawing.Point(270, 189)
-        Me.HOME_STOCK_OUT_BTN.Margin = New System.Windows.Forms.Padding(10, 10, 20, 10)
-        Me.HOME_STOCK_OUT_BTN.Name = "HOME_STOCK_OUT_BTN"
-        Me.HOME_STOCK_OUT_BTN.Size = New System.Drawing.Size(230, 160)
-        Me.HOME_STOCK_OUT_BTN.TabIndex = 6
-        Me.HOME_STOCK_OUT_BTN.TabStop = False
-        Me.HOME_STOCK_OUT_BTN.Text = "ITEM OUT"
-        Me.HOME_STOCK_OUT_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_STOCK_OUT_BTN.UseVisualStyleBackColor = False
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.BRAND_CBX)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.SETTINGS_UP_BTN)
-        Me.Panel1.Controls.Add(Me.SETTINGS_DLT_BTN)
-        Me.Panel1.Controls.Add(Me.SETTINGS_ADD_BTN)
-        Me.Panel1.Location = New System.Drawing.Point(37, 294)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(558, 263)
-        Me.Panel1.TabIndex = 61
-        '
-        'SETTINGS_UP_BTN
-        '
-        Me.SETTINGS_UP_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.SETTINGS_UP_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SETTINGS_UP_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.SETTINGS_UP_BTN.Location = New System.Drawing.Point(108, 220)
-        Me.SETTINGS_UP_BTN.Name = "SETTINGS_UP_BTN"
-        Me.SETTINGS_UP_BTN.Size = New System.Drawing.Size(75, 26)
-        Me.SETTINGS_UP_BTN.TabIndex = 62
-        Me.SETTINGS_UP_BTN.Text = "UPDATE"
-        Me.SETTINGS_UP_BTN.UseVisualStyleBackColor = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(27, 166)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(235, 26)
-        Me.TextBox1.TabIndex = 62
-        '
-        'BRAND_CBX
-        '
-        Me.BRAND_CBX.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BRAND_CBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BRAND_CBX.Font = New System.Drawing.Font("Tw Cen MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BRAND_CBX.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BRAND_CBX.FormattingEnabled = True
-        Me.BRAND_CBX.ItemHeight = 15
-        Me.BRAND_CBX.Items.AddRange(New Object() {"Admin", "User"})
-        Me.BRAND_CBX.Location = New System.Drawing.Point(28, 137)
-        Me.BRAND_CBX.Name = "BRAND_CBX"
-        Me.BRAND_CBX.Size = New System.Drawing.Size(235, 23)
-        Me.BRAND_CBX.TabIndex = 62
-        Me.BRAND_CBX.Text = "BRAND"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(273, 89)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(276, 158)
-        Me.DataGridView1.TabIndex = 63
-        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -917,6 +917,12 @@ Partial Class Settings
         Me.Name = "Settings"
         Me.Text = "Settings"
         Me.SETTINGS_PANEL_SB.ResumeLayout(False)
+        Me.SETTINGS_PANEL.ResumeLayout(False)
+        Me.SETTINGS_PANEL.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.HOME_PANEL.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -927,12 +933,6 @@ Partial Class Settings
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.DAY_LOG_PANEL.ResumeLayout(False)
-        Me.SETTINGS_PANEL.ResumeLayout(False)
-        Me.SETTINGS_PANEL.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
