@@ -1042,23 +1042,36 @@ Public Class Form1
     'SETTINGS ================================================================================================================
 
     Private Sub TBX_SUPNAME_GotFocus(sender As Object, e As EventArgs) Handles TBX_SUPNAME.GotFocus
-        TBX_SUPNAME.Text = ""
-        TBX_SUPNAME.ForeColor = Color.Black
+        If TBX_SUPNAME.Text = "Name" Then
+            TBX_SUPNAME.Text = ""
+            TBX_SUPNAME.ForeColor = Color.Black
+        End If
+
+
     End Sub
 
     Private Sub TBX_SUPNUM_GotFocus(sender As Object, e As EventArgs) Handles TBX_SUPNUM.GotFocus
-        TBX_SUPNUM.Text = ""
-        TBX_SUPNUM.ForeColor = Color.Black
+        If TBX_SUPNUM.Text = "Number" Then
+            TBX_SUPNUM.Text = ""
+            TBX_SUPNUM.ForeColor = Color.Black
+        End If
+
     End Sub
 
     Private Sub TBX_SUPMAIL_GotFocus(sender As Object, e As EventArgs) Handles TBX_SUPMAIL.GotFocus
-        TBX_SUPMAIL.Text = ""
-        TBX_SUPMAIL.ForeColor = Color.Black
+
+        If TBX_SUPMAIL.Text = "Email" Then
+            TBX_SUPMAIL.Text = ""
+            TBX_SUPMAIL.ForeColor = Color.Black
+        End If
+
     End Sub
 
     Private Sub TBX_SUPMED_GotFocus(sender As Object, e As EventArgs) Handles TBX_SUPMED.GotFocus
-        TBX_SUPMED.Text = ""
-        TBX_SUPMED.ForeColor = Color.Black
+        If TBX_SUPMED.Text = "Other Links" Then
+            TBX_SUPMED.Text = ""
+            TBX_SUPMED.ForeColor = Color.Black
+        End If
     End Sub
 
     Private Sub TBX_SUPNAME_LoseFocus(sender As Object, e As EventArgs) Handles TBX_SUPNAME.LostFocus
@@ -1090,6 +1103,73 @@ Public Class Form1
             TBX_SUPMED.Text = "Other Links"
             TBX_SUPMED.ForeColor = Color.Gray
         End If
+
+    End Sub
+
+    Private Sub PANEL_SETTINGS_Paint(sender As Object, e As PaintEventArgs) Handles PANEL_SETTINGS.Paint
+
+    End Sub
+
+    Private Sub CheckedListBox4_SelectedIndexChanged(sender As Object, e As EventArgs)
+    End Sub
+
+    Private Sub SBX_BRAND_TextChanged(sender As Object, e As EventArgs) Handles SBX_BRAND.TextChanged
+        tableload("SELECT `BRAND_NAME` AS 'BRANDS' FROM `brands` WHERE `BRAND_NAME` LIKE '%" & SBX_BRAND.Text & "%'", BRANDS_DGV)
+        strconn.Close()
+    End Sub
+
+    Private Sub SBX_VAR_TextChanged(sender As Object, e As EventArgs) Handles SBX_VAR.TextChanged
+        tableload("SELECT  `variant_name` AS 'VARIANTS' FROM `variants` WHERE  `variant_name` LIKE '%" & SBX_VAR.Text & "%'", VARIANTS_DGV)
+        strconn.Close()
+    End Sub
+
+    Private Sub SBX_CAT_TextChanged(sender As Object, e As EventArgs) Handles SBX_CAT.TextChanged
+        tableload("SELECT  `categories_name` AS 'CATEGORIES' FROM `categories` WHERE  `categories_name` LIKE '%" & SBX_CAT.Text & "%'", CAT_DGV)
+        strconn.Close()
+    End Sub
+
+    Private Sub SBX_SUP_TextChanged(sender As Object, e As EventArgs) Handles SBX_SUP.TextChanged
+        tableload("SELECT `supplier_name` AS 'SUPPLIER NAME', `supplier_number` AS 'NUMBER', `supplier_email` AS 'E-MAIL', `supplier_socmed` AS 'SOCIAL MEDIA' FROM `suppliers` WHERE `supplier_name` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_number` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_email` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_socmed` LIKE '%" & SBX_SUP.Text & "%'", SUP_DGV)
+        strconn.Close()
+    End Sub
+
+    Private Sub BRANDS_DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles BRANDS_DGV.CellClick
+        TBX_BRNAME.Text = BRANDS_DGV.CurrentRow.Cells(0).Value.ToString
+
+    End Sub
+
+    Private Sub VARIANTS_DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles VARIANTS_DGV.CellClick
+        TBX_VARNAME.Text = VARIANTS_DGV.CurrentRow.Cells(0).Value.ToString
+    End Sub
+
+    Private Sub CAT_DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles CAT_DGV.CellClick
+        TBX_CATNAME.Text = CAT_DGV.CurrentRow.Cells(0).Value.ToString
+    End Sub
+
+    Private Sub SUP_DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles SUP_DGV.CellClick
+
+        TBX_SUPNAME.Text = SUP_DGV.CurrentRow.Cells(0).Value.ToString
+        TBX_SUPNUM.Text = SUP_DGV.CurrentRow.Cells(1).Value.ToString
+        TBX_SUPMAIL.Text = SUP_DGV.CurrentRow.Cells(2).Value.ToString
+        TBX_SUPMED.Text = SUP_DGV.CurrentRow.Cells(3).Value.ToString
+
+        TBX_SUPNAME.ForeColor = Color.Black
+        TBX_SUPNUM.ForeColor = Color.Black
+        TBX_SUPMAIL.ForeColor = Color.Black
+        TBX_SUPMED.ForeColor = Color.Black
+
+    End Sub
+
+    Private Sub TBX_SUPNAME_TextChanged(sender As Object, e As EventArgs) Handles TBX_SUPNAME.TextChanged
+
+    End Sub
+
+    Private Sub SAV_BRAND_Click(sender As Object, e As EventArgs) Handles SAV_BRAND.Click
+
+
+    End Sub
+
+    Private Sub ADD_BRAND_Click(sender As Object, e As EventArgs) Handles ADD_BRAND.Click
 
     End Sub
 

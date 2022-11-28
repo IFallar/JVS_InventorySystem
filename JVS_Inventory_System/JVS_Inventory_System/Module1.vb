@@ -44,7 +44,67 @@ Module Module1
         strconnection.Close()
         adapter.Dispose()
     End Sub
+    'create function used in settings'
+    Public Sub create(ByRef sql As String)
+        Try
+            strconn.Open()
 
+            With cmd
+                .Connection = strconn
+                .CommandText = sql
+                res = cmd.ExecuteNonQuery
+                If res = 0 Then
+                    MessageBox.Show("Failed to add data", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Data successfully added", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            strconn.Close()
+        End Try
+    End Sub
+    'update function used in settings'
+    Public Sub update(ByRef sql As String)
+        Try
+            strconn.Open()
+            With cmd
+                .Connection = strconn
+                .CommandText = sql
+                res = cmd.ExecuteNonQuery
+                If res = 0 Then
+                    MessageBox.Show("Failed to update data", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Data successfully updated", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            strconn.Close()
+        End Try
+    End Sub
+    'delete function used in settings'
+    Public Sub delete(ByRef sql As String)
+        Try
+            strconn.Open()
+            With cmd
+                .Connection = strconn
+                .CommandText = sql
+                res = cmd.ExecuteNonQuery
+                If res = 0 Then
+                    MessageBox.Show("Failed to delete data", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Data successfully deleted", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            strconn.Close()
+        End Try
+    End Sub
     <Extension()>
     Public Sub Add(Of T)(ByRef arr As T(), ByVal item As T)
         Array.Resize(arr, arr.Length + 1)
