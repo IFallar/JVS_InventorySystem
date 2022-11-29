@@ -6,7 +6,7 @@ Public Class Form1
     'PUBLICS ================================================================================================================
 
     Public Class GlobalVariables
-        Public Shared UserID As Integer
+        Public Shared UserID As Integer = 1
         Public Shared Selected_Item As Integer
         Public Shared logged As Integer = 1
     End Class
@@ -206,11 +206,13 @@ Public Class Form1
         Dim log_in As Integer
         Dim log_add As Integer
         Dim log_change As Integer
+        Dim curdate As Date = Date.Now()
+        Dim todate = curdate.ToString("yyyy\-MM\-dd")
 
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT (SELECT SUM(SUBSTRING(r_qty,2, LENGTH(r_qty) -1)) FROM transaction_log WHERE transaction_type = 'Stock Out') AS 'OUT', (SELECT SUM(SUBSTRING(r_qty,2,(r_qty))) FROM transaction_log WHERE transaction_type = 'Restock') AS 'ADD', (SELECT COUNT(*) FROM transaction_log WHERE transaction_type = 'New Item') as 'New', (SELECT COUNT(*) FROM transaction_log WHERE transaction_type = 'Edited Info') AS 'Edited'"
+        cmd.CommandText = "SELECT (SELECT SUM(SUBSTRING(r_qty,2, LENGTH(r_qty) -1)) FROM transaction_log WHERE transaction_type = 'Stock Out' AND `r_date` = '" & todate & "') AS 'OUT', (SELECT SUM(SUBSTRING(r_qty,2,(r_qty))) FROM transaction_log WHERE transaction_type = 'Restock' AND `r_date` = '" & todate & "') AS 'ADD', (SELECT COUNT(*) FROM transaction_log WHERE transaction_type = 'New Item' AND `r_date` = '" & todate & "') as 'New', (SELECT COUNT(*) FROM transaction_log WHERE transaction_type = 'Edited Info' AND `r_date` = '" & todate & "') AS 'Edited' "
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
@@ -321,6 +323,8 @@ Public Class Form1
     End Sub
 
     Public Sub LoadHistory()
+
+        DateTimePicker1.Value = Date.Now()
 
         If ACT_FLT.Text = "Action:" Then
             tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE 1", Me.DataGridView2)
@@ -482,6 +486,28 @@ Public Class Form1
         DataGridView2.Columns(6).Width = 90
 
         DataGridView2.RowTemplate.MinimumHeight = 40
+
+    End Sub
+
+
+    Private Sub VARIANTS_DGV_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles VARIANTS_DGV.DataBindingComplete
+
+        VARIANTS_DGV.RowTemplate.Resizable = False
+        VARIANTS_DGV.RowTemplate.MinimumHeight = 20
+
+    End Sub
+
+    Private Sub CAT_DGV_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles CAT_DGV.DataBindingComplete
+
+        CAT_DGV.RowTemplate.Resizable = False
+        CAT_DGV.RowTemplate.MinimumHeight = 20
+
+    End Sub
+
+    Private Sub SUP_DGV_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles SUP_DGV.DataBindingComplete
+
+        SUP_DGV.RowTemplate.Resizable = False
+        SUP_DGV.RowTemplate.MinimumHeight = 20
 
     End Sub
 
@@ -650,12 +676,11 @@ Public Class Form1
         SIDE_SET_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
 
         Set_Home_Value()
+        Set_DGV()
 
     End Sub
 
     'MAIN SCREEN ================================================================================================================
-
-
 
     '++++++++++++++++ MAIN SCREEN BUTTONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -695,6 +720,30 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub HOME_INVENTORY_LOG_BTN_Click(sender As Object, e As EventArgs) Handles HOME_INVENTORY_LOG_BTN.Click
+
+        HOME_PANEL.Visible = False
+        ITEM_PANEL.Visible = False
+        LOG_PANEL.Visible = True
+        PANEL_SETTINGS.Visible = False
+
+        SIDE_HOME_BTN.BackColor = System.Drawing.Color.Transparent
+        SIDE_ITEM_BTN.BackColor = System.Drawing.Color.Transparent
+        SIDE_LOG_BTN.BackColor = System.Drawing.Color.White
+        SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent
+
+        SIDE_HOME_BTN.ForeColor = System.Drawing.Color.White
+        SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.White
+        SIDE_LOG_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
+        SIDE_SET_BTN.ForeColor = System.Drawing.Color.White
+
+        Set_Home_Value()
+        DataGridView2.RowTemplate.MinimumHeight = 40
+        Set_Log_Value()
+        LoadHistory()
 
     End Sub
 
@@ -1106,71 +1155,314 @@ Public Class Form1
 
     End Sub
 
-    Private Sub PANEL_SETTINGS_Paint(sender As Object, e As PaintEventArgs) Handles PANEL_SETTINGS.Paint
+    Public Sub Set_DGV()
+
+        tableload("SELECT `brand_id` AS 'ID', `BRAND_NAME` AS 'BRANDS' FROM `brands` WHERE 1", BRANDS_DGV)
+        strconn.Close()
+        tableload("SELECT `variant_id` AS 'ID', `variant_name` AS 'VARIANTS' FROM `variants` WHERE 1", VARIANTS_DGV)
+        strconn.Close()
+        tableload("SELECT `categories_id` AS 'ID', `categories_name` AS 'CATEGORIES' FROM `categories` WHERE 1", CAT_DGV)
+        strconn.Close()
+        tableload("SELECT `supplier_id` AS 'ID', `supplier_name` AS 'NAME', `supplier_number` AS 'NUMBER', `supplier_email` AS 'E-MAIL', `supplier_socmed` AS 'SOCIALS' FROM `suppliers` WHERE 1", SUP_DGV)
+        strconn.Close()
+
+        SUP_DGV.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+
 
     End Sub
 
-    Private Sub CheckedListBox4_SelectedIndexChanged(sender As Object, e As EventArgs)
-    End Sub
+    Dim To_set As Integer
 
     Private Sub SBX_BRAND_TextChanged(sender As Object, e As EventArgs) Handles SBX_BRAND.TextChanged
-        tableload("SELECT `BRAND_NAME` AS 'BRANDS' FROM `brands` WHERE `BRAND_NAME` LIKE '%" & SBX_BRAND.Text & "%'", BRANDS_DGV)
+        tableload("SELECT `brand_id` AS 'ID', `BRAND_NAME` AS 'BRANDS' FROM `brands` WHERE `BRAND_NAME` LIKE '%" & SBX_BRAND.Text & "%'", BRANDS_DGV)
         strconn.Close()
     End Sub
 
     Private Sub SBX_VAR_TextChanged(sender As Object, e As EventArgs) Handles SBX_VAR.TextChanged
-        tableload("SELECT  `variant_name` AS 'VARIANTS' FROM `variants` WHERE  `variant_name` LIKE '%" & SBX_VAR.Text & "%'", VARIANTS_DGV)
+        tableload("SELECT  `variant_id` AS 'ID', `variant_name` AS 'VARIANTS' FROM `variants` WHERE  `variant_name` LIKE '%" & SBX_VAR.Text & "%'", VARIANTS_DGV)
         strconn.Close()
     End Sub
 
     Private Sub SBX_CAT_TextChanged(sender As Object, e As EventArgs) Handles SBX_CAT.TextChanged
-        tableload("SELECT  `categories_name` AS 'CATEGORIES' FROM `categories` WHERE  `categories_name` LIKE '%" & SBX_CAT.Text & "%'", CAT_DGV)
+        tableload("SELECT  `categories_id` AS `categories_name` AS 'CATEGORIES' FROM `categories` WHERE  `categories_name` LIKE '%" & SBX_CAT.Text & "%'", CAT_DGV)
         strconn.Close()
     End Sub
 
     Private Sub SBX_SUP_TextChanged(sender As Object, e As EventArgs) Handles SBX_SUP.TextChanged
-        tableload("SELECT `supplier_name` AS 'SUPPLIER NAME', `supplier_number` AS 'NUMBER', `supplier_email` AS 'E-MAIL', `supplier_socmed` AS 'SOCIAL MEDIA' FROM `suppliers` WHERE `supplier_name` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_number` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_email` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_socmed` LIKE '%" & SBX_SUP.Text & "%'", SUP_DGV)
+        tableload("SELECT `supplier_id` AS 'ID', `supplier_name` AS 'SUPPLIER NAME', `supplier_number` AS 'NUMBER', `supplier_email` AS 'E-MAIL', `supplier_socmed` AS 'SOCIAL MEDIA' FROM `suppliers` WHERE `supplier_name` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_number` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_email` LIKE '%" & SBX_SUP.Text & "%' OR `supplier_socmed` LIKE '%" & SBX_SUP.Text & "%'", SUP_DGV)
         strconn.Close()
     End Sub
 
     Private Sub BRANDS_DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles BRANDS_DGV.CellClick
-        TBX_BRNAME.Text = BRANDS_DGV.CurrentRow.Cells(0).Value.ToString
+        To_set = BRANDS_DGV.CurrentRow.Cells(0).Value.ToString
+        TBX_BRNAME.Text = BRANDS_DGV.CurrentRow.Cells(1).Value.ToString
+
+        RESET_BRAND.Text = "CANCEL"
+        SAV_BRAND.Text = "UPDATE"
+        DEL_BRAND.Visible = True
 
     End Sub
 
     Private Sub VARIANTS_DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles VARIANTS_DGV.CellClick
-        TBX_VARNAME.Text = VARIANTS_DGV.CurrentRow.Cells(0).Value.ToString
+        To_set = VARIANTS_DGV.CurrentRow.Cells(0).Value.ToString
+        TBX_VARNAME.Text = VARIANTS_DGV.CurrentRow.Cells(1).Value.ToString
+
+        RESET_VARIANT.Text = "CANCEL"
+        SAV_VAR.Text = "UPDATE"
+        DEL_VAR.Visible = True
+
     End Sub
 
     Private Sub CAT_DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles CAT_DGV.CellClick
-        TBX_CATNAME.Text = CAT_DGV.CurrentRow.Cells(0).Value.ToString
+        To_set = CAT_DGV.CurrentRow.Cells(0).Value.ToString
+        TBX_CATNAME.Text = CAT_DGV.CurrentRow.Cells(1).Value.ToString
+
+        RESET_CAT.Text = "CANCEL"
+        SETTINGS_LOWER.Text = "UPDATE"
+        DEL_CAT.Visible = True
+
     End Sub
 
     Private Sub SUP_DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles SUP_DGV.CellClick
-
         TBX_SUPNAME.Text = SUP_DGV.CurrentRow.Cells(0).Value.ToString
-        TBX_SUPNUM.Text = SUP_DGV.CurrentRow.Cells(1).Value.ToString
-        TBX_SUPMAIL.Text = SUP_DGV.CurrentRow.Cells(2).Value.ToString
-        TBX_SUPMED.Text = SUP_DGV.CurrentRow.Cells(3).Value.ToString
+        TBX_SUPNAME.Text = SUP_DGV.CurrentRow.Cells(1).Value.ToString
+        TBX_SUPNUM.Text = SUP_DGV.CurrentRow.Cells(2).Value.ToString
+        TBX_SUPMAIL.Text = SUP_DGV.CurrentRow.Cells(3).Value.ToString
+        TBX_SUPMED.Text = SUP_DGV.CurrentRow.Cells(4).Value.ToString
 
         TBX_SUPNAME.ForeColor = Color.Black
         TBX_SUPNUM.ForeColor = Color.Black
         TBX_SUPMAIL.ForeColor = Color.Black
         TBX_SUPMED.ForeColor = Color.Black
 
+        RESET_SUP.Text = "CANCEL"
+        SAV_SUP.Text = "UPDATE"
+        DEL_SUP.Visible = True
+
     End Sub
 
-    Private Sub TBX_SUPNAME_TextChanged(sender As Object, e As EventArgs) Handles TBX_SUPNAME.TextChanged
+    Private Sub SBX_CAT_TabIndexChanged(sender As Object, e As EventArgs) Handles SETTINGS_LOWER.SelectedIndexChanged
+
+        Set_DGV()
+
+        If SETTINGS_LOWER.SelectedIndex = 3 Then
+            SUP_DGV.Width = 530
+            SETTINGS_LOWER.Width = 815
+        Else
+            SUP_DGV.Width = 309
+            SETTINGS_LOWER.Width = 592
+        End If
+
+        TBX_BRNAME.Text = ""
+        TBX_VARNAME.Text = ""
+        TBX_CATNAME.Text = ""
+
+        TBX_SUPNAME.Text = "Name"
+        TBX_SUPNAME.ForeColor = Color.Gray
+        TBX_SUPNUM.Text = "Number"
+        TBX_SUPNUM.ForeColor = Color.Gray
+        TBX_SUPMAIL.Text = "Email"
+        TBX_SUPMAIL.ForeColor = Color.Gray
+        TBX_SUPMED.Text = "Other Links"
+        TBX_SUPMED.ForeColor = Color.Gray
 
     End Sub
+
+    Dim cnd_str As String = ""
+
+    Public Sub CMDSTRING(cnd As String, tok As Integer)
+
+        Try
+
+            strconnection()
+
+            cmd.Connection = strconn
+            strconn.Open()
+
+            cmd.CommandText = cnd
+            cmd.ExecuteNonQuery()
+
+            strconn.Close()
+
+            MsgBox("SUCCESS!", MsgBoxStyle.OkOnly, "")
+            Set_DGV()
+
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+
+            If tok = 0 Then
+
+                MsgBox("You are trying to update a Value used in other tables!" & Environment.NewLine & "Do you want to proceed?", MsgBoxStyle.YesNo, "WARNING!")
+
+                If MsgBoxResult.Yes Then
+
+                    strconn.Close()
+
+                    strconnection()
+
+                    cmd.Connection = strconn
+                    strconn.Open()
+
+                    cmd.CommandText = "SET FOREIGN_KEY_CHECKS=0;" & cnd & "; SET FOREIGN_KEY_CHECKS=1"
+                    cmd.ExecuteNonQuery()
+
+                    strconn.Close()
+
+                    MsgBox("SUCCESS!", MsgBoxStyle.OkOnly, "")
+                    Set_DGV()
+
+                End If
+
+            Else
+
+                MsgBox("Cannot Perform Action." & Environment.NewLine & "You are trying to delete data currently in use!", MsgBoxStyle.OkOnly, "ERROR!")
+
+            End If
+
+        End Try
+
+
+    End Sub
+
+    '++++++++++++++++ BUTTONS [BRAND] SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub SAV_BRAND_Click(sender As Object, e As EventArgs) Handles SAV_BRAND.Click
 
+        If SAV_BRAND.Text = "ADD" Then
+            cnd_str = "INSERT INTO `brands`(`brand_id`, `BRAND_NAME`) VALUES (DEFAULT,'" & TBX_BRNAME.Text & "')"
+            CMDSTRING(cnd_str, 0)
+        ElseIf SAV_BRAND.Text = "UPDATE" Then
+            cnd_str = "UPDATE `brands` SET `BRAND_NAME`= '" & TBX_BRNAME.Text & "' WHERE `brand_id` = '" & To_set & "'"
+            CMDSTRING(cnd_str, 0)
+        End If
 
     End Sub
 
-    Private Sub ADD_BRAND_Click(sender As Object, e As EventArgs) Handles ADD_BRAND.Click
+    Private Sub RESET_BRAND_Click(sender As Object, e As EventArgs) Handles RESET_BRAND.Click
 
+        If RESET_BRAND.Text = "CANCEL" Then
+            RESET_BRAND.Text = "RESET"
+            SAV_BRAND.Text = "ADD"
+            DEL_BRAND.Visible = False
+        End If
+
+        TBX_BRNAME.Text = ""
+
+    End Sub
+
+    Private Sub DEL_BRAND_Click(sender As Object, e As EventArgs) Handles DEL_BRAND.Click
+        cnd_str = "DELETE FROM `brands` WHERE `brand_id` = '" & To_set & "'"
+        CMDSTRING(cnd_str, 1)
+        TBX_BRNAME.Text = ""
+    End Sub
+
+    '++++++++++++++++ BUTTONS [VARIANT] SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Private Sub SAV_VAR_Click(sender As Object, e As EventArgs) Handles SAV_VAR.Click
+
+        If SAV_VAR.Text = "ADD" Then
+            cnd_str = "INSERT INTO `variants`(`variant_id`, `variant_name`) VALUES (DEFAULT,'" & TBX_VARNAME.Text & "')"
+            CMDSTRING(cnd_str, 0)
+        ElseIf SAV_VAR.Text = "UPDATE" Then
+            cnd_str = "UPDATE `variants` SET `variant_name`='" & TBX_VARNAME.Text & "' WHERE `variant_id`='" & To_set & "'"
+            CMDSTRING(cnd_str, 0)
+        End If
+
+    End Sub
+
+    Private Sub RESET_VARIANT_Click(sender As Object, e As EventArgs) Handles RESET_VARIANT.Click
+
+        If RESET_VARIANT.Text = "CANCEL" Then
+            RESET_VARIANT.Text = "RESET"
+            SAV_VAR.Text = "ADD"
+            DEL_VAR.Visible = False
+        End If
+
+        TBX_VARNAME.Text = ""
+
+    End Sub
+
+    Private Sub DEL_VAR_Click(sender As Object, e As EventArgs) Handles DEL_VAR.Click
+        cnd_str = "DELETE FROM `variants` WHERE `variant_id`='" & To_set & "'"
+        CMDSTRING(cnd_str, 1)
+        TBX_VARNAME.Text = ""
+    End Sub
+
+    '++++++++++++++++ BUTTONS [CATEGORY] SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Private Sub SAV_CAT_Click(sender As Object, e As EventArgs) Handles SAV_CAT.Click
+
+        If SAV_CAT.Text = "ADD" Then
+            cnd_str = "INSERT INTO `categories`(`categories_id`, `categories_name`) VALUES (DEFAULT,'" & TBX_CATNAME.Text & "')"
+            CMDSTRING(cnd_str, 0)
+        ElseIf SAV_CAT.Text = "UPDATE" Then
+            cnd_str = "UPDATE `categories` SET `categories_name`='" & TBX_CATNAME.Text & "' WHERE `categories_id`='" & To_set & "'"
+            CMDSTRING(cnd_str, 0)
+        End If
+
+    End Sub
+
+    Private Sub RESET_CAT_Click(sender As Object, e As EventArgs) Handles RESET_CAT.Click
+
+        If RESET_CAT.Text = "CANCEL" Then
+            RESET_CAT.Text = "RESET"
+            SAV_CAT.Text = "ADD"
+            DEL_CAT.Visible = False
+        End If
+
+        TBX_CATNAME.Text = ""
+
+    End Sub
+
+    Private Sub DEL_CAT_Click(sender As Object, e As EventArgs) Handles DEL_CAT.Click
+        cnd_str = "DELETE FROM `categories` WHERE `categories_id` = '" & To_set & "'"
+        CMDSTRING(cnd_str, 1)
+        TBX_CATNAME.Text = ""
+    End Sub
+
+    '++++++++++++++++ BUTTONS [SUPPLIER] SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    Private Sub SAV_SUP_Click(sender As Object, e As EventArgs) Handles SAV_SUP.Click
+
+        If SAV_SUP.Text = "ADD" Then
+            cnd_str = "INSERT INTO `suppliers`(`supplier_id`, `supplier_name`, `supplier_number`, `supplier_email`, `supplier_socmed`) VALUES (DEFAULT,'" & TBX_SUPNAME.Text & "','" & TBX_SUPNUM.Text & "','" & TBX_SUPMAIL.Text & "','" & TBX_SUPMED.Text & "')"
+            CMDSTRING(cnd_str, 0)
+        ElseIf SAV_SUP.Text = "UPDATE" Then
+            cnd_str = "UPDATE `suppliers` SET `supplier_name`='" & TBX_SUPNAME.Text & "',`supplier_number`='" & TBX_SUPNUM.Text & "',`supplier_email`='" & TBX_SUPNUM.Text & "',`supplier_socmed`=''" & TBX_SUPMED.Text & "' WHERE `supplier_id`='" & To_set & "'"
+            CMDSTRING(cnd_str, 0)
+        End If
+
+    End Sub
+
+    Private Sub RESET_SUP_Click(sender As Object, e As EventArgs) Handles RESET_SUP.Click
+
+        If RESET_CAT.Text = "CANCEL" Then
+            RESET_CAT.Text = "RESET"
+            SAV_SUP.Text = "ADD"
+            DEL_CAT.Visible = False
+        End If
+
+        TBX_SUPNAME.Text = "Name"
+        TBX_SUPNAME.ForeColor = Color.Gray
+        TBX_SUPNUM.Text = "Number"
+        TBX_SUPNUM.ForeColor = Color.Gray
+        TBX_SUPMAIL.Text = "Email"
+        TBX_SUPMAIL.ForeColor = Color.Gray
+        TBX_SUPMED.Text = "Other Links"
+        TBX_SUPMED.ForeColor = Color.Gray
+
+    End Sub
+
+    Private Sub DEL_SUP_Click(sender As Object, e As EventArgs) Handles DEL_SUP.Click
+        cnd_str = "DELETE FROM `suppliers` WHERE `supplier_id` = '" & To_set & "'"
+        CMDSTRING(cnd_str, 1)
+        TBX_SUPNAME.Text = "Name"
+        TBX_SUPNAME.ForeColor = Color.Gray
+        TBX_SUPNUM.Text = "Number"
+        TBX_SUPNUM.ForeColor = Color.Gray
+        TBX_SUPMAIL.Text = "Email"
+        TBX_SUPMAIL.ForeColor = Color.Gray
+        TBX_SUPMED.Text = "Other Links"
+        TBX_SUPMED.ForeColor = Color.Gray
     End Sub
 
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++

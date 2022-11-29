@@ -21,6 +21,7 @@
             Else
                 If STOCK_AMOUNT > ITEM_INIT Then
                     MsgBox("Exceeds Inventory Quantity.", MsgBoxStyle.OkOnly, "Insufficient Stock")
+                    Exit Sub
                 Else
                     FINAL_AMOUNT = ITEM_INIT - STOCK_AMOUNT
                 End If
@@ -36,7 +37,19 @@
 
             NEW_TOTAL = UNIT_PRICE * FINAL_AMOUNT
 
+            strconnection()
 
+            cmd.Connection = strconn
+            strconn.Open()
+
+            cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "',`PRV_ORDQ`='" & STOCK_AMOUNT & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
+            cmd.ExecuteNonQuery()
+            MsgBox("Success", MsgBoxStyle.OkOnly, "Action Confirmation")
+            strconn.Close()
+
+
+            Form1.Load_Table_Main()
+            Form1.Set_Home_Value()
 
         Catch ex As Exception
 
@@ -44,19 +57,7 @@
 
         End Try
 
-        strconnection()
 
-        cmd.Connection = strconn
-        strconn.Open()
-
-        cmd.CommandText = "UPDATE `products` SET `QUANTITY`='" & FINAL_AMOUNT & "',`STOCK_STATUS`='" & NEW_STATUS & "',`TOTAL_PRICE`='" & NEW_TOTAL & "',`LAST_STOCK`='" & ITEM_ADD_DATE & "',`PRV_ORDQ`='" & STOCK_AMOUNT & "' WHERE `ITEM_ID` = '" & ID & "'; UPDATE `latest_date` SET `last_restock`='" & ITEM_ADD_DATE & "' WHERE 1"
-        cmd.ExecuteNonQuery()
-        MsgBox("Success", MsgBoxStyle.OkOnly, "Action Confirmation")
-        strconn.Close()
-
-
-        Form1.Load_Table_Main()
-        Form1.Set_Home_Value()
 
     End Sub
 
