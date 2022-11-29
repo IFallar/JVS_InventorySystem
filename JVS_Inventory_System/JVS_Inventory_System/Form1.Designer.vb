@@ -22,27 +22,23 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle106 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle107 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle108 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle109 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle110 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle111 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle112 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim DataGridViewCellStyle113 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle114 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle115 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle116 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle117 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle118 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle119 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle120 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.acc_type_lbl = New System.Windows.Forms.Label()
         Me.acc_name_lbl = New System.Windows.Forms.Label()
@@ -51,64 +47,6 @@ Partial Class Form1
         Me.SIDE_LOG_BTN = New System.Windows.Forms.Button()
         Me.SIDE_ITEM_BTN = New System.Windows.Forms.Button()
         Me.Base_Panel = New System.Windows.Forms.Panel()
-        Me.PANEL_SETTINGS = New System.Windows.Forms.Panel()
-        Me.SETTINGS_LOWER = New System.Windows.Forms.TabControl()
-        Me.TAB_BRAND = New System.Windows.Forms.TabPage()
-        Me.BRANDS_DGV = New System.Windows.Forms.DataGridView()
-        Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.DEL_BRAND = New System.Windows.Forms.Button()
-        Me.SAV_BRAND = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBX_BRNAME = New System.Windows.Forms.TextBox()
-        Me.SBX_BRAND = New System.Windows.Forms.TextBox()
-        Me.RESET_BRAND = New System.Windows.Forms.Button()
-        Me.TAB_VARIANT = New System.Windows.Forms.TabPage()
-        Me.RESET_VARIANT = New System.Windows.Forms.Button()
-        Me.VARIANTS_DGV = New System.Windows.Forms.DataGridView()
-        Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.DEL_VAR = New System.Windows.Forms.Button()
-        Me.SAV_VAR = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TBX_VARNAME = New System.Windows.Forms.TextBox()
-        Me.SBX_VAR = New System.Windows.Forms.TextBox()
-        Me.TAB_CAT = New System.Windows.Forms.TabPage()
-        Me.RESET_CAT = New System.Windows.Forms.Button()
-        Me.CAT_DGV = New System.Windows.Forms.DataGridView()
-        Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.DEL_CAT = New System.Windows.Forms.Button()
-        Me.SAV_CAT = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TBX_CATNAME = New System.Windows.Forms.TextBox()
-        Me.SBX_CAT = New System.Windows.Forms.TextBox()
-        Me.TAB_SUP = New System.Windows.Forms.TabPage()
-        Me.RESET_SUP = New System.Windows.Forms.Button()
-        Me.SUP_DGV = New System.Windows.Forms.DataGridView()
-        Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.DEL_SUP = New System.Windows.Forms.Button()
-        Me.SAV_SUP = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TBX_SUPMED = New System.Windows.Forms.TextBox()
-        Me.TBX_SUPMAIL = New System.Windows.Forms.TextBox()
-        Me.TBX_SUPNUM = New System.Windows.Forms.TextBox()
-        Me.TBX_SUPNAME = New System.Windows.Forms.TextBox()
-        Me.SBX_SUP = New System.Windows.Forms.TextBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.NEW_ACC_BTN = New System.Windows.Forms.Button()
-        Me.UPDATE_BTN = New System.Windows.Forms.Button()
-        Me.RESET_BTN = New System.Windows.Forms.Button()
-        Me.L_NAME_TBX = New System.Windows.Forms.TextBox()
-        Me.L_NAME = New System.Windows.Forms.Label()
-        Me.ADDRESS_TBX = New System.Windows.Forms.TextBox()
-        Me.ADDRESS = New System.Windows.Forms.Label()
-        Me.F_NAME = New System.Windows.Forms.Label()
-        Me.F_NAME_TBX = New System.Windows.Forms.TextBox()
-        Me.EMAIL_TBX = New System.Windows.Forms.TextBox()
-        Me.EMAIL = New System.Windows.Forms.Label()
-        Me.PASSWORD_TBX = New System.Windows.Forms.TextBox()
-        Me.NUMBER_TBX = New System.Windows.Forms.TextBox()
-        Me.PASSWORD = New System.Windows.Forms.Label()
-        Me.NUMBER = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.HOME_PANEL = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -173,19 +111,66 @@ Partial Class Form1
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.TD_LBL3 = New System.Windows.Forms.Label()
         Me.TD_BTN3 = New System.Windows.Forms.Button()
+        Me.PANEL_SETTINGS = New System.Windows.Forms.Panel()
+        Me.SETTINGS_LOWER = New System.Windows.Forms.TabControl()
+        Me.TAB_BRAND = New System.Windows.Forms.TabPage()
+        Me.BRANDS_DGV = New System.Windows.Forms.DataGridView()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.DEL_BRAND = New System.Windows.Forms.Button()
+        Me.SAV_BRAND = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TBX_BRNAME = New System.Windows.Forms.TextBox()
+        Me.SBX_BRAND = New System.Windows.Forms.TextBox()
+        Me.RESET_BRAND = New System.Windows.Forms.Button()
+        Me.TAB_VARIANT = New System.Windows.Forms.TabPage()
+        Me.RESET_VARIANT = New System.Windows.Forms.Button()
+        Me.VARIANTS_DGV = New System.Windows.Forms.DataGridView()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.DEL_VAR = New System.Windows.Forms.Button()
+        Me.SAV_VAR = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TBX_VARNAME = New System.Windows.Forms.TextBox()
+        Me.SBX_VAR = New System.Windows.Forms.TextBox()
+        Me.TAB_CAT = New System.Windows.Forms.TabPage()
+        Me.RESET_CAT = New System.Windows.Forms.Button()
+        Me.CAT_DGV = New System.Windows.Forms.DataGridView()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.DEL_CAT = New System.Windows.Forms.Button()
+        Me.SAV_CAT = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TBX_CATNAME = New System.Windows.Forms.TextBox()
+        Me.SBX_CAT = New System.Windows.Forms.TextBox()
+        Me.TAB_SUP = New System.Windows.Forms.TabPage()
+        Me.RESET_SUP = New System.Windows.Forms.Button()
+        Me.SUP_DGV = New System.Windows.Forms.DataGridView()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.DEL_SUP = New System.Windows.Forms.Button()
+        Me.SAV_SUP = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TBX_SUPMED = New System.Windows.Forms.TextBox()
+        Me.TBX_SUPMAIL = New System.Windows.Forms.TextBox()
+        Me.TBX_SUPNUM = New System.Windows.Forms.TextBox()
+        Me.TBX_SUPNAME = New System.Windows.Forms.TextBox()
+        Me.SBX_SUP = New System.Windows.Forms.TextBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.NEW_ACC_BTN = New System.Windows.Forms.Button()
+        Me.UPDATE_BTN = New System.Windows.Forms.Button()
+        Me.RESET_BTN = New System.Windows.Forms.Button()
+        Me.L_NAME_TBX = New System.Windows.Forms.TextBox()
+        Me.L_NAME = New System.Windows.Forms.Label()
+        Me.ADDRESS_TBX = New System.Windows.Forms.TextBox()
+        Me.ADDRESS = New System.Windows.Forms.Label()
+        Me.F_NAME = New System.Windows.Forms.Label()
+        Me.F_NAME_TBX = New System.Windows.Forms.TextBox()
+        Me.EMAIL_TBX = New System.Windows.Forms.TextBox()
+        Me.EMAIL = New System.Windows.Forms.Label()
+        Me.PASSWORD_TBX = New System.Windows.Forms.TextBox()
+        Me.NUMBER_TBX = New System.Windows.Forms.TextBox()
+        Me.PASSWORD = New System.Windows.Forms.Label()
+        Me.NUMBER = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Base_Panel.SuspendLayout()
-        Me.PANEL_SETTINGS.SuspendLayout()
-        Me.SETTINGS_LOWER.SuspendLayout()
-        Me.TAB_BRAND.SuspendLayout()
-        CType(Me.BRANDS_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TAB_VARIANT.SuspendLayout()
-        CType(Me.VARIANTS_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TAB_CAT.SuspendLayout()
-        CType(Me.CAT_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TAB_SUP.SuspendLayout()
-        CType(Me.SUP_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox4.SuspendLayout()
         Me.HOME_PANEL.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -209,6 +194,17 @@ Partial Class Form1
         Me.Panel11.SuspendLayout()
         Me.Panel12.SuspendLayout()
         Me.Panel13.SuspendLayout()
+        Me.PANEL_SETTINGS.SuspendLayout()
+        Me.SETTINGS_LOWER.SuspendLayout()
+        Me.TAB_BRAND.SuspendLayout()
+        CType(Me.BRANDS_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TAB_VARIANT.SuspendLayout()
+        CType(Me.VARIANTS_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TAB_CAT.SuspendLayout()
+        CType(Me.CAT_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TAB_SUP.SuspendLayout()
+        CType(Me.SUP_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -347,853 +343,6 @@ Partial Class Form1
         Me.Base_Panel.Name = "Base_Panel"
         Me.Base_Panel.Size = New System.Drawing.Size(881, 660)
         Me.Base_Panel.TabIndex = 2
-        '
-        'PANEL_SETTINGS
-        '
-        Me.PANEL_SETTINGS.Controls.Add(Me.SETTINGS_LOWER)
-        Me.PANEL_SETTINGS.Controls.Add(Me.GroupBox4)
-        Me.PANEL_SETTINGS.Controls.Add(Me.Label2)
-        Me.PANEL_SETTINGS.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PANEL_SETTINGS.Location = New System.Drawing.Point(0, 0)
-        Me.PANEL_SETTINGS.Name = "PANEL_SETTINGS"
-        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 660)
-        Me.PANEL_SETTINGS.TabIndex = 2
-        '
-        'SETTINGS_LOWER
-        '
-        Me.SETTINGS_LOWER.Controls.Add(Me.TAB_BRAND)
-        Me.SETTINGS_LOWER.Controls.Add(Me.TAB_VARIANT)
-        Me.SETTINGS_LOWER.Controls.Add(Me.TAB_CAT)
-        Me.SETTINGS_LOWER.Controls.Add(Me.TAB_SUP)
-        Me.SETTINGS_LOWER.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
-        Me.SETTINGS_LOWER.Location = New System.Drawing.Point(34, 305)
-        Me.SETTINGS_LOWER.Name = "SETTINGS_LOWER"
-        Me.SETTINGS_LOWER.SelectedIndex = 0
-        Me.SETTINGS_LOWER.Size = New System.Drawing.Size(592, 312)
-        Me.SETTINGS_LOWER.TabIndex = 67
-        '
-        'TAB_BRAND
-        '
-        Me.TAB_BRAND.Controls.Add(Me.BRANDS_DGV)
-        Me.TAB_BRAND.Controls.Add(Me.Panel15)
-        Me.TAB_BRAND.Controls.Add(Me.DEL_BRAND)
-        Me.TAB_BRAND.Controls.Add(Me.SAV_BRAND)
-        Me.TAB_BRAND.Controls.Add(Me.Label3)
-        Me.TAB_BRAND.Controls.Add(Me.TBX_BRNAME)
-        Me.TAB_BRAND.Controls.Add(Me.SBX_BRAND)
-        Me.TAB_BRAND.Controls.Add(Me.RESET_BRAND)
-        Me.TAB_BRAND.Location = New System.Drawing.Point(4, 29)
-        Me.TAB_BRAND.Name = "TAB_BRAND"
-        Me.TAB_BRAND.Padding = New System.Windows.Forms.Padding(3)
-        Me.TAB_BRAND.Size = New System.Drawing.Size(584, 279)
-        Me.TAB_BRAND.TabIndex = 0
-        Me.TAB_BRAND.Text = "BRANDS"
-        Me.TAB_BRAND.UseVisualStyleBackColor = True
-        '
-        'BRANDS_DGV
-        '
-        Me.BRANDS_DGV.AllowUserToAddRows = False
-        Me.BRANDS_DGV.AllowUserToDeleteRows = False
-        Me.BRANDS_DGV.AllowUserToResizeColumns = False
-        Me.BRANDS_DGV.AllowUserToResizeRows = False
-        Me.BRANDS_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.BRANDS_DGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.BRANDS_DGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle101.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle101.Font = New System.Drawing.Font("Tw Cen MT", 12.0!)
-        DataGridViewCellStyle101.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle101.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle101.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle101.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BRANDS_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle101
-        Me.BRANDS_DGV.ColumnHeadersHeight = 30
-        Me.BRANDS_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle102.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle102.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        DataGridViewCellStyle102.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle102.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle102.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle102.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BRANDS_DGV.DefaultCellStyle = DataGridViewCellStyle102
-        Me.BRANDS_DGV.EnableHeadersVisualStyles = False
-        Me.BRANDS_DGV.Location = New System.Drawing.Point(259, 18)
-        Me.BRANDS_DGV.Name = "BRANDS_DGV"
-        Me.BRANDS_DGV.ReadOnly = True
-        DataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle103.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle103.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
-        DataGridViewCellStyle103.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle103.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle103.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle103.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BRANDS_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle103
-        Me.BRANDS_DGV.RowHeadersVisible = False
-        Me.BRANDS_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.BRANDS_DGV.Size = New System.Drawing.Size(309, 234)
-        Me.BRANDS_DGV.TabIndex = 74
-        '
-        'Panel15
-        '
-        Me.Panel15.BackColor = System.Drawing.Color.DimGray
-        Me.Panel15.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Panel15.Location = New System.Drawing.Point(13, 55)
-        Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(235, 2)
-        Me.Panel15.TabIndex = 80
-        '
-        'DEL_BRAND
-        '
-        Me.DEL_BRAND.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DEL_BRAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DEL_BRAND.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.DEL_BRAND.ForeColor = System.Drawing.SystemColors.Control
-        Me.DEL_BRAND.Location = New System.Drawing.Point(13, 120)
-        Me.DEL_BRAND.Name = "DEL_BRAND"
-        Me.DEL_BRAND.Size = New System.Drawing.Size(75, 26)
-        Me.DEL_BRAND.TabIndex = 74
-        Me.DEL_BRAND.Text = "DELETE"
-        Me.DEL_BRAND.UseVisualStyleBackColor = False
-        Me.DEL_BRAND.Visible = False
-        '
-        'SAV_BRAND
-        '
-        Me.SAV_BRAND.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.SAV_BRAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SAV_BRAND.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.SAV_BRAND.ForeColor = System.Drawing.SystemColors.Control
-        Me.SAV_BRAND.Location = New System.Drawing.Point(172, 120)
-        Me.SAV_BRAND.Name = "SAV_BRAND"
-        Me.SAV_BRAND.Size = New System.Drawing.Size(75, 26)
-        Me.SAV_BRAND.TabIndex = 77
-        Me.SAV_BRAND.Text = "ADD"
-        Me.SAV_BRAND.UseVisualStyleBackColor = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(10, 66)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.Label3.Size = New System.Drawing.Size(87, 16)
-        Me.Label3.TabIndex = 75
-        Me.Label3.Text = "BRAND NAME"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TBX_BRNAME
-        '
-        Me.TBX_BRNAME.BackColor = System.Drawing.SystemColors.Window
-        Me.TBX_BRNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.TBX_BRNAME.Location = New System.Drawing.Point(13, 85)
-        Me.TBX_BRNAME.Name = "TBX_BRNAME"
-        Me.TBX_BRNAME.Size = New System.Drawing.Size(235, 27)
-        Me.TBX_BRNAME.TabIndex = 78
-        '
-        'SBX_BRAND
-        '
-        Me.SBX_BRAND.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.SBX_BRAND.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SBX_BRAND.Location = New System.Drawing.Point(13, 18)
-        Me.SBX_BRAND.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
-        Me.SBX_BRAND.Name = "SBX_BRAND"
-        Me.SBX_BRAND.Size = New System.Drawing.Size(235, 26)
-        Me.SBX_BRAND.TabIndex = 76
-        '
-        'RESET_BRAND
-        '
-        Me.RESET_BRAND.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.RESET_BRAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RESET_BRAND.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.RESET_BRAND.ForeColor = System.Drawing.SystemColors.Control
-        Me.RESET_BRAND.Location = New System.Drawing.Point(92, 120)
-        Me.RESET_BRAND.Name = "RESET_BRAND"
-        Me.RESET_BRAND.Size = New System.Drawing.Size(75, 26)
-        Me.RESET_BRAND.TabIndex = 74
-        Me.RESET_BRAND.Text = "RESET"
-        Me.RESET_BRAND.UseVisualStyleBackColor = False
-        '
-        'TAB_VARIANT
-        '
-        Me.TAB_VARIANT.Controls.Add(Me.RESET_VARIANT)
-        Me.TAB_VARIANT.Controls.Add(Me.VARIANTS_DGV)
-        Me.TAB_VARIANT.Controls.Add(Me.Panel16)
-        Me.TAB_VARIANT.Controls.Add(Me.DEL_VAR)
-        Me.TAB_VARIANT.Controls.Add(Me.SAV_VAR)
-        Me.TAB_VARIANT.Controls.Add(Me.Label4)
-        Me.TAB_VARIANT.Controls.Add(Me.TBX_VARNAME)
-        Me.TAB_VARIANT.Controls.Add(Me.SBX_VAR)
-        Me.TAB_VARIANT.Location = New System.Drawing.Point(4, 29)
-        Me.TAB_VARIANT.Name = "TAB_VARIANT"
-        Me.TAB_VARIANT.Padding = New System.Windows.Forms.Padding(3)
-        Me.TAB_VARIANT.Size = New System.Drawing.Size(584, 279)
-        Me.TAB_VARIANT.TabIndex = 1
-        Me.TAB_VARIANT.Text = "VARIANTS"
-        Me.TAB_VARIANT.UseVisualStyleBackColor = True
-        '
-        'RESET_VARIANT
-        '
-        Me.RESET_VARIANT.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.RESET_VARIANT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RESET_VARIANT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.RESET_VARIANT.ForeColor = System.Drawing.SystemColors.Control
-        Me.RESET_VARIANT.Location = New System.Drawing.Point(91, 120)
-        Me.RESET_VARIANT.Name = "RESET_VARIANT"
-        Me.RESET_VARIANT.Size = New System.Drawing.Size(75, 26)
-        Me.RESET_VARIANT.TabIndex = 87
-        Me.RESET_VARIANT.Text = "RESET"
-        Me.RESET_VARIANT.UseVisualStyleBackColor = False
-        '
-        'VARIANTS_DGV
-        '
-        Me.VARIANTS_DGV.AllowUserToAddRows = False
-        Me.VARIANTS_DGV.AllowUserToDeleteRows = False
-        Me.VARIANTS_DGV.AllowUserToResizeColumns = False
-        Me.VARIANTS_DGV.AllowUserToResizeRows = False
-        Me.VARIANTS_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.VARIANTS_DGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.VARIANTS_DGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle104.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle104.Font = New System.Drawing.Font("Tw Cen MT", 12.0!)
-        DataGridViewCellStyle104.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle104.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle104.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle104.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.VARIANTS_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle104
-        Me.VARIANTS_DGV.ColumnHeadersHeight = 30
-        Me.VARIANTS_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle105.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle105.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        DataGridViewCellStyle105.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle105.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle105.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle105.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.VARIANTS_DGV.DefaultCellStyle = DataGridViewCellStyle105
-        Me.VARIANTS_DGV.EnableHeadersVisualStyles = False
-        Me.VARIANTS_DGV.Location = New System.Drawing.Point(259, 18)
-        Me.VARIANTS_DGV.Name = "VARIANTS_DGV"
-        Me.VARIANTS_DGV.ReadOnly = True
-        DataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle106.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle106.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
-        DataGridViewCellStyle106.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle106.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle106.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle106.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.VARIANTS_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle106
-        Me.VARIANTS_DGV.RowHeadersVisible = False
-        Me.VARIANTS_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.VARIANTS_DGV.Size = New System.Drawing.Size(309, 234)
-        Me.VARIANTS_DGV.TabIndex = 75
-        '
-        'Panel16
-        '
-        Me.Panel16.BackColor = System.Drawing.Color.DimGray
-        Me.Panel16.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Panel16.Location = New System.Drawing.Point(13, 55)
-        Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(235, 2)
-        Me.Panel16.TabIndex = 86
-        '
-        'DEL_VAR
-        '
-        Me.DEL_VAR.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DEL_VAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DEL_VAR.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.DEL_VAR.ForeColor = System.Drawing.SystemColors.Control
-        Me.DEL_VAR.Location = New System.Drawing.Point(13, 120)
-        Me.DEL_VAR.Name = "DEL_VAR"
-        Me.DEL_VAR.Size = New System.Drawing.Size(75, 26)
-        Me.DEL_VAR.TabIndex = 81
-        Me.DEL_VAR.Text = "DELETE"
-        Me.DEL_VAR.UseVisualStyleBackColor = False
-        Me.DEL_VAR.Visible = False
-        '
-        'SAV_VAR
-        '
-        Me.SAV_VAR.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.SAV_VAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SAV_VAR.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.SAV_VAR.ForeColor = System.Drawing.SystemColors.Control
-        Me.SAV_VAR.Location = New System.Drawing.Point(172, 120)
-        Me.SAV_VAR.Name = "SAV_VAR"
-        Me.SAV_VAR.Size = New System.Drawing.Size(75, 26)
-        Me.SAV_VAR.TabIndex = 84
-        Me.SAV_VAR.Text = "ADD"
-        Me.SAV_VAR.UseVisualStyleBackColor = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Gray
-        Me.Label4.Location = New System.Drawing.Point(10, 66)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.Label4.Size = New System.Drawing.Size(66, 16)
-        Me.Label4.TabIndex = 82
-        Me.Label4.Text = "VARIANTS"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TBX_VARNAME
-        '
-        Me.TBX_VARNAME.BackColor = System.Drawing.SystemColors.Window
-        Me.TBX_VARNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.TBX_VARNAME.Location = New System.Drawing.Point(13, 85)
-        Me.TBX_VARNAME.Name = "TBX_VARNAME"
-        Me.TBX_VARNAME.Size = New System.Drawing.Size(235, 27)
-        Me.TBX_VARNAME.TabIndex = 85
-        '
-        'SBX_VAR
-        '
-        Me.SBX_VAR.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.SBX_VAR.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SBX_VAR.Location = New System.Drawing.Point(13, 18)
-        Me.SBX_VAR.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
-        Me.SBX_VAR.Name = "SBX_VAR"
-        Me.SBX_VAR.Size = New System.Drawing.Size(235, 26)
-        Me.SBX_VAR.TabIndex = 83
-        '
-        'TAB_CAT
-        '
-        Me.TAB_CAT.Controls.Add(Me.RESET_CAT)
-        Me.TAB_CAT.Controls.Add(Me.CAT_DGV)
-        Me.TAB_CAT.Controls.Add(Me.Panel17)
-        Me.TAB_CAT.Controls.Add(Me.DEL_CAT)
-        Me.TAB_CAT.Controls.Add(Me.SAV_CAT)
-        Me.TAB_CAT.Controls.Add(Me.Label5)
-        Me.TAB_CAT.Controls.Add(Me.TBX_CATNAME)
-        Me.TAB_CAT.Controls.Add(Me.SBX_CAT)
-        Me.TAB_CAT.Location = New System.Drawing.Point(4, 29)
-        Me.TAB_CAT.Name = "TAB_CAT"
-        Me.TAB_CAT.Padding = New System.Windows.Forms.Padding(3)
-        Me.TAB_CAT.Size = New System.Drawing.Size(584, 279)
-        Me.TAB_CAT.TabIndex = 2
-        Me.TAB_CAT.Text = "CATEGORIES"
-        Me.TAB_CAT.UseVisualStyleBackColor = True
-        '
-        'RESET_CAT
-        '
-        Me.RESET_CAT.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.RESET_CAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RESET_CAT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.RESET_CAT.ForeColor = System.Drawing.SystemColors.Control
-        Me.RESET_CAT.Location = New System.Drawing.Point(91, 120)
-        Me.RESET_CAT.Name = "RESET_CAT"
-        Me.RESET_CAT.Size = New System.Drawing.Size(75, 26)
-        Me.RESET_CAT.TabIndex = 87
-        Me.RESET_CAT.Text = "RESET"
-        Me.RESET_CAT.UseVisualStyleBackColor = False
-        '
-        'CAT_DGV
-        '
-        Me.CAT_DGV.AllowUserToAddRows = False
-        Me.CAT_DGV.AllowUserToDeleteRows = False
-        Me.CAT_DGV.AllowUserToResizeColumns = False
-        Me.CAT_DGV.AllowUserToResizeRows = False
-        Me.CAT_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.CAT_DGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.CAT_DGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle107.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle107.Font = New System.Drawing.Font("Tw Cen MT", 12.0!)
-        DataGridViewCellStyle107.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle107.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle107.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle107.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CAT_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle107
-        Me.CAT_DGV.ColumnHeadersHeight = 30
-        Me.CAT_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle108.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle108.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        DataGridViewCellStyle108.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle108.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle108.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle108.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.CAT_DGV.DefaultCellStyle = DataGridViewCellStyle108
-        Me.CAT_DGV.EnableHeadersVisualStyles = False
-        Me.CAT_DGV.Location = New System.Drawing.Point(259, 18)
-        Me.CAT_DGV.Name = "CAT_DGV"
-        Me.CAT_DGV.ReadOnly = True
-        DataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle109.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle109.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
-        DataGridViewCellStyle109.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle109.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle109.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle109.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CAT_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle109
-        Me.CAT_DGV.RowHeadersVisible = False
-        Me.CAT_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.CAT_DGV.Size = New System.Drawing.Size(309, 234)
-        Me.CAT_DGV.TabIndex = 75
-        '
-        'Panel17
-        '
-        Me.Panel17.BackColor = System.Drawing.Color.DimGray
-        Me.Panel17.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Panel17.Location = New System.Drawing.Point(13, 55)
-        Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(235, 2)
-        Me.Panel17.TabIndex = 86
-        '
-        'DEL_CAT
-        '
-        Me.DEL_CAT.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DEL_CAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DEL_CAT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.DEL_CAT.ForeColor = System.Drawing.SystemColors.Control
-        Me.DEL_CAT.Location = New System.Drawing.Point(13, 120)
-        Me.DEL_CAT.Name = "DEL_CAT"
-        Me.DEL_CAT.Size = New System.Drawing.Size(75, 26)
-        Me.DEL_CAT.TabIndex = 81
-        Me.DEL_CAT.Text = "DELETE"
-        Me.DEL_CAT.UseVisualStyleBackColor = False
-        Me.DEL_CAT.Visible = False
-        '
-        'SAV_CAT
-        '
-        Me.SAV_CAT.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.SAV_CAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SAV_CAT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.SAV_CAT.ForeColor = System.Drawing.SystemColors.Control
-        Me.SAV_CAT.Location = New System.Drawing.Point(172, 120)
-        Me.SAV_CAT.Name = "SAV_CAT"
-        Me.SAV_CAT.Size = New System.Drawing.Size(75, 26)
-        Me.SAV_CAT.TabIndex = 84
-        Me.SAV_CAT.Text = "ADD"
-        Me.SAV_CAT.UseVisualStyleBackColor = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(10, 66)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.Label5.Size = New System.Drawing.Size(83, 16)
-        Me.Label5.TabIndex = 82
-        Me.Label5.Text = "CATEGORIES"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TBX_CATNAME
-        '
-        Me.TBX_CATNAME.BackColor = System.Drawing.SystemColors.Window
-        Me.TBX_CATNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.TBX_CATNAME.Location = New System.Drawing.Point(13, 85)
-        Me.TBX_CATNAME.Name = "TBX_CATNAME"
-        Me.TBX_CATNAME.Size = New System.Drawing.Size(235, 27)
-        Me.TBX_CATNAME.TabIndex = 85
-        '
-        'SBX_CAT
-        '
-        Me.SBX_CAT.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.SBX_CAT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SBX_CAT.Location = New System.Drawing.Point(13, 18)
-        Me.SBX_CAT.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
-        Me.SBX_CAT.Name = "SBX_CAT"
-        Me.SBX_CAT.Size = New System.Drawing.Size(235, 26)
-        Me.SBX_CAT.TabIndex = 83
-        '
-        'TAB_SUP
-        '
-        Me.TAB_SUP.Controls.Add(Me.RESET_SUP)
-        Me.TAB_SUP.Controls.Add(Me.SUP_DGV)
-        Me.TAB_SUP.Controls.Add(Me.Panel14)
-        Me.TAB_SUP.Controls.Add(Me.DEL_SUP)
-        Me.TAB_SUP.Controls.Add(Me.SAV_SUP)
-        Me.TAB_SUP.Controls.Add(Me.Label1)
-        Me.TAB_SUP.Controls.Add(Me.TBX_SUPMED)
-        Me.TAB_SUP.Controls.Add(Me.TBX_SUPMAIL)
-        Me.TAB_SUP.Controls.Add(Me.TBX_SUPNUM)
-        Me.TAB_SUP.Controls.Add(Me.TBX_SUPNAME)
-        Me.TAB_SUP.Controls.Add(Me.SBX_SUP)
-        Me.TAB_SUP.Location = New System.Drawing.Point(4, 29)
-        Me.TAB_SUP.Name = "TAB_SUP"
-        Me.TAB_SUP.Padding = New System.Windows.Forms.Padding(3)
-        Me.TAB_SUP.Size = New System.Drawing.Size(584, 279)
-        Me.TAB_SUP.TabIndex = 3
-        Me.TAB_SUP.Text = "SUPPLIERS"
-        Me.TAB_SUP.UseVisualStyleBackColor = True
-        '
-        'RESET_SUP
-        '
-        Me.RESET_SUP.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.RESET_SUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RESET_SUP.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.RESET_SUP.ForeColor = System.Drawing.SystemColors.Control
-        Me.RESET_SUP.Location = New System.Drawing.Point(92, 226)
-        Me.RESET_SUP.Name = "RESET_SUP"
-        Me.RESET_SUP.Size = New System.Drawing.Size(75, 26)
-        Me.RESET_SUP.TabIndex = 75
-        Me.RESET_SUP.Text = "RESET"
-        Me.RESET_SUP.UseVisualStyleBackColor = False
-        '
-        'SUP_DGV
-        '
-        Me.SUP_DGV.AllowUserToAddRows = False
-        Me.SUP_DGV.AllowUserToDeleteRows = False
-        Me.SUP_DGV.AllowUserToResizeColumns = False
-        Me.SUP_DGV.AllowUserToResizeRows = False
-        Me.SUP_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.SUP_DGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.SUP_DGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.SUP_DGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle110.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle110.Font = New System.Drawing.Font("Tw Cen MT", 12.0!)
-        DataGridViewCellStyle110.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle110.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle110.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle110.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SUP_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle110
-        Me.SUP_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle111.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle111.Font = New System.Drawing.Font("Tw Cen MT", 10.0!)
-        DataGridViewCellStyle111.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle111.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle111.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle111.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.SUP_DGV.DefaultCellStyle = DataGridViewCellStyle111
-        Me.SUP_DGV.EnableHeadersVisualStyles = False
-        Me.SUP_DGV.Location = New System.Drawing.Point(259, 18)
-        Me.SUP_DGV.Name = "SUP_DGV"
-        Me.SUP_DGV.ReadOnly = True
-        DataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle112.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle112.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
-        DataGridViewCellStyle112.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle112.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle112.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle112.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SUP_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle112
-        Me.SUP_DGV.RowHeadersVisible = False
-        Me.SUP_DGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.SUP_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.SUP_DGV.Size = New System.Drawing.Size(309, 234)
-        Me.SUP_DGV.TabIndex = 74
-        '
-        'Panel14
-        '
-        Me.Panel14.BackColor = System.Drawing.Color.DimGray
-        Me.Panel14.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Panel14.Location = New System.Drawing.Point(13, 55)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(235, 2)
-        Me.Panel14.TabIndex = 73
-        '
-        'DEL_SUP
-        '
-        Me.DEL_SUP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DEL_SUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DEL_SUP.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.DEL_SUP.ForeColor = System.Drawing.SystemColors.Control
-        Me.DEL_SUP.Location = New System.Drawing.Point(14, 226)
-        Me.DEL_SUP.Name = "DEL_SUP"
-        Me.DEL_SUP.Size = New System.Drawing.Size(75, 26)
-        Me.DEL_SUP.TabIndex = 68
-        Me.DEL_SUP.Text = "DELETE"
-        Me.DEL_SUP.UseVisualStyleBackColor = False
-        Me.DEL_SUP.Visible = False
-        '
-        'SAV_SUP
-        '
-        Me.SAV_SUP.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.SAV_SUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SAV_SUP.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.SAV_SUP.ForeColor = System.Drawing.SystemColors.Control
-        Me.SAV_SUP.Location = New System.Drawing.Point(173, 226)
-        Me.SAV_SUP.Name = "SAV_SUP"
-        Me.SAV_SUP.Size = New System.Drawing.Size(75, 26)
-        Me.SAV_SUP.TabIndex = 69
-        Me.SAV_SUP.Text = "ADD"
-        Me.SAV_SUP.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(10, 66)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(93, 16)
-        Me.Label1.TabIndex = 68
-        Me.Label1.Text = "SUPPLIER INFO"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TBX_SUPMED
-        '
-        Me.TBX_SUPMED.BackColor = System.Drawing.SystemColors.Window
-        Me.TBX_SUPMED.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.TBX_SUPMED.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.TBX_SUPMED.Location = New System.Drawing.Point(13, 183)
-        Me.TBX_SUPMED.Name = "TBX_SUPMED"
-        Me.TBX_SUPMED.Size = New System.Drawing.Size(235, 27)
-        Me.TBX_SUPMED.TabIndex = 72
-        Me.TBX_SUPMED.Text = "Other Links"
-        '
-        'TBX_SUPMAIL
-        '
-        Me.TBX_SUPMAIL.BackColor = System.Drawing.SystemColors.Window
-        Me.TBX_SUPMAIL.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.TBX_SUPMAIL.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.TBX_SUPMAIL.Location = New System.Drawing.Point(13, 151)
-        Me.TBX_SUPMAIL.Name = "TBX_SUPMAIL"
-        Me.TBX_SUPMAIL.Size = New System.Drawing.Size(235, 27)
-        Me.TBX_SUPMAIL.TabIndex = 71
-        Me.TBX_SUPMAIL.Text = "Email"
-        '
-        'TBX_SUPNUM
-        '
-        Me.TBX_SUPNUM.BackColor = System.Drawing.SystemColors.Window
-        Me.TBX_SUPNUM.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.TBX_SUPNUM.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.TBX_SUPNUM.Location = New System.Drawing.Point(13, 118)
-        Me.TBX_SUPNUM.Name = "TBX_SUPNUM"
-        Me.TBX_SUPNUM.Size = New System.Drawing.Size(235, 27)
-        Me.TBX_SUPNUM.TabIndex = 70
-        Me.TBX_SUPNUM.Text = "Number"
-        '
-        'TBX_SUPNAME
-        '
-        Me.TBX_SUPNAME.BackColor = System.Drawing.SystemColors.Window
-        Me.TBX_SUPNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.TBX_SUPNAME.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.TBX_SUPNAME.Location = New System.Drawing.Point(13, 85)
-        Me.TBX_SUPNAME.Name = "TBX_SUPNAME"
-        Me.TBX_SUPNAME.Size = New System.Drawing.Size(235, 27)
-        Me.TBX_SUPNAME.TabIndex = 69
-        Me.TBX_SUPNAME.Text = "Name"
-        '
-        'SBX_SUP
-        '
-        Me.SBX_SUP.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.SBX_SUP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SBX_SUP.Location = New System.Drawing.Point(13, 18)
-        Me.SBX_SUP.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
-        Me.SBX_SUP.Name = "SBX_SUP"
-        Me.SBX_SUP.Size = New System.Drawing.Size(235, 26)
-        Me.SBX_SUP.TabIndex = 68
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.NEW_ACC_BTN)
-        Me.GroupBox4.Controls.Add(Me.UPDATE_BTN)
-        Me.GroupBox4.Controls.Add(Me.RESET_BTN)
-        Me.GroupBox4.Controls.Add(Me.L_NAME_TBX)
-        Me.GroupBox4.Controls.Add(Me.L_NAME)
-        Me.GroupBox4.Controls.Add(Me.ADDRESS_TBX)
-        Me.GroupBox4.Controls.Add(Me.ADDRESS)
-        Me.GroupBox4.Controls.Add(Me.F_NAME)
-        Me.GroupBox4.Controls.Add(Me.F_NAME_TBX)
-        Me.GroupBox4.Controls.Add(Me.EMAIL_TBX)
-        Me.GroupBox4.Controls.Add(Me.EMAIL)
-        Me.GroupBox4.Controls.Add(Me.PASSWORD_TBX)
-        Me.GroupBox4.Controls.Add(Me.NUMBER_TBX)
-        Me.GroupBox4.Controls.Add(Me.PASSWORD)
-        Me.GroupBox4.Controls.Add(Me.NUMBER)
-        Me.GroupBox4.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
-        Me.GroupBox4.Location = New System.Drawing.Point(34, 79)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(592, 203)
-        Me.GroupBox4.TabIndex = 66
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "PROFILE"
-        '
-        'NEW_ACC_BTN
-        '
-        Me.NEW_ACC_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.NEW_ACC_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.NEW_ACC_BTN.Font = New System.Drawing.Font("Tw Cen MT", 10.0!)
-        Me.NEW_ACC_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.NEW_ACC_BTN.Location = New System.Drawing.Point(468, 0)
-        Me.NEW_ACC_BTN.Name = "NEW_ACC_BTN"
-        Me.NEW_ACC_BTN.Size = New System.Drawing.Size(104, 26)
-        Me.NEW_ACC_BTN.TabIndex = 67
-        Me.NEW_ACC_BTN.Text = "+ New Account"
-        Me.NEW_ACC_BTN.UseVisualStyleBackColor = False
-        '
-        'UPDATE_BTN
-        '
-        Me.UPDATE_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.UPDATE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.UPDATE_BTN.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.UPDATE_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.UPDATE_BTN.Location = New System.Drawing.Point(495, 157)
-        Me.UPDATE_BTN.Name = "UPDATE_BTN"
-        Me.UPDATE_BTN.Size = New System.Drawing.Size(75, 26)
-        Me.UPDATE_BTN.TabIndex = 67
-        Me.UPDATE_BTN.Text = "UPDATE"
-        Me.UPDATE_BTN.UseVisualStyleBackColor = False
-        '
-        'RESET_BTN
-        '
-        Me.RESET_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.RESET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RESET_BTN.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
-        Me.RESET_BTN.ForeColor = System.Drawing.SystemColors.Control
-        Me.RESET_BTN.Location = New System.Drawing.Point(411, 157)
-        Me.RESET_BTN.Name = "RESET_BTN"
-        Me.RESET_BTN.Size = New System.Drawing.Size(75, 26)
-        Me.RESET_BTN.TabIndex = 66
-        Me.RESET_BTN.Text = "RESET"
-        Me.RESET_BTN.UseVisualStyleBackColor = False
-        '
-        'L_NAME_TBX
-        '
-        Me.L_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_NAME_TBX.Location = New System.Drawing.Point(159, 49)
-        Me.L_NAME_TBX.Name = "L_NAME_TBX"
-        Me.L_NAME_TBX.Size = New System.Drawing.Size(126, 26)
-        Me.L_NAME_TBX.TabIndex = 64
-        '
-        'L_NAME
-        '
-        Me.L_NAME.AutoSize = True
-        Me.L_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_NAME.ForeColor = System.Drawing.Color.Gray
-        Me.L_NAME.Location = New System.Drawing.Point(156, 30)
-        Me.L_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.L_NAME.Name = "L_NAME"
-        Me.L_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.L_NAME.Size = New System.Drawing.Size(74, 16)
-        Me.L_NAME.TabIndex = 57
-        Me.L_NAME.Text = "LAST NAME"
-        Me.L_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'ADDRESS_TBX
-        '
-        Me.ADDRESS_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ADDRESS_TBX.Location = New System.Drawing.Point(308, 103)
-        Me.ADDRESS_TBX.Name = "ADDRESS_TBX"
-        Me.ADDRESS_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.ADDRESS_TBX.TabIndex = 64
-        '
-        'ADDRESS
-        '
-        Me.ADDRESS.AutoSize = True
-        Me.ADDRESS.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ADDRESS.ForeColor = System.Drawing.Color.Gray
-        Me.ADDRESS.Location = New System.Drawing.Point(305, 84)
-        Me.ADDRESS.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.ADDRESS.Name = "ADDRESS"
-        Me.ADDRESS.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.ADDRESS.Size = New System.Drawing.Size(61, 16)
-        Me.ADDRESS.TabIndex = 65
-        Me.ADDRESS.Text = "ADDRESS"
-        Me.ADDRESS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'F_NAME
-        '
-        Me.F_NAME.AutoSize = True
-        Me.F_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.F_NAME.ForeColor = System.Drawing.Color.Gray
-        Me.F_NAME.Location = New System.Drawing.Point(19, 30)
-        Me.F_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.F_NAME.Name = "F_NAME"
-        Me.F_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.F_NAME.Size = New System.Drawing.Size(77, 16)
-        Me.F_NAME.TabIndex = 56
-        Me.F_NAME.Text = "FIRST NAME"
-        Me.F_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'F_NAME_TBX
-        '
-        Me.F_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.F_NAME_TBX.Location = New System.Drawing.Point(22, 49)
-        Me.F_NAME_TBX.Name = "F_NAME_TBX"
-        Me.F_NAME_TBX.Size = New System.Drawing.Size(126, 26)
-        Me.F_NAME_TBX.TabIndex = 55
-        '
-        'EMAIL_TBX
-        '
-        Me.EMAIL_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EMAIL_TBX.Location = New System.Drawing.Point(308, 49)
-        Me.EMAIL_TBX.Name = "EMAIL_TBX"
-        Me.EMAIL_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.EMAIL_TBX.TabIndex = 60
-        '
-        'EMAIL
-        '
-        Me.EMAIL.AutoSize = True
-        Me.EMAIL.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EMAIL.ForeColor = System.Drawing.Color.Gray
-        Me.EMAIL.Location = New System.Drawing.Point(305, 30)
-        Me.EMAIL.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.EMAIL.Name = "EMAIL"
-        Me.EMAIL.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.EMAIL.Size = New System.Drawing.Size(43, 16)
-        Me.EMAIL.TabIndex = 61
-        Me.EMAIL.Text = "EMAIL"
-        Me.EMAIL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PASSWORD_TBX
-        '
-        Me.PASSWORD_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PASSWORD_TBX.Location = New System.Drawing.Point(23, 103)
-        Me.PASSWORD_TBX.Name = "PASSWORD_TBX"
-        Me.PASSWORD_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.PASSWORD_TBX.TabIndex = 58
-        '
-        'NUMBER_TBX
-        '
-        Me.NUMBER_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NUMBER_TBX.Location = New System.Drawing.Point(23, 157)
-        Me.NUMBER_TBX.Name = "NUMBER_TBX"
-        Me.NUMBER_TBX.Size = New System.Drawing.Size(262, 26)
-        Me.NUMBER_TBX.TabIndex = 62
-        '
-        'PASSWORD
-        '
-        Me.PASSWORD.AutoSize = True
-        Me.PASSWORD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PASSWORD.ForeColor = System.Drawing.Color.Gray
-        Me.PASSWORD.Location = New System.Drawing.Point(20, 84)
-        Me.PASSWORD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.PASSWORD.Name = "PASSWORD"
-        Me.PASSWORD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.PASSWORD.Size = New System.Drawing.Size(79, 16)
-        Me.PASSWORD.TabIndex = 59
-        Me.PASSWORD.Text = "PASSWORD"
-        Me.PASSWORD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'NUMBER
-        '
-        Me.NUMBER.AutoSize = True
-        Me.NUMBER.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NUMBER.ForeColor = System.Drawing.Color.Gray
-        Me.NUMBER.Location = New System.Drawing.Point(20, 138)
-        Me.NUMBER.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
-        Me.NUMBER.Name = "NUMBER"
-        Me.NUMBER.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.NUMBER.Size = New System.Drawing.Size(58, 16)
-        Me.NUMBER.TabIndex = 63
-        Me.NUMBER.Text = "NUMBER"
-        Me.NUMBER.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Label2.Location = New System.Drawing.Point(29, 22)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(292, 33)
-        Me.Label2.TabIndex = 54
-        Me.Label2.Text = "ACCOUNT AND SETTINGS"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'HOME_PANEL
         '
@@ -1884,26 +1033,26 @@ Partial Class Form1
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle113.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle113.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle113.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle113.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle113.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle113.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle113
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridView1.ColumnHeadersHeight = 40
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cbx_column})
-        DataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle114.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle114.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle114.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle114.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
-        DataGridViewCellStyle114.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle114.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle114.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle114
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle18.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle18
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight
@@ -1912,18 +1061,18 @@ Partial Class Form1
         Me.DataGridView1.MinimumSize = New System.Drawing.Size(850, 431)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle115.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle115.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle115.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle115.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle115.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle115.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle115
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle116.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle116
+        DataGridViewCellStyle20.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle20
         Me.DataGridView1.Size = New System.Drawing.Size(850, 431)
         Me.DataGridView1.TabIndex = 0
         Me.DataGridView1.TabStop = False
@@ -1972,25 +1121,25 @@ Partial Class Form1
         Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle117.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle117.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle117.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle117.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle117.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle117.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle117.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle117
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle21
         Me.DataGridView2.ColumnHeadersHeight = 40
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle118.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle118.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle118.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle118.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
-        DataGridViewCellStyle118.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle118.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle118.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle118
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle22.Padding = New System.Windows.Forms.Padding(1, 5, 1, 5)
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle22
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.GridColor = System.Drawing.SystemColors.ControlLightLight
         Me.DataGridView2.Location = New System.Drawing.Point(15, 217)
@@ -1999,18 +1148,18 @@ Partial Class Form1
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle119.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle119.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle119.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle119.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle119.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle119.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle119
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Bahnschrift", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle23
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle120.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle120
+        DataGridViewCellStyle24.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle24
         Me.DataGridView2.Size = New System.Drawing.Size(850, 400)
         Me.DataGridView2.TabIndex = 19
         Me.DataGridView2.TabStop = False
@@ -2270,6 +1419,821 @@ Partial Class Form1
         Me.TD_BTN3.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.TD_BTN3.UseVisualStyleBackColor = False
         '
+        'PANEL_SETTINGS
+        '
+        Me.PANEL_SETTINGS.Controls.Add(Me.SETTINGS_LOWER)
+        Me.PANEL_SETTINGS.Controls.Add(Me.GroupBox4)
+        Me.PANEL_SETTINGS.Controls.Add(Me.Label2)
+        Me.PANEL_SETTINGS.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PANEL_SETTINGS.Location = New System.Drawing.Point(0, 0)
+        Me.PANEL_SETTINGS.Name = "PANEL_SETTINGS"
+        Me.PANEL_SETTINGS.Size = New System.Drawing.Size(881, 660)
+        Me.PANEL_SETTINGS.TabIndex = 2
+        '
+        'SETTINGS_LOWER
+        '
+        Me.SETTINGS_LOWER.Controls.Add(Me.TAB_BRAND)
+        Me.SETTINGS_LOWER.Controls.Add(Me.TAB_VARIANT)
+        Me.SETTINGS_LOWER.Controls.Add(Me.TAB_CAT)
+        Me.SETTINGS_LOWER.Controls.Add(Me.TAB_SUP)
+        Me.SETTINGS_LOWER.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        Me.SETTINGS_LOWER.Location = New System.Drawing.Point(34, 305)
+        Me.SETTINGS_LOWER.Name = "SETTINGS_LOWER"
+        Me.SETTINGS_LOWER.SelectedIndex = 0
+        Me.SETTINGS_LOWER.Size = New System.Drawing.Size(592, 312)
+        Me.SETTINGS_LOWER.TabIndex = 67
+        '
+        'TAB_BRAND
+        '
+        Me.TAB_BRAND.Controls.Add(Me.BRANDS_DGV)
+        Me.TAB_BRAND.Controls.Add(Me.Panel15)
+        Me.TAB_BRAND.Controls.Add(Me.DEL_BRAND)
+        Me.TAB_BRAND.Controls.Add(Me.SAV_BRAND)
+        Me.TAB_BRAND.Controls.Add(Me.Label3)
+        Me.TAB_BRAND.Controls.Add(Me.TBX_BRNAME)
+        Me.TAB_BRAND.Controls.Add(Me.SBX_BRAND)
+        Me.TAB_BRAND.Controls.Add(Me.RESET_BRAND)
+        Me.TAB_BRAND.Location = New System.Drawing.Point(4, 29)
+        Me.TAB_BRAND.Name = "TAB_BRAND"
+        Me.TAB_BRAND.Padding = New System.Windows.Forms.Padding(3)
+        Me.TAB_BRAND.Size = New System.Drawing.Size(584, 279)
+        Me.TAB_BRAND.TabIndex = 0
+        Me.TAB_BRAND.Text = "BRANDS"
+        Me.TAB_BRAND.UseVisualStyleBackColor = True
+        '
+        'BRANDS_DGV
+        '
+        Me.BRANDS_DGV.AllowUserToAddRows = False
+        Me.BRANDS_DGV.AllowUserToDeleteRows = False
+        Me.BRANDS_DGV.AllowUserToResizeColumns = False
+        Me.BRANDS_DGV.AllowUserToResizeRows = False
+        Me.BRANDS_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.BRANDS_DGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.BRANDS_DGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BRANDS_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
+        Me.BRANDS_DGV.ColumnHeadersHeight = 30
+        Me.BRANDS_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.BRANDS_DGV.EnableHeadersVisualStyles = False
+        Me.BRANDS_DGV.Location = New System.Drawing.Point(259, 18)
+        Me.BRANDS_DGV.Name = "BRANDS_DGV"
+        Me.BRANDS_DGV.ReadOnly = True
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BRANDS_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle26
+        Me.BRANDS_DGV.RowHeadersVisible = False
+        Me.BRANDS_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.BRANDS_DGV.Size = New System.Drawing.Size(309, 234)
+        Me.BRANDS_DGV.TabIndex = 74
+        '
+        'Panel15
+        '
+        Me.Panel15.BackColor = System.Drawing.Color.DimGray
+        Me.Panel15.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel15.Location = New System.Drawing.Point(13, 55)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(235, 2)
+        Me.Panel15.TabIndex = 80
+        '
+        'DEL_BRAND
+        '
+        Me.DEL_BRAND.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DEL_BRAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DEL_BRAND.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.DEL_BRAND.ForeColor = System.Drawing.SystemColors.Control
+        Me.DEL_BRAND.Location = New System.Drawing.Point(13, 120)
+        Me.DEL_BRAND.Name = "DEL_BRAND"
+        Me.DEL_BRAND.Size = New System.Drawing.Size(75, 26)
+        Me.DEL_BRAND.TabIndex = 74
+        Me.DEL_BRAND.Text = "DELETE"
+        Me.DEL_BRAND.UseVisualStyleBackColor = False
+        Me.DEL_BRAND.Visible = False
+        '
+        'SAV_BRAND
+        '
+        Me.SAV_BRAND.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SAV_BRAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SAV_BRAND.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.SAV_BRAND.ForeColor = System.Drawing.SystemColors.Control
+        Me.SAV_BRAND.Location = New System.Drawing.Point(172, 120)
+        Me.SAV_BRAND.Name = "SAV_BRAND"
+        Me.SAV_BRAND.Size = New System.Drawing.Size(75, 26)
+        Me.SAV_BRAND.TabIndex = 77
+        Me.SAV_BRAND.Text = "ADD"
+        Me.SAV_BRAND.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Gray
+        Me.Label3.Location = New System.Drawing.Point(10, 66)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label3.Size = New System.Drawing.Size(87, 16)
+        Me.Label3.TabIndex = 75
+        Me.Label3.Text = "BRAND NAME"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TBX_BRNAME
+        '
+        Me.TBX_BRNAME.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_BRNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_BRNAME.Location = New System.Drawing.Point(13, 85)
+        Me.TBX_BRNAME.Name = "TBX_BRNAME"
+        Me.TBX_BRNAME.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_BRNAME.TabIndex = 78
+        '
+        'SBX_BRAND
+        '
+        Me.SBX_BRAND.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SBX_BRAND.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SBX_BRAND.Location = New System.Drawing.Point(13, 18)
+        Me.SBX_BRAND.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
+        Me.SBX_BRAND.Name = "SBX_BRAND"
+        Me.SBX_BRAND.Size = New System.Drawing.Size(235, 26)
+        Me.SBX_BRAND.TabIndex = 76
+        '
+        'RESET_BRAND
+        '
+        Me.RESET_BRAND.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.RESET_BRAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RESET_BRAND.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.RESET_BRAND.ForeColor = System.Drawing.SystemColors.Control
+        Me.RESET_BRAND.Location = New System.Drawing.Point(92, 120)
+        Me.RESET_BRAND.Name = "RESET_BRAND"
+        Me.RESET_BRAND.Size = New System.Drawing.Size(75, 26)
+        Me.RESET_BRAND.TabIndex = 74
+        Me.RESET_BRAND.Text = "RESET"
+        Me.RESET_BRAND.UseVisualStyleBackColor = False
+        '
+        'TAB_VARIANT
+        '
+        Me.TAB_VARIANT.Controls.Add(Me.RESET_VARIANT)
+        Me.TAB_VARIANT.Controls.Add(Me.VARIANTS_DGV)
+        Me.TAB_VARIANT.Controls.Add(Me.Panel16)
+        Me.TAB_VARIANT.Controls.Add(Me.DEL_VAR)
+        Me.TAB_VARIANT.Controls.Add(Me.SAV_VAR)
+        Me.TAB_VARIANT.Controls.Add(Me.Label4)
+        Me.TAB_VARIANT.Controls.Add(Me.TBX_VARNAME)
+        Me.TAB_VARIANT.Controls.Add(Me.SBX_VAR)
+        Me.TAB_VARIANT.Location = New System.Drawing.Point(4, 29)
+        Me.TAB_VARIANT.Name = "TAB_VARIANT"
+        Me.TAB_VARIANT.Padding = New System.Windows.Forms.Padding(3)
+        Me.TAB_VARIANT.Size = New System.Drawing.Size(584, 279)
+        Me.TAB_VARIANT.TabIndex = 1
+        Me.TAB_VARIANT.Text = "VARIANTS"
+        Me.TAB_VARIANT.UseVisualStyleBackColor = True
+        '
+        'RESET_VARIANT
+        '
+        Me.RESET_VARIANT.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.RESET_VARIANT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RESET_VARIANT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.RESET_VARIANT.ForeColor = System.Drawing.SystemColors.Control
+        Me.RESET_VARIANT.Location = New System.Drawing.Point(91, 120)
+        Me.RESET_VARIANT.Name = "RESET_VARIANT"
+        Me.RESET_VARIANT.Size = New System.Drawing.Size(75, 26)
+        Me.RESET_VARIANT.TabIndex = 87
+        Me.RESET_VARIANT.Text = "RESET"
+        Me.RESET_VARIANT.UseVisualStyleBackColor = False
+        '
+        'VARIANTS_DGV
+        '
+        Me.VARIANTS_DGV.AllowUserToAddRows = False
+        Me.VARIANTS_DGV.AllowUserToDeleteRows = False
+        Me.VARIANTS_DGV.AllowUserToResizeColumns = False
+        Me.VARIANTS_DGV.AllowUserToResizeRows = False
+        Me.VARIANTS_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.VARIANTS_DGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.VARIANTS_DGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        DataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VARIANTS_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle27
+        Me.VARIANTS_DGV.ColumnHeadersHeight = 30
+        Me.VARIANTS_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.VARIANTS_DGV.EnableHeadersVisualStyles = False
+        Me.VARIANTS_DGV.Location = New System.Drawing.Point(259, 18)
+        Me.VARIANTS_DGV.Name = "VARIANTS_DGV"
+        Me.VARIANTS_DGV.ReadOnly = True
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VARIANTS_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle28
+        Me.VARIANTS_DGV.RowHeadersVisible = False
+        Me.VARIANTS_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.VARIANTS_DGV.Size = New System.Drawing.Size(309, 234)
+        Me.VARIANTS_DGV.TabIndex = 75
+        '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.DimGray
+        Me.Panel16.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel16.Location = New System.Drawing.Point(13, 55)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(235, 2)
+        Me.Panel16.TabIndex = 86
+        '
+        'DEL_VAR
+        '
+        Me.DEL_VAR.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DEL_VAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DEL_VAR.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.DEL_VAR.ForeColor = System.Drawing.SystemColors.Control
+        Me.DEL_VAR.Location = New System.Drawing.Point(13, 120)
+        Me.DEL_VAR.Name = "DEL_VAR"
+        Me.DEL_VAR.Size = New System.Drawing.Size(75, 26)
+        Me.DEL_VAR.TabIndex = 81
+        Me.DEL_VAR.Text = "DELETE"
+        Me.DEL_VAR.UseVisualStyleBackColor = False
+        Me.DEL_VAR.Visible = False
+        '
+        'SAV_VAR
+        '
+        Me.SAV_VAR.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SAV_VAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SAV_VAR.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.SAV_VAR.ForeColor = System.Drawing.SystemColors.Control
+        Me.SAV_VAR.Location = New System.Drawing.Point(172, 120)
+        Me.SAV_VAR.Name = "SAV_VAR"
+        Me.SAV_VAR.Size = New System.Drawing.Size(75, 26)
+        Me.SAV_VAR.TabIndex = 84
+        Me.SAV_VAR.Text = "ADD"
+        Me.SAV_VAR.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Gray
+        Me.Label4.Location = New System.Drawing.Point(10, 66)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label4.Size = New System.Drawing.Size(66, 16)
+        Me.Label4.TabIndex = 82
+        Me.Label4.Text = "VARIANTS"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TBX_VARNAME
+        '
+        Me.TBX_VARNAME.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_VARNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_VARNAME.Location = New System.Drawing.Point(13, 85)
+        Me.TBX_VARNAME.Name = "TBX_VARNAME"
+        Me.TBX_VARNAME.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_VARNAME.TabIndex = 85
+        '
+        'SBX_VAR
+        '
+        Me.SBX_VAR.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SBX_VAR.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SBX_VAR.Location = New System.Drawing.Point(13, 18)
+        Me.SBX_VAR.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
+        Me.SBX_VAR.Name = "SBX_VAR"
+        Me.SBX_VAR.Size = New System.Drawing.Size(235, 26)
+        Me.SBX_VAR.TabIndex = 83
+        '
+        'TAB_CAT
+        '
+        Me.TAB_CAT.Controls.Add(Me.RESET_CAT)
+        Me.TAB_CAT.Controls.Add(Me.CAT_DGV)
+        Me.TAB_CAT.Controls.Add(Me.Panel17)
+        Me.TAB_CAT.Controls.Add(Me.DEL_CAT)
+        Me.TAB_CAT.Controls.Add(Me.SAV_CAT)
+        Me.TAB_CAT.Controls.Add(Me.Label5)
+        Me.TAB_CAT.Controls.Add(Me.TBX_CATNAME)
+        Me.TAB_CAT.Controls.Add(Me.SBX_CAT)
+        Me.TAB_CAT.Location = New System.Drawing.Point(4, 29)
+        Me.TAB_CAT.Name = "TAB_CAT"
+        Me.TAB_CAT.Padding = New System.Windows.Forms.Padding(3)
+        Me.TAB_CAT.Size = New System.Drawing.Size(584, 279)
+        Me.TAB_CAT.TabIndex = 2
+        Me.TAB_CAT.Text = "CATEGORIES"
+        Me.TAB_CAT.UseVisualStyleBackColor = True
+        '
+        'RESET_CAT
+        '
+        Me.RESET_CAT.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.RESET_CAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RESET_CAT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.RESET_CAT.ForeColor = System.Drawing.SystemColors.Control
+        Me.RESET_CAT.Location = New System.Drawing.Point(91, 120)
+        Me.RESET_CAT.Name = "RESET_CAT"
+        Me.RESET_CAT.Size = New System.Drawing.Size(75, 26)
+        Me.RESET_CAT.TabIndex = 87
+        Me.RESET_CAT.Text = "RESET"
+        Me.RESET_CAT.UseVisualStyleBackColor = False
+        '
+        'CAT_DGV
+        '
+        Me.CAT_DGV.AllowUserToAddRows = False
+        Me.CAT_DGV.AllowUserToDeleteRows = False
+        Me.CAT_DGV.AllowUserToResizeColumns = False
+        Me.CAT_DGV.AllowUserToResizeRows = False
+        Me.CAT_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.CAT_DGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.CAT_DGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        DataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CAT_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle29
+        Me.CAT_DGV.ColumnHeadersHeight = 30
+        Me.CAT_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.CAT_DGV.EnableHeadersVisualStyles = False
+        Me.CAT_DGV.Location = New System.Drawing.Point(259, 18)
+        Me.CAT_DGV.Name = "CAT_DGV"
+        Me.CAT_DGV.ReadOnly = True
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CAT_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle30
+        Me.CAT_DGV.RowHeadersVisible = False
+        Me.CAT_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.CAT_DGV.Size = New System.Drawing.Size(309, 234)
+        Me.CAT_DGV.TabIndex = 75
+        '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.DimGray
+        Me.Panel17.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel17.Location = New System.Drawing.Point(13, 55)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(235, 2)
+        Me.Panel17.TabIndex = 86
+        '
+        'DEL_CAT
+        '
+        Me.DEL_CAT.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DEL_CAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DEL_CAT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.DEL_CAT.ForeColor = System.Drawing.SystemColors.Control
+        Me.DEL_CAT.Location = New System.Drawing.Point(13, 120)
+        Me.DEL_CAT.Name = "DEL_CAT"
+        Me.DEL_CAT.Size = New System.Drawing.Size(75, 26)
+        Me.DEL_CAT.TabIndex = 81
+        Me.DEL_CAT.Text = "DELETE"
+        Me.DEL_CAT.UseVisualStyleBackColor = False
+        Me.DEL_CAT.Visible = False
+        '
+        'SAV_CAT
+        '
+        Me.SAV_CAT.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SAV_CAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SAV_CAT.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.SAV_CAT.ForeColor = System.Drawing.SystemColors.Control
+        Me.SAV_CAT.Location = New System.Drawing.Point(172, 120)
+        Me.SAV_CAT.Name = "SAV_CAT"
+        Me.SAV_CAT.Size = New System.Drawing.Size(75, 26)
+        Me.SAV_CAT.TabIndex = 84
+        Me.SAV_CAT.Text = "ADD"
+        Me.SAV_CAT.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gray
+        Me.Label5.Location = New System.Drawing.Point(10, 66)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label5.Size = New System.Drawing.Size(83, 16)
+        Me.Label5.TabIndex = 82
+        Me.Label5.Text = "CATEGORIES"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TBX_CATNAME
+        '
+        Me.TBX_CATNAME.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_CATNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_CATNAME.Location = New System.Drawing.Point(13, 85)
+        Me.TBX_CATNAME.Name = "TBX_CATNAME"
+        Me.TBX_CATNAME.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_CATNAME.TabIndex = 85
+        '
+        'SBX_CAT
+        '
+        Me.SBX_CAT.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SBX_CAT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SBX_CAT.Location = New System.Drawing.Point(13, 18)
+        Me.SBX_CAT.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
+        Me.SBX_CAT.Name = "SBX_CAT"
+        Me.SBX_CAT.Size = New System.Drawing.Size(235, 26)
+        Me.SBX_CAT.TabIndex = 83
+        '
+        'TAB_SUP
+        '
+        Me.TAB_SUP.Controls.Add(Me.RESET_SUP)
+        Me.TAB_SUP.Controls.Add(Me.SUP_DGV)
+        Me.TAB_SUP.Controls.Add(Me.Panel14)
+        Me.TAB_SUP.Controls.Add(Me.DEL_SUP)
+        Me.TAB_SUP.Controls.Add(Me.SAV_SUP)
+        Me.TAB_SUP.Controls.Add(Me.Label1)
+        Me.TAB_SUP.Controls.Add(Me.TBX_SUPMED)
+        Me.TAB_SUP.Controls.Add(Me.TBX_SUPMAIL)
+        Me.TAB_SUP.Controls.Add(Me.TBX_SUPNUM)
+        Me.TAB_SUP.Controls.Add(Me.TBX_SUPNAME)
+        Me.TAB_SUP.Controls.Add(Me.SBX_SUP)
+        Me.TAB_SUP.Location = New System.Drawing.Point(4, 29)
+        Me.TAB_SUP.Name = "TAB_SUP"
+        Me.TAB_SUP.Padding = New System.Windows.Forms.Padding(3)
+        Me.TAB_SUP.Size = New System.Drawing.Size(584, 279)
+        Me.TAB_SUP.TabIndex = 3
+        Me.TAB_SUP.Text = "SUPPLIERS"
+        Me.TAB_SUP.UseVisualStyleBackColor = True
+        '
+        'RESET_SUP
+        '
+        Me.RESET_SUP.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.RESET_SUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RESET_SUP.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.RESET_SUP.ForeColor = System.Drawing.SystemColors.Control
+        Me.RESET_SUP.Location = New System.Drawing.Point(92, 226)
+        Me.RESET_SUP.Name = "RESET_SUP"
+        Me.RESET_SUP.Size = New System.Drawing.Size(75, 26)
+        Me.RESET_SUP.TabIndex = 75
+        Me.RESET_SUP.Text = "RESET"
+        Me.RESET_SUP.UseVisualStyleBackColor = False
+        '
+        'SUP_DGV
+        '
+        Me.SUP_DGV.AllowUserToAddRows = False
+        Me.SUP_DGV.AllowUserToDeleteRows = False
+        Me.SUP_DGV.AllowUserToResizeColumns = False
+        Me.SUP_DGV.AllowUserToResizeRows = False
+        Me.SUP_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.SUP_DGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.SUP_DGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.SUP_DGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SUP_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle31
+        Me.SUP_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SUP_DGV.EnableHeadersVisualStyles = False
+        Me.SUP_DGV.Location = New System.Drawing.Point(259, 18)
+        Me.SUP_DGV.Name = "SUP_DGV"
+        Me.SUP_DGV.ReadOnly = True
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SUP_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle32
+        Me.SUP_DGV.RowHeadersVisible = False
+        Me.SUP_DGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.SUP_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.SUP_DGV.Size = New System.Drawing.Size(309, 234)
+        Me.SUP_DGV.TabIndex = 74
+        '
+        'Panel14
+        '
+        Me.Panel14.BackColor = System.Drawing.Color.DimGray
+        Me.Panel14.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel14.Location = New System.Drawing.Point(13, 55)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(235, 2)
+        Me.Panel14.TabIndex = 73
+        '
+        'DEL_SUP
+        '
+        Me.DEL_SUP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DEL_SUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DEL_SUP.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.DEL_SUP.ForeColor = System.Drawing.SystemColors.Control
+        Me.DEL_SUP.Location = New System.Drawing.Point(14, 226)
+        Me.DEL_SUP.Name = "DEL_SUP"
+        Me.DEL_SUP.Size = New System.Drawing.Size(75, 26)
+        Me.DEL_SUP.TabIndex = 68
+        Me.DEL_SUP.Text = "DELETE"
+        Me.DEL_SUP.UseVisualStyleBackColor = False
+        Me.DEL_SUP.Visible = False
+        '
+        'SAV_SUP
+        '
+        Me.SAV_SUP.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SAV_SUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SAV_SUP.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.SAV_SUP.ForeColor = System.Drawing.SystemColors.Control
+        Me.SAV_SUP.Location = New System.Drawing.Point(173, 226)
+        Me.SAV_SUP.Name = "SAV_SUP"
+        Me.SAV_SUP.Size = New System.Drawing.Size(75, 26)
+        Me.SAV_SUP.TabIndex = 69
+        Me.SAV_SUP.Text = "ADD"
+        Me.SAV_SUP.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(10, 66)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(93, 16)
+        Me.Label1.TabIndex = 68
+        Me.Label1.Text = "SUPPLIER INFO"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TBX_SUPMED
+        '
+        Me.TBX_SUPMED.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_SUPMED.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_SUPMED.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TBX_SUPMED.Location = New System.Drawing.Point(13, 183)
+        Me.TBX_SUPMED.Name = "TBX_SUPMED"
+        Me.TBX_SUPMED.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_SUPMED.TabIndex = 72
+        Me.TBX_SUPMED.Text = "Other Links"
+        '
+        'TBX_SUPMAIL
+        '
+        Me.TBX_SUPMAIL.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_SUPMAIL.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_SUPMAIL.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TBX_SUPMAIL.Location = New System.Drawing.Point(13, 151)
+        Me.TBX_SUPMAIL.Name = "TBX_SUPMAIL"
+        Me.TBX_SUPMAIL.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_SUPMAIL.TabIndex = 71
+        Me.TBX_SUPMAIL.Text = "Email"
+        '
+        'TBX_SUPNUM
+        '
+        Me.TBX_SUPNUM.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_SUPNUM.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_SUPNUM.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TBX_SUPNUM.Location = New System.Drawing.Point(13, 118)
+        Me.TBX_SUPNUM.Name = "TBX_SUPNUM"
+        Me.TBX_SUPNUM.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_SUPNUM.TabIndex = 70
+        Me.TBX_SUPNUM.Text = "Number"
+        '
+        'TBX_SUPNAME
+        '
+        Me.TBX_SUPNAME.BackColor = System.Drawing.SystemColors.Window
+        Me.TBX_SUPNAME.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.TBX_SUPNAME.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TBX_SUPNAME.Location = New System.Drawing.Point(13, 85)
+        Me.TBX_SUPNAME.Name = "TBX_SUPNAME"
+        Me.TBX_SUPNAME.Size = New System.Drawing.Size(235, 27)
+        Me.TBX_SUPNAME.TabIndex = 69
+        Me.TBX_SUPNAME.Text = "Name"
+        '
+        'SBX_SUP
+        '
+        Me.SBX_SUP.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SBX_SUP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SBX_SUP.Location = New System.Drawing.Point(13, 18)
+        Me.SBX_SUP.Margin = New System.Windows.Forms.Padding(10, 15, 3, 3)
+        Me.SBX_SUP.Name = "SBX_SUP"
+        Me.SBX_SUP.Size = New System.Drawing.Size(235, 26)
+        Me.SBX_SUP.TabIndex = 68
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.NEW_ACC_BTN)
+        Me.GroupBox4.Controls.Add(Me.UPDATE_BTN)
+        Me.GroupBox4.Controls.Add(Me.RESET_BTN)
+        Me.GroupBox4.Controls.Add(Me.L_NAME_TBX)
+        Me.GroupBox4.Controls.Add(Me.L_NAME)
+        Me.GroupBox4.Controls.Add(Me.ADDRESS_TBX)
+        Me.GroupBox4.Controls.Add(Me.ADDRESS)
+        Me.GroupBox4.Controls.Add(Me.F_NAME)
+        Me.GroupBox4.Controls.Add(Me.F_NAME_TBX)
+        Me.GroupBox4.Controls.Add(Me.EMAIL_TBX)
+        Me.GroupBox4.Controls.Add(Me.EMAIL)
+        Me.GroupBox4.Controls.Add(Me.PASSWORD_TBX)
+        Me.GroupBox4.Controls.Add(Me.NUMBER_TBX)
+        Me.GroupBox4.Controls.Add(Me.PASSWORD)
+        Me.GroupBox4.Controls.Add(Me.NUMBER)
+        Me.GroupBox4.Font = New System.Drawing.Font("Tw Cen MT", 13.0!)
+        Me.GroupBox4.Location = New System.Drawing.Point(34, 79)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(592, 203)
+        Me.GroupBox4.TabIndex = 66
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "PROFILE"
+        '
+        'NEW_ACC_BTN
+        '
+        Me.NEW_ACC_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.NEW_ACC_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NEW_ACC_BTN.Font = New System.Drawing.Font("Tw Cen MT", 10.0!)
+        Me.NEW_ACC_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.NEW_ACC_BTN.Location = New System.Drawing.Point(468, 0)
+        Me.NEW_ACC_BTN.Name = "NEW_ACC_BTN"
+        Me.NEW_ACC_BTN.Size = New System.Drawing.Size(104, 26)
+        Me.NEW_ACC_BTN.TabIndex = 67
+        Me.NEW_ACC_BTN.Text = "+ New Account"
+        Me.NEW_ACC_BTN.UseVisualStyleBackColor = False
+        '
+        'UPDATE_BTN
+        '
+        Me.UPDATE_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.UPDATE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UPDATE_BTN.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.UPDATE_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.UPDATE_BTN.Location = New System.Drawing.Point(495, 157)
+        Me.UPDATE_BTN.Name = "UPDATE_BTN"
+        Me.UPDATE_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.UPDATE_BTN.TabIndex = 67
+        Me.UPDATE_BTN.Text = "UPDATE"
+        Me.UPDATE_BTN.UseVisualStyleBackColor = False
+        '
+        'RESET_BTN
+        '
+        Me.RESET_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.RESET_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RESET_BTN.Font = New System.Drawing.Font("Tw Cen MT", 11.0!)
+        Me.RESET_BTN.ForeColor = System.Drawing.SystemColors.Control
+        Me.RESET_BTN.Location = New System.Drawing.Point(411, 157)
+        Me.RESET_BTN.Name = "RESET_BTN"
+        Me.RESET_BTN.Size = New System.Drawing.Size(75, 26)
+        Me.RESET_BTN.TabIndex = 66
+        Me.RESET_BTN.Text = "RESET"
+        Me.RESET_BTN.UseVisualStyleBackColor = False
+        '
+        'L_NAME_TBX
+        '
+        Me.L_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_NAME_TBX.Location = New System.Drawing.Point(159, 49)
+        Me.L_NAME_TBX.Name = "L_NAME_TBX"
+        Me.L_NAME_TBX.Size = New System.Drawing.Size(126, 26)
+        Me.L_NAME_TBX.TabIndex = 64
+        '
+        'L_NAME
+        '
+        Me.L_NAME.AutoSize = True
+        Me.L_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_NAME.ForeColor = System.Drawing.Color.Gray
+        Me.L_NAME.Location = New System.Drawing.Point(156, 30)
+        Me.L_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.L_NAME.Name = "L_NAME"
+        Me.L_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.L_NAME.Size = New System.Drawing.Size(74, 16)
+        Me.L_NAME.TabIndex = 57
+        Me.L_NAME.Text = "LAST NAME"
+        Me.L_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ADDRESS_TBX
+        '
+        Me.ADDRESS_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADDRESS_TBX.Location = New System.Drawing.Point(308, 103)
+        Me.ADDRESS_TBX.Name = "ADDRESS_TBX"
+        Me.ADDRESS_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.ADDRESS_TBX.TabIndex = 64
+        '
+        'ADDRESS
+        '
+        Me.ADDRESS.AutoSize = True
+        Me.ADDRESS.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADDRESS.ForeColor = System.Drawing.Color.Gray
+        Me.ADDRESS.Location = New System.Drawing.Point(305, 84)
+        Me.ADDRESS.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.ADDRESS.Name = "ADDRESS"
+        Me.ADDRESS.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.ADDRESS.Size = New System.Drawing.Size(61, 16)
+        Me.ADDRESS.TabIndex = 65
+        Me.ADDRESS.Text = "ADDRESS"
+        Me.ADDRESS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'F_NAME
+        '
+        Me.F_NAME.AutoSize = True
+        Me.F_NAME.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.F_NAME.ForeColor = System.Drawing.Color.Gray
+        Me.F_NAME.Location = New System.Drawing.Point(19, 30)
+        Me.F_NAME.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.F_NAME.Name = "F_NAME"
+        Me.F_NAME.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.F_NAME.Size = New System.Drawing.Size(77, 16)
+        Me.F_NAME.TabIndex = 56
+        Me.F_NAME.Text = "FIRST NAME"
+        Me.F_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'F_NAME_TBX
+        '
+        Me.F_NAME_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.F_NAME_TBX.Location = New System.Drawing.Point(22, 49)
+        Me.F_NAME_TBX.Name = "F_NAME_TBX"
+        Me.F_NAME_TBX.Size = New System.Drawing.Size(126, 26)
+        Me.F_NAME_TBX.TabIndex = 55
+        '
+        'EMAIL_TBX
+        '
+        Me.EMAIL_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EMAIL_TBX.Location = New System.Drawing.Point(308, 49)
+        Me.EMAIL_TBX.Name = "EMAIL_TBX"
+        Me.EMAIL_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.EMAIL_TBX.TabIndex = 60
+        '
+        'EMAIL
+        '
+        Me.EMAIL.AutoSize = True
+        Me.EMAIL.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EMAIL.ForeColor = System.Drawing.Color.Gray
+        Me.EMAIL.Location = New System.Drawing.Point(305, 30)
+        Me.EMAIL.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.EMAIL.Name = "EMAIL"
+        Me.EMAIL.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.EMAIL.Size = New System.Drawing.Size(43, 16)
+        Me.EMAIL.TabIndex = 61
+        Me.EMAIL.Text = "EMAIL"
+        Me.EMAIL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PASSWORD_TBX
+        '
+        Me.PASSWORD_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PASSWORD_TBX.Location = New System.Drawing.Point(23, 103)
+        Me.PASSWORD_TBX.Name = "PASSWORD_TBX"
+        Me.PASSWORD_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.PASSWORD_TBX.TabIndex = 58
+        '
+        'NUMBER_TBX
+        '
+        Me.NUMBER_TBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NUMBER_TBX.Location = New System.Drawing.Point(23, 157)
+        Me.NUMBER_TBX.Name = "NUMBER_TBX"
+        Me.NUMBER_TBX.Size = New System.Drawing.Size(262, 26)
+        Me.NUMBER_TBX.TabIndex = 62
+        '
+        'PASSWORD
+        '
+        Me.PASSWORD.AutoSize = True
+        Me.PASSWORD.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PASSWORD.ForeColor = System.Drawing.Color.Gray
+        Me.PASSWORD.Location = New System.Drawing.Point(20, 84)
+        Me.PASSWORD.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.PASSWORD.Name = "PASSWORD"
+        Me.PASSWORD.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.PASSWORD.Size = New System.Drawing.Size(79, 16)
+        Me.PASSWORD.TabIndex = 59
+        Me.PASSWORD.Text = "PASSWORD"
+        Me.PASSWORD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'NUMBER
+        '
+        Me.NUMBER.AutoSize = True
+        Me.NUMBER.Font = New System.Drawing.Font("Tw Cen MT", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NUMBER.ForeColor = System.Drawing.Color.Gray
+        Me.NUMBER.Location = New System.Drawing.Point(20, 138)
+        Me.NUMBER.Margin = New System.Windows.Forms.Padding(5, 0, 3, 0)
+        Me.NUMBER.Name = "NUMBER"
+        Me.NUMBER.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.NUMBER.Size = New System.Drawing.Size(58, 16)
+        Me.NUMBER.TabIndex = 63
+        Me.NUMBER.Text = "NUMBER"
+        Me.NUMBER.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Label2.Location = New System.Drawing.Point(29, 22)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(292, 33)
+        Me.Label2.TabIndex = 54
+        Me.Label2.Text = "ACCOUNT AND SETTINGS"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2290,22 +2254,6 @@ Partial Class Form1
         Me.Text = "HOME"
         Me.Panel1.ResumeLayout(False)
         Me.Base_Panel.ResumeLayout(False)
-        Me.PANEL_SETTINGS.ResumeLayout(False)
-        Me.SETTINGS_LOWER.ResumeLayout(False)
-        Me.TAB_BRAND.ResumeLayout(False)
-        Me.TAB_BRAND.PerformLayout()
-        CType(Me.BRANDS_DGV, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TAB_VARIANT.ResumeLayout(False)
-        Me.TAB_VARIANT.PerformLayout()
-        CType(Me.VARIANTS_DGV, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TAB_CAT.ResumeLayout(False)
-        Me.TAB_CAT.PerformLayout()
-        CType(Me.CAT_DGV, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TAB_SUP.ResumeLayout(False)
-        Me.TAB_SUP.PerformLayout()
-        CType(Me.SUP_DGV, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
         Me.HOME_PANEL.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -2331,6 +2279,22 @@ Partial Class Form1
         Me.Panel11.ResumeLayout(False)
         Me.Panel12.ResumeLayout(False)
         Me.Panel13.ResumeLayout(False)
+        Me.PANEL_SETTINGS.ResumeLayout(False)
+        Me.SETTINGS_LOWER.ResumeLayout(False)
+        Me.TAB_BRAND.ResumeLayout(False)
+        Me.TAB_BRAND.PerformLayout()
+        CType(Me.BRANDS_DGV, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TAB_VARIANT.ResumeLayout(False)
+        Me.TAB_VARIANT.PerformLayout()
+        CType(Me.VARIANTS_DGV, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TAB_CAT.ResumeLayout(False)
+        Me.TAB_CAT.PerformLayout()
+        CType(Me.CAT_DGV, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TAB_SUP.ResumeLayout(False)
+        Me.TAB_SUP.PerformLayout()
+        CType(Me.SUP_DGV, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

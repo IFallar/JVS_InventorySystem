@@ -1,5 +1,8 @@
 ﻿Public Class Form_Stock_IS
 
+    Dim Current As Boolean = False
+    Dim NEW_STATUS As String = ""
+
     Public Sub Stock_Function()
 
         Dim ID As String = Form1.GlobalVariables.Selected_Item
@@ -9,7 +12,6 @@
 
         Dim FINAL_AMOUNT As Integer
         Dim NEW_TOTAL As Integer
-        Dim NEW_STATUS As String = ""
 
         Dim regDate As Date = Date.Now()
         Dim ITEM_ADD_DATE = regDate.ToString("yyyy\-MM\-dd")
@@ -91,14 +93,19 @@
 
         FSIS_NUM_TBX.Text = 0
 
+        If FSIS_TRH_HOLD.Text > FSIS_QTY_HOLD.Text Then
+            Current = True
+        End If
+
     End Sub
 
     Dim STOCK_AMOUNT As Integer
 
-
     Private Sub FSIS_SAVE_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_SAVE_BTN.Click
 
-        Form1.Get_LastDate(Form1.GlobalVariables.Selected_Item)
+        If Current = True And NEW_STATUS IsNot "Normal" And FSIS_HEAD_LBL.Text IsNot "RESTOCK" Then
+            Form1.Get_LastDate(Form1.GlobalVariables.Selected_Item)
+        End If
 
         STOCK_AMOUNT = FSIS_NUM_TBX.Text
 

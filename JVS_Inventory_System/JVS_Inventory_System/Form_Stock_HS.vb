@@ -2,6 +2,8 @@
 
     Dim QTY As Integer
     Dim TRH As Integer
+    Dim Current As Boolean = False
+    Dim NEW_STATUS As String = ""
 
     Public Sub Stock_Function()
 
@@ -12,7 +14,6 @@
 
         Dim FINAL_AMOUNT As Integer
         Dim NEW_TOTAL As Integer
-        Dim NEW_STATUS As String = ""
 
         Dim regDate As Date = Date.Now()
         Dim ITEM_ADD_DATE = regDate.ToString("yyyy\-MM\-dd")
@@ -91,6 +92,7 @@
         If QTY >= TRH And QTY > 0 Then
             FSHS_FLT4_TBX.BackColor = Color.Green
             FSHS_FLT5_TBX.BackColor = Color.Green
+            Current = True
         ElseIf QTY = 0 Then
             FSHS_FLT4_TBX.BackColor = Color.Red
             FSHS_FLT5_TBX.BackColor = Color.Red
@@ -328,7 +330,10 @@
 
     Private Sub FSHS_SAVE_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_SAVE_BTN.Click
 
-        Form1.Get_LastDate(FSHS_ID_HOLD.Text)
+        If Current = True And NEW_STATUS IsNot "Normal" And FSHS_HEAD_LBL.Text IsNot "RESTOCK" Then
+            Form1.Get_LastDate(FSHS_ID_HOLD.Text)
+        End If
+
 
         STOCK_AMOUNT = FSHS_NUM_TBX.Text
         Stock_Function()

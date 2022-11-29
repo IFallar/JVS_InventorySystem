@@ -15,26 +15,15 @@ Public Class Form1
 
     Public Sub Get_LastDate(SID As String)
 
-        opencon()
+        Try
 
-        cmd.Connection = con
-        cmd.CommandText = "SELECT `LAST_STOCK` FROM `products` WHERE `ITEM_ID` = '" & SID & "'"
-        cmd.Prepare()
+            Dim LastDate As Date = Date.Now()
+            FLD = LastDate.ToString("yyyy\-MM\-dd")
 
-        cmdreader = cmd.ExecuteReader
+        Catch ex As System.InvalidCastException
 
-        While cmdreader.Read
+        End Try
 
-            Try
-
-                Dim LastDate As Date = cmdreader.GetValue(0)
-                FLD = LastDate.ToString("yyyy\-MM\-dd")
-
-            Catch ex As System.InvalidCastException
-
-            End Try
-
-        End While
 
         cmdreader.Close()
         con.Close()
@@ -489,28 +478,6 @@ Public Class Form1
 
     End Sub
 
-
-    Private Sub VARIANTS_DGV_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles VARIANTS_DGV.DataBindingComplete
-
-        VARIANTS_DGV.RowTemplate.Resizable = False
-        VARIANTS_DGV.RowTemplate.MinimumHeight = 20
-
-    End Sub
-
-    Private Sub CAT_DGV_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles CAT_DGV.DataBindingComplete
-
-        CAT_DGV.RowTemplate.Resizable = False
-        CAT_DGV.RowTemplate.MinimumHeight = 20
-
-    End Sub
-
-    Private Sub SUP_DGV_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles SUP_DGV.DataBindingComplete
-
-        SUP_DGV.RowTemplate.Resizable = False
-        SUP_DGV.RowTemplate.MinimumHeight = 20
-
-    End Sub
-
     '++++++++++++++++ SET CELL SELECTION (RUDIMENTRARY) ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Private Sub DataGridView1_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles DataGridView1.CellBeginEdit
@@ -755,6 +722,18 @@ Public Class Form1
             Dim Modal As New Form_Valuation
             Form_Valuation.FV_HEAD_LBL.Text = "INVENTORY VALUE BREAKDOWN"
             Form_Valuation.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub VALUE_LOWSTOCK_Click(sender As Object, e As EventArgs) Handles VALUE_LOWSTOCK.Click
+
+        Try
+            Dim Modal As New Reorder_Points
+            Reorder_Points.ShowDialog()
 
         Catch ex As Exception
 
@@ -1464,6 +1443,8 @@ Public Class Form1
         TBX_SUPMED.Text = "Other Links"
         TBX_SUPMED.ForeColor = Color.Gray
     End Sub
+
+
 
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

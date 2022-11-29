@@ -66,7 +66,6 @@
         VALUE_GRID.Columns(6).Width = 90
         VALUE_GRID.Columns(7).Width = 100
 
-
     End Sub
 
     Private Sub PRICE_BTN_Click(sender As Object, e As EventArgs) Handles PRICE_BTN.Click
