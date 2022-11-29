@@ -1444,6 +1444,110 @@ Public Class Form1
         TBX_SUPMED.ForeColor = Color.Gray
     End Sub
 
+    Private Sub PANEL_SETTINGS_Paint(sender As Object, e As PaintEventArgs) Handles PANEL_SETTINGS.Paint
+
+    End Sub
+
+    Private Sub UPDATE_BTN_Click(sender As Object, e As EventArgs) Handles UPDATE_BTN.Click
+        If UPDATE_BTN.Text = "UPDATE" Then
+            cnd_str = "UPDATE `account` SET `acc_fn`='" & F_NAME_TBX.Text & "',`acc_ln`='" & L_NAME_TBX.Text & "',`acc_pass`='" & PASSWORD_TBX.Text & "',`acc_email`='" & EMAIL_TBX.Text & "',`acc_phone`='" & NUMBER_TBX.Text & "',`acc_address`='" & ADDRESS_TBX.Text & "' WHERE `acc_id` = '" & GlobalVariables.UserID & "'"
+            CMDSTRING(cnd_str, 0)
+        ElseIf UPDATE_BTN.Text = "SAVE" Then
+            cnd_str = "INSERT INTO `account`(`usertype`, `acc_fn`, `acc_ln`, `acc_pass`, `acc_email`, `acc_phone`, `acc_address`) VALUES ('" & ACC_TYPE_CBX.SelectedItem & "','" & F_NAME_TBX.Text & "','" & L_NAME_TBX.Text & "','" & PASSWORD_TBX.Text & "','" & EMAIL_TBX.Text & "','" & NUMBER_TBX.Text & "','" & ADDRESS_TBX.Text & "')"
+            CMDSTRING(cnd_str, 0)
+        End If
+    End Sub
+    Public Sub CMDSTRING_PROFILE(cnd As String, tok As Integer)
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT `acc_id`, `usertype`, `acc_fn`, `acc_ln`, `acc_pass`, `acc_email`, `acc_phone`, `acc_address` FROM `account` WHERE `acc_id` = '" & GlobalVariables.UserID & "'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+
+
+        While cmdreader.Read
+
+            Try
+
+                F_NAME_TBX.Text = cmdreader.GetValue(2)
+                L_NAME_TBX.Text = cmdreader.GetValue(3)
+                PASSWORD_TBX.Text = cmdreader.GetValue(4)
+                EMAIL_TBX.Text = cmdreader.GetValue(5)
+                NUMBER_TBX.Text = cmdreader.GetValue(6)
+                ADDRESS_TBX.Text = cmdreader.GetValue(7)
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+    End Sub
+    Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles GroupBox4.Enter
+
+        ACC_TYPE_LB.Visible = False
+        ACC_TYPE_CBX.Visible = False
+
+        cnd_str = "SELECT `acc_id`, `usertype`, `acc_fn`, `acc_ln`, `acc_pass`, `acc_email`, `acc_phone`, `acc_address` FROM `account` WHERE `acc_id` = '" & GlobalVariables.UserID & "'"
+        CMDSTRING_PROFILE(cnd_str, 0)
+
+
+    End Sub
+
+    Private Sub TBX_BRNAME_TextChanged(sender As Object, e As EventArgs) Handles TBX_BRNAME.TextChanged
+
+    End Sub
+
+    Private Sub BRANDS_DGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles BRANDS_DGV.CellContentClick
+
+    End Sub
+
+    Private Sub NEW_ACC_BTN_Click(sender As Object, e As EventArgs) Handles NEW_ACC_BTN.Click
+
+        ACC_TYPE_LB.Visible = True
+        ACC_TYPE_CBX.Visible = True
+
+        F_NAME_TBX.Text = " "
+        L_NAME_TBX.Text = " "
+        PASSWORD_TBX.Text = " "
+        EMAIL_TBX.Text = " "
+        NUMBER_TBX.Text = " "
+        ADDRESS_TBX.Text = " "
+        ACC_TYPE_CBX.Text = " "
+
+        RESET_BTN.Text = "CANCEL"
+        UPDATE_BTN.Text = "SAVE"
+
+
+
+
+    End Sub
+
+    Private Sub RESET_BTN_Click(sender As Object, e As EventArgs) Handles RESET_BTN.Click
+        If RESET_BTN.Text = "RESET" Then
+            cnd_str = "SELECT `acc_id`, `usertype`, `acc_fn`, `acc_ln`, `acc_pass`, `acc_email`, `acc_phone`, `acc_address` FROM `account` WHERE `acc_id` = '" & GlobalVariables.UserID & "'"
+            CMDSTRING_PROFILE(cnd_str, 0)
+        ElseIf RESET_BTN.Text = "CANCEL" Then
+            cnd_str = "SELECT `acc_id`, `usertype`, `acc_fn`, `acc_ln`, `acc_pass`, `acc_email`, `acc_phone`, `acc_address` FROM `account` WHERE `acc_id` = '" & GlobalVariables.UserID & "'"
+            CMDSTRING_PROFILE(cnd_str, 0)
+
+            RESET_BTN.Text = "RESET"
+            UPDATE_BTN.Text = "UPDATE"
+            ACC_TYPE_LB.Visible = False
+            ACC_TYPE_CBX.Visible = False
+
+        End If
+    End Sub
+
+    Private Sub ACC_TYPE_LB_Click(sender As Object, e As EventArgs) Handles ACC_TYPE_LB.Click
+
+    End Sub
+
 
 
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -25,7 +25,7 @@ Public Class Login
             Try
 
                 acc_id = cmdreader.GetValue(0)
-                usetype = cmdreader.GetValue(1)
+                usertype = cmdreader.GetValue(1)
                 usename = cmdreader.GetValue(2)
                 userpass = cmdreader.GetValue(3)
                 valid = True
@@ -43,7 +43,7 @@ Public Class Login
             MessageBox.Show("Welcome " + usename + "!")
 
             If userType.SelectedIndex = 0 Then
-                'tentative showing form1'
+
                 Dim a As New Form1
 
                 a.acc_name_lbl.Text = userName.Text
@@ -55,7 +55,7 @@ Public Class Login
                 Me.Hide()
 
             Else Dim u As New Form1
-                'tentative showing form1'
+
                 u.Show()
                 Me.Hide()
 

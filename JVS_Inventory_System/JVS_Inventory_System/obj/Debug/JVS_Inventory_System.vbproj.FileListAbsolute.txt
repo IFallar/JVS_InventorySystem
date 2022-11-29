@@ -55,5 +55,5 @@ C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_S
 C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.pdb
 C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Login.resources
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Login.resources
-C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Settings.resources
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Reorder_Points.resources
+C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Reorder_Points.resources
