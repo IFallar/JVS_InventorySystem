@@ -6,9 +6,9 @@ Public Class Form1
     'PUBLICS ================================================================================================================
 
     Public Class GlobalVariables
-        Public Shared UserID As Integer = 1
+        Public Shared UserID As Integer
         Public Shared Selected_Item As Integer
-        Public Shared logged As Integer = 1
+        Public Shared logged As Integer = 0
     End Class
 
     Dim FLD As String
@@ -410,7 +410,7 @@ Public Class Form1
 
         If GlobalVariables.logged = 0 Then
             Login.ShowDialog()
-            Me.Close()
+            Me.Hide()
         Else
 
         End If
@@ -548,6 +548,20 @@ Public Class Form1
     Private Sub LOG_BTN_MouseLeave(sender As Object, e As EventArgs) Handles SIDE_LOG_BTN.MouseLeave
         If (SIDE_LOG_BTN.BackColor = System.Drawing.Color.Transparent) Then
             SIDE_LOG_BTN.ForeColor = System.Drawing.Color.White
+        End If
+
+    End Sub
+
+    Private Sub SET_BTN_MouseEnter(sender As Object, e As EventArgs) Handles SIDE_SET_BTN.MouseEnter
+        If (SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent) Then
+            SIDE_SET_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
+        End If
+
+    End Sub
+
+    Private Sub SET_BTN_MouseLeave(sender As Object, e As EventArgs) Handles SIDE_SET_BTN.MouseLeave
+        If (SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent) Then
+            SIDE_SET_BTN.ForeColor = System.Drawing.Color.White
         End If
 
     End Sub
@@ -1444,8 +1458,8 @@ Public Class Form1
         TBX_SUPMED.ForeColor = Color.Gray
     End Sub
 
-
-
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 
 End Class

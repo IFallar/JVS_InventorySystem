@@ -51,8 +51,7 @@ Public Class Login
                 Form1.GlobalVariables.UserID = acc_id
                 Form1.GlobalVariables.logged = 1
 
-                a.Show()
-                Me.Hide()
+                Me.Close()
 
             Else Dim u As New Form1
                 'tentative showing form1'
