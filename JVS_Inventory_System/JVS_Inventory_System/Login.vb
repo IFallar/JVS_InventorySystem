@@ -45,12 +45,12 @@ Public Class Login
 
                 Dim a As New Form1
 
-                a.acc_name_lbl.Text = userName.Text
-                a.acc_type_lbl.Text = userType.SelectedItem
+                Form1.acc_name_lbl.Text = userName.Text
+                Form1.acc_type_lbl.Text = userType.SelectedItem
                 Form1.GlobalVariables.UserID = acc_id
                 Form1.GlobalVariables.logged = 1
 
-                a.Show()
+
                 Me.Hide()
 
             Else Dim u As New Form1
@@ -100,7 +100,7 @@ Public Class Login
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Close()
+        End
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

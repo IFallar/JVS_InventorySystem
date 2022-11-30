@@ -410,12 +410,12 @@ Public Class Form1
 
         If GlobalVariables.logged = 0 Then
             Login.ShowDialog()
-            Me.Close()
+            Me.Hide()
         Else
-            Load_Table_Main()
-            Set_Home_Value()
-        End If
 
+        End If
+        Load_Table_Main()
+        Set_Home_Value()
     End Sub
 
     'FORMAT TABLE AND CELLS ================================================================================================================
@@ -549,7 +549,19 @@ Public Class Form1
         End If
 
     End Sub
+    Private Sub SET_BTN_MouseEnter(sender As Object, e As EventArgs) Handles SIDE_SET_BTN.MouseEnter
+        If (SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent) Then
+            SIDE_SET_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
+        End If
 
+    End Sub
+
+    Private Sub SET_BTN_MouseLeave(sender As Object, e As EventArgs) Handles SIDE_SET_BTN.MouseLeave
+        If (SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent) Then
+            SIDE_SET_BTN.ForeColor = System.Drawing.Color.White
+        End If
+
+    End Sub
     'PANEL NAVIGATION ================================================================================================================
 
     '++++++++++++++++ PANEL STYLE CHANGES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1442,9 +1454,7 @@ Public Class Form1
         TBX_SUPMED.ForeColor = Color.Gray
     End Sub
 
-    Private Sub PANEL_SETTINGS_Paint(sender As Object, e As PaintEventArgs) Handles PANEL_SETTINGS.Paint
 
-    End Sub
 
     Private Sub UPDATE_BTN_Click(sender As Object, e As EventArgs) Handles UPDATE_BTN.Click
         If UPDATE_BTN.Text = "UPDATE" Then
@@ -1455,6 +1465,8 @@ Public Class Form1
             CMDSTRING(cnd_str, 0)
         End If
     End Sub
+
+
     Public Sub CMDSTRING_PROFILE(cnd As String, tok As Integer)
         opencon()
 
@@ -1497,14 +1509,6 @@ Public Class Form1
 
     End Sub
 
-    Private Sub TBX_BRNAME_TextChanged(sender As Object, e As EventArgs) Handles TBX_BRNAME.TextChanged
-
-    End Sub
-
-    Private Sub BRANDS_DGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles BRANDS_DGV.CellContentClick
-
-    End Sub
-
     Private Sub NEW_ACC_BTN_Click(sender As Object, e As EventArgs) Handles NEW_ACC_BTN.Click
 
         ACC_TYPE_LB.Visible = True
@@ -1541,13 +1545,6 @@ Public Class Form1
 
         End If
     End Sub
-
-    Private Sub ACC_TYPE_LB_Click(sender As Object, e As EventArgs) Handles ACC_TYPE_LB.Click
-
-    End Sub
-
-
-
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 End Class
