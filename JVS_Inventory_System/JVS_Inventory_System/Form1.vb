@@ -6,9 +6,9 @@ Public Class Form1
     'PUBLICS ================================================================================================================
 
     Public Class GlobalVariables
-        Public Shared UserID As Integer = 1
+        Public Shared UserID As Integer
         Public Shared Selected_Item As Integer
-        Public Shared logged As Integer = 1
+        Public Shared logged As Integer = 0
     End Class
 
     Dim FLD As String
@@ -150,7 +150,7 @@ Public Class Form1
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT (SELECT SUM(TOTAL_PRICE) FROM products) as home_item_valuation, (Select Count(*) as home_item_qty from products) as home_item_qty, (Select Count(*) as home_item_lowstock from products WHERE STOCK_STATUS = 'LOW STOCK') as home_item_lowstock, (SELECT last_restock FROM latest_date) AS last_restock, (SELECT last_outstock FROM latest_date) AS last_outstock"
+        cmd.CommandText = "SELECT (SELECT SUM(TOTAL_PRICE) FROM products) as home_item_valuation, (Select Count(*) as home_item_qty from products) as home_item_qty, (Select Count(*) as home_item_lowstock from products WHERE STOCK_STATUS = 'LOW STOCK' OR STOCK_STATUS = 'OUT OF STOCK') as home_item_lowstock, (SELECT last_restock FROM latest_date) AS last_restock, (SELECT last_outstock FROM latest_date) AS last_outstock"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
@@ -160,16 +160,16 @@ Public Class Form1
             Try
 
                 home_item_valuation = cmdreader.GetValue(0)
-                Me.VALUE_ITEMS.Text = "P" + home_item_valuation
+                VALUE_ITEMS.Text = "P" + home_item_valuation
 
                 home_item_qty = cmdreader.GetValue(1)
-                Me.VALUE_COUNT.Text = home_item_qty
+                VALUE_COUNT.Text = home_item_qty
 
                 home_item_lowstock = cmdreader.GetValue(2)
-                Me.VALUE_LOWSTOCK.Text = home_item_lowstock
+                VALUE_LOWSTOCK.Text = home_item_lowstock
 
                 home_item_laststock = cmdreader.GetValue(3)
-                Me.VALUE_LASTSTOCK.Text = home_item_laststock
+                VALUE_LASTSTOCK.Text = home_item_laststock
 
             Catch ex As System.InvalidCastException
 
@@ -412,11 +412,9 @@ Public Class Form1
             Login.ShowDialog()
             Me.Close()
         Else
-
+            Load_Table_Main()
+            Set_Home_Value()
         End If
-
-        Load_Table_Main()
-        Set_Home_Value()
 
     End Sub
 

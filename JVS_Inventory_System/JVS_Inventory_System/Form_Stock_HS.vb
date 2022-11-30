@@ -32,7 +32,7 @@
 
             If FINAL_AMOUNT >= THRESHOLD Then
                 NEW_STATUS = "NORMAL"
-            ElseIf ITEM_INIT = 0 Then
+            ElseIf FINAL_AMOUNT = 0 Then
                 NEW_STATUS = "OUT OF STOCK"
             Else
                 NEW_STATUS = "LOW STOCK"
@@ -346,8 +346,6 @@
 
         Form1.Load_Table_Main()
         Form1.Set_Home_Value()
-
-
 
     End Sub
 

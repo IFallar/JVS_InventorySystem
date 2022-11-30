@@ -25,7 +25,6 @@ Public Class Login
             Try
 
                 acc_id = cmdreader.GetValue(0)
-                usertype = cmdreader.GetValue(1)
                 usename = cmdreader.GetValue(2)
                 userpass = cmdreader.GetValue(3)
                 valid = True
