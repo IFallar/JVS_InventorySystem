@@ -8,7 +8,7 @@ Public Class Login
     Dim usetype As String
     Dim usename As String
     Dim userpass As String
-    Dim valid As Boolean = False
+    Dim valid As Boolean = True
 
     Private Sub log_in_Click(sender As Object, e As EventArgs) Handles log_in.Click
 
@@ -31,6 +31,8 @@ Public Class Login
 
             Catch ex As System.InvalidCastException
 
+                MessageBox.Show("Welcome")
+
             End Try
 
         End While
@@ -38,7 +40,9 @@ Public Class Login
         cmdreader.Close()
         con.Close()
 
-        If valid = True Then
+        If userName.Text = usename And pass.Text = userpass Then
+
+
             MessageBox.Show("Welcome " + usename + "!")
 
             If userType.SelectedIndex = 0 Then
@@ -53,10 +57,9 @@ Public Class Login
 
                 Me.Hide()
 
-            Else Dim u As New Form1
+            Else
+                MessageBox.Show("Invalid Credentials")
 
-                u.Show()
-                Me.Hide()
 
             End If
 
@@ -109,7 +112,4 @@ Public Class Login
 
     End Sub
 
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

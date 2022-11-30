@@ -654,6 +654,7 @@ Public Class Form1
 
         Set_Home_Value()
         Set_DGV()
+        CMDSTRING_PROFILE(cnd_str, 0)
 
     End Sub
 
