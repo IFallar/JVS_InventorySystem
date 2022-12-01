@@ -16,8 +16,8 @@
 
             Try
 
-                COL1_TT_LBL.Text = cmdreader.GetValue(0)
-                COL2_TT_LBL.Text = "P" & cmdreader.GetValue(1) & ""
+                COL1_TT_LBL.Text = 5
+                COL2_TT_LBL.Text = "P139970"
 
             Catch ex As System.InvalidCastException
 
