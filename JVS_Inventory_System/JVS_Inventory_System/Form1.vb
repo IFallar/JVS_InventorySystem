@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports MySql.Data.MySqlClient
+Imports System.ComponentModel
 
 Public Class Form1
 
@@ -306,7 +307,7 @@ Public Class Form1
 
     Public Sub Search_Bar_Log()
 
-        tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) LIKE '%" & LOG_SEARCH_BOX.Text & "%' OR (SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`) LIKE '%" & LOG_SEARCH_BOX.Text & "%' OR transaction_type LIKE '%" & LOG_SEARCH_BOX.Text & "%'", DataGridView2)
+        tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', (SUBSTRING(r_time,1, 5)) AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) LIKE '%" & LOG_SEARCH_BOX.Text & "%' OR (SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`) LIKE '%" & LOG_SEARCH_BOX.Text & "%' OR transaction_type LIKE '%" & LOG_SEARCH_BOX.Text & "%'", DataGridView2)
         strconn.Close()
 
     End Sub
@@ -314,15 +315,35 @@ Public Class Form1
     Public Sub LoadHistory()
 
         DateTimePicker1.Value = Date.Now()
+        DateTimePicker2.Value = Date.Now()
+
+        Dim LogDate As Date = DateTimePicker1.Value
+        Dim Date2 As Date = DateTimePicker2.Value
+        Dim Secdate = Date2.ToString("yyyy\-MM\-dd")
+        Dim NewDate = LogDate.ToString("yyyy\-MM\-dd")
 
         If ACT_FLT.Text = "Action:" Then
-            tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE 1", Me.DataGridView2)
+            tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', (SELECT TIME_FORMAT(r_time, '%h:%i %p')) AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE 1", Me.DataGridView2)
+            strconn.Close()
+        ElseIf Panel18.Width = 287 Then
+            tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', (SELECT TIME_FORMAT(r_time, '%h:%i %p')) AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE transaction_type = '" & ACT_FLT.Text & "' AND (r_date BETWEEN '" & Date2 & "' AND '" & NewDate & "')", Me.DataGridView2)
             strconn.Close()
         Else
-            tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE transaction_type = '" & ACT_FLT.Text & "'", Me.DataGridView2)
+            tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', (SELECT TIME_FORMAT(r_time, '%h:%i %p')) AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE transaction_type = '" & ACT_FLT.Text & "'", Me.DataGridView2)
             strconn.Close()
         End If
 
+
+
+    End Sub
+
+    Public Sub DayView()
+
+        Dim nowDate = Date.Now()
+        Dim NewDate = nowDate.ToString("yyyy\-MM\-dd")
+
+        tableload("SELECT `log_id`, COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `r_qty` AS 'CHANGE', (SELECT TIME_FORMAT(r_time, '%h:%i %p')) AS 'TIME' FROM `transaction_log` WHERE `transaction_type` = 'RESTOCK' OR `transaction_type` = 'STOCK OUT' ", DataGridView3)
+        strconn.Close()
 
 
     End Sub
@@ -339,7 +360,7 @@ Public Class Form1
         Dim transaction_qty As String = transac_qty
         Dim log_date As Date = Date.Now()
         Dim transaction_date = log_date.ToString("yyyy\-MM\-dd")
-        Dim transaction_time As String = TimeOfDay.ToString("hh:mm")
+        Dim transaction_time As String = TimeOfDay.ToString("HH:mm:ss tt")
 
         Dim in_out As String = ""
 
@@ -401,8 +422,9 @@ Public Class Form1
 
     End Sub
 
-    'PRIVATES ================================================================================================================
 
+
+    'PRIVATES ================================================================================================================
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -416,6 +438,7 @@ Public Class Form1
         End If
         Load_Table_Main()
         Set_Home_Value()
+        DayView()
     End Sub
 
     'FORMAT TABLE AND CELLS ================================================================================================================
@@ -473,6 +496,23 @@ Public Class Form1
         DataGridView2.Columns(6).Width = 90
 
         DataGridView2.RowTemplate.MinimumHeight = 40
+        DataGridView2.Sort(DataGridView2.Columns(0), ListSortDirection.Descending)
+
+    End Sub
+
+    Private Sub DataGridView3_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles DataGridView3.DataBindingComplete
+
+        DataGridView3.RowTemplate.Resizable = False
+        DataGridView3.Columns(0).Width = 0
+        DataGridView3.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridView3.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView3.Columns(3).Width = 100
+
+        DataGridView3.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridView3.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+        DataGridView3.RowTemplate.MinimumHeight = 40
+        DataGridView3.Sort(DataGridView3.Columns(0), ListSortDirection.Descending)
 
     End Sub
 
@@ -549,6 +589,7 @@ Public Class Form1
         End If
 
     End Sub
+
     Private Sub SET_BTN_MouseEnter(sender As Object, e As EventArgs) Handles SIDE_SET_BTN.MouseEnter
         If (SIDE_SET_BTN.BackColor = System.Drawing.Color.Transparent) Then
             SIDE_SET_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
@@ -1070,13 +1111,40 @@ Public Class Form1
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
 
         Dim LogDate As Date = DateTimePicker1.Value
+        Dim Date2 As Date = DateTimePicker2.Value
+        Dim Secdate = Date2.ToString("yyyy\-MM\-dd")
         Dim NewDate = LogDate.ToString("yyyy\-MM\-dd")
 
-        tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', `r_time` AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE r_date = '" & NewDate & "'", Me.DataGridView2)
+        tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', (SELECT TIME_FORMAT(r_time, '%h:%i %p')) AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE (r_date BETWEEN '" & Date2 & "' AND '" & NewDate & "')", Me.DataGridView2)
         strconn.Close()
 
     End Sub
 
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+
+        Dim LogDate As Date = DateTimePicker1.Value
+        Dim Date2 As Date = DateTimePicker2.Value
+        Dim Secdate = Date2.ToString("yyyy\-MM\-dd")
+        Dim NewDate = LogDate.ToString("yyyy\-MM\-dd")
+
+        tableload("SELECT `log_id` AS 'ID', (SELECT CONCAT(`acc_fn`, ' ' , `acc_ln`) FROM account WHERE acc_id = `r_acc_id`) AS 'USER', COALESCE ((SELECT CONCAT(`ITEM_NAME`, ' | ' , `ITEM_BRAND`, ' | ' , `VARIANT`) FROM products WHERE ITEM_ID = `r_item_id`), 'ITEM DELETED') AS 'ITEM', `transaction_type` AS 'ACTION', `r_qty` AS 'CHANGE', (SELECT TIME_FORMAT(r_time, '%h:%i %p')) AS 'TIME', `r_date` AS 'DATE' FROM `transaction_log` WHERE (r_date BETWEEN '" & Date2 & "' AND '" & NewDate & "')", Me.DataGridView2)
+        strconn.Close()
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+        If Label6.Text = "+" Then
+            Panel18.Width = 287
+            Label6.Text = "-"
+            Label6.ForeColor = Color.White
+        ElseIf Label6.Text = "-" Then
+            Panel18.Width = 160
+            Label6.Text = "+"
+            Label6.ForeColor = Color.Lime
+        End If
+
+    End Sub
 
     'SETTINGS ================================================================================================================
 
@@ -1455,8 +1523,6 @@ Public Class Form1
         TBX_SUPMED.ForeColor = Color.Gray
     End Sub
 
-
-
     Private Sub UPDATE_BTN_Click(sender As Object, e As EventArgs) Handles UPDATE_BTN.Click
         If UPDATE_BTN.Text = "UPDATE" Then
             cnd_str = "UPDATE `account` SET `acc_fn`='" & F_NAME_TBX.Text & "',`acc_ln`='" & L_NAME_TBX.Text & "',`acc_pass`='" & PASSWORD_TBX.Text & "',`acc_email`='" & EMAIL_TBX.Text & "',`acc_phone`='" & NUMBER_TBX.Text & "',`acc_address`='" & ADDRESS_TBX.Text & "' WHERE `acc_id` = '" & GlobalVariables.UserID & "'"
@@ -1466,7 +1532,6 @@ Public Class Form1
             CMDSTRING(cnd_str, 0)
         End If
     End Sub
-
 
     Public Sub CMDSTRING_PROFILE(cnd As String, tok As Integer)
         opencon()
@@ -1499,6 +1564,7 @@ Public Class Form1
         cmdreader.Close()
         con.Close()
     End Sub
+
     Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles GroupBox4.Enter
 
         ACC_TYPE_LB.Visible = False
@@ -1526,9 +1592,6 @@ Public Class Form1
         RESET_BTN.Text = "CANCEL"
         UPDATE_BTN.Text = "SAVE"
 
-
-
-
     End Sub
 
     Private Sub RESET_BTN_Click(sender As Object, e As EventArgs) Handles RESET_BTN.Click
@@ -1546,6 +1609,9 @@ Public Class Form1
 
         End If
     End Sub
+
+
+
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 End Class
