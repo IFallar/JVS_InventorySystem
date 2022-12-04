@@ -32,6 +32,16 @@ JVS_Inventory_System
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:JVS_Inventory_System.My.Resources.Resources.account_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JVS_Inventory_System.My.Resources.Resources.Admin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:JVS_Inventory_System.My.Resources.Resources.divider_36066">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -53,6 +63,11 @@ JVS_Inventory_System
 </summary>
 </member>
 <member name="P:JVS_Inventory_System.My.Resources.Resources.user">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JVS_Inventory_System.My.Resources.Resources.usericon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

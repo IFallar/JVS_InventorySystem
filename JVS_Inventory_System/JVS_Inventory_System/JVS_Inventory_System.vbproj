@@ -199,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="312218751_613601023893862_5389271300730309614_n.ico" />
+    <None Include="Resources\account_ico.png" />
+    <None Include="Resources\usericon.png" />
+    <None Include="Resources\Admin.png" />
     <None Include="Resources\line-png-16805.png" />
     <None Include="Resources\divider-36066.png" />
   </ItemGroup>

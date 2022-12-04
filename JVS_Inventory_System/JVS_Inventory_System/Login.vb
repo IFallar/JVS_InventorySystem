@@ -57,8 +57,11 @@ Public Class Login
                 Me.Hide()
 
                 userName.Text = "USERNAME"
+                userName.ForeColor = Color.Silver
                 pass.Text = "PASSWORD"
+                pass.ForeColor = Color.Silver
                 userType.Text = "ACCOUNT TYPE"
+                PictureBox2.Image = My.Resources.account_ico
 
             ElseIf acc_type = "user" Then
 
@@ -74,8 +77,11 @@ Public Class Login
                 Me.Hide()
 
                 userName.Text = "USERNAME"
+                userName.ForeColor = Color.Silver
                 pass.Text = "PASSWORD"
+                pass.ForeColor = Color.Silver
                 userType.Text = "ACCOUNT TYPE"
+                PictureBox2.Image = My.Resources.account_ico
 
             End If
 
@@ -129,6 +135,18 @@ Public Class Login
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
         Me.WindowState = FormWindowState.Minimized
+
+    End Sub
+
+    Private Sub userType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles userType.SelectedIndexChanged
+
+        If userType.Text = "User" Then
+            PictureBox2.Image = My.Resources.usericon
+        ElseIf userType.Text = "Admin" Then
+            PictureBox2.Image = My.Resources.Admin
+        Else
+            PictureBox2.Image = My.Resources.account_ico
+        End If
 
     End Sub
 

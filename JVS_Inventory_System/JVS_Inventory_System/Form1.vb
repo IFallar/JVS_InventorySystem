@@ -385,6 +385,16 @@ Public Class Form1
 
     End Sub
 
+    Public Sub Set_Profile()
+        If GlobalVariables.logged_priv = 1 Then
+            PictureBox3.Image = My.Resources.usericon
+        ElseIf GlobalVariables.logged_priv = 0 Then
+            PictureBox3.Image = My.Resources.Admin
+        Else
+            PictureBox3.Image = My.Resources.account_ico
+        End If
+    End Sub
+
     '++++++++++++++++ LOG FUNCTIONALITY ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Public Sub Add_Log(Token As Integer, transac_qty As String, itid As Integer)
@@ -471,6 +481,8 @@ Public Class Form1
         Else
 
         End If
+
+        Set_Profile()
         Load_Table_Main()
         Set_Home_Value()
         DayView()
@@ -1676,7 +1688,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub log_in_Click(sender As Object, e As EventArgs) Handles log_in.Click
+    Private Sub log_out_Click(sender As Object, e As EventArgs) Handles log_out.Click
 
         Dim logout = MsgBox("Are you sure you want to log out?", MsgBoxStyle.YesNo, "LOG OUT")
 
@@ -1687,6 +1699,7 @@ Public Class Form1
             GlobalVariables.UserID = Nothing
             GlobalVariables.logged_priv = Nothing
             GlobalVariables.logged = 0
+            PictureBox3.Image = My.Resources.account_ico
 
             Me.Hide()
             Login.Show()
