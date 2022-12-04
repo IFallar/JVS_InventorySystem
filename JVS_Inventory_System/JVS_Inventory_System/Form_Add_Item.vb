@@ -223,6 +223,12 @@ Public Class Form_Add_Item
             Form1.Add_Log(4, FAI_TBX_ITEM_INIT.Text, FAI_TBX_ITEM_ID.Text)
         End If
 
+        Try
+            Me.Close()
+
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 

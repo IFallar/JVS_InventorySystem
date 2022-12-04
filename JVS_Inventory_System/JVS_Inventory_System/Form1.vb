@@ -9,7 +9,8 @@ Public Class Form1
     Public Class GlobalVariables
         Public Shared UserID As Integer
         Public Shared Selected_Item As Integer
-        Public Shared logged As Integer = 1
+        Public Shared logged_priv As Integer
+        Public Shared logged As Integer = 0
     End Class
 
     Dim FLD As String
@@ -244,7 +245,7 @@ Public Class Form1
 
     End Sub
 
-    Public Sub UPDATE_RPR_STATUS()
+    Public Sub Set_RPR_Stat()
         If GlobalVariables.Selected_Item = Nothing Then
             MsgBox("Select an Item to Flag.", MsgBoxStyle.OkOnly, "No Item Selected")
         Else
@@ -353,6 +354,37 @@ Public Class Form1
 
     End Sub
 
+    Public Sub Set_Day_Val()
+
+        Dim curdate As Date = Date.Now()
+        Dim todate = curdate.ToString("yyyy\-MM\-dd")
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT (SELECT SUM(r_qty) FROM `transaction_log` WHERE r_date = '" & todate & "' AND transaction_type = 'Restock') AS 'Day In', (SELECT SUM(r_qty) FROM `transaction_log` WHERE r_date = '" & todate & "' AND transaction_type = 'Stock Out') AS 'Day Out'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Try
+
+                ItemInD_lbl.Text = cmdreader.GetValue(0)
+                ItemOutD_lbl.Text = cmdreader.GetValue(1)
+
+            Catch ex As System.InvalidCastException
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+    End Sub
+
     '++++++++++++++++ LOG FUNCTIONALITY ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Public Sub Add_Log(Token As Integer, transac_qty As String, itid As Integer)
@@ -427,8 +459,6 @@ Public Class Form1
 
     End Sub
 
-
-
     'PRIVATES ================================================================================================================
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -444,6 +474,8 @@ Public Class Form1
         Load_Table_Main()
         Set_Home_Value()
         DayView()
+        Set_Day_Val()
+
     End Sub
 
     'FORMAT TABLE AND CELLS ================================================================================================================
@@ -698,6 +730,12 @@ Public Class Form1
         SIDE_ITEM_BTN.ForeColor = System.Drawing.Color.White
         SIDE_LOG_BTN.ForeColor = System.Drawing.Color.White
         SIDE_SET_BTN.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
+
+        If GlobalVariables.logged_priv = 0 Then
+            GroupBox4.Enabled = True
+        Else
+            GroupBox4.Enabled = False
+        End If
 
         Set_Home_Value()
         Set_DGV()
@@ -963,7 +1001,7 @@ Public Class Form1
 
         FLAGGED_MSG = " as Damaged?"
         FLAGGED_VAL = "DAMAGED"
-        UPDATE_RPR_STATUS()
+        Set_RPR_Stat()
         Add_Log(6, "Flagged as Damaged", GlobalVariables.Selected_Item)
 
     End Sub
@@ -972,7 +1010,7 @@ Public Class Form1
 
         FLAGGED_MSG = " as Defective?"
         FLAGGED_VAL = "DEFECTIVE"
-        UPDATE_RPR_STATUS()
+        Set_RPR_Stat()
         Add_Log(6, "Flagged as Defective", GlobalVariables.Selected_Item)
 
     End Sub
@@ -981,7 +1019,7 @@ Public Class Form1
 
         FLAGGED_MSG = " as Normal?"
         FLAGGED_VAL = "NORMAL"
-        UPDATE_RPR_STATUS()
+        Set_RPR_Stat()
         Add_Log(6, "Flagged as Normal", GlobalVariables.Selected_Item)
 
     End Sub
@@ -1375,9 +1413,9 @@ Public Class Form1
 
             If tok = 0 Then
 
-                MsgBox("You are trying to update a Value used in other tables!" & Environment.NewLine & "Do you want to proceed?", MsgBoxStyle.YesNo, "WARNING!")
+                Dim check = MsgBox("You are trying to update a Value used in other tables!" & Environment.NewLine & "Do you want to proceed?", MsgBoxStyle.YesNo, "WARNING!")
 
-                If MsgBoxResult.Yes Then
+                If check = MsgBoxResult.Yes Then
 
                     strconn.Close()
 
@@ -1393,6 +1431,8 @@ Public Class Form1
 
                     MsgBox("SUCCESS!", MsgBoxStyle.OkOnly, "")
                     Set_DGV()
+
+                ElseIf check = MsgBoxResult.No Then
 
                 End If
 
@@ -1634,6 +1674,26 @@ Public Class Form1
             ACC_TYPE_CBX.Visible = False
 
         End If
+    End Sub
+
+    Private Sub log_in_Click(sender As Object, e As EventArgs) Handles log_in.Click
+
+        Dim logout = MsgBox("Are you sure you want to log out?", MsgBoxStyle.YesNo, "LOG OUT")
+
+        If logout = MsgBoxResult.Yes Then
+
+            acc_name_lbl.Text = "ACCOUNT NAME"
+            acc_type_lbl.Text = "ACCOUNT TYPE"
+            GlobalVariables.UserID = Nothing
+            GlobalVariables.logged_priv = Nothing
+            GlobalVariables.logged = 0
+
+            Me.Hide()
+            Login.Show()
+        ElseIf logout = MsgBoxResult.No Then
+
+        End If
+
     End Sub
 
 

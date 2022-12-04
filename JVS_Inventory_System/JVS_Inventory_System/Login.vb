@@ -5,8 +5,7 @@ Imports MySql.Data.MySqlClient
 Public Class Login
 
     Dim acc_id As String
-    Dim usetype As String
-    Dim usename As String
+    Dim acc_type As String
     Dim userpass As String
     Dim valid As Boolean = True
 
@@ -15,7 +14,7 @@ Public Class Login
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT `acc_id`,`usertype`, CONCAT(`acc_fn`, ' ' , `acc_ln`) as `UserName`, `acc_pass` FROM `account` WHERE usertype = '" & userType.SelectedItem & "' and CONCAT(`acc_fn`, ' ' , `acc_ln`) = '" & userName.Text & "' and acc_pass = '" & pass.Text & "'"
+        cmd.CommandText = "SELECT `acc_id`,`usertype`, `acc_pass` FROM `account` WHERE usertype = '" & userType.SelectedItem & "' and CONCAT(`acc_fn`, ' ' , `acc_ln`) = '" & userName.Text & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
@@ -25,13 +24,13 @@ Public Class Login
             Try
 
                 acc_id = cmdreader.GetValue(0)
-                usename = cmdreader.GetValue(2)
-                userpass = cmdreader.GetValue(3)
+                acc_type = cmdreader.GetValue(1)
+                userpass = cmdreader.GetValue(2)
                 valid = True
 
             Catch ex As System.InvalidCastException
 
-                MessageBox.Show("Welcome")
+                MessageBox.Show("Account Does Not Exist")
 
             End Try
 
@@ -40,28 +39,49 @@ Public Class Login
         cmdreader.Close()
         con.Close()
 
-        If userName.Text = usename And pass.Text = userpass Then
+        If pass.Text = userpass Then
 
 
-            MessageBox.Show("Welcome " + usename + "!")
 
-            If userType.SelectedIndex = 0 Then
+            If acc_type = "admin" Then
 
                 Dim a As New Form1
 
                 Form1.acc_name_lbl.Text = userName.Text
                 Form1.acc_type_lbl.Text = userType.SelectedItem
+                Form1.GlobalVariables.logged_priv = 0
                 Form1.GlobalVariables.UserID = acc_id
                 Form1.GlobalVariables.logged = 1
-
+                MessageBox.Show("Welcome " + userName.Text + "!")
 
                 Me.Hide()
 
-            Else
-                MessageBox.Show("Invalid Credentials")
+                userName.Text = "USERNAME"
+                pass.Text = "PASSWORD"
+                userType.Text = "ACCOUNT TYPE"
 
+            ElseIf acc_type = "user" Then
+
+                Dim a As New Form1
+
+                Form1.acc_name_lbl.Text = userName.Text
+                Form1.acc_type_lbl.Text = userType.SelectedItem
+                Form1.GlobalVariables.logged_priv = 1
+                Form1.GlobalVariables.UserID = acc_id
+                Form1.GlobalVariables.logged = 1
+                MessageBox.Show("Welcome " + userName.Text + "!")
+
+                Me.Hide()
+
+                userName.Text = "USERNAME"
+                pass.Text = "PASSWORD"
+                userType.Text = "ACCOUNT TYPE"
 
             End If
+
+        Else
+
+            MessageBox.Show("Invalid Credentials")
 
         End If
 
