@@ -395,6 +395,17 @@ Public Class Form1
         End If
     End Sub
 
+    Public Sub Show_Home()
+
+        If GlobalVariables.logged = 0 Then
+            Login.ShowDialog()
+            Me.Hide()
+        Else
+            Me.Show()
+        End If
+
+    End Sub
+
     '++++++++++++++++ LOG FUNCTIONALITY ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     Public Sub Add_Log(Token As Integer, transac_qty As String, itid As Integer)
@@ -474,14 +485,7 @@ Public Class Form1
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         '++++++++++++++++ SET MAIN TABLE VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-        If GlobalVariables.logged = 0 Then
-            Login.ShowDialog()
-            Me.Hide()
-        Else
-
-        End If
-
+        Show_Home()
         Set_Profile()
         Load_Table_Main()
         Set_Home_Value()
@@ -1701,7 +1705,7 @@ Public Class Form1
             GlobalVariables.logged = 0
             PictureBox3.Image = My.Resources.account_ico
 
-            Me.Hide()
+            Me.Dispose()
             Login.Show()
         ElseIf logout = MsgBoxResult.No Then
 

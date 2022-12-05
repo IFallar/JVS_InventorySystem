@@ -63,6 +63,8 @@ Public Class Login
                 userType.Text = "ACCOUNT TYPE"
                 PictureBox2.Image = My.Resources.account_ico
 
+                Form1.Show_Home()
+
             ElseIf acc_type = "user" Then
 
                 Dim a As New Form1
@@ -82,6 +84,8 @@ Public Class Login
                 pass.ForeColor = Color.Silver
                 userType.Text = "ACCOUNT TYPE"
                 PictureBox2.Image = My.Resources.account_ico
+
+                Form1.Show_Home()
 
             End If
 
