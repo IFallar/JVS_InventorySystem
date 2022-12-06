@@ -48,8 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>JVS_Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -208,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="312218751_613601023893862_5389271300730309614_n.ico" />
+    <Content Include="JVS_Icon.ico" />
     <None Include="Resources\account_ico.png" />
     <None Include="Resources\usericon.png" />
     <None Include="Resources\Admin.png" />

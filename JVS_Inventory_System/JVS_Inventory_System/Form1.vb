@@ -1748,6 +1748,19 @@ Public Class Form1
 
     End Sub
 
+    Private Sub VALUE_OUT_Click(sender As Object, e As EventArgs) Handles VALUE_OUT.Click
+
+        Try
+            Dim Modal As New Form_Valuation
+            Form_Out_Value.FV_HEAD_LBL.Text = "ITEMS OUT - OVERVIEW"
+            Form_Out_Value.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 End Class
