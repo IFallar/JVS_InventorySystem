@@ -22,6 +22,7 @@ Partial Class Form_Stock_IS
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Stock_IS))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FSIS_PRC_HOLD = New System.Windows.Forms.Label()
         Me.FSIS_TRH_HOLD = New System.Windows.Forms.Label()
@@ -225,6 +226,7 @@ Partial Class Form_Stock_IS
         Me.Controls.Add(Me.FSIS_NUM_TBX)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.FSIS_ITEM_TBX)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form_Stock_IS"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "QUICK STOCK"

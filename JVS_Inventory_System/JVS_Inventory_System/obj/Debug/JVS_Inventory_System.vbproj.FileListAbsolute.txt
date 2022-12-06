@@ -60,3 +60,7 @@ C:\JVS Inventory System\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_S
 C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Login.resources
 C:\Users\Asus\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Reorder_Points.resources
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.Form_Out_Value.resources
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.exe.manifest
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\bin\Debug\JVS_Inventory_System.application
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.exe.manifest
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVS_InventorySystem\JVS_Inventory_System\JVS_Inventory_System\obj\Debug\JVS_Inventory_System.application

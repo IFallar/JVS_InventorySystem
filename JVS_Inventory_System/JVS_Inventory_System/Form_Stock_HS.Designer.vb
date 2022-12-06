@@ -22,6 +22,7 @@ Partial Class Form_Stock_HS
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Stock_HS))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FSHS_HEAD_LBL = New System.Windows.Forms.Label()
         Me.FSHS_ADD_BTN = New System.Windows.Forms.Button()
@@ -393,6 +394,7 @@ Partial Class Form_Stock_HS
         Me.Controls.Add(Me.FSHS_CNC_BTN)
         Me.Controls.Add(Me.FSHS_NUM_TBX)
         Me.Controls.Add(Me.FSHS_SAVE_BTN)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form_Stock_HS"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

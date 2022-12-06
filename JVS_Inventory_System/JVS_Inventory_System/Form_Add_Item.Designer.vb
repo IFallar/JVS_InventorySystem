@@ -22,6 +22,7 @@ Partial Class Form_Add_Item
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Add_Item))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -504,6 +505,7 @@ Partial Class Form_Add_Item
         Me.ClientSize = New System.Drawing.Size(584, 411)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(600, 450)
         Me.MinimumSize = New System.Drawing.Size(600, 450)
         Me.Name = "Form_Add_Item"
