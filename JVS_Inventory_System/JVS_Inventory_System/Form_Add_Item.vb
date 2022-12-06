@@ -6,6 +6,8 @@ Public Class Form_Add_Item
     Dim Confirm As String
     Dim Query As String
 
+
+
     Private Sub Form_Add_Item_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         'INITIATE MODAL ================================================================================================================
@@ -209,7 +211,19 @@ Public Class Form_Add_Item
 
             MsgBox(Message, MsgBoxStyle.OkOnly, "Action Confirmation")
 
+            Try
+                Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+                Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
 
+                Form1.Load_Table_Main()
+                Form1.Set_Home_Value()
+                Form1.DayView()
+                Form1.Set_Day_Val()
+                Me.Close()
+
+            Catch ex As Exception
+
+            End Try
 
         Catch ex As System.InvalidCastException
 
@@ -222,20 +236,6 @@ Public Class Form_Add_Item
         ElseIf Query = 1 Then
             Form1.Add_Log(4, FAI_TBX_ITEM_INIT.Text, FAI_TBX_ITEM_ID.Text)
         End If
-
-        Try
-            Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
-            Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
-
-            Form1.Load_Table_Main()
-            Form1.Set_Home_Value()
-            Form1.DayView()
-            Form1.Set_Day_Val()
-            Me.Close()
-
-        Catch ex As Exception
-
-        End Try
 
     End Sub
 
@@ -250,8 +250,9 @@ Public Class Form_Add_Item
 
         FAI_CBX_ITEM_BRAND.ResetText()
         FAI_CBX_ITEM_CAT.ResetText()
-        FAI_CBX_ITEM_HLDSTAT.Text = ""
+        FAI_CBX_ITEM_HLDSTAT.ResetText()
         FAI_CBX_ITEM_MODEL.ResetText()
+        FAI_CBX_ITEM_SP.ResetText()
 
         FAI_TBX_TOPAY.BackColor = Color.White
         FAI_TBX_TOPAY.ReadOnly = False
@@ -290,6 +291,15 @@ Public Class Form_Add_Item
             FAI_TBX_TOPAY.ReadOnly = False
 
         End If
+
+    End Sub
+
+    Private Sub Form_Add_Item_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+
+        Form1.Load_Table_Main()
+        Form1.Set_Home_Value()
+        Form1.DayView()
+        Form1.Set_Day_Val()
 
     End Sub
 
