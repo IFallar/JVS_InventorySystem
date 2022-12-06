@@ -344,10 +344,14 @@
             Form1.Add_Log(3, STOCK_AMOUNT, FSHS_ID_HOLD.Text)
         End If
 
-        Form1.Load_Table_Main()
-        Form1.Set_Home_Value()
-
         Try
+            Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+            Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
+
+            Form1.Load_Table_Main()
+            Form1.Set_Home_Value()
+            Form1.DayView()
+            Form1.Set_Day_Val()
             Me.Close()
 
         Catch ex As Exception
@@ -357,6 +361,9 @@
     End Sub
 
     Private Sub FSHS_CNC_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_CNC_BTN.Click
+
+        Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+        Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
 
         FSHS_ITEM_TBX.Text = ""
         FSHS_FLT1_TBX.Text = "BRAND"
@@ -375,6 +382,8 @@
 
         Form1.Load_Table_Main()
         Form1.Set_Home_Value()
+        Form1.DayView()
+        Form1.Set_Day_Val()
 
     End Sub
 

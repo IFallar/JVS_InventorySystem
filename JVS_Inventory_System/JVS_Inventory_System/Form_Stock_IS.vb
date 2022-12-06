@@ -117,10 +117,17 @@
             Form1.Add_Log(3, STOCK_AMOUNT, Form1.GlobalVariables.Selected_Item)
         End If
 
-        Form1.Load_Table_Main()
-        Form1.Set_Home_Value()
+        Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+        Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
 
         Try
+            Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+            Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
+
+            Form1.Load_Table_Main()
+            Form1.Set_Home_Value()
+            Form1.DayView()
+            Form1.Set_Day_Val()
             Me.Close()
 
         Catch ex As Exception
@@ -156,6 +163,11 @@
     End Sub
 
     Private Sub FSIS_CNC_BTN_Click(sender As Object, e As EventArgs) Handles FSIS_CNC_BTN.Click
+
+        Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+        Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
+        Form1.DayView()
+        Form1.Set_Day_Val()
 
         Try
             Me.Close()

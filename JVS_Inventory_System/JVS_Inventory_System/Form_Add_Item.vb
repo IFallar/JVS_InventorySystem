@@ -124,6 +124,8 @@ Public Class Form_Add_Item
 
         Form1.Load_Table_Main()
         Form1.Set_Home_Value()
+        Form1.DayView()
+        Form1.Set_Day_Val()
 
     End Sub
 
@@ -207,8 +209,6 @@ Public Class Form_Add_Item
 
             MsgBox(Message, MsgBoxStyle.OkOnly, "Action Confirmation")
 
-            Form1.Load_Table_Main()
-            Form1.Set_Home_Value()
 
 
         Catch ex As System.InvalidCastException
@@ -224,6 +224,13 @@ Public Class Form_Add_Item
         End If
 
         Try
+            Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+            Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
+
+            Form1.Load_Table_Main()
+            Form1.Set_Home_Value()
+            Form1.DayView()
+            Form1.Set_Day_Val()
             Me.Close()
 
         Catch ex As Exception
@@ -258,8 +265,13 @@ Public Class Form_Add_Item
             Form1.Edit_Details()
         End If
 
+        Form1.ITM_FLTSET_ITEM_CBX.Text = "FILTER"
+        Form1.ITM_FLTVAL_ITEM_CBX.Text = "VALUE"
+
         Form1.Load_Table_Main()
         Form1.Set_Home_Value()
+        Form1.DayView()
+        Form1.Set_Day_Val()
 
     End Sub
 

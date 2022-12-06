@@ -91,6 +91,12 @@
     <Compile Include="Form_Add_Item.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Out_Value.Designer.vb">
+      <DependentUpon>Form_Out_Value.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Out_Value.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Stock_HS.Designer.vb">
       <DependentUpon>Form_Stock_HS.vb</DependentUpon>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Add_Item.resx">
       <DependentUpon>Form_Add_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Out_Value.resx">
+      <DependentUpon>Form_Out_Value.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Stock_HS.resx">
       <DependentUpon>Form_Stock_HS.vb</DependentUpon>

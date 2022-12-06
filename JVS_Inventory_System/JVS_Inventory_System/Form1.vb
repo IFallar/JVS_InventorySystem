@@ -147,7 +147,6 @@ Public Class Form1
         Dim home_item_valuation As String
         Dim home_item_qty As Integer
         Dim home_item_lowstock As Integer
-        Dim home_item_laststock As String
 
         opencon()
 
@@ -170,15 +169,37 @@ Public Class Form1
                 home_item_lowstock = cmdreader.GetValue(2)
                 VALUE_LOWSTOCK.Text = home_item_lowstock
 
-                home_item_laststock = cmdreader.GetValue(3)
-                VALUE_LASTSTOCK.Text = home_item_laststock
-
             Catch ex As System.InvalidCastException
 
                 VALUE_ITEMS.Text = "P0"
                 VALUE_COUNT.Text = 0
                 VALUE_LOWSTOCK.Text = 0
-                VALUE_LASTSTOCK.Text = "DD/MM/YYYY"
+
+            End Try
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT SUM(`r_qty`) AS 'CHANGE', (SELECT SUM((SELECT UNIT_PRICE FROM products WHERE ITEM_ID = r_item_id) * (r_qty * -1))) AS 'VALUE' FROM `transaction_log` WHERE `transaction_type` = 'STOCK OUT' AND r_date >= DATE(NOW() - INTERVAL 7 DAY)"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Try
+
+                Dim HomeOutVal As String = cmdreader.GetValue(1)
+                VALUE_OUT.Text = "P" + HomeOutVal
+
+            Catch ex As System.InvalidCastException
+
+                VALUE_OUT.Text = 0
 
             End Try
 
@@ -679,6 +700,7 @@ Public Class Form1
 
 
         Set_Home_Value()
+        DayView()
 
     End Sub
 
@@ -1713,7 +1735,18 @@ Public Class Form1
 
     End Sub
 
+    Private Sub TD_BTN4_Click(sender As Object, e As EventArgs) Handles TD_BTN4.Click
 
+        Try
+            Dim Modal As New Form_Valuation
+            Form_Out_Value.FV_HEAD_LBL.Text = "ITEMS OUT - OVERVIEW"
+            Form_Out_Value.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 
     '++++++++++++++++ SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
