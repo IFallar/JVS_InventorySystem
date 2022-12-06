@@ -45,6 +45,7 @@ Module Module1
         adapter.Dispose()
     End Sub
     'create function used in settings'
+
     Public Sub create(ByRef sql As String)
         Try
             strconn.Open()
@@ -65,6 +66,7 @@ Module Module1
             strconn.Close()
         End Try
     End Sub
+
     'update function used in settings'
     Public Sub update(ByRef sql As String)
         Try
@@ -85,6 +87,7 @@ Module Module1
             strconn.Close()
         End Try
     End Sub
+
     'delete function used in settings'
     Public Sub delete(ByRef sql As String)
         Try
