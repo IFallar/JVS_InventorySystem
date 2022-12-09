@@ -680,7 +680,8 @@ Public Class Form1
 
     'PANEL NAVIGATION ================================================================================================================
 
-    '++++++++++++++++ PANEL STYLE CHANGES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    '++++++++++++++++ PANEL STYLE CHANGES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
     Private Sub HOME_BTN_Click(sender As Object, e As EventArgs) Handles SIDE_HOME_BTN.Click
         HOME_PANEL.Visible = True
