@@ -41,8 +41,6 @@ Public Class Login
 
         If pass.Text = userpass Then
 
-
-
             If acc_type = "admin" Then
 
                 Dim a As New Form1
